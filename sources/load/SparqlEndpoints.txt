@@ -1,0 +1,2 @@
+http://dbpedia.org/sparql
+http://greententacle.techfak.uni-bielefeld.de:5171/sparql

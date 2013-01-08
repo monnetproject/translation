@@ -1,0 +1,12532 @@
+{
+	"Accountancy": 
+	{
+		"de": {
+			"Rechnungswesen": 1
+		},
+		"es": {
+			"Contabilidad": 1
+		},
+		"nl": {
+		}
+	},
+	"direct debit recall": 
+	{
+		"de": {
+			"Lastschriftwiderruf": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accrual method": 
+	{
+		"de": {
+			"Periodenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"expenditure variance": 
+	{
+		"de": {
+			"Verbrauchsabweichung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cameralistics": 
+	{
+		"de": {
+			"Kameralistik": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash and cash equivalents": 
+	{
+		"de": {
+			"flüssige Mittel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Double-entry bookkeeping system": 
+	{
+		"de": {
+			"Buchführung": 1
+		},
+		"es": {
+			"Partida doble": 1
+		},
+		"nl": {
+			"Dubbel boekhouden": 1
+		}
+	},
+	"List of countries by public debt": 
+	{
+		"de": {
+			"Liste der Länder nach Staatsschuldenquote": 1
+		},
+		"es": {
+			"Anexo:Países por deuda pública": 1
+		},
+		"nl": {
+			"Lijst van landen naar staatsschuld": 1
+		}
+	},
+	"Commonwealth of Nations": 
+	{
+		"de": {
+			"Commonwealth of Nations": 1
+		},
+		"es": {
+			"Mancomunidad de Naciones": 1
+		},
+		"nl": {
+			"Gemenebest van Naties": 1
+		}
+	},
+	"budget environment": 
+	{
+		"de": {
+			"Budgetumfeld": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"research and development": 
+	{
+		"de": {
+			"Forschung und Entwicklung": 1
+		},
+		"es": {
+			"Investigación y desarrollo": 1
+		},
+		"nl": {
+			"Onderzoek & Ontwikkeling": 1
+		}
+	},
+	"Portugal": 
+	{
+		"de": {
+			"Portugal": 1
+		},
+		"es": {
+			"Portugal": 1
+		},
+		"nl": {
+			"Portugal": 1
+		}
+	},
+	"Audit": 
+	{
+		"de": {
+			"Audit": 1
+		},
+		"es": {
+			"Auditoría contable": 1
+		},
+		"nl": {
+			"Auditing": 1
+		}
+	},
+	"demutualization": 
+	{
+		"de": {
+			"Demutualisierung": 1
+		},
+		"es": {
+			"Desmutualización": 1
+		},
+		"nl": {
+		}
+	},
+	"Government-sponsored enterprise": 
+	{
+		"de": {
+			"Government sponsored enterprise": 1
+		},
+		"es": {
+			"Government-sponsored enterprise": 1
+		},
+		"nl": {
+		}
+	},
+	"financial ratio": 
+	{
+		"de": {
+			"Betriebswirtschaftliche Kennzahl": 1
+		},
+		"es": {
+			"Ratio financiera": 1
+		},
+		"nl": {
+			"Kengetal": 1
+		}
+	},
+	"to record on a value basis": 
+	{
+		"de": {
+			"wertmäßig erfassen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross method": 
+	{
+		"de": {
+			"Bruttomethode": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting period": 
+	{
+		"de": {
+			"Bilanzierungszeitraum": 1,
+			"Abrechnungszeitraum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"letter of credit": 
+	{
+		"de": {
+			"Akkreditiv": 1
+		},
+		"es": {
+			"Carta de crédito": 1
+		},
+		"nl": {
+			"Documentair krediet": 1
+		}
+	},
+	"loan covenant": 
+	{
+		"de": {
+			"Covenants": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"recurring audit": 
+	{
+		"de": {
+			"Folgeprüfung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"U.S. Customs and Border Protection": 
+	{
+		"de": {
+			"United States Customs and Border Protection": 1
+		},
+		"es": {
+			"Oficina de Aduanas y Protección Fronteriza de los Estados Unidos": 1
+		},
+		"nl": {
+		}
+	},
+	"cross-company": 
+	{
+		"de": {
+			"buchungskreisübergreifend": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Equity": 
+	{
+		"de": {
+			"Eigenkapital": 1
+		},
+		"es": {
+			"Fondos propios": 1
+		},
+		"nl": {
+			"Eigen vermogen": 1
+		}
+	},
+	"Japan": 
+	{
+		"de": {
+			"Japan": 1
+		},
+		"es": {
+			"Japón": 1
+		},
+		"nl": {
+			"Japan": 1
+		}
+	},
+	"cashbook": 
+	{
+		"de": {
+			"Kassenbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"paradigm": 
+	{
+		"de": {
+			"Paradigma": 1
+		},
+		"es": {
+			"Paradigma": 1
+		},
+		"nl": {
+			"Paradigma": 1
+		}
+	},
+	"principle of completeness": 
+	{
+		"de": {
+			"Grundsatz der Vollständigkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business entity": 
+	{
+		"de": {
+			"Wirtschaftseinheit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Business process modeling": 
+	{
+		"de": {
+			"Business Process Modeling": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Business Process Modeling": 1
+		}
+	},
+	"retail": 
+	{
+		"de": {
+			"Einzelhandel": 1
+		},
+		"es": {
+			"Minorista": 1
+		},
+		"nl": {
+			"Detailhandel": 1
+		}
+	},
+	"Pocket veto": 
+	{
+		"de": {
+			"Pocket Veto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"foreign direct investment": 
+	{
+		"de": {
+			"Direktinvestition": 1
+		},
+		"es": {
+			"Inversión extranjera directa": 1
+		},
+		"nl": {
+			"Directe buitenlandse investeringen": 1
+		}
+	},
+	"The Wall Street Journal": 
+	{
+		"de": {
+			"The Wall Street Journal": 1
+		},
+		"es": {
+			"The Wall Street Journal": 1
+		},
+		"nl": {
+			"The Wall Street Journal": 1
+		}
+	},
+	"overheads": 
+	{
+		"de": {
+			"Fixkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"transitory item": 
+	{
+		"de": {
+			"Durchlaufposten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to close out": 
+	{
+		"de": {
+			"abschließen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"supplementary tax": 
+	{
+		"de": {
+			"Nachsteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"aggregate cost method": 
+	{
+		"de": {
+			"Gesamtkostenverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Retained earnings": 
+	{
+		"de": {
+			"Gewinnvortrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"follow-on offering": 
+	{
+		"de": {
+			"Zweitplatzierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"University of Mississippi": 
+	{
+		"de": {
+			"University of Mississippi": 1
+		},
+		"es": {
+			"Universidad de Misisipi": 1
+		},
+		"nl": {
+		}
+	},
+	"Accrual": 
+	{
+		"de": {
+			"Rechnungsabgrenzung": 1
+		},
+		"es": {
+			"Devengo": 1
+		},
+		"nl": {
+		}
+	},
+	"cost for negotiating bills": 
+	{
+		"de": {
+			"Wechselbegebungskosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debits and credits": 
+	{
+		"de": {
+			"Soll": 1
+		},
+		"es": {
+			"Débito": 1
+		},
+		"nl": {
+			"Debet": 1
+		}
+	},
+	"to recognise as expenditures": 
+	{
+		"de": {
+			"als Aufwand erfassen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"current-value depreciation": 
+	{
+		"de": {
+			"Teilwertabschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"retained earnings": 
+	{
+		"de": {
+			"Gewinnvortrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"share": 
+	{
+		"de": {
+			"Aktie": 1
+		},
+		"es": {
+			"Acción": 1
+		},
+		"nl": {
+			"Aandeel": 1
+		}
+	},
+	"billing date": 
+	{
+		"de": {
+			"Rechnungsdatum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"option": 
+	{
+		"de": {
+			"Option": 1
+		},
+		"es": {
+			"Opción financiera": 1
+		},
+		"nl": {
+			"Optie": 1
+		}
+	},
+	"Costa Rica": 
+	{
+		"de": {
+			"Costa Rica": 1
+		},
+		"es": {
+			"Costa Rica": 1
+		},
+		"nl": {
+			"Costa Rica": 1
+		}
+	},
+	"one-off expenses": 
+	{
+		"de": {
+			"Einmalaufwendungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income receipts": 
+	{
+		"de": {
+			"Vereinnahmung von Erträgen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"total liabilities": 
+	{
+		"de": {
+			"Gesamtpassiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"end of the (financial) year": 
+	{
+		"de": {
+			"Jahresultimo": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"warrant": 
+	{
+		"de": {
+			"Optionsschein": 1
+		},
+		"es": {
+			"Warrant": 1
+		},
+		"nl": {
+			"Warrant": 1
+		}
+	},
+	"Fixed capital": 
+	{
+		"de": {
+			"Fixes Kapital": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"special paid leave": 
+	{
+		"de": {
+			"bezahlter Sonderurlaub": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audit report": 
+	{
+		"de": {
+			"Auditbericht": 1,
+			"Prüfbericht": 1,
+			"Prüfungsbericht": 1,
+			"Revisionsbericht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit card": 
+	{
+		"de": {
+			"Debitkarte": 1
+		},
+		"es": {
+			"Tarjeta de débito": 1
+		},
+		"nl": {
+			"Betaalkaart": 1
+		}
+	},
+	"tax bracket": 
+	{
+		"de": {
+		},
+		"es": {
+			"Soporte de impuestos": 1
+		},
+		"nl": {
+		}
+	},
+	"net revenue": 
+	{
+		"de": {
+			"Nettoumsatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"patent": 
+	{
+		"de": {
+			"Patent": 1
+		},
+		"es": {
+			"Patente": 1
+		},
+		"nl": {
+			"Octrooi": 1
+		}
+	},
+	"to administer accounts": 
+	{
+		"de": {
+			"Konten führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"arm's length principle": 
+	{
+		"de": {
+			"Fremdvergleichsgrundsatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"U.S. Securities and Exchange Commission": 
+	{
+		"de": {
+			"United States Securities and Exchange Commission": 1
+		},
+		"es": {
+			"Securities and Exchange Commission": 1
+		},
+		"nl": {
+			"Securities and Exchange Commission": 1
+		}
+	},
+	"Our books have been balanced.": 
+	{
+		"de": {
+			"Unsere Bücher sind abgeschlossen.": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"financial recovery": 
+	{
+		"de": {
+			"finanzielle Sanierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"corporate tax": 
+	{
+		"de": {
+			"Körperschaftssteuer": 1
+		},
+		"es": {
+			"Impuesto sobre sociedades": 1
+		},
+		"nl": {
+			"Vennootschapsbelasting": 1
+		}
+	},
+	"Debt": 
+	{
+		"de": {
+			"Schulden": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Schulden": 1
+		}
+	},
+	"overhead": 
+	{
+		"de": {
+			"Fixkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"on balance": 
+	{
+		"de": {
+			"per Saldo": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"at fair value through profit and loss": 
+	{
+		"de": {
+			"ergebniswirksam zum beizulegenden Zeitwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"capital structure": 
+	{
+		"de": {
+			"Kapitalstruktur": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"contribution to fixed cost and profit combined": 
+	{
+		"de": {
+			"Deckungsbeitrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"voucher": 
+	{
+		"de": {
+			"Buchungsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"write-down structure": 
+	{
+		"de": {
+			"Abschreibungsstruktur": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Revenue": 
+	{
+		"de": {
+			"Erlös": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Omzet": 1
+		}
+	},
+	"management's discussion and analysis &lt;MD&A&gt; (USGAAP/10K filing)": 
+	{
+		"de": {
+			"Nettosubstanzerhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"non-productive cost center": 
+	{
+		"de": {
+			"Hilfskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audited": 
+	{
+		"de": {
+			"geprüft": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"buzzword": 
+	{
+		"de": {
+			"Schlagwort": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Buzzwoord": 1
+		}
+	},
+	"Net national income": 
+	{
+		"de": {
+			"Nettonationaleinkommen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"single-entry accounting": 
+	{
+		"de": {
+			"einfache Buchführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to keep sb.'s books": 
+	{
+		"de": {
+			"jdm. die Bücher führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reversing entry": 
+	{
+		"de": {
+			"Wertberichtigungsbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United States House of Representatives": 
+	{
+		"de": {
+			"Repräsentantenhaus der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Cámara de Representantes de los Estados Unidos": 1
+		},
+		"nl": {
+			"Huis van Afgevaardigden": 1
+		}
+	},
+	"Generally accepted accounting principles": 
+	{
+		"de": {
+			"Grunds%C3%A4tze%20ordnungsm%C3%A4%C3%9Figer%20Buchf%C3%BChrung": 1
+		},
+		"es": {
+			"Principios%20de%20Contabilidad%20Generalmente%20Aceptados": 1
+		},
+		"nl": {
+		}
+	},
+	"preferred stock": 
+	{
+		"de": {
+			"Vorzugsaktie": 1
+		},
+		"es": {
+			"Acciones preferenciales": 1
+		},
+		"nl": {
+		}
+	},
+	"unaudited": 
+	{
+		"de": {
+			"nicht geprüft": 1,
+			"ungeprüft": 1,
+			"untestiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"attestation": 
+	{
+		"de": {
+			"Testierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"deferred credits to income": 
+	{
+		"de": {
+			"passive Rechnungsabgrenzung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"semi-annual financial statements": 
+	{
+		"de": {
+			"Halbjahresbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"detail strip": 
+	{
+		"de": {
+			"Belegstreifen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"withholding tax": 
+	{
+		"de": {
+			"Kapitalertragssteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"provision": 
+	{
+		"de": {
+			"Beistellung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"return on capital employed": 
+	{
+		"de": {
+			"Return on Capital Employed": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"subprime mortgage crisis": 
+	{
+		"de": {
+		},
+		"es": {
+			"Crisis de las hipotecas subprime": 1
+		},
+		"nl": {
+		}
+	},
+	"profit and loss statement &lt;P&L&gt;": 
+	{
+		"de": {
+			"Gewinn- und Verlustrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost causing principle": 
+	{
+		"de": {
+			"Kostenverursachungsprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash flow statement": 
+	{
+		"de": {
+			"Mittelflussrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"flextime wage record": 
+	{
+		"de": {
+			"Arbeitszeitkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Spain": 
+	{
+		"de": {
+			"Spanien": 1
+		},
+		"es": {
+			"España": 1
+		},
+		"nl": {
+			"Spanje": 1
+		}
+	},
+	"interest-bearing debt capital": 
+	{
+		"de": {
+			"verzinsliches Fremdkapital": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reversal invoice": 
+	{
+		"de": {
+			"Stornorechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"expensed": 
+	{
+		"de": {
+			"gebucht": 1,
+			"in den Aufwand gebucht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Human resources": 
+	{
+		"de": {
+			"Personalwesen": 1
+		},
+		"es": {
+			"Recursos humanos": 1
+		},
+		"nl": {
+		}
+	},
+	"cash equivalents": 
+	{
+		"de": {
+			"Zahlungsmitteläquivalente": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Corporate group": 
+	{
+		"de": {
+			"Unternehmensverbindung": 1
+		},
+		"es": {
+			"Grupo de empresas": 1
+		},
+		"nl": {
+			"Groep": 1
+		}
+	},
+	"fiscal accounting": 
+	{
+		"de": {
+			"Kameralistik": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost shifting": 
+	{
+		"de": {
+			"Kostenwälzung": 1,
+			"Kostenverschiebung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"wholesale": 
+	{
+		"de": {
+			"Großhandel": 1
+		},
+		"es": {
+			"Mayorista": 1
+		},
+		"nl": {
+			"Groothandel": 1
+		}
+	},
+	"interest on borrowed capital": 
+	{
+		"de": {
+			"Fremdkapitalzinsen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"amortization of intangible assets": 
+	{
+		"de": {
+			"Amortisierung immaterieller Anlagen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cable television": 
+	{
+		"de": {
+			"Kabelfernsehen": 1
+		},
+		"es": {
+			"Televisión por cable": 1
+		},
+		"nl": {
+			"Kabeltelevisie": 1
+		}
+	},
+	"Enterprise value": 
+	{
+		"de": {
+			"Enterprise Value": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"taxonomy": 
+	{
+		"de": {
+			"Taxonomie": 1
+		},
+		"es": {
+			"Taxonomía": 1
+		},
+		"nl": {
+			"Taxonomie": 1
+		}
+	},
+	"treasury stock": 
+	{
+		"de": {
+			"Eigene Aktie": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"counterparty": 
+	{
+		"de": {
+			"Kontrahent": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"price": 
+	{
+		"de": {
+			"Preis": 1
+		},
+		"es": {
+			"Precio": 1
+		},
+		"nl": {
+			"Prijs": 1
+		}
+	},
+	"cost of sales method": 
+	{
+		"de": {
+			"Umsatzkostenverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"year end": 
+	{
+		"de": {
+			"Jahresultimo": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting expert": 
+	{
+		"de": {
+			"Buchsachverständiger": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Business valuation": 
+	{
+		"de": {
+		},
+		"es": {
+			"Valuación": 1
+		},
+		"nl": {
+		}
+	},
+	"rebate": 
+	{
+		"de": {
+			"Rabatt": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Korting": 1
+		}
+	},
+	"annual deficit": 
+	{
+		"de": {
+			"Jahresfehlbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"non-controlling interests": 
+	{
+		"de": {
+			"Minderheitsanteile": 1,
+			"Minderheitenanteile": 1,
+			"Anteile anderer Gesellschafter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"certificate from (a) chartered accountant": 
+	{
+		"de": {
+			"Wirtschaftsprüfertestat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business plan": 
+	{
+		"de": {
+			"Geschäftsplan": 1
+		},
+		"es": {
+			"Plan de negocio": 1
+		},
+		"nl": {
+			"Ondernemingsplan": 1
+		}
+	},
+	"health insurance": 
+	{
+		"de": {
+			"Krankenversicherung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Ziektekostenverzekering": 1
+		}
+	},
+	"to recharge": 
+	{
+		"de": {
+			"weiterberechnen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"life insurance": 
+	{
+		"de": {
+			"Lebensversicherung": 1
+		},
+		"es": {
+			"Seguro de personas": 1
+		},
+		"nl": {
+			"Levensverzekering": 1
+		}
+	},
+	"under reserve": 
+	{
+		"de": {
+			"Eingang vorbehalten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to cook the accounts": 
+	{
+		"de": {
+			"die Bücher fälschen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balancing the cash": 
+	{
+		"de": {
+			"Kassenabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Tax deduction": 
+	{
+		"de": {
+			"Steuersubvention": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Aftrekpost": 1
+		}
+	},
+	"debt": 
+	{
+		"de": {
+			"Schulden": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Schulden": 1
+		}
+	},
+	"going concern": 
+	{
+		"de": {
+			"Fortführungsprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"advance payments": 
+	{
+		"de": {
+			"geleistete Anzahlungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Balance sheet": 
+	{
+		"de": {
+			"Bilanz": 1
+		},
+		"es": {
+			"Estado de situación patrimonial": 1
+		},
+		"nl": {
+			"Balans": 1
+		}
+	},
+	"related party disclosures": 
+	{
+		"de": {
+			"Angaben über Beziehungen zu nahestehenden Unternehmen und Personen": 1,
+			"Angaben über Beziehungen zu nahestehenden Personen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accruals and deferrals (on the liability / asset side of the balance sheet)": 
+	{
+		"de": {
+			"(passive / aktive) Rechnungsabgrenzungsposten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Gini coefficient": 
+	{
+		"de": {
+			"Gini-Koeffizient": 1
+		},
+		"es": {
+			"Coeficiente de Gini": 1
+		},
+		"nl": {
+			"Gini-coëfficiënt": 1
+		}
+	},
+	"consolidated financial statement": 
+	{
+		"de": {
+			"Konzernabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"asset ceiling": 
+	{
+		"de": {
+			"Vermögenswert-Höchstgrenze": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Security": 
+	{
+		"de": {
+			"Wertpapier": 1
+		},
+		"es": {
+			"Valor": 1
+		},
+		"nl": {
+			"Effecten": 1
+		}
+	},
+	"to make the figures for sth. seem better than they are": 
+	{
+		"de": {
+			"etw. schönrechnen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"financial services": 
+	{
+		"de": {
+			"Finanzdienstleistung": 1
+		},
+		"es": {
+			"Servicios financieros": 1
+		},
+		"nl": {
+			"Financiële dienstverlening": 1
+		}
+	},
+	"Kingdom of Great Britain": 
+	{
+		"de": {
+			"Königreich Großbritannien": 1
+		},
+		"es": {
+			"Reino de Gran Bretaña": 1
+		},
+		"nl": {
+			"Koninkrijk Groot-Brittannië": 1
+		}
+	},
+	"audit period": 
+	{
+		"de": {
+			"Prüfungszeitraum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fair value measurement": 
+	{
+		"de": {
+			"Marktbewertung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"savings income": 
+	{
+		"de": {
+			"Einkünfte aus Kapitalvermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross operating profit": 
+	{
+		"de": {
+			"Betriebsergebnis vor Verwaltungskosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Surety": 
+	{
+		"de": {
+			"Bürgschaft": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to be taxed under the general arrangements for business taxation": 
+	{
+		"de": {
+			"den allgemeinen Vorschriften für die Unternehmensbesteuerung unterliegen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"residual book value": 
+	{
+		"de": {
+			"Restbuchwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"interest paid": 
+	{
+		"de": {
+			"Zinsaufwendungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Capital surplus": 
+	{
+		"de": {
+			"Kapitalrücklage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income from investments": 
+	{
+		"de": {
+			"Beteiligungsergebnis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting date": 
+	{
+		"de": {
+			"Bilanzstichtag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"corporate bond": 
+	{
+		"de": {
+		},
+		"es": {
+			"Bonos corporativos": 1
+		},
+		"nl": {
+		}
+	},
+	"to balance the books": 
+	{
+		"de": {
+			"die Bücher schließen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Debits and credits": 
+	{
+		"de": {
+			"Soll": 1
+		},
+		"es": {
+			"Débito": 1
+		},
+		"nl": {
+			"Debet": 1
+		}
+	},
+	"date of balance": 
+	{
+		"de": {
+			"Bilanzstichtag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"blocking costs": 
+	{
+		"de": {
+			"Sperrkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"budget analyst": 
+	{
+		"de": {
+			"Controller": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"overdraft facility": 
+	{
+		"de": {
+			"Dispositionskredit": 1,
+			"Kreditlinie": 1,
+			"Überziehungsmöglichkeit": 1,
+			"Überziehungsfazilität": 1,
+			"Dispokredit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"loss carryforward": 
+	{
+		"de": {
+			"Verlustvortrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting guidelines": 
+	{
+		"de": {
+			"Buchführungsrichtlinien": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Bioenergetics": 
+	{
+		"de": {
+			"Bioenergetik": 1
+		},
+		"es": {
+			"Bioenergética": 1
+		},
+		"nl": {
+			"Bio-energetica": 1
+		}
+	},
+	"ore reserve": 
+	{
+		"de": {
+			"Erzreserve": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to balance": 
+	{
+		"de": {
+			"Saldo ziehen": 1,
+			"saldieren": 1,
+			"ausbilanzieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Latin": 
+	{
+		"de": {
+			"Latein": 1
+		},
+		"es": {
+			"Latín": 1
+		},
+		"nl": {
+			"Latijn": 1
+		}
+	},
+	"depreciation below zero": 
+	{
+		"de": {
+			"Abschreibung unter Null": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"near-balance": 
+	{
+		"de": {
+			"beinahe ausgeglichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"International Monetary Fund": 
+	{
+		"de": {
+			"Internationaler Währungsfonds": 1
+		},
+		"es": {
+			"Fondo Monetario Internacional": 1
+		},
+		"nl": {
+			"Internationaal Monetair Fonds": 1
+		}
+	},
+	"permanent income hypothesis": 
+	{
+		"de": {
+			"Permanente Einkommenshypothese": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Republic of China": 
+	{
+		"de": {
+			"Republik China": 1
+		},
+		"es": {
+			"República de China": 1
+		},
+		"nl": {
+			"Republiek China": 1
+		}
+	},
+	"United Arab Emirates": 
+	{
+		"de": {
+			"Vereinigte Arabische Emirate": 1
+		},
+		"es": {
+			"Emiratos Árabes Unidos": 1
+		},
+		"nl": {
+			"Verenigde Arabische Emiraten": 1
+		}
+	},
+	"profit retained": 
+	{
+		"de": {
+			"Bilanzgewinn": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to audit": 
+	{
+		"de": {
+			"Bücher prüfen": 1,
+			"Bücher revidieren": 1,
+			"Bilanzprüfung durchführen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Singapore": 
+	{
+		"de": {
+			"Singapur": 1
+		},
+		"es": {
+			"Singapur": 1
+		},
+		"nl": {
+			"Singapore": 1
+		}
+	},
+	"economies of scale": 
+	{
+		"de": {
+			"Skaleneffekt": 1
+		},
+		"es": {
+			"Economía de escala": 1
+		},
+		"nl": {
+			"Schaalvoordeel": 1
+		}
+	},
+	"equity-financed": 
+	{
+		"de": {
+			"eigenfinanziert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"deductibility": 
+	{
+		"de": {
+			"Abzugsfähigkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"operating costs": 
+	{
+		"de": {
+			"Betriebsausgaben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"invoice": 
+	{
+		"de": {
+			"Rechnung": 1
+		},
+		"es": {
+			"Factura": 1
+		},
+		"nl": {
+			"Factuur": 1
+		}
+	},
+	"inventory log": 
+	{
+		"de": {
+			"Bestandsverlauf": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"News Corporation": 
+	{
+		"de": {
+			"News Corporation": 1
+		},
+		"es": {
+			"News Corporation": 1
+		},
+		"nl": {
+			"News Corporation": 1
+		}
+	},
+	"building": 
+	{
+		"de": {
+			"Gebäude": 1
+		},
+		"es": {
+			"Edificio": 1
+		},
+		"nl": {
+			"Opstal": 1
+		}
+	},
+	"to keep books": 
+	{
+		"de": {
+			"Bücher führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audit series": 
+	{
+		"de": {
+			"Prüfungsreihe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cast": 
+	{
+		"de": {
+			"Saldierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Operating expense": 
+	{
+		"de": {
+			"Betriebskosten": 1
+		},
+		"es": {
+			"Opex": 1
+		},
+		"nl": {
+			"OPEX": 1
+		}
+	},
+	"customs": 
+	{
+		"de": {
+			"Zoll": 1
+		},
+		"es": {
+			"Aduana": 1
+		},
+		"nl": {
+			"Douane": 1
+		}
+	},
+	"deferred taxes": 
+	{
+		"de": {
+			"Steuerlatenzen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"account code structure": 
+	{
+		"de": {
+			"Kalkulationsschema": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"construction contracts": 
+	{
+		"de": {
+			"Fertigungsaufträge": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Quarry": 
+	{
+		"de": {
+			"Steinbruch": 1
+		},
+		"es": {
+			"Cantera": 1
+		},
+		"nl": {
+			"Groeve": 1
+		}
+	},
+	"service concession arrangements": 
+	{
+		"de": {
+			"Dienstleistungskonzessionsvereinbarungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Fair value": 
+	{
+		"de": {
+			"Gerechter Preis": 1
+		},
+		"es": {
+			"Valor razonable": 1
+		},
+		"nl": {
+		}
+	},
+	"Net 30": 
+	{
+		"de": {
+		},
+		"es": {
+			"Net 30": 1
+		},
+		"nl": {
+		}
+	},
+	"certificate of (a) chartered accountant": 
+	{
+		"de": {
+			"Wirtschaftsprüfertestat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"imputed depreciation": 
+	{
+		"de": {
+			"kalkulatorische Abschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Book value": 
+	{
+		"de": {
+			"Buchwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Boekwaarde": 1
+		}
+	},
+	"audit evidence": 
+	{
+		"de": {
+			"Prüfungsinformationen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"license": 
+	{
+		"de": {
+			"Lizenz": 1
+		},
+		"es": {
+			"Licencia": 1
+		},
+		"nl": {
+			"Licentie": 1
+		}
+	},
+	"Wealth#Economic analysis": 
+	{
+		"de": {
+			"Wohlstand": 1
+		},
+		"es": {
+			"Riqueza": 1
+		},
+		"nl": {
+			"Rijkdom": 1
+		}
+	},
+	"net earnings from continuing operations": 
+	{
+		"de": {
+			"Lagebericht (nach US GAAP)": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Going concern": 
+	{
+		"de": {
+			"Fortf%C3%BChrungsprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"initial inventory at the beginning of the year": 
+	{
+		"de": {
+			"Erhöhung des Bestands an unfertigen Erzeugnissen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit": 
+	{
+		"de": {
+			"Soll": 1,
+			"Debet": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"T-account": 
+	{
+		"de": {
+			"T-Konto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Current liability": 
+	{
+		"de": {
+		},
+		"es": {
+			"Pasivo%20circulante": 1
+		},
+		"nl": {
+			"Vlottende%20schulden": 1
+		}
+	},
+	"settlement account": 
+	{
+		"de": {
+			"Abrechnungskonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"pool of costs": 
+	{
+		"de": {
+			"Kostenblock": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"multi-employer plans": 
+	{
+		"de": {
+			"gemeinschaftliche Pensionspläne mehrerer Arbeitgeber": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"ordinary depreciation": 
+	{
+		"de": {
+			"Normalabschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to plow back": 
+	{
+		"de": {
+			"thesaurieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Tool": 
+	{
+		"de": {
+			"Werkzeug": 1
+		},
+		"es": {
+			"Herramienta": 1
+		},
+		"nl": {
+			"Gereedschap": 1
+		}
+	},
+	"audited accounts": 
+	{
+		"de": {
+			"testierter Abschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"means of production": 
+	{
+		"de": {
+			"Produktionsmittel": 1
+		},
+		"es": {
+			"Medios de producción": 1
+		},
+		"nl": {
+		}
+	},
+	"calendar year": 
+	{
+		"de": {
+			"Kalenderjahr": 1
+		},
+		"es": {
+			"Año natural": 1
+		},
+		"nl": {
+			"Kalenderjaar": 1
+		}
+	},
+	"cash book": 
+	{
+		"de": {
+			"Kassenbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit voucher": 
+	{
+		"de": {
+			"Gutschriftsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Money market": 
+	{
+		"de": {
+			"Geldmarkt": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Geldmarkt": 1
+		}
+	},
+	"auditor's report": 
+	{
+		"de": {
+			"Prüfungsbericht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"sale on deferred terms": 
+	{
+		"de": {
+			"Zielverkauf": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"production cost center": 
+	{
+		"de": {
+			"Fertigungskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"net asset value": 
+	{
+		"de": {
+			"Substanzwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"group accounting": 
+	{
+		"de": {
+			"Konzernrechnungswesen": 1,
+			"Gruppenrechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to bill": 
+	{
+		"de": {
+			"fakturieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross revenue": 
+	{
+		"de": {
+			"Bruttoumsatz": 1,
+			"Bruttoeinnahmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"land reclamation": 
+	{
+		"de": {
+			"Landgewinnung": 1
+		},
+		"es": {
+			"Tierras ganadas al mar": 1
+		},
+		"nl": {
+			"Landwinning": 1
+		}
+	},
+	"contingent assets": 
+	{
+		"de": {
+			"Eventualforderungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"write-downs": 
+	{
+		"de": {
+			"Abschreibungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to recognise as expenses": 
+	{
+		"de": {
+			"als Aufwand erfassen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"rights issue": 
+	{
+		"de": {
+			"Bezugsrechtsemission": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Claimemissie": 1
+		}
+	},
+	"cash audit": 
+	{
+		"de": {
+			"Kassenrevision": 1,
+			"Kassenprüfung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Bureau of Economic Analysis": 
+	{
+		"de": {
+		},
+		"es": {
+			"Oficina de Análisis Económico": 1
+		},
+		"nl": {
+		}
+	},
+	"Consolidation": 
+	{
+		"de": {
+			"Konsolidierung": 1
+		},
+		"es": {
+			"Consolidaci%C3%B3n%20de%20estados%20financieros": 1
+		},
+		"nl": {
+		}
+	},
+	"creditor": 
+	{
+		"de": {
+			"Gläubiger": 1
+		},
+		"es": {
+			"Acreedor": 1
+		},
+		"nl": {
+			"Crediteur": 1
+		}
+	},
+	"total cost": 
+	{
+		"de": {
+			"Gesamtkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"additions": 
+	{
+		"de": {
+			"Zugänge": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"falsification of a balance sheet": 
+	{
+		"de": {
+			"Bilanzfälschung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"barter": 
+	{
+		"de": {
+			"Tauschhandel": 1
+		},
+		"es": {
+			"Trueque": 1
+		},
+		"nl": {
+			"Ruilhandel": 1
+		}
+	},
+	"biology": 
+	{
+		"de": {
+			"Biologie": 1
+		},
+		"es": {
+			"Biología": 1
+		},
+		"nl": {
+			"Biologie": 1
+		}
+	},
+	"administrative accounting": 
+	{
+		"de": {
+			"Geschäftsbuchhaltung": 1,
+			"Finanzbuchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"assets accounting system": 
+	{
+		"de": {
+			"Anlagenbuchhaltungssystem": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to accumulate": 
+	{
+		"de": {
+			"thesaurieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"net income for the year": 
+	{
+		"de": {
+			"Nettogewinn aus der laufenden Geschäftstätigkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Administration of business": 
+	{
+		"de": {
+			"Verwaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Bedrijfskunde": 1
+		}
+	},
+	"United States dollar": 
+	{
+		"de": {
+			"US-Dollar": 1
+		},
+		"es": {
+			"Dólar de los Estados Unidos": 1
+		},
+		"nl": {
+			"Amerikaanse dollar": 1
+		}
+	},
+	"improper accounting": 
+	{
+		"de": {
+			"nicht ordnungsgemäße Buchführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"default currency": 
+	{
+		"de": {
+			"Stammwährung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Suggested retail price": 
+	{
+		"de": {
+			"Unverbindliche Preisempfehlung": 1
+		},
+		"es": {
+			"Precio recomendado de venta al público": 1
+		},
+		"nl": {
+		}
+	},
+	"cheque": 
+	{
+		"de": {
+			"Scheck": 1
+		},
+		"es": {
+			"Cheque": 1
+		},
+		"nl": {
+			"Cheque": 1
+		}
+	},
+	"consolidated balance-sheet": 
+	{
+		"de": {
+			"Konzernbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to write down": 
+	{
+		"de": {
+			"abschreiben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"changes in inventories and work performed by the enterprise and capitalised": 
+	{
+		"de": {
+			"Bestandsveränderungen und andere aktivierte Eigenleistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"direct expenses": 
+	{
+		"de": {
+			"direkte Kosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"nominal interest yield": 
+	{
+		"de": {
+			"Nominalverzinsung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"internally produced and capitalised assets": 
+	{
+		"de": {
+			"Jahresanfangsbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Egypt": 
+	{
+		"de": {
+			"Ägypten": 1
+		},
+		"es": {
+			"Egipto": 1
+		},
+		"nl": {
+			"Egypte": 1
+		}
+	},
+	"corporate account": 
+	{
+		"de": {
+			"Gesellschaftskonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United Kingdom": 
+	{
+		"de": {
+			"Vereinigtes Königreich": 1
+		},
+		"es": {
+			"Reino Unido": 1
+		},
+		"nl": {
+			"Verenigd Koninkrijk": 1
+		}
+	},
+	"cushion": 
+	{
+		"de": {
+			"Reserve": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"federal funds rate": 
+	{
+		"de": {
+			"Federal Funds Rate": 1
+		},
+		"es": {
+			"Federal funds rate": 1
+		},
+		"nl": {
+		}
+	},
+	"accounting policies": 
+	{
+		"de": {
+			"Rechnungslegungsprinzipien": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"planned balance sheet": 
+	{
+		"de": {
+			"Planbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Introductory Act to the German Commercial Code": 
+	{
+		"de": {
+			"aktivierte Eigenleistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Dot-com company": 
+	{
+		"de": {
+			"Dotcom": 1
+		},
+		"es": {
+			"Empresa punto com": 1
+		},
+		"nl": {
+		}
+	},
+	"intermediate consumption": 
+	{
+		"de": {
+			"Vorleistung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"society": 
+	{
+		"de": {
+			"Gesellschaft": 1
+		},
+		"es": {
+			"Sociedad": 1
+		},
+		"nl": {
+			"Maatschappij": 1
+		}
+	},
+	"Mergers and acquisitions": 
+	{
+		"de": {
+			"Mergers & Acquisitions": 1
+		},
+		"es": {
+			"Fusiones y adquisiciones": 1
+		},
+		"nl": {
+			"Concentratie": 1
+		}
+	},
+	"Associate company": 
+	{
+		"de": {
+			"Assoziiertes Unternehmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"net worth": 
+	{
+		"de": {
+			"Reinvermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Nettowaarde": 1
+		}
+	},
+	"netting": 
+	{
+		"de": {
+			"Netting": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"weighted average cost of capital": 
+	{
+		"de": {
+			"abzugsfähige Vorsteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income statement": 
+	{
+		"de": {
+			"Gewinn- und Verlustrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"on the revenue side": 
+	{
+		"de": {
+			"auf der Einnahmenseite": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"file management": 
+	{
+		"de": {
+			"Aktenführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"book keeper": 
+	{
+		"de": {
+			"Buchhalter": 1,
+			"Buchhalterin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Insurance law": 
+	{
+		"de": {
+			"Versicherungsrecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Lorenz curve": 
+	{
+		"de": {
+			"Lorenz-Kurve": 1
+		},
+		"es": {
+			"Curva de Lorenz": 1
+		},
+		"nl": {
+			"Lorenz-curve": 1
+		}
+	},
+	"profit": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Bedrijfsresultaat": 1
+		}
+	},
+	"Gross fixed capital formation": 
+	{
+		"de": {
+			"Bruttoinvestition": 1
+		},
+		"es": {
+			"Formación bruta de capital fijo": 1
+		},
+		"nl": {
+		}
+	},
+	"remittance advice": 
+	{
+		"de": {
+			"Avis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Software": 
+	{
+		"de": {
+			"Software": 1
+		},
+		"es": {
+			"Software": 1
+		},
+		"nl": {
+			"Software": 1
+		}
+	},
+	"EBITDAR": 
+	{
+		"de": {
+			"EBITDAR": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"capital market oriented": 
+	{
+		"de": {
+			"kapitalmarktorientiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reinvestment funds": 
+	{
+		"de": {
+			"thesaurierende Fonds": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"consolidated accounts": 
+	{
+		"de": {
+			"Konzernabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"consolidated balance sheet": 
+	{
+		"de": {
+			"Gemeinschaftsbilanz": 1,
+			"konsolidierte Bilanz": 1,
+			"Konzernbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Sweden": 
+	{
+		"de": {
+			"Schweden": 1
+		},
+		"es": {
+			"Suecia": 1
+		},
+		"nl": {
+			"Zweden": 1
+		}
+	},
+	"United States federal budget": 
+	{
+		"de": {
+			"Haushaltsplan der Vereinigten Staaten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Revaluation": 
+	{
+		"de": {
+		},
+		"es": {
+			"Revaluación": 1
+		},
+		"nl": {
+			"Revaluatie": 1
+		}
+	},
+	"outstanding debt": 
+	{
+		"de": {
+			"offene Forderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"general journal": 
+	{
+		"de": {
+		},
+		"es": {
+			"Libro diario": 1
+		},
+		"nl": {
+		}
+	},
+	"business": 
+	{
+		"de": {
+			"Unternehmen": 1
+		},
+		"es": {
+			"Negocio": 1
+		},
+		"nl": {
+			"Bedrijfsleven": 1
+		}
+	},
+	"raw material": 
+	{
+		"de": {
+			"Rohstoff": 1
+		},
+		"es": {
+			"Materia prima": 1
+		},
+		"nl": {
+			"Grondstof": 1
+		}
+	},
+	"accounts payable": 
+	{
+		"de": {
+			"Verbindlichkeiten": 1
+		},
+		"es": {
+			"Cuenta por pagar": 1
+		},
+		"nl": {
+		}
+	},
+	"contingent asset": 
+	{
+		"de": {
+			"Eventualforderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Paul the Apostle": 
+	{
+		"de": {
+			"Paulus von Tarsus": 1
+		},
+		"es": {
+			"Pablo de Tarso": 1
+		},
+		"nl": {
+			"Paulus": 1
+		}
+	},
+	"statute": 
+	{
+		"de": {
+			"Statut": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Government budget deficit": 
+	{
+		"de": {
+			"Haushaltssaldo": 1
+		},
+		"es": {
+			"Déficit presupuestario": 1
+		},
+		"nl": {
+			"Begrotingstekort": 1
+		}
+	},
+	"Stock dilution": 
+	{
+		"de": {
+			"Kapitalverwässerung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounts received in advance": 
+	{
+		"de": {
+			"transitorische Passiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"administration cost center": 
+	{
+		"de": {
+			"Verwaltungskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"governmental accounting": 
+	{
+		"de": {
+			"Kameralistik": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"differential amount": 
+	{
+		"de": {
+			"Differenzbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting of ...": 
+	{
+		"de": {
+			"Verrechnung von ...": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"discount for cash": 
+	{
+		"de": {
+			"Kassenskonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Emergency Economic Stabilization Act of 2008": 
+	{
+		"de": {
+			"Emergency Economic Stabilization Act": 1
+		},
+		"es": {
+			"Ley de Estabilización Económica de Urgencia de 2008": 1
+		},
+		"nl": {
+			"Amerikaans economisch reddingsplan 2008": 1
+		}
+	},
+	"net loss": 
+	{
+		"de": {
+			"Bilanzverlust": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"net working capital": 
+	{
+		"de": {
+			"Nettoumlaufvermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"long-term investments": 
+	{
+		"de": {
+			"langfristige Finanzanlagen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Netherlands": 
+	{
+		"de": {
+			"Niederlande": 1
+		},
+		"es": {
+			"Países Bajos": 1
+		},
+		"nl": {
+			"Nederland": 1
+		}
+	},
+	"real accounts": 
+	{
+		"de": {
+			"Bestandskonten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reversing (of) entry": 
+	{
+		"de": {
+			"Stornierungsbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Automated teller machine": 
+	{
+		"de": {
+			"Geldautomat": 1
+		},
+		"es": {
+			"Cajero automático": 1
+		},
+		"nl": {
+			"Geldautomaat": 1
+		}
+	},
+	"mining": 
+	{
+		"de": {
+			"Bergbau": 1
+		},
+		"es": {
+			"Minería": 1
+		},
+		"nl": {
+			"Mijnbouw": 1
+		}
+	},
+	"accounting document": 
+	{
+		"de": {
+			"Buchungsunterlage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"excess reserves": 
+	{
+		"de": {
+			"außerordentliche Reserven": 1,
+			"Sonderrücklagen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Market liquidity": 
+	{
+		"de": {
+			"Liquidität": 1
+		},
+		"es": {
+			"Liquidez": 1
+		},
+		"nl": {
+			"Liquiditeit": 1
+		}
+	},
+	"order ID": 
+	{
+		"de": {
+			"Auftragskennzeichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bad debt charges": 
+	{
+		"de": {
+			"Wertberichtigungen auf zweifelhafte Forderungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"non-operating asset": 
+	{
+		"de": {
+			"nicht betriebsnotwendiges Vermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fair value": 
+	{
+		"de": {
+			"beizulegender Zeitwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to charge against income": 
+	{
+		"de": {
+			"ergebniswirksam buchen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"liabilities side": 
+	{
+		"de": {
+			"Passivseite": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to plough back": 
+	{
+		"de": {
+			"thesaurieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"underage": 
+	{
+		"de": {
+			"Fehlbetrag": 1,
+			"Fehlmenge": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"red": 
+	{
+		"de": {
+			"rote Zahlen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"operational accounting": 
+	{
+		"de": {
+			"betriebliches Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"advances received": 
+	{
+		"de": {
+			"erhaltene Anzahlungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"principle of cost causation": 
+	{
+		"de": {
+			"Grundsatz der Kostenverursachung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"annual shortfall": 
+	{
+		"de": {
+			"Jahresfehlbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fixed capital": 
+	{
+		"de": {
+			"Fixes Kapital": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"clearing cost center": 
+	{
+		"de": {
+			"Verrechnungskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash method": 
+	{
+		"de": {
+			"Einnahme-Überschuss-Rechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Rupert Murdoch": 
+	{
+		"de": {
+			"Rupert Murdoch": 1
+		},
+		"es": {
+			"Rupert Murdoch": 1
+		},
+		"nl": {
+			"Rupert Murdoch": 1
+		}
+	},
+	"Legal personality": 
+	{
+		"de": {
+			"Juristische Person": 1
+		},
+		"es": {
+			"Persona jurídica": 1
+		},
+		"nl": {
+			"Rechtspersoon": 1
+		}
+	},
+	"write-off": 
+	{
+		"de": {
+			"Abschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Cost curve": 
+	{
+		"de": {
+			"Kostenfunktion": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accrual accounting": 
+	{
+		"de": {
+			"Periodenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost over-absorption": 
+	{
+		"de": {
+			"Kostenüberdeckung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Greece": 
+	{
+		"de": {
+			"Griechenland": 1
+		},
+		"es": {
+			"Grecia": 1
+		},
+		"nl": {
+			"Griekenland": 1
+		}
+	},
+	"to keep sb.'s accounts": 
+	{
+		"de": {
+			"jdm. die Bücher führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"stock dilution": 
+	{
+		"de": {
+			"Kapitalverwässerung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accountant": 
+	{
+		"de": {
+			"Buchhalter": 1,
+			"Steuerberater": 1,
+			"Bilanzbuchhalter": 1,
+			"Buchhalterin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"petroleum": 
+	{
+		"de": {
+			"Erdöl": 1
+		},
+		"es": {
+			"Petróleo": 1
+		},
+		"nl": {
+			"Aardolie": 1
+		}
+	},
+	"self-fulfilling prophecy": 
+	{
+		"de": {
+			"Selbsterfüllende Prophezeiung": 1
+		},
+		"es": {
+			"Profecía autocumplida": 1
+		},
+		"nl": {
+			"Zelfbevestigende voorspelling": 1
+		}
+	},
+	"at the enacted tax rate in effect": 
+	{
+		"de": {
+			"zum geltenden gesetzlichen Steuersatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Operating margin": 
+	{
+		"de": {
+			"Umsatzrendite": 1
+		},
+		"es": {
+			"Margen de beneficio": 1
+		},
+		"nl": {
+		}
+	},
+	"import": 
+	{
+		"de": {
+			"Import": 1
+		},
+		"es": {
+			"Importación": 1
+		},
+		"nl": {
+			"Invoer": 1
+		}
+	},
+	" amortization and rent": 
+	{
+		"de": {
+			" Abschreibungen auf immaterielle Vermögensgegenstände und Leasingkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"product": 
+	{
+		"de": {
+			"Produkt": 1
+		},
+		"es": {
+			"Producto": 1
+		},
+		"nl": {
+			"Product": 1
+		}
+	},
+	"purchase requisition processing status": 
+	{
+		"de": {
+			"Bestellanforderungsbearbeitungsstatus": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balancing": 
+	{
+		"de": {
+			"Abstimmung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"in debit": 
+	{
+		"de": {
+			"im Soll": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"direct costing": 
+	{
+		"de": {
+			"einstufige Deckungsbeitragsrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"prime rate": 
+	{
+		"de": {
+			"Leitzins": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"International Accounting Standards Board": 
+	{
+		"de": {
+			"International Accounting Standards Board": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"International Accounting Standards Board": 1
+		}
+	},
+	"contingencies": 
+	{
+		"de": {
+			"Eventualverbindlichkeiten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"share-based compensation": 
+	{
+		"de": {
+			"aktienbasierte Vergütung": 1,
+			"anteilsbasierte Vergütung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Hong Kong": 
+	{
+		"de": {
+			"Hongkong": 1
+		},
+		"es": {
+			"Hong Kong": 1
+		},
+		"nl": {
+			"Hongkong": 1
+		}
+	},
+	"Pakistan": 
+	{
+		"de": {
+			"Pakistan": 1
+		},
+		"es": {
+			"Pakistán": 1
+		},
+		"nl": {
+			"Pakistan": 1
+		}
+	},
+	"expense-based": 
+	{
+		"de": {
+			"aufwandsgleich": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"par value": 
+	{
+		"de": {
+			"Pari": 1
+		},
+		"es": {
+			"Valor nominal": 1
+		},
+		"nl": {
+			"Nominale waarde": 1
+		}
+	},
+	"itemized deduction": 
+	{
+		"de": {
+			"Einzelabzug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"G-20 major economies": 
+	{
+		"de": {
+			"Gruppe der zwanzig wichtigsten Industrie- und Schwellenländer": 1
+		},
+		"es": {
+			"Grupo de los 20": 1
+		},
+		"nl": {
+			"G20": 1
+		}
+	},
+	"Parliament of Australia": 
+	{
+		"de": {
+			"Australisches Parlament": 1
+		},
+		"es": {
+			"Parlamento de Australia": 1
+		},
+		"nl": {
+		}
+	},
+	"insurance policy": 
+	{
+		"de": {
+			"Versicherungsschein": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Verzekeringspolis": 1
+		}
+	},
+	"liquidation": 
+	{
+		"de": {
+			"Liquidation": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Liquidatie": 1
+		}
+	},
+	"subsidiary": 
+	{
+		"de": {
+			"Filiale": 1
+		},
+		"es": {
+			"Filial": 1
+		},
+		"nl": {
+			"Dochteronderneming": 1
+		}
+	},
+	"Federal government of the United States": 
+	{
+		"de": {
+			"Bundesregierung": 1
+		},
+		"es": {
+			"Gobierno federal de los Estados Unidos": 1
+		},
+		"nl": {
+			"Overheid van de Verenigde Staten": 1
+		}
+	},
+	"Earnings before interest, taxes, depreciation and amortization": 
+	{
+		"de": {
+			"EBITDA": 1
+		},
+		"es": {
+			"EBITDA": 1
+		},
+		"nl": {
+			"EBITDA": 1
+		}
+	},
+	"fee": 
+	{
+		"de": {
+			"Gebühr": 1
+		},
+		"es": {
+			"Tasa": 1
+		},
+		"nl": {
+		}
+	},
+	"Pro forma": 
+	{
+		"de": {
+			"Pro%20forma": 1
+		},
+		"es": {
+			"Pro-forma": 1
+		},
+		"nl": {
+		}
+	},
+	"annual amount": 
+	{
+		"de": {
+			"Periodenbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accrued payroll account": 
+	{
+		"de": {
+			"Konto zur Periodenabgrenzung von Löhnen und Gehältern": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Externality": 
+	{
+		"de": {
+			"Externer Effekt": 1
+		},
+		"es": {
+			"Externalidad": 1
+		},
+		"nl": {
+			"Externaliteit": 1
+		}
+	},
+	"overhead expenses": 
+	{
+		"de": {
+			"Gemeinkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"budget ceiling": 
+	{
+		"de": {
+			"Haushaltsplafond": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax accountant": 
+	{
+		"de": {
+			"Steuerberater": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"deferred tax": 
+	{
+		"de": {
+			"Latente Steuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Latente belastingschuld": 1
+		}
+	},
+	"closing inventory": 
+	{
+		"de": {
+			"Endbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Australian Bureau of Statistics": 
+	{
+		"de": {
+			"Australian Bureau of Statistics": 1
+		},
+		"es": {
+			"Australian Bureau of Statistics": 1
+		},
+		"nl": {
+		}
+	},
+	"Tesco": 
+	{
+		"de": {
+			"Tesco": 1
+		},
+		"es": {
+			"Tesco": 1
+		},
+		"nl": {
+			"Tesco": 1
+		}
+	},
+	"liabilities": 
+	{
+		"de": {
+			"Passiven": 1,
+			"Schuldverhältnisse": 1,
+			"Passiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"projected unit credit method": 
+	{
+		"de": {
+			"Anwartschaftsbarwertverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax audit notice": 
+	{
+		"de": {
+			"Prüfungsanordnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Academic term": 
+	{
+		"de": {
+			"Semester": 1
+		},
+		"es": {
+			"Año escolar": 1
+		},
+		"nl": {
+			"Semester": 1
+		}
+	},
+	"by deducting": 
+	{
+		"de": {
+			"unter Abzug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"transitory items": 
+	{
+		"de": {
+			"transitorische Posten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"billing procedure": 
+	{
+		"de": {
+			"Abrechnungsverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"low value fixed assets": 
+	{
+		"de": {
+			"geringwertige Vermögensgegenstände des Anlagevermögens": 1,
+			"geringwertige Anlagegüter": 1,
+			"geringwertige Wirtschaftsgüter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"American Institute of Certified Public Accountants": 
+	{
+		"de": {
+			"American Institute of Certified Public Accountants": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"recording of orders": 
+	{
+		"de": {
+			"Auftragserfassung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Total loss": 
+	{
+		"de": {
+			"Totalschaden": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Total loss": 1
+		}
+	},
+	"operating segments": 
+	{
+		"de": {
+			"operative Segmente": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tender floating period": 
+	{
+		"de": {
+			"Angebotsfrist": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"lowering interest rates": 
+	{
+		"de": {
+			"Zinssenkung": 1,
+			"Zinsabbau": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"realization principle": 
+	{
+		"de": {
+			"Realisationsprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"wealth tax": 
+	{
+		"de": {
+			"Reichensteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"appraiser": 
+	{
+		"de": {
+			"Gutachter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit entry": 
+	{
+		"de": {
+			"Belastungsbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Collateral": 
+	{
+		"de": {
+			"Kreditsicherung": 1
+		},
+		"es": {
+			"Garantía": 1
+		},
+		"nl": {
+		}
+	},
+	"accounts clerk": 
+	{
+		"de": {
+			"Buchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"House of Commons of the United Kingdom": 
+	{
+		"de": {
+			"House of Commons": 1
+		},
+		"es": {
+			"Cámara de los Comunes del Reino Unido": 1
+		},
+		"nl": {
+			"Lagerhuis": 1
+		}
+	},
+	"distribution of non-cash assets to owners": 
+	{
+		"de": {
+			"Sachausschüttungen an Eigentümer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Provision": 
+	{
+		"de": {
+			"R%C3%BCckstellung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Voorzieningen%20%28boekhouden%29": 1
+		}
+	},
+	"generally accepted accounting principles": 
+	{
+		"de": {
+			"Grundsätze ordnungsmäßiger Buchführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Internal Revenue Code": 
+	{
+		"de": {
+			"Internal Revenue Code": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"New Zealand": 
+	{
+		"de": {
+			"Neuseeland": 1
+		},
+		"es": {
+			"Nueva Zelanda": 1
+		},
+		"nl": {
+			"Nieuw-Zeeland": 1
+		}
+	},
+	"Current asset": 
+	{
+		"de": {
+			"Umlaufverm%C3%B6gen": 1
+		},
+		"es": {
+			"Activo%20circulante": 1
+		},
+		"nl": {
+			"Vlottende%20activa": 1
+		}
+	},
+	"return on assets": 
+	{
+		"de": {
+			"Vermögensrendite": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"forestry assets": 
+	{
+		"de": {
+			"forstwirtschaftliches Vermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business case": 
+	{
+		"de": {
+			"Business Case": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Businesscase": 1
+		}
+	},
+	"share premium reserve": 
+	{
+		"de": {
+			"Agiorücklage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"late charge": 
+	{
+		"de": {
+			"Verspätungszuschlag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"university": 
+	{
+		"de": {
+			"Universität": 1
+		},
+		"es": {
+			"Universidad": 1
+		},
+		"nl": {
+			"Universiteit": 1
+		}
+	},
+	"implicit costs": 
+	{
+		"de": {
+			"kalkulatorische Kosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"auditor": 
+	{
+		"de": {
+			"Revisor": 1,
+			"Wirtschaftsprüfer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"mortgage bank": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Hypotheekbank": 1
+		}
+	},
+	"capital": 
+	{
+		"de": {
+			"Kapital": 1
+		},
+		"es": {
+			"Capital": 1
+		},
+		"nl": {
+			"Kapitaal": 1
+		}
+	},
+	"to invoice": 
+	{
+		"de": {
+			"fakturieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"off-balance-sheet financing": 
+	{
+		"de": {
+			"bilanzexterne Finanzierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Film": 
+	{
+		"de": {
+			"Film": 1
+		},
+		"es": {
+			"Película": 1
+		},
+		"nl": {
+			"Film": 1
+		}
+	},
+	"non-interest-bearing liabilities": 
+	{
+		"de": {
+			"Abzugskapital": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"paid special leave": 
+	{
+		"de": {
+			"bezahlter Sonderurlaub": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Old Style and New Style dates": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Old Style en New Style": 1
+		}
+	},
+	"Revenue recognition": 
+	{
+		"de": {
+			"Revenue Recognition": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"annual auditor": 
+	{
+		"de": {
+			"Abschlussprüfer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"internal transfer pricing system": 
+	{
+		"de": {
+			"innerbetriebliche / interne Leistungsverrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"limited audit": 
+	{
+		"de": {
+			"eingeschränkte Revision": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"billing procedures": 
+	{
+		"de": {
+			"Abrechnungsverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to overstate": 
+	{
+		"de": {
+			"überbewerten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"lowering the interest rate": 
+	{
+		"de": {
+			"Senkung des Zinssatzes": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"interest on permanent debt(s)": 
+	{
+		"de": {
+			"Dauerschuldzinsen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Foreign direct investment": 
+	{
+		"de": {
+			"Direktinvestition": 1
+		},
+		"es": {
+			"Inversión extranjera directa": 1
+		},
+		"nl": {
+			"Directe buitenlandse investeringen": 1
+		}
+	},
+	"contract": 
+	{
+		"de": {
+			"Vertrag": 1
+		},
+		"es": {
+			"Contrato": 1
+		},
+		"nl": {
+			"Overeenkomst": 1
+		}
+	},
+	"management accounting": 
+	{
+		"de": {
+			"Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"New Jersey": 
+	{
+		"de": {
+			"New Jersey": 1
+		},
+		"es": {
+			"Nueva Jersey": 1
+		},
+		"nl": {
+			"New Jersey": 1
+		}
+	},
+	"biometrics": 
+	{
+		"de": {
+			"Biometrie": 1
+		},
+		"es": {
+			"Biometría": 1
+		},
+		"nl": {
+			"Biometrie": 1
+		}
+	},
+	"entered": 
+	{
+		"de": {
+			"verbucht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial transaction": 
+	{
+		"de": {
+			"Transaktion": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Arrangements between railroads": 
+	{
+		"de": {
+			"Streckennutzungsrecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Deposit account": 
+	{
+		"de": {
+			"Bankguthaben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"depreciation period": 
+	{
+		"de": {
+			"Abschreibungszeitraum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"natural resource": 
+	{
+		"de": {
+			"Natürliche Ressource": 1
+		},
+		"es": {
+			"Recurso natural": 1
+		},
+		"nl": {
+			"Natuurlijke hulpbron": 1
+		}
+	},
+	"production costs": 
+	{
+		"de": {
+			"Herstellungsgemeinkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"recovery right": 
+	{
+		"de": {
+			"Besserungsrecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"parliament": 
+	{
+		"de": {
+			"Parlament": 1
+		},
+		"es": {
+			"Parlamento": 1
+		},
+		"nl": {
+			"Parlement": 1
+		}
+	},
+	"Point of sale": 
+	{
+		"de": {
+			"Kassenarbeitsplatz": 1
+		},
+		"es": {
+			"Terminal punto de venta": 1
+		},
+		"nl": {
+		}
+	},
+	"Mark-to-market accounting": 
+	{
+		"de": {
+			"Mark to market": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"allowance for doubtful accounts": 
+	{
+		"de": {
+			"Wertberichtigung für dubiose Konten": 1,
+			"Wertberichtigung auf zweifelhafte Forderungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Parliament of Canada": 
+	{
+		"de": {
+			"Parlament von Kanada": 1
+		},
+		"es": {
+			"Parlamento de Canadá": 1
+		},
+		"nl": {
+			"Parlement van Canada": 1
+		}
+	},
+	"Professional association": 
+	{
+		"de": {
+			"Standesvertretung": 1
+		},
+		"es": {
+			"Colegio profesional": 1
+		},
+		"nl": {
+			"Beroepsorganisatie": 1
+		}
+	},
+	"balance of accounts": 
+	{
+		"de": {
+			"Bilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accumulated depreciation": 
+	{
+		"de": {
+			"kumulierte Abschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"internally produced and capitalized assets": 
+	{
+		"de": {
+			"aktivierte Eigenleistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"earnings after tax": 
+	{
+		"de": {
+			"Ergebnis nach Steuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"government debt": 
+	{
+		"de": {
+			"Staatsverschuldung": 1
+		},
+		"es": {
+			"Deuda pública": 1
+		},
+		"nl": {
+			"Staatsschuld": 1
+		}
+	},
+	"Polder": 
+	{
+		"de": {
+			"Koog": 1
+		},
+		"es": {
+			"Pólder": 1
+		},
+		"nl": {
+			"Polder": 1
+		}
+	},
+	"straight-line depreciation": 
+	{
+		"de": {
+			"lineare Abschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"advertising": 
+	{
+		"de": {
+			"Werbung": 1
+		},
+		"es": {
+			"Publicidad": 1
+		},
+		"nl": {
+			"Reclame": 1
+		}
+	},
+	"Federal Deposit Insurance Corporation": 
+	{
+		"de": {
+			"Federal Deposit Insurance Corporation": 1
+		},
+		"es": {
+			"Corporación Federal de Seguro de Depósitos": 1
+		},
+		"nl": {
+			"Federal Deposit Insurance Corporation": 1
+		}
+	},
+	"assets": 
+	{
+		"de": {
+			"Guthaben": 1,
+			"Aktiva": 1,
+			"Aktiven": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Tax": 
+	{
+		"de": {
+			"Steuer": 1
+		},
+		"es": {
+			"Impuesto": 1
+		},
+		"nl": {
+			"Belasting": 1
+		}
+	},
+	"construction": 
+	{
+		"de": {
+			"Bauausführung": 1
+		},
+		"es": {
+			"Construcción": 1
+		},
+		"nl": {
+			"Bouw": 1
+		}
+	},
+	"India": 
+	{
+		"de": {
+			"Indien": 1
+		},
+		"es": {
+			"India": 1
+		},
+		"nl": {
+			"India": 1
+		}
+	},
+	"pooling-of-interest method": 
+	{
+		"de": {
+			"Interessenzusammenführungsmethode": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Outline of industrial organization": 
+	{
+		"de": {
+			"Produktion": 1
+		},
+		"es": {
+			"Producción": 1
+		},
+		"nl": {
+			"Productie": 1
+		}
+	},
+	"investments in associates": 
+	{
+		"de": {
+			"Anteile an assoziierten Unternehmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Notes to financial statements": 
+	{
+		"de": {
+			"Anhang": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"pre-calculation": 
+	{
+		"de": {
+			"Vorkalkulation": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"owner's equity": 
+	{
+		"de": {
+			"Eigenkapital": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"General ledger": 
+	{
+		"de": {
+			"Buchführung#Hauptbuch": 1
+		},
+		"es": {
+			"Libro mayor": 1
+		},
+		"nl": {
+			"Grootboek": 1
+		}
+	},
+	"trial balance": 
+	{
+		"de": {
+			"Zwischenberichterstattung#Zwischenberichterstattung und internes Berichtswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"special loss account": 
+	{
+		"de": {
+			"Sonderverlustkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit risk": 
+	{
+		"de": {
+			"Kreditrisiko": 1
+		},
+		"es": {
+			"Riesgo de crédito": 1
+		},
+		"nl": {
+			"Kredietrisico": 1
+		}
+	},
+	"emphasis of matter": 
+	{
+		"de": {
+			"Kernfassung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"after-tax earnings": 
+	{
+		"de": {
+			"Nachsteuergewinn": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Liquidation": 
+	{
+		"de": {
+			"Liquidation": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Liquidatie": 1
+		}
+	},
+	"Paul Volcker": 
+	{
+		"de": {
+			"Paul Volcker": 1
+		},
+		"es": {
+			"Paul Volcker": 1
+		},
+		"nl": {
+			"Paul Volcker": 1
+		}
+	},
+	"antibiotic resistance": 
+	{
+		"de": {
+			"Antibiotikum-Resistenz": 1
+		},
+		"es": {
+			"Resistencia a antibióticos": 1
+		},
+		"nl": {
+			"Resistentie tegen antibiotica": 1
+		}
+	},
+	"MSNBC": 
+	{
+		"de": {
+			"MSNBC": 1
+		},
+		"es": {
+			"MSNBC": 1
+		},
+		"nl": {
+			"MSNBC": 1
+		}
+	},
+	"ordinary commercial accounting principles": 
+	{
+		"de": {
+			"Grundsätze ordnungsgemäßer kaufmännischer Buchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Manmohan Singh": 
+	{
+		"de": {
+			"Manmohan Singh": 1
+		},
+		"es": {
+			"Manmohan Singh": 1
+		},
+		"nl": {
+			"Manmohan Singh": 1
+		}
+	},
+	"President of the United States": 
+	{
+		"de": {
+			"Präsident der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Presidente de los Estados Unidos": 1
+		},
+		"nl": {
+			"President van de Verenigde Staten": 1
+		}
+	},
+	"extinguishing financial liabilities with equity instruments": 
+	{
+		"de": {
+			"Tilgung finanzieller Verbindlichkeiten durch Eigenkapitalinstrumente": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Annuity": 
+	{
+		"de": {
+			"Annuität": 1
+		},
+		"es": {
+			"Anualidad": 1
+		},
+		"nl": {
+			"Annuïteit": 1
+		}
+	},
+	"bond": 
+	{
+		"de": {
+			"Verzinsliches Wertpapier": 1
+		},
+		"es": {
+			"Bono": 1
+		},
+		"nl": {
+			"Obligatie": 1
+		}
+	},
+	"collateral haircut": 
+	{
+		"de": {
+			"Sicherheitsabschlag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"goods account": 
+	{
+		"de": {
+			"Warenkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"relevant for billing": 
+	{
+		"de": {
+			"fakturarelevant": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"opportunity cost": 
+	{
+		"de": {
+			"Opportunitätskosten": 1
+		},
+		"es": {
+			"Coste de oportunidad": 1
+		},
+		"nl": {
+			"Alternatieve kosten": 1
+		}
+	},
+	"insured benefits": 
+	{
+		"de": {
+			"versicherte Leistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"statement of changes in equity": 
+	{
+		"de": {
+			"Eigenkapitalnachweis": 1,
+			"Mehr-Weniger-Rechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Germany": 
+	{
+		"de": {
+			"Deutschland": 1
+		},
+		"es": {
+			"Alemania": 1
+		},
+		"nl": {
+			"Duitsland": 1
+		}
+	},
+	"impairment": 
+	{
+		"de": {
+			"Wertminderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Marginal cost": 
+	{
+		"de": {
+			"Grenzkosten": 1
+		},
+		"es": {
+			"Coste marginal": 1
+		},
+		"nl": {
+			"Marginale kosten": 1
+		}
+	},
+	"Mortgage loan": 
+	{
+		"de": {
+			"Hypothekendarlehen": 1
+		},
+		"es": {
+			"Hipoteca": 1
+		},
+		"nl": {
+			"Hypotheek": 1
+		}
+	},
+	"non-current liabilities": 
+	{
+		"de": {
+			"langfristige Verbindlichkeiten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting system": 
+	{
+		"de": {
+			"Buchführungssystem": 1,
+			"Bilanzierungssystem": 1,
+			"Rechnungswesen": 1,
+			"Buchhaltungssystem": 1,
+			"Abrechnungssystem": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Opportunity cost": 
+	{
+		"de": {
+			"Opportunitätskosten": 1
+		},
+		"es": {
+			"Coste de oportunidad": 1
+		},
+		"nl": {
+			"Alternatieve kosten": 1
+		}
+	},
+	"current liabilities": 
+	{
+		"de": {
+			"kurzfristige Verbindlichkeiten": 1,
+			"laufende Verbindlichkeiten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Court order": 
+	{
+		"de": {
+		},
+		"es": {
+			"Auto judicial": 1
+		},
+		"nl": {
+		}
+	},
+	"to generate": 
+	{
+		"de": {
+			"erzielen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"direct debit procedure": 
+	{
+		"de": {
+			"Lastschrifteinzugsverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"total assets": 
+	{
+		"de": {
+			"Bilanzsumme": 1,
+			"Gesamtkapital": 1,
+			"Gesamtaktiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Preferred stock": 
+	{
+		"de": {
+			"Vorzugsaktie": 1
+		},
+		"es": {
+			"Acciones preferenciales": 1
+		},
+		"nl": {
+		}
+	},
+	"impairment test": 
+	{
+		"de": {
+			"Werthaltigkeitstest": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tangible fixed assets": 
+	{
+		"de": {
+			"Sachanlagevermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"sales quote": 
+	{
+		"de": {
+			"Angebot": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to square accounts": 
+	{
+		"de": {
+			"Konten begleichen": 1,
+			"Konten abstimmen": 1,
+			"Konten abgleichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit card billing": 
+	{
+		"de": {
+			"Kreditkartenabrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Loan": 
+	{
+		"de": {
+		},
+		"es": {
+			"Empréstito": 1
+		},
+		"nl": {
+			"Lening": 1
+		}
+	},
+	"offsetting": 
+	{
+		"de": {
+			"Aufrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"in-kind benefit": 
+	{
+		"de": {
+			"Eigenverbrauch": 1,
+			"unentgeltliche Wertabgabe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reports and accounts": 
+	{
+		"de": {
+			"Berichtswesen und Buchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Startup company": 
+	{
+		"de": {
+			"Existenzgründung": 1
+		},
+		"es": {
+			"Compañía startup": 1
+		},
+		"nl": {
+		}
+	},
+	"company-code dependent": 
+	{
+		"de": {
+			"buchungskreisabhängig": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"budget tranche": 
+	{
+		"de": {
+			"Budgettranche": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"book-keeping": 
+	{
+		"de": {
+			"Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accountancy firm": 
+	{
+		"de": {
+			"Buchprüfungsfirma": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to release a reserve": 
+	{
+		"de": {
+			"Rücklage auflösen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"macro hedge": 
+	{
+		"de": {
+			"globaler (interner) Sicherungszusammenhang": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"profit contribution": 
+	{
+		"de": {
+			"Deckungsbeitrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"capital assets": 
+	{
+		"de": {
+			"Kapitalposten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Debtor": 
+	{
+		"de": {
+			"Schuldner": 1
+		},
+		"es": {
+			"Deudor": 1
+		},
+		"nl": {
+			"Debiteur": 1
+		}
+	},
+	"bank": 
+	{
+		"de": {
+			"Bank": 1
+		},
+		"es": {
+			"Banco": 1
+		},
+		"nl": {
+			"Bank": 1
+		}
+	},
+	"pro forma": 
+	{
+		"de": {
+			"Pro forma": 1
+		},
+		"es": {
+			"Pro-forma": 1
+		},
+		"nl": {
+		}
+	},
+	"revenue from ordinary activities": 
+	{
+		"de": {
+			"Ergebnis der gewöhnlichen Geschäftstätigkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"stagflation": 
+	{
+		"de": {
+			"Stagflation": 1
+		},
+		"es": {
+			"Estanflación": 1
+		},
+		"nl": {
+			"Stagflatie": 1
+		}
+	},
+	"Depreciation": 
+	{
+		"de": {
+			"Abschreibung": 1
+		},
+		"es": {
+			"Depreciación": 1
+		},
+		"nl": {
+			"Afschrijving": 1
+		}
+	},
+	"per capita": 
+	{
+		"de": {
+		},
+		"es": {
+			"Per cápita": 1
+		},
+		"nl": {
+			"Per capita": 1
+		}
+	},
+	"vehicle": 
+	{
+		"de": {
+			"Fahrzeug": 1
+		},
+		"es": {
+			"Vehículo": 1
+		},
+		"nl": {
+		}
+	},
+	"Federal Reserve System": 
+	{
+		"de": {
+			"Federal Reserve System": 1
+		},
+		"es": {
+			"Sistema de Reserva Federal": 1
+		},
+		"nl": {
+			"Federal Reserve": 1
+		}
+	},
+	"job (order) costing": 
+	{
+		"de": {
+			"Auftragskostenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounts receivable accountant": 
+	{
+		"de": {
+			"Debitorenbuchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Capital expenditure": 
+	{
+		"de": {
+			"Investitionskosten": 1
+		},
+		"es": {
+			"Capex": 1
+		},
+		"nl": {
+			"CAPEX": 1
+		}
+	},
+	"industrial accountant": 
+	{
+		"de": {
+			"Betriebsbuchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debitor": 
+	{
+		"de": {
+			"Debitor": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Investment banking": 
+	{
+		"de": {
+			"Investmentbank": 1
+		},
+		"es": {
+			"Banca de inversión": 1
+		},
+		"nl": {
+			"Investeringsbank": 1
+		}
+	},
+	"accounting method": 
+	{
+		"de": {
+			"Bilanzierungsweise": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United States Constitution": 
+	{
+		"de": {
+			"Verfassung der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Constitución de los Estados Unidos": 1
+		},
+		"nl": {
+			"Grondwet van de Verenigde Staten": 1
+		}
+	},
+	"certified management accountant": 
+	{
+		"de": {
+			"Bilanzbuchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balance sheet analysis": 
+	{
+		"de": {
+			"Bilanzanalyse": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Net income": 
+	{
+		"de": {
+			"Jahresüberschuss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial statement": 
+	{
+		"de": {
+			"Jahresabschluss": 1
+		},
+		"es": {
+			"Estados financieros": 1
+		},
+		"nl": {
+			"Jaarverslag": 1
+		}
+	},
+	"current service cost": 
+	{
+		"de": {
+			"Dienstzeitaufwand": 1,
+			"Barwert des Anwartschaftszuwachses": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"promotion": 
+	{
+		"de": {
+			"Kommunikationspolitik": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Promotie": 1
+		}
+	},
+	"other income": 
+	{
+		"de": {
+			"sonstige Erträge": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"meal documentation": 
+	{
+		"de": {
+			"Bewirtungsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"billing": 
+	{
+		"de": {
+			"Inrechnungstellen": 1,
+			"Rechnungslegung": 1,
+			"Fakturierung": 1,
+			"Rechnungsstellung": 1,
+			"Abrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"clearing cost centre": 
+	{
+		"de": {
+			"Verrechnungskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Australia": 
+	{
+		"de": {
+			"Australien": 1
+		},
+		"es": {
+			"Australia": 1
+		},
+		"nl": {
+			"Australië": 1
+		}
+	},
+	"internal cost allocation": 
+	{
+		"de": {
+			"innerbetriebliche Leistungsverrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"allowance": 
+	{
+		"de": {
+			"Rückstellung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"International Financial Reporting Standards": 
+	{
+		"de": {
+			"International Financial Reporting Standards": 1
+		},
+		"es": {
+			"Normas Internacionales de Información Financiera": 1
+		},
+		"nl": {
+			"International Financial Reporting Standards": 1
+		}
+	},
+	"cost centre": 
+	{
+		"de": {
+			"Kostenzentrum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Contract": 
+	{
+		"de": {
+			"Vertrag": 1
+		},
+		"es": {
+			"Contrato": 1
+		},
+		"nl": {
+			"Overeenkomst": 1
+		}
+	},
+	"SEPA credit transfer": 
+	{
+		"de": {
+			"SEPA-Überweisung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"impairment loss": 
+	{
+		"de": {
+			"Verlust aus Wertminderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Canada": 
+	{
+		"de": {
+			"Kanada": 1
+		},
+		"es": {
+			"Canadá": 1
+		},
+		"nl": {
+			"Canada": 1
+		}
+	},
+	"control document": 
+	{
+		"de": {
+			"Steuerbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"commercial balance sheet": 
+	{
+		"de": {
+			"Handelsbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"material group": 
+	{
+		"de": {
+			"Materialgruppe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to set up a provision": 
+	{
+		"de": {
+			"eine Rückstellung bilden": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash flow": 
+	{
+		"de": {
+			"Cashflow": 1
+		},
+		"es": {
+			"Flujo de caja": 1
+		},
+		"nl": {
+			"Kasstroom": 1
+		}
+	},
+	"accounting trick": 
+	{
+		"de": {
+			"Buchungstrick": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"insurance": 
+	{
+		"de": {
+			"Versicherung": 1
+		},
+		"es": {
+			"Contrato de seguro": 1
+		},
+		"nl": {
+			"Verzekering": 1
+		}
+	},
+	"House of Lords": 
+	{
+		"de": {
+			"House of Lords": 1
+		},
+		"es": {
+			"Cámara de los Lores": 1
+		},
+		"nl": {
+			"Hogerhuis": 1
+		}
+	},
+	"Economic inequality": 
+	{
+		"de": {
+		},
+		"es": {
+			"Desigualdad social": 1
+		},
+		"nl": {
+		}
+	},
+	"comprehensible billing": 
+	{
+		"de": {
+			"nachvollziehbare Abrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"vesting period": 
+	{
+		"de": {
+			"Erdienungszeitraum": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Bookkeeping": 
+	{
+		"de": {
+			"Buchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Boekhouding": 1
+		}
+	},
+	"accountancy rule": 
+	{
+		"de": {
+			"Bilanzierungsregel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"on balance sheet": 
+	{
+		"de": {
+			"bilanziell": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"financial accounting-related": 
+	{
+		"de": {
+			"pagatorisch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"finance generally": 
+	{
+		"de": {
+			"Kassenwesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"current assets": 
+	{
+		"de": {
+			"Umlaufvermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"loss for the period": 
+	{
+		"de": {
+			"Periodenverlust": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Tax protester (United States)": 
+	{
+		"de": {
+			"Steuerverweigerung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Vendor": 
+	{
+		"de": {
+			"Lieferant": 1
+		},
+		"es": {
+			"Tipos de proveedores": 1
+		},
+		"nl": {
+			"Leverancier": 1
+		}
+	},
+	"Reserve Bank of India": 
+	{
+		"de": {
+			"Reserve Bank of India": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"time value of money": 
+	{
+		"de": {
+			"Zeitwert des Geldes": 1
+		},
+		"es": {
+			"Valor tiempo del dinero": 1
+		},
+		"nl": {
+		}
+	},
+	"discounted cash flow": 
+	{
+		"de": {
+			"Discounted Cash-Flow": 1
+		},
+		"es": {
+			"Flujos de Fondos Descontados": 1
+		},
+		"nl": {
+		}
+	},
+	"reporting of orders": 
+	{
+		"de": {
+			"Auftragserfassung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fiscal year": 
+	{
+		"de": {
+			"Geschäftsjahr": 1
+		},
+		"es": {
+			"Año fiscal": 1
+		},
+		"nl": {
+			"Boekjaar": 1
+		}
+	},
+	"administration cost centre": 
+	{
+		"de": {
+			"Verwaltungskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"over-run": 
+	{
+		"de": {
+			"Überziehung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"finance-oriented": 
+	{
+		"de": {
+			"finanzorientiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Cost": 
+	{
+		"de": {
+			"Kosten": 1
+		},
+		"es": {
+			"Coste": 1
+		},
+		"nl": {
+		}
+	},
+	"mortgage loan": 
+	{
+		"de": {
+			"Hypothekendarlehen": 1
+		},
+		"es": {
+			"Hipoteca": 1
+		},
+		"nl": {
+			"Hypotheek": 1
+		}
+	},
+	"community property": 
+	{
+		"de": {
+			"Gütergemeinschaft": 1
+		},
+		"es": {
+			"Comunidad de bienes": 1
+		},
+		"nl": {
+		}
+	},
+	"accounting record": 
+	{
+		"de": {
+			"Buchungssatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"intangible asset": 
+	{
+		"de": {
+			"Immaterieller Vermögensgegenstand": 1
+		},
+		"es": {
+			"Activos intangibles": 1
+		},
+		"nl": {
+			"Immateriële activa": 1
+		}
+	},
+	"Share capital": 
+	{
+		"de": {
+			"Grundkapital": 1
+		},
+		"es": {
+			"Capital social": 1
+		},
+		"nl": {
+			"Aandelenkapitaal": 1
+		}
+	},
+	"payday loan": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Flitskrediet": 1
+		}
+	},
+	"Routing": 
+	{
+		"de": {
+			"Routing": 1
+		},
+		"es": {
+			"Encaminamiento": 1
+		},
+		"nl": {
+		}
+	},
+	"depreciation of fixed assets": 
+	{
+		"de": {
+			"Abschreibungen für Anlagegüter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"marketing": 
+	{
+		"de": {
+			"Marketing": 1
+		},
+		"es": {
+			"Marketing": 1
+		},
+		"nl": {
+			"Marketing": 1
+		}
+	},
+	"Payment": 
+	{
+		"de": {
+			"Zahlung": 1
+		},
+		"es": {
+			"Pago": 1
+		},
+		"nl": {
+			"Betaling": 1
+		}
+	},
+	"check fraud": 
+	{
+		"de": {
+			"Scheckbetrug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting clerk": 
+	{
+		"de": {
+			"Buchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"billion-dollar write-offs": 
+	{
+		"de": {
+			"Milliardenabschreibungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"real estate": 
+	{
+		"de": {
+			"Immobilie": 1
+		},
+		"es": {
+			"Inmueble": 1
+		},
+		"nl": {
+			"Onroerende zaak": 1
+		}
+	},
+	"goodwill": 
+	{
+		"de": {
+			"Geschäfts- oder Firmenwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"theft": 
+	{
+		"de": {
+			"Diebstahl": 1
+		},
+		"es": {
+			"Hurto": 1
+		},
+		"nl": {
+			"Diefstal": 1
+		}
+	},
+	"accounting procedure": 
+	{
+		"de": {
+			"Buchhaltungsverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"receipt": 
+	{
+		"de": {
+			"Abrechnungsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"earnings before interest": 
+	{
+		"de": {
+			"Ertrag vor Zinsen": 1,
+			"Ergebnis vor Zinsen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income summary": 
+	{
+		"de": {
+			"GuV-Konto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"full audit": 
+	{
+		"de": {
+			"ordentliche Revision": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"equity method": 
+	{
+		"de": {
+			"Equitymethode": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bankruptcy": 
+	{
+		"de": {
+			"Insolvenz": 1
+		},
+		"es": {
+			"Quiebra": 1
+		},
+		"nl": {
+			"Faillissement": 1
+		}
+	},
+	"reporting date": 
+	{
+		"de": {
+			"Bilanzstichtag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"maturity": 
+	{
+		"de": {
+			"Fälligkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"sales price calculation": 
+	{
+		"de": {
+			"Handelskalkulation": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Takeover": 
+	{
+		"de": {
+			"Unternehmensübernahme": 1
+		},
+		"es": {
+			"Oferta pública de adquisición": 1
+		},
+		"nl": {
+			"Overname": 1
+		}
+	},
+	"inventory": 
+	{
+		"de": {
+			"Inventar": 1
+		},
+		"es": {
+			"Inventario": 1
+		},
+		"nl": {
+			"Voorraad": 1
+		}
+	},
+	"audit trail": 
+	{
+		"de": {
+			"Belegsammlung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audit record": 
+	{
+		"de": {
+			"Prüfprotokoll": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting analysis": 
+	{
+		"de": {
+			"Rechnungswesen-Analyse": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"general expense": 
+	{
+		"de": {
+			"Gemeinkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"disclosure": 
+	{
+		"de": {
+			"Ausweis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit balance": 
+	{
+		"de": {
+			"Überdeckung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fluctuating workweek wage record": 
+	{
+		"de": {
+			"Arbeitszeitkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"indirect cost centre": 
+	{
+		"de": {
+			"Hilfskostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross fixed capital formation": 
+	{
+		"de": {
+			"Bruttoinvestition": 1
+		},
+		"es": {
+			"Formación bruta de capital fijo": 1
+		},
+		"nl": {
+		}
+	},
+	"fixed cost": 
+	{
+		"de": {
+			"Fixe Kosten": 1
+		},
+		"es": {
+			"Coste fijo": 1
+		},
+		"nl": {
+			"Constante kosten": 1
+		}
+	},
+	"provision for anticipated losses": 
+	{
+		"de": {
+			"Drohverlustrückstellung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit note": 
+	{
+		"de": {
+			"Stornierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Stornering": 1
+		}
+	},
+	"bill payable": 
+	{
+		"de": {
+			"Schuldwechsel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"wage": 
+	{
+		"de": {
+			"Arbeitsentgelt": 1
+		},
+		"es": {
+			"Salario": 1
+		},
+		"nl": {
+			"Arbeidsloon": 1
+		}
+	},
+	"book-keeper": 
+	{
+		"de": {
+			"Buchhalterin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"group accounts": 
+	{
+		"de": {
+			"Konzernabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"strictly net": 
+	{
+		"de": {
+			"netto ohne jeden (weiteren) Abzug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"happy hour": 
+	{
+		"de": {
+			"Happy Hour": 1
+		},
+		"es": {
+			"Happy hour": 1
+		},
+		"nl": {
+			"Happy hour": 1
+		}
+	},
+	"to depreciate": 
+	{
+		"de": {
+			"abschreiben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"public company": 
+	{
+		"de": {
+		},
+		"es": {
+			"Public company": 1
+		},
+		"nl": {
+		}
+	},
+	"liability": 
+	{
+		"de": {
+			"Passiva": 1
+		},
+		"es": {
+			"Pasivo": 1
+		},
+		"nl": {
+			"Passiva": 1
+		}
+	},
+	"face value": 
+	{
+		"de": {
+			"Nennwert": 1
+		},
+		"es": {
+			"Valor facial": 1
+		},
+		"nl": {
+		}
+	},
+	"unrealised losses": 
+	{
+		"de": {
+			"unrealisierte Verluste": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audit agreement": 
+	{
+		"de": {
+			"Prüfungsvereinbarung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"finance": 
+	{
+		"de": {
+			"Finanzierung": 1
+		},
+		"es": {
+			"Finanzas": 1
+		},
+		"nl": {
+			"Financiën": 1
+		}
+	},
+	"revenue": 
+	{
+		"de": {
+			"Erlös": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Omzet": 1
+		}
+	},
+	"common stock": 
+	{
+		"de": {
+			"Stammaktie": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Expense": 
+	{
+		"de": {
+			"Aufwand": 1
+		},
+		"es": {
+			"Gasto": 1
+		},
+		"nl": {
+		}
+	},
+	"Currency": 
+	{
+		"de": {
+			"Währung": 1
+		},
+		"es": {
+			"Divisa": 1
+		},
+		"nl": {
+			"Valuta": 1
+		}
+	},
+	"investor": 
+	{
+		"de": {
+			"Anleger": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Investeerder": 1
+		}
+	},
+	"morality": 
+	{
+		"de": {
+			"Moral": 1
+		},
+		"es": {
+			"Moral": 1
+		},
+		"nl": {
+			"Moraal": 1
+		}
+	},
+	"to be in the red": 
+	{
+		"de": {
+			"in den roten Zahlen sein": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"line item budget": 
+	{
+		"de": {
+			"Einzeletat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balance sheet contraction": 
+	{
+		"de": {
+			"Bilanzverkürzung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Liability": 
+	{
+		"de": {
+			"Passiva": 1
+		},
+		"es": {
+			"Pasivo": 1
+		},
+		"nl": {
+			"Passiva": 1
+		}
+	},
+	"Minority interest": 
+	{
+		"de": {
+		},
+		"es": {
+			"Interés minoritario": 1
+		},
+		"nl": {
+		}
+	},
+	"asset accountant": 
+	{
+		"de": {
+			"Anlagenbuchhalter": 1,
+			"Anlagenbuchhalterin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"measures of national income and output": 
+	{
+		"de": {
+			"Nationaleinkommen": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Nationaal inkomen": 1
+		}
+	},
+	"tax rate on retained profits": 
+	{
+		"de": {
+			"Gewinn- und Verlustrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"risk management": 
+	{
+		"de": {
+			"Risikomanagement": 1
+		},
+		"es": {
+			"Gestión de riesgos": 1
+		},
+		"nl": {
+			"Risicomanagement": 1
+		}
+	},
+	"bookkeeper": 
+	{
+		"de": {
+			"Buchhalter": 1,
+			"Buchhalterin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial accountancy": 
+	{
+		"de": {
+			"Finanzbuchhaltung": 1
+		},
+		"es": {
+			"Contabilidad financiera": 1
+		},
+		"nl": {
+			"Financial accounting": 1
+		}
+	},
+	"gross margin": 
+	{
+		"de": {
+			"Bruttomarge": 1,
+			"Deckungsbeitrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Income tax": 
+	{
+		"de": {
+			"Einkommensteuer": 1
+		},
+		"es": {
+			"Impuesto sobre la renta": 1
+		},
+		"nl": {
+			"Inkomstenbelasting": 1
+		}
+	},
+	"Ticket": 
+	{
+		"de": {
+			"Eintrittskarte": 1
+		},
+		"es": {
+			"Billete": 1
+		},
+		"nl": {
+			"Toegangsbewijs": 1
+		}
+	},
+	"Supreme Court of the United States": 
+	{
+		"de": {
+			"Oberster Gerichtshof der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Corte Suprema de los Estados Unidos": 1
+		},
+		"nl": {
+			"Hooggerechtshof": 1
+		}
+	},
+	"investment": 
+	{
+		"de": {
+			"Investition": 1
+		},
+		"es": {
+			"Inversión": 1
+		},
+		"nl": {
+			"Investering": 1
+		}
+	},
+	"rent collection": 
+	{
+		"de": {
+			"Vereinnahmung der Miete": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Return merchandise authorization": 
+	{
+		"de": {
+			"Rücksendenummer": 1
+		},
+		"es": {
+			"RMA": 1
+		},
+		"nl": {
+		}
+	},
+	"Trial balance": 
+	{
+		"de": {
+			"Zwischenberichterstattung%23Zwischenberichterstattung%20und%20internes%20Berichtswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to keep an account": 
+	{
+		"de": {
+			"Buch führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United States Department of Housing and Urban Development": 
+	{
+		"de": {
+			"Bauministerium der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Departamento de Vivienda y Desarrollo Urbano de los Estados Unidos": 1
+		},
+		"nl": {
+			"United States Department of Housing and Urban Development": 1
+		}
+	},
+	"accrual-based accounting": 
+	{
+		"de": {
+			"periodengerechte Buchführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Europe": 
+	{
+		"de": {
+			"Europa": 1
+		},
+		"es": {
+			"Europa": 1
+		},
+		"nl": {
+			"Europa": 1
+		}
+	},
+	"Bond market": 
+	{
+		"de": {
+			"Rentenmarkt": 1
+		},
+		"es": {
+			"Mercado de bonos": 1
+		},
+		"nl": {
+		}
+	},
+	"capital gain": 
+	{
+		"de": {
+			"Privates Veräußerungsgeschäft": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Meerwaarde": 1
+		}
+	},
+	"head of state": 
+	{
+		"de": {
+			"Staatsoberhaupt": 1
+		},
+		"es": {
+			"Jefe de Estado": 1
+		},
+		"nl": {
+			"Staatshoofd": 1
+		}
+	},
+	"Income": 
+	{
+		"de": {
+			"Einkommen": 1
+		},
+		"es": {
+			"Ingreso": 1
+		},
+		"nl": {
+			"Inkomen": 1
+		}
+	},
+	"restructuring": 
+	{
+		"de": {
+			"Restrukturierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"profit and loss summary account": 
+	{
+		"de": {
+			"Periodenergebnis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"software license": 
+	{
+		"de": {
+		},
+		"es": {
+			"Licencia de software": 1
+		},
+		"nl": {
+			"Softwarelicentie": 1
+		}
+	},
+	"financially oriented": 
+	{
+		"de": {
+			"finanzorientiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"deposit account": 
+	{
+		"de": {
+			"Bankguthaben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income": 
+	{
+		"de": {
+			"Einkommen": 1
+		},
+		"es": {
+			"Ingreso": 1
+		},
+		"nl": {
+			"Inkomen": 1
+		}
+	},
+	"Price Clause Act": 
+	{
+		"de": {
+			"Preisklauselgesetz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"current account balance claims": 
+	{
+		"de": {
+			"Saldoforderungen aus laufender Rechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Dividend": 
+	{
+		"de": {
+			"Dividende": 1
+		},
+		"es": {
+			"Dividendo": 1
+		},
+		"nl": {
+			"Dividend": 1
+		}
+	},
+	"closing inventory at the end of the year": 
+	{
+		"de": {
+			"Jahresendbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balance sheet provisions": 
+	{
+		"de": {
+			"Bilanzrückstellungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"stock item entry": 
+	{
+		"de": {
+			"Lagerbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"release of reserves": 
+	{
+		"de": {
+			"Auflösung von Reserven": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Capital": 
+	{
+		"de": {
+			"Kapital": 1
+		},
+		"es": {
+			"Capital": 1
+		},
+		"nl": {
+			"Kapitaal": 1
+		}
+	},
+	"commercially rounded": 
+	{
+		"de": {
+			"kaufmännisch gerundet": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost centre accounting": 
+	{
+		"de": {
+			"Kostenstellenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"factor income": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Factorinkomen": 1
+		}
+	},
+	"Net profit": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Nettowinst": 1
+		}
+	},
+	"law firm": 
+	{
+		"de": {
+			"Anwaltskanzlei": 1
+		},
+		"es": {
+			"Firma de abogados": 1
+		},
+		"nl": {
+			"Advocatenkantoor": 1
+		}
+	},
+	"Fiscal year": 
+	{
+		"de": {
+			"Gesch%C3%A4ftsjahr": 1
+		},
+		"es": {
+			"A%C3%B1o%20fiscal": 1
+		},
+		"nl": {
+			"Boekjaar": 1
+		}
+	},
+	"production function": 
+	{
+		"de": {
+			"Produktionsfunktion": 1
+		},
+		"es": {
+			"Función de producción": 1
+		},
+		"nl": {
+		}
+	},
+	"Present": 
+	{
+		"de": {
+			"Gegenwart": 1
+		},
+		"es": {
+			"Presente": 1
+		},
+		"nl": {
+			"Heden": 1
+		}
+	},
+	"financial assets": 
+	{
+		"de": {
+			"Finanzanlagen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"depreciation policy": 
+	{
+		"de": {
+			"Abschreibungspolitik": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income from paid employment": 
+	{
+		"de": {
+			"Einkünfte aus nichtselbständiger Arbeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"account": 
+	{
+		"de": {
+			"Berechnung": 1,
+			"Forderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"consolidated notes": 
+	{
+		"de": {
+			"Konzernanhang": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"pooling-of-interests method": 
+	{
+		"de": {
+			"Interessenzusammenführungsmethode": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost accounting": 
+	{
+		"de": {
+			"Kosten- und Leistungsrechnung": 1,
+			"Betriebsabrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reconciliation group": 
+	{
+		"de": {
+			"Abstimmgruppe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"direct costs": 
+	{
+		"de": {
+			"Einzelkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit card": 
+	{
+		"de": {
+			"Kreditkarte": 1
+		},
+		"es": {
+			"Tarjeta de crédito": 1
+		},
+		"nl": {
+			"Creditcard": 1
+		}
+	},
+	"Acronym and initialism": 
+	{
+		"de": {
+			"Akronym": 1
+		},
+		"es": {
+			"Acrónimo": 1
+		},
+		"nl": {
+			"Acroniem": 1
+		}
+	},
+	"Debt-to-equity ratio": 
+	{
+		"de": {
+			"Verschuldungsgrad": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fixed asset": 
+	{
+		"de": {
+			"Wirtschaftsgut des Anlagevermögens": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"ordinary business activities": 
+	{
+		"de": {
+			"gewöhnliche Geschäftstätigkeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"badwill": 
+	{
+		"de": {
+			"negativer Geschäfts- oder Firmenwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"formalized offer": 
+	{
+		"de": {
+			"vertraglich bindendes Angebot": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"municipal bond": 
+	{
+		"de": {
+			"Kommunalanleihe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Cisco Systems": 
+	{
+		"de": {
+			"Cisco Systems": 1
+		},
+		"es": {
+			"Cisco Systems": 1
+		},
+		"nl": {
+			"Cisco Systems": 1
+		}
+	},
+	"Parliament of the United Kingdom": 
+	{
+		"de": {
+			"Parlament des Vereinigten Königreichs": 1
+		},
+		"es": {
+			"Parlamento del Reino Unido": 1
+		},
+		"nl": {
+			"Parlement van het Verenigd Koninkrijk": 1
+		}
+	},
+	"accounting firm": 
+	{
+		"de": {
+			"Wirtschaftsprüfungsfirma": 1,
+			"Wirtschaftsprüfungsunternehmen": 1,
+			"Revisionsfirma": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Goodwill": 
+	{
+		"de": {
+			"Geschäfts- oder Firmenwert": 1
+		},
+		"es": {
+			"Fondo de comercio": 1
+		},
+		"nl": {
+			"Goodwill": 1
+		}
+	},
+	"Subsidiary": 
+	{
+		"de": {
+			"Filiale": 1
+		},
+		"es": {
+			"Filial": 1
+		},
+		"nl": {
+			"Dochteronderneming": 1
+		}
+	},
+	"United States Department of Commerce": 
+	{
+		"de": {
+			"Handelsministerium der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Departamento de Comercio de Estados Unidos": 1
+		},
+		"nl": {
+			"United States Department of Commerce": 1
+		}
+	},
+	"accounting deficit": 
+	{
+		"de": {
+			"Rechnungsdefizit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to recognize as expenditures": 
+	{
+		"de": {
+			"als Aufwand erfassen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"profit for the period": 
+	{
+		"de": {
+			"Periodengewinn": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"company code": 
+	{
+		"de": {
+			"Buchungskreis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"statement of operations (and accumulated deficit)": 
+	{
+		"de": {
+			"Bewegungsbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"management analysis": 
+	{
+		"de": {
+			"betriebswirtschaftliche Auswertung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"grooming transactions": 
+	{
+		"de": {
+			"sachverhaltsgestaltende Maßnahmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Congressional Budget and Impoundment Control Act of 1974": 
+	{
+		"de": {
+			"Congressional Budget and Impoundment Control Act": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"secondary market": 
+	{
+		"de": {
+			"Sekundärmarkt": 1
+		},
+		"es": {
+			"Mercado secundario": 1
+		},
+		"nl": {
+		}
+	},
+	"billing amount": 
+	{
+		"de": {
+			"Rechnungsbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"medical malpractice": 
+	{
+		"de": {
+			"Behandlungsfehler": 1
+		},
+		"es": {
+			"Negligencia médica": 1
+		},
+		"nl": {
+		}
+	},
+	"adoption of financial statements": 
+	{
+		"de": {
+			"Feststellung des Jahresabschlusses": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debtor": 
+	{
+		"de": {
+			"Debitor": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Late-2000s financial crisis": 
+	{
+		"de": {
+			"Finanzkrise ab 2007": 1
+		},
+		"es": {
+			"Crisis económica de 2008-2011": 1
+		},
+		"nl": {
+			"Kredietcrisis": 1
+		}
+	},
+	"Property insurance": 
+	{
+		"de": {
+			"Schadenversicherung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Brandverzekering": 1
+		}
+	},
+	"Lumber": 
+	{
+		"de": {
+			"Bauholz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost under-absorption": 
+	{
+		"de": {
+			"Kostenunterdeckung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"VAT return": 
+	{
+		"de": {
+			"Umsatzsteuer-Anmeldung": 1,
+			"Umsatzsteuererklärung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"machine": 
+	{
+		"de": {
+			"Maschine": 1
+		},
+		"es": {
+			"Máquina": 1
+		},
+		"nl": {
+			"Machine": 1
+		}
+	},
+	"profit and loss account": 
+	{
+		"de": {
+			"Gewinn- und Verlustrechnung": 1,
+			"Erfolgsrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Gregorian calendar": 
+	{
+		"de": {
+			"Gregorianischer Kalender": 1
+		},
+		"es": {
+			"Calendario gregoriano": 1
+		},
+		"nl": {
+			"Gregoriaanse kalender": 1
+		}
+	},
+	"loan": 
+	{
+		"de": {
+		},
+		"es": {
+			"Empréstito": 1
+		},
+		"nl": {
+			"Lening": 1
+		}
+	},
+	"Write-off": 
+	{
+		"de": {
+		},
+		"es": {
+			"Siniestro%20total": 1
+		},
+		"nl": {
+			"Afschrijving": 1
+		}
+	},
+	"chartered accountant": 
+	{
+		"de": {
+			"Steuer- und Wirtschaftsberater": 1,
+			"vereidigter Buchprüfer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"chart of accounts": 
+	{
+		"de": {
+			"Kontenplan": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Consolidated financial statement": 
+	{
+		"de": {
+			"Konzernabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Credit derivative": 
+	{
+		"de": {
+			"Kreditderivat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"issuing of invoices": 
+	{
+		"de": {
+			"Fakturierung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Account": 
+	{
+		"de": {
+			"Konto": 1
+		},
+		"es": {
+			"Cuenta": 1
+		},
+		"nl": {
+			"Grootboekrekening": 1
+		}
+	},
+	"recognition criteria": 
+	{
+		"de": {
+			"Ansatzkriterien": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"assets accounting voucher": 
+	{
+		"de": {
+			"Anlagenbuchhaltungsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash equivalent": 
+	{
+		"de": {
+			"Zahlungsmitteläquivalent": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"one-off expense": 
+	{
+		"de": {
+			"einmaliger Aufwand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Benjamin M. Friedman": 
+	{
+		"de": {
+			"Benjamin M. Friedman": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"List of sovereign states by current account balance": 
+	{
+		"de": {
+			"Leistungsbilanzsalden nach Ländern": 1
+		},
+		"es": {
+			"Anexo:Países según su balanza comercial": 1
+		},
+		"nl": {
+			"Lijst van landen naar saldo lopende rekening": 1
+		}
+	},
+	"cash management": 
+	{
+		"de": {
+			"Kassenwesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to assign sth. (to an account)": 
+	{
+		"de": {
+			"etw. kontieren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"company-produced additions to plant and equipment": 
+	{
+		"de": {
+			"aktivierte Eigenleistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business assessment": 
+	{
+		"de": {
+			"betriebswirtschaftliche Auswertung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost center": 
+	{
+		"de": {
+			"Kostenzentrum": 1,
+			"Kostenbereich": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"distribution": 
+	{
+		"de": {
+			"Distributionspolitik": 1
+		},
+		"es": {
+			"Distribución": 1
+		},
+		"nl": {
+		}
+	},
+	"accounting technique": 
+	{
+		"de": {
+			"Abrechnungsverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"subgroup accounts": 
+	{
+		"de": {
+			"Teilkonzernabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost-by-cause principle": 
+	{
+		"de": {
+			"Kostenverursacherprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"exchange rate difference": 
+	{
+		"de": {
+			"Währungsdifferenz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to gross": 
+	{
+		"de": {
+			"umsetzen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"commercial invoice": 
+	{
+		"de": {
+			"Handelsrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"derivative": 
+	{
+		"de": {
+			"Derivat": 1
+		},
+		"es": {
+			"Derivado financiero": 1
+		},
+		"nl": {
+			"Financiële derivaten": 1
+		}
+	},
+	"cash assets": 
+	{
+		"de": {
+			"Barguthaben": 1,
+			"Kassenbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"vehicle insurance": 
+	{
+		"de": {
+			"Autoversicherung": 1
+		},
+		"es": {
+			"Seguro del automóvil": 1
+		},
+		"nl": {
+			"Autoverzekering": 1
+		}
+	},
+	"accountantship": 
+	{
+		"de": {
+			"Buchhalterstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Business process": 
+	{
+		"de": {
+			"Geschäftsprozess": 1
+		},
+		"es": {
+			"Proceso de negocio": 1
+		},
+		"nl": {
+			"Bedrijfsproces": 1
+		}
+	},
+	"termination of employment": 
+	{
+		"de": {
+			"Beendigung des Arbeitsverhältnisses": 1
+		},
+		"es": {
+			"Despido laboral": 1
+		},
+		"nl": {
+			"Ontslag": 1
+		}
+	},
+	"market value": 
+	{
+		"de": {
+			"Marktwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash flow return on investment": 
+	{
+		"de": {
+			"Cash Flow Return on Investment": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Commercial paper": 
+	{
+		"de": {
+			"Geldmarktpapier": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Commercial paper": 1
+		}
+	},
+	"law": 
+	{
+		"de": {
+			"Recht": 1
+		},
+		"es": {
+			"Derecho": 1
+		},
+		"nl": {
+			"Recht": 1
+		}
+	},
+	"stock and flow": 
+	{
+		"de": {
+		},
+		"es": {
+			"Existencias y flujos": 1
+		},
+		"nl": {
+		}
+	},
+	"Republic of Ireland": 
+	{
+		"de": {
+			"Irland": 1
+		},
+		"es": {
+			"Irlanda": 1
+		},
+		"nl": {
+			"Ierland": 1
+		}
+	},
+	"income taxes": 
+	{
+		"de": {
+			"Ertragssteuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial intermediary": 
+	{
+		"de": {
+			"Finanzintermediär": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"working capital": 
+	{
+		"de": {
+			"Betriebsnotwendiges Vermögen": 1
+		},
+		"es": {
+			"Capital de trabajo": 1
+		},
+		"nl": {
+			"Werkkapitaal": 1
+		}
+	},
+	"Cabinet": 
+	{
+		"de": {
+			"Kabinett": 1
+		},
+		"es": {
+			"Consejo de Ministros": 1
+		},
+		"nl": {
+			"Kabinet": 1
+		}
+	},
+	"non-recognition": 
+	{
+		"de": {
+			"Nichtansatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"deferment": 
+	{
+		"de": {
+			"transitorische Rechnungsabgrenzung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accrued expenses": 
+	{
+		"de": {
+			"antizipative Passiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"export": 
+	{
+		"de": {
+			"Export": 1
+		},
+		"es": {
+			"Exportación": 1
+		},
+		"nl": {
+			"Uitvoer": 1
+		}
+	},
+	"equity compensation benefits": 
+	{
+		"de": {
+			"Kapitalbeteiligungsleistungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost": 
+	{
+		"de": {
+			"Kosten": 1
+		},
+		"es": {
+			"Coste": 1
+		},
+		"nl": {
+			"kosten": 1
+		}
+	},
+	"Treasury stock": 
+	{
+		"de": {
+			"Eigene Aktie": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"wire transfer": 
+	{
+		"de": {
+			"Überweisung": 1
+		},
+		"es": {
+			"Transferencia bancaria": 1
+		},
+		"nl": {
+		}
+	},
+	"revenue recognition": 
+	{
+		"de": {
+			"Revenue Recognition": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"commercial paper": 
+	{
+		"de": {
+			"Geldmarktpapier": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Commercial paper": 1
+		}
+	},
+	"share premium account": 
+	{
+		"de": {
+			"Aufgeldkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Common stock": 
+	{
+		"de": {
+			"Stammaktie": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to audit the books": 
+	{
+		"de": {
+			"die Bücher überprüfen": 1,
+			"die Bücher prüfen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"benefit in kind": 
+	{
+		"de": {
+			"Eigenverbrauch": 1,
+			"unentgeltliche Wertabgabe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting": 
+	{
+		"de": {
+			"Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cross-company code": 
+	{
+		"de": {
+			"buchungskreisübergreifendes Kennzeichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"factory accountant": 
+	{
+		"de": {
+			"Betriebsbuchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial Accounting Standards Board": 
+	{
+		"de": {
+			"Financial Accounting Standards Board": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"quick ratio": 
+	{
+		"de": {
+			"Liquidität zweiten Grades": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting standards": 
+	{
+		"de": {
+			"Rechnungslegungsstandards": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"claim for repayment": 
+	{
+		"de": {
+			"Erstattungsantrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Title insurance": 
+	{
+		"de": {
+		},
+		"es": {
+			"Seguro de título inmobiliario": 1
+		},
+		"nl": {
+		}
+	},
+	"liability side of the balance sheet": 
+	{
+		"de": {
+			"bilanzierungsfähige Posten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"manufacturing": 
+	{
+		"de": {
+			"Produktionsprozess": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Productieproces": 1
+		}
+	},
+	"Net worth": 
+	{
+		"de": {
+			"Reinvermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Nettowaarde": 1
+		}
+	},
+	"Fannie Mae": 
+	{
+		"de": {
+			"Fannie Mae": 1
+		},
+		"es": {
+			"Fannie Mae": 1
+		},
+		"nl": {
+			"Fannie Mae": 1
+		}
+	},
+	"transfer pricing documentation": 
+	{
+		"de": {
+			"Verrechnungspreisdokumentation": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bookkeeping": 
+	{
+		"de": {
+			"Buchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Boekhouding": 1
+		}
+	},
+	"current liability": 
+	{
+		"de": {
+		},
+		"es": {
+			"Pasivo circulante": 1
+		},
+		"nl": {
+			"Vlottende schulden": 1
+		}
+	},
+	"purchased goods": 
+	{
+		"de": {
+			"bezogene Waren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Privatization": 
+	{
+		"de": {
+			"Privatisierung": 1
+		},
+		"es": {
+			"Privatización": 1
+		},
+		"nl": {
+			"Privatisering": 1
+		}
+	},
+	"tax": 
+	{
+		"de": {
+			"Steuer": 1
+		},
+		"es": {
+			"Impuesto": 1
+		},
+		"nl": {
+			"Belasting": 1
+		}
+	},
+	"corporate income tax": 
+	{
+		"de": {
+			"Körperschaftssteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Historical cost": 
+	{
+		"de": {
+			"Anschaffungskosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"real account": 
+	{
+		"de": {
+			"Bestandskonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"variable cost": 
+	{
+		"de": {
+			"Variable Kosten": 1
+		},
+		"es": {
+			"Costo variable": 1
+		},
+		"nl": {
+			"Variabele kosten": 1
+		}
+	},
+	"cash": 
+	{
+		"de": {
+			"Bargeld": 1
+		},
+		"es": {
+			"Dinero en efectivo": 1
+		},
+		"nl": {
+			"Chartaal geld": 1
+		}
+	},
+	"according to the International Financial Reporting Standards": 
+	{
+		"de": {
+			"gemäß den internationalen Rechnungslegungsstandards": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Leverage": 
+	{
+		"de": {
+			"Leverage-Effekt": 1
+		},
+		"es": {
+			"Apalancamiento": 1
+		},
+		"nl": {
+		}
+	},
+	"financial statement": 
+	{
+		"de": {
+			"Jahresabschluss": 1
+		},
+		"es": {
+			"Estados financieros": 1
+		},
+		"nl": {
+			"Jaarverslag": 1
+		}
+	},
+	"cheque fraud": 
+	{
+		"de": {
+			"Scheckbetrug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting event": 
+	{
+		"de": {
+			"Buchungsvorfall": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Government National Mortgage Association": 
+	{
+		"de": {
+			"Ginnie Mae": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"opening balance": 
+	{
+		"de": {
+			"Anfangsbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost centre structure": 
+	{
+		"de": {
+			"Kostenstellengliederung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to audit the cash": 
+	{
+		"de": {
+			"Kassenprüfung vornehmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross profit": 
+	{
+		"de": {
+			"Bruttoertrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"auditing": 
+	{
+		"de": {
+			"Wirtschaftsprüfung": 1,
+			"Prüfungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Bankruptcy": 
+	{
+		"de": {
+			"Insolvenz": 1
+		},
+		"es": {
+			"Quiebra": 1
+		},
+		"nl": {
+			"Faillissement": 1
+		}
+	},
+	"assigned (to an account)": 
+	{
+		"de": {
+			"kontiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"liquidation account": 
+	{
+		"de": {
+			"Liquidationsrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balance sheet date": 
+	{
+		"de": {
+			"Bilanzstichtag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"mergers and acquisitions": 
+	{
+		"de": {
+			"Mergers & Acquisitions": 1
+		},
+		"es": {
+			"Fusiones y adquisiciones": 1
+		},
+		"nl": {
+			"Concentratie": 1
+		}
+	},
+	"accounting equation": 
+	{
+		"de": {
+		},
+		"es": {
+			"Ecuación de contabilidad": 1
+		},
+		"nl": {
+		}
+	},
+	"additional costs": 
+	{
+		"de": {
+			"Nebenkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"leasehold improvement": 
+	{
+		"de": {
+			"Verbesserungen an gepachtetem / ge­mietetem Besitz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Internal Revenue Service": 
+	{
+		"de": {
+			"Internal Revenue Service": 1
+		},
+		"es": {
+			"Internal Revenue Service": 1
+		},
+		"nl": {
+			"Internal Revenue Service": 1
+		}
+	},
+	"Drug resistance": 
+	{
+		"de": {
+			"Resistenz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"provisions concerning tax on profits": 
+	{
+		"de": {
+			"Gewinn- und Verlustsammelkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Land": 
+	{
+		"de": {
+			"Boden": 1
+		},
+		"es": {
+			"Tierra": 1
+		},
+		"nl": {
+			"Land": 1
+		}
+	},
+	"accountable event": 
+	{
+		"de": {
+			"Buchungsvorfall": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income from salaried employment": 
+	{
+		"de": {
+			"Einkünfte aus nichtselbständiger Arbeit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"asset side": 
+	{
+		"de": {
+			"Aktivseite": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Fixed asset": 
+	{
+		"de": {
+			"Sachanlage": 1
+		},
+		"es": {
+			"Activo fijo": 1
+		},
+		"nl": {
+			"Vaste activa": 1
+		}
+	},
+	"Minnesota": 
+	{
+		"de": {
+			"Minnesota": 1
+		},
+		"es": {
+			"Minnesota": 1
+		},
+		"nl": {
+			"Minnesota": 1
+		}
+	},
+	"sales promotion": 
+	{
+		"de": {
+			"Verkaufsförderung": 1
+		},
+		"es": {
+			"Promoción de ventas": 1
+		},
+		"nl": {
+			"Verkoopbevordering": 1
+		}
+	},
+	"Cash flow": 
+	{
+		"de": {
+			"Cashflow": 1
+		},
+		"es": {
+			"Flujo de caja": 1
+		},
+		"nl": {
+			"Kasstroom": 1
+		}
+	},
+	"writing off": 
+	{
+		"de": {
+			"abbuchend": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"payment": 
+	{
+		"de": {
+			"Zahlung": 1
+		},
+		"es": {
+			"Pago": 1
+		},
+		"nl": {
+			"Betaling": 1
+		}
+	},
+	"Capital good": 
+	{
+		"de": {
+			"Investitionsgut": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Kapitaalgoed": 1
+		}
+	},
+	"segment reporting": 
+	{
+		"de": {
+			"Segmentberichterstattung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax treaty": 
+	{
+		"de": {
+			"Doppelbesteuerungsabkommen": 1
+		},
+		"es": {
+			"Convenio de doble imposición": 1
+		},
+		"nl": {
+			"Belastingverdrag": 1
+		}
+	},
+	"follow-up file": 
+	{
+		"de": {
+			"Wiedervorlagemappe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax on earnings": 
+	{
+		"de": {
+			"Ertragssteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"settlement amount": 
+	{
+		"de": {
+			"Erfüllungsbetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax loss carryforward": 
+	{
+		"de": {
+			"steuerlicher Verlustvortrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"derecognition": 
+	{
+		"de": {
+			"Ausbuchung": 1,
+			"Abgang": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"net method": 
+	{
+		"de": {
+			"Nettomethode": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"buyer": 
+	{
+		"de": {
+			"Käufer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accruals": 
+	{
+		"de": {
+			"Zugänge": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"travel expense report": 
+	{
+		"de": {
+			"Reisekostenabrechnung": 1,
+			"Reiseabrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"amount of balance": 
+	{
+		"de": {
+			"Saldobetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Papua New Guinea": 
+	{
+		"de": {
+			"Papua-Neuguinea": 1
+		},
+		"es": {
+			"Papúa Nueva Guinea": 1
+		},
+		"nl": {
+			"Papoea-Nieuw-Guinea": 1
+		}
+	},
+	"cash asset": 
+	{
+		"de": {
+			"Barguthaben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"interest on equity capital": 
+	{
+		"de": {
+			"Eigenkapitalverzinsung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost-type accounting": 
+	{
+		"de": {
+			"Kostenartenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fixed asset schedule": 
+	{
+		"de": {
+			"Anlagespiegel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"transactional account": 
+	{
+		"de": {
+			"Girokonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Interest": 
+	{
+		"de": {
+			"Zins": 1
+		},
+		"es": {
+			"Interés": 1
+		},
+		"nl": {
+			"Rente": 1
+		}
+	},
+	"extraordinary item": 
+	{
+		"de": {
+			"außerordentlicher Posten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost center structure": 
+	{
+		"de": {
+			"Kostenstellengliederung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business operations": 
+	{
+		"de": {
+			"Geschäftsentwicklung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"assets and liabilities": 
+	{
+		"de": {
+			"Aktiva und Passiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"historical cost principle": 
+	{
+		"de": {
+			"Anschaffungskostenprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"statement of changes in financial position": 
+	{
+		"de": {
+			"Eigenkapitalspiegel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Colombia": 
+	{
+		"de": {
+			"Kolumbien": 1
+		},
+		"es": {
+			"Colombia": 1
+		},
+		"nl": {
+			"Colombia": 1
+		}
+	},
+	"final cost center": 
+	{
+		"de": {
+			"Endkostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"collateral posting": 
+	{
+		"de": {
+			"Sicherheitenstellung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debtor account": 
+	{
+		"de": {
+			"Debitorenkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"internal audit": 
+	{
+		"de": {
+			"Innenrevision": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"international financial reporting standards": 
+	{
+		"de": {
+			"internationale Rechnungslegungsvorschriften": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit": 
+	{
+		"de": {
+			"Haben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to square an account": 
+	{
+		"de": {
+			"ein Konto begleichen": 1,
+			"ein Konto ausgleichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Senate of Canada": 
+	{
+		"de": {
+			"Senat": 1
+		},
+		"es": {
+			"Senado de Canadá": 1
+		},
+		"nl": {
+			"Senaat": 1
+		}
+	},
+	"Warren Buffett": 
+	{
+		"de": {
+			"Warren Buffett": 1
+		},
+		"es": {
+			"Warren Buffett": 1
+		},
+		"nl": {
+			"Warren Buffett": 1
+		}
+	},
+	"logging": 
+	{
+		"de": {
+			"Holzernte": 1
+		},
+		"es": {
+			"Industria maderera": 1
+		},
+		"nl": {
+			"Houtkap": 1
+		}
+	},
+	"United States Senate": 
+	{
+		"de": {
+			"Senat der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Senado de los Estados Unidos": 1
+		},
+		"nl": {
+			"Senaat": 1
+		}
+	},
+	"balance date": 
+	{
+		"de": {
+			"Bilanzstichtag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"remaining income": 
+	{
+		"de": {
+			"verbleibender Erlös": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"social cost": 
+	{
+		"de": {
+		},
+		"es": {
+			"Coste social": 1
+		},
+		"nl": {
+		}
+	},
+	"Sunk costs": 
+	{
+		"de": {
+			"Sunk costs": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Sunk costs": 1
+		}
+	},
+	"financial position of the company and the results of its operations and its cash flows": 
+	{
+		"de": {
+			"Vermögens-, Finanz- und Ertragslage der Gesellschaft": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"marginal cost": 
+	{
+		"de": {
+			"Grenzkosten": 1
+		},
+		"es": {
+			"Coste marginal": 1
+		},
+		"nl": {
+			"Marginale kosten": 1
+		}
+	},
+	"recording of entries": 
+	{
+		"de": {
+			"Erfassung von Buchungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"transaction cost": 
+	{
+		"de": {
+			"Transaktionskosten": 1
+		},
+		"es": {
+			"Coste de transacción": 1
+		},
+		"nl": {
+			"Transactiekosten": 1
+		}
+	},
+	"output variable": 
+	{
+		"de": {
+			"Ausgangsgröße": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"standard deduction": 
+	{
+		"de": {
+			"Pauschalabzug": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"BT Group": 
+	{
+		"de": {
+			"British Telecom": 1
+		},
+		"es": {
+			"BT Group": 1
+		},
+		"nl": {
+			"BT Group": 1
+		}
+	},
+	"service cost center": 
+	{
+		"de": {
+			"allgemeine Kostenstelle": 1,
+			"Gemeinkostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"supplies": 
+	{
+		"de": {
+			"Betriebsmittel": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income determination": 
+	{
+		"de": {
+			"Einkommensermittlung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"audit": 
+	{
+		"de": {
+			"Buchprüfung": 1,
+			"Wirtschaftsprüfung": 1,
+			"amtliche Rechnungsprüfung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Derivative": 
+	{
+		"de": {
+			"Derivat": 1
+		},
+		"es": {
+			"Derivado financiero": 1
+		},
+		"nl": {
+			"Financiële derivaten": 1
+		}
+	},
+	"Asset": 
+	{
+		"de": {
+			"Aktiva": 1
+		},
+		"es": {
+			"Activo": 1
+		},
+		"nl": {
+			"Activa": 1
+		}
+	},
+	"accrued costs": 
+	{
+		"de": {
+			"angefallene Kosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"time": 
+	{
+		"de": {
+			"Zeit": 1
+		},
+		"es": {
+			"Tiempo": 1
+		},
+		"nl": {
+			"Tijd": 1
+		}
+	},
+	"Mass media": 
+	{
+		"de": {
+			"Massenmedien": 1
+		},
+		"es": {
+			"Medio de comunicación de masas": 1
+		},
+		"nl": {
+			"Massamedia": 1
+		}
+	},
+	"intercompany turnover": 
+	{
+		"de": {
+			"Innenumsätze": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Petty cash": 
+	{
+		"de": {
+		},
+		"es": {
+			"Caja%20menor": 1
+		},
+		"nl": {
+		}
+	},
+	"Administration": 
+	{
+		"de": {
+		},
+		"es": {
+			"Concurso de acreedores": 1
+		},
+		"nl": {
+		}
+	},
+	"recognition": 
+	{
+		"de": {
+			"Einbuchung": 1,
+			"Ansatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Customer service": 
+	{
+		"de": {
+			"Kundendienst": 1
+		},
+		"es": {
+			"Servicio de atención al cliente": 1
+		},
+		"nl": {
+			"Klantenservice": 1
+		}
+	},
+	"Microfinance": 
+	{
+		"de": {
+			"Mikrofinanz": 1
+		},
+		"es": {
+			"Microfinanza": 1
+		},
+		"nl": {
+			"Microfinanciering": 1
+		}
+	},
+	"tax accounting law": 
+	{
+		"de": {
+			"Bilanzsteuerrecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bank in charge of an account": 
+	{
+		"de": {
+			"kontoführende Stelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"capital maintenance": 
+	{
+		"de": {
+			"Kapitalerhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash account book": 
+	{
+		"de": {
+			"Kassenbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounts paid in advance": 
+	{
+		"de": {
+			"transitorische Aktiva": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accountants' section": 
+	{
+		"de": {
+			"Abteilung Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Bargaining": 
+	{
+		"de": {
+			"Feilschen": 1
+		},
+		"es": {
+			"Regateo": 1
+		},
+		"nl": {
+		}
+	},
+	"Deferred tax": 
+	{
+		"de": {
+			"Latente Steuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Latente belastingschuld": 1
+		}
+	},
+	"liability insurance": 
+	{
+		"de": {
+			"Haftpflichtversicherung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Aansprakelijkheidsverzekering": 1
+		}
+	},
+	"gross profit margin": 
+	{
+		"de": {
+			"Bruttogewinnspanne": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost and earnings situation": 
+	{
+		"de": {
+			"Kosten- und Erlöslage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost assessment": 
+	{
+		"de": {
+			"Kostenumlage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"promissory note": 
+	{
+		"de": {
+			"Orderpapier": 1
+		},
+		"es": {
+			"Letra de cambio": 1
+		},
+		"nl": {
+			"orderbrief": 1
+		}
+	},
+	"Credit": 
+	{
+		"de": {
+			"Kredit": 1
+		},
+		"es": {
+			"Crédito": 1
+		},
+		"nl": {
+			"Krediet": 1
+		}
+	},
+	"Adam Smith": 
+	{
+		"de": {
+			"Adam Smith": 1
+		},
+		"es": {
+			"Adam Smith": 1
+		},
+		"nl": {
+			"Adam Smith": 1
+		}
+	},
+	"Energy crisis": 
+	{
+		"de": {
+			"Energiekrise": 1
+		},
+		"es": {
+			"Crisis energética": 1
+		},
+		"nl": {
+		}
+	},
+	"Liturgical year": 
+	{
+		"de": {
+			"Kirchenjahr": 1
+		},
+		"es": {
+			"Año litúrgico": 1
+		},
+		"nl": {
+			"Kerkelijk jaar": 1
+		}
+	},
+	"Interest rate derivative": 
+	{
+		"de": {
+			"Zinsderivat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Hawaii": 
+	{
+		"de": {
+			"Hawaii": 1
+		},
+		"es": {
+			"Hawái": 1
+		},
+		"nl": {
+			"Hawaï": 1
+		}
+	},
+	"calculated assets": 
+	{
+		"de": {
+			"Sollbestand": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"detail account": 
+	{
+		"de": {
+			"Unterkonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"double-entry bookkeeping system": 
+	{
+		"de": {
+			"Buchführung": 1
+		},
+		"es": {
+			"Partida doble": 1
+		},
+		"nl": {
+			"Dubbel boekhouden": 1
+		}
+	},
+	"assistant accountant": 
+	{
+		"de": {
+			"Hilfsbuchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"separate financial statement": 
+	{
+		"de": {
+			"Einzelabschluss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"additional balance": 
+	{
+		"de": {
+			"Nachtragsbilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"insolvency": 
+	{
+		"de": {
+			"Insolvenzrecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Insolventie": 1
+		}
+	},
+	"Convention": 
+	{
+		"de": {
+			"Konvention": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Conventie": 1
+		}
+	},
+	"off balance sheet": 
+	{
+		"de": {
+			"außerbilanziell": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	" depreciation": 
+	{
+		"de": {
+			" Abschreibungen auf Sachanlagen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"intercompany": 
+	{
+		"de": {
+			"buchungskreisübergreifend": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"operating surplus": 
+	{
+		"de": {
+			"Betriebsüberschuss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Balance of payments": 
+	{
+		"de": {
+			"Zahlungsbilanz": 1
+		},
+		"es": {
+			"Balanza de pagos": 1
+		},
+		"nl": {
+			"Betalingsbalans": 1
+		}
+	},
+	"(internal) correction statement": 
+	{
+		"de": {
+			"(interner) Korrekturbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Westminster system": 
+	{
+		"de": {
+			"Westminster-System": 1
+		},
+		"es": {
+			"Sistema Westminster": 1
+		},
+		"nl": {
+		}
+	},
+	"Retail": 
+	{
+		"de": {
+			"Einzelhandel": 1
+		},
+		"es": {
+			"Minorista": 1
+		},
+		"nl": {
+			"Detailhandel": 1
+		}
+	},
+	"European Union law": 
+	{
+		"de": {
+			"Europarecht": 1
+		},
+		"es": {
+			"Derecho de la Unión Europea": 1
+		},
+		"nl": {
+			"Recht van de Europese Unie": 1
+		}
+	},
+	"crime": 
+	{
+		"de": {
+			"Kriminalität": 1
+		},
+		"es": {
+			"Delito": 1
+		},
+		"nl": {
+			"Misdaad": 1
+		}
+	},
+	"business activity statement": 
+	{
+		"de": {
+			"betriebswirtschaftliche Auswertung auf einem amtlichen Vordruck": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United States": 
+	{
+		"de": {
+			"Vereinigte Staaten": 1
+		},
+		"es": {
+			"Estados Unidos": 1
+		},
+		"nl": {
+			"Verenigde Staten": 1
+		}
+	},
+	"chartered accountant certificate": 
+	{
+		"de": {
+			"Wirtschaftsprüfertestat": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"double-entry bookkeeping": 
+	{
+		"de": {
+			"Doppik": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting voucher": 
+	{
+		"de": {
+			"Buchhaltungsbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Surety bond": 
+	{
+		"de": {
+		},
+		"es": {
+			"Contrato de fianza": 1
+		},
+		"nl": {
+		}
+	},
+	"single-entry bookkeeping": 
+	{
+		"de": {
+			"einfache Buchführung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Company": 
+	{
+		"de": {
+			"Kompanie": 1
+		},
+		"es": {
+			"Empresa": 1
+		},
+		"nl": {
+			"Vennootschap": 1
+		}
+	},
+	"to serve the equity capital": 
+	{
+		"de": {
+			"das Eigenkapital bedienen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax voucher": 
+	{
+		"de": {
+			"Steuerbeleg": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Community of Protestant Churches in Europe": 
+	{
+		"de": {
+			"Gemeinschaft Evangelischer Kirchen in Europa": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"depreciation": 
+	{
+		"de": {
+			"Abschreibung": 1
+		},
+		"es": {
+			"Depreciación": 1
+		},
+		"nl": {
+			"Afschrijving": 1
+		}
+	},
+	"accounting skeletons": 
+	{
+		"de": {
+			"Bilanzleichen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"engineering": 
+	{
+		"de": {
+			"Ingenieurwissenschaften": 1
+		},
+		"es": {
+			"Ingeniería": 1
+		},
+		"nl": {
+			"Techniek": 1
+		}
+	},
+	"Sales management": 
+	{
+		"de": {
+			"Verkäufer": 1
+		},
+		"es": {
+			"Vendedor": 1
+		},
+		"nl": {
+			"Verkoper": 1
+		}
+	},
+	"cost of goods sold": 
+	{
+		"de": {
+			"Wareneinsatz": 1,
+			"Umsatzkosten": 1,
+			"Umsatzaufwendungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Withholding tax": 
+	{
+		"de": {
+			"Quellensteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Loonheffing": 1
+		}
+	},
+	"business combinations": 
+	{
+		"de": {
+			"Unternehmenszusammenschlüsse": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Subprime mortgage crisis": 
+	{
+		"de": {
+		},
+		"es": {
+			"Crisis de las hipotecas subprime": 1
+		},
+		"nl": {
+		}
+	},
+	"intercompany sales": 
+	{
+		"de": {
+			"Innenumsätze": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"skill": 
+	{
+		"de": {
+			"Fertigkeit": 1
+		},
+		"es": {
+			"Habilidad": 1
+		},
+		"nl": {
+			"Vaardigheid": 1
+		}
+	},
+	"disability": 
+	{
+		"de": {
+			"Behinderung": 1
+		},
+		"es": {
+			"Discapacidad": 1
+		},
+		"nl": {
+			"Handicap": 1
+		}
+	},
+	"accounting policy": 
+	{
+		"de": {
+			"Bilanzierungs- und Bewertungsmethoden": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Estimation theory": 
+	{
+		"de": {
+		},
+		"es": {
+			"Estimación estadística": 1
+		},
+		"nl": {
+		}
+	},
+	"coupon": 
+	{
+		"de": {
+			"Couponing": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Duty": 
+	{
+		"de": {
+			"Abgabe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"progress payments": 
+	{
+		"de": {
+			"Abschlagszahlungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Deferral": 
+	{
+		"de": {
+			"Rechnungsabgrenzung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Greenhouse gas": 
+	{
+		"de": {
+			"Treibhausgas": 1
+		},
+		"es": {
+			"Gas de efecto invernadero": 1
+		},
+		"nl": {
+			"Broeikasgassen": 1
+		}
+	},
+	"direct cost center": 
+	{
+		"de": {
+			"Hauptkostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"1571": 
+	{
+		"de": {
+			"1571": 1
+		},
+		"es": {
+			"1571": 1
+		},
+		"nl": {
+			"1571": 1
+		}
+	},
+	"write-down": 
+	{
+		"de": {
+			"Abschreibung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"House of Commons of Canada": 
+	{
+		"de": {
+			"Unterhaus": 1
+		},
+		"es": {
+			"Cámara de los Comunes de Canadá": 1
+		},
+		"nl": {
+			"Lagerhuis": 1
+		}
+	},
+	"increase in work in progress": 
+	{
+		"de": {
+			"Allgemeine Auftragsbedingungen für Abschlussprüfungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"activity accounting": 
+	{
+		"de": {
+			"Vorgangskostenrechnung": 1,
+			"Prozesskostenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax-exempt special savings account": 
+	{
+		"de": {
+			"Thesaurierungssteuersatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Gross income": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Brutoloon": 1
+		}
+	},
+	"productivity": 
+	{
+		"de": {
+			"Produktivität": 1
+		},
+		"es": {
+			"Productividad": 1
+		},
+		"nl": {
+		}
+	},
+	"balance sheet": 
+	{
+		"de": {
+			"Bilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to recognize as expenses": 
+	{
+		"de": {
+			"als Aufwand erfassen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"extraordinary items": 
+	{
+		"de": {
+			"außerordentliche Posten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax exemption": 
+	{
+		"de": {
+			"Freibetrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Heffingskorting": 1
+		}
+	},
+	"accounts receivable": 
+	{
+		"de": {
+			"Forderung#Forderungen im Rechnungswesen": 1
+		},
+		"es": {
+			"Deuda activa": 1
+		},
+		"nl": {
+			"Vordering": 1
+		}
+	},
+	"operating account": 
+	{
+		"de": {
+			"Betriebskonto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"minimum funding requirements": 
+	{
+		"de": {
+			"Mindestdotierungsverpflichtung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Charlie McCreevy": 
+	{
+		"de": {
+			"Charlie McCreevy": 1
+		},
+		"es": {
+			"Charlie McCreevy": 1
+		},
+		"nl": {
+			"Charlie McCreevy": 1
+		}
+	},
+	"maintenance of net asset value": 
+	{
+		"de": {
+			"Passivseite der Bilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Cost accounting": 
+	{
+		"de": {
+			"Kostenartenrechnung": 1
+		},
+		"es": {
+			"Contabilidad de costos": 1
+		},
+		"nl": {
+		}
+	},
+	"expense": 
+	{
+		"de": {
+			"Aufwand": 1
+		},
+		"es": {
+			"Gasto": 1
+		},
+		"nl": {
+		}
+	},
+	"method of amortization": 
+	{
+		"de": {
+			"Tilgungsart": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"land improvement": 
+	{
+		"de": {
+			"Melioration": 1
+		},
+		"es": {
+			"Mejora de la tierra": 1
+		},
+		"nl": {
+			"Grondverbetering": 1
+		}
+	},
+	"default": 
+	{
+		"de": {
+			"Schuldnerverzug": 1
+		},
+		"es": {
+			"Suspensión de pagos": 1
+		},
+		"nl": {
+		}
+	},
+	"Social_Security": 
+	{
+		"de": {
+			"Sozialversicherung": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Social Security Act": 1
+		}
+	},
+	"Receivership": 
+	{
+		"de": {
+			"Insolvenzverwalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Curator": 1
+		}
+	},
+	"investment securities": 
+	{
+		"de": {
+			"Wertpapiere des Anlagevermögens": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"United States Department of the Treasury": 
+	{
+		"de": {
+			"Finanzministerium der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Departamento del Tesoro de los Estados Unidos": 1
+		},
+		"nl": {
+			"United States Department of the Treasury": 1
+		}
+	},
+	"Tanzania": 
+	{
+		"de": {
+			"Tansania": 1
+		},
+		"es": {
+			"Tanzania": 1
+		},
+		"nl": {
+			"Tanzania": 1
+		}
+	},
+	"balance": 
+	{
+		"de": {
+			"Unterschiedsbetrag": 1,
+			"Abschlussbetrag": 1,
+			"Saldo": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"current ratio": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Current ratio": 1
+		}
+	},
+	"debit and credit": 
+	{
+		"de": {
+			"Soll und Haben": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Economy of the United States": 
+	{
+		"de": {
+			"Wirtschaft der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Economía de los Estados Unidos": 1
+		},
+		"nl": {
+			"Economie van de Verenigde Staten": 1
+		}
+	},
+	"cooking the books": 
+	{
+		"de": {
+			"Bilanzfälschung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cash journal": 
+	{
+		"de": {
+			"Kassenbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit turnover": 
+	{
+		"de": {
+			"Sollumsatz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	" depreciation and amortization": 
+	{
+		"de": {
+			" Abschreibungen auf Sachanlagen und Abschreibungen auf immaterielle Vermögensgegenstände": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bad debt provision": 
+	{
+		"de": {
+			"Rückstellung für Dubiose": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax inspector": 
+	{
+		"de": {
+			"Steuerprüferin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to cook the books": 
+	{
+		"de": {
+			"die Bücher fälschen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Commodity Futures Trading Commission": 
+	{
+		"de": {
+			"Commodity Futures Trading Commission": 1
+		},
+		"es": {
+			"Commodity Futures Trading Commission": 1
+		},
+		"nl": {
+		}
+	},
+	" tax": 
+	{
+		"de": {
+			" Steuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"on an accrual basis": 
+	{
+		"de": {
+			"periodengerecht": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"fraud": 
+	{
+		"de": {
+			"Betrug": 1
+		},
+		"es": {
+			"Intrusismo": 1
+		},
+		"nl": {
+			"Fraude": 1
+		}
+	},
+	"Eurostat": 
+	{
+		"de": {
+			"Eurostat": 1
+		},
+		"es": {
+			"Eurostat": 1
+		},
+		"nl": {
+			"Eurostat": 1
+		}
+	},
+	"approval of balance sheet": 
+	{
+		"de": {
+			"Bilanzgenehmigung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Freddie Mac": 
+	{
+		"de": {
+			"Freddie Mac": 1
+		},
+		"es": {
+			"Freddie Mac": 1
+		},
+		"nl": {
+			"Freddie Mac": 1
+		}
+	},
+	"doctrine": 
+	{
+		"de": {
+			"Doktrin": 1
+		},
+		"es": {
+			"Doctrina": 1
+		},
+		"nl": {
+			"Doctrine": 1
+		}
+	},
+	"Trade association": 
+	{
+		"de": {
+			"Wirtschaftsverband": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Brancheorganisatie": 1
+		}
+	},
+	"project controlling": 
+	{
+		"de": {
+			"Projektcontrolling": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Speech from the throne": 
+	{
+		"de": {
+			"Thronrede": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Troonrede": 1
+		}
+	},
+	"billing address": 
+	{
+		"de": {
+			"Rechnungsanschrift": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Traffic collision": 
+	{
+		"de": {
+			"Straßenverkehrsunfall": 1
+		},
+		"es": {
+			"Accidente de tráfico": 1
+		},
+		"nl": {
+			"Verkeersongeval": 1
+		}
+	},
+	"Bond": 
+	{
+		"de": {
+			"Verzinsliches Wertpapier": 1
+		},
+		"es": {
+			"Bono": 1
+		},
+		"nl": {
+			"Obligatie": 1
+		}
+	},
+	"audit date": 
+	{
+		"de": {
+			"Prüfungstermin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"realisation principle": 
+	{
+		"de": {
+			"Realisationsprinzip": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"bookwork": 
+	{
+		"de": {
+			"Buchhaltung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"share-based payment": 
+	{
+		"de": {
+			"aktienbasierte Vergütung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"credit column": 
+	{
+		"de": {
+			"Habenseite": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"average cost": 
+	{
+		"de": {
+			"Stückkosten": 1
+		},
+		"es": {
+			"Coste total": 1
+		},
+		"nl": {
+		}
+	},
+	"Share": 
+	{
+		"de": {
+			"Aktie": 1
+		},
+		"es": {
+			"Acción": 1
+		},
+		"nl": {
+			"Aandeel": 1
+		}
+	},
+	"general ledger": 
+	{
+		"de": {
+			"Buchführung#Hauptbuch": 1
+		},
+		"es": {
+			"Libro mayor": 1
+		},
+		"nl": {
+			"Grootboek": 1
+		}
+	},
+	"asset": 
+	{
+		"de": {
+			"Aktiva": 1
+		},
+		"es": {
+			"Activo": 1
+		},
+		"nl": {
+			"Activa": 1
+		}
+	},
+	"historical cost": 
+	{
+		"de": {
+			"Anschaffungskosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"dividend": 
+	{
+		"de": {
+			"Dividende": 1
+		},
+		"es": {
+			"Dividendo": 1
+		},
+		"nl": {
+			"Dividend": 1
+		}
+	},
+	"General Conditions of Contract for Audits of Annual Accounts": 
+	{
+		"de": {
+			" Finanz- und Ertragslage der Gesellschaft": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Stock and flow": 
+	{
+		"de": {
+		},
+		"es": {
+			"Existencias y flujos": 1
+		},
+		"nl": {
+		}
+	},
+	"items which can be included into the balance sheet": 
+	{
+		"de": {
+			"Einführungsgesetz zum Handelsgesetzbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"in unaudited form": 
+	{
+		"de": {
+			"ungeprüft": 1,
+			"untestiert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"partial write-off": 
+	{
+		"de": {
+			"Teilausbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to audit books": 
+	{
+		"de": {
+			"Bücher prüfen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"to keep accounts": 
+	{
+		"de": {
+			"Bücher führen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"petty cash book": 
+	{
+		"de": {
+			"Portokassenbuch": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"blip": 
+	{
+		"de": {
+			"kurzzeitige Veränderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"nonprofit organization": 
+	{
+		"de": {
+			"Non-Profit-Organisation": 1
+		},
+		"es": {
+			"Organización sin ánimo de lucro": 1
+		},
+		"nl": {
+			"Non-profit": 1
+		}
+	},
+	"after-tax": 
+	{
+		"de": {
+			"Nachsteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"one-off expenditure": 
+	{
+		"de": {
+			"Einmalaufwendungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Gross domestic product": 
+	{
+		"de": {
+			"Bruttoinlandsprodukt": 1
+		},
+		"es": {
+			"Producto interno bruto": 1
+		},
+		"nl": {
+			"Bruto binnenlands product": 1
+		}
+	},
+	"convertible bond": 
+	{
+		"de": {
+			"Wandelanleihe": 1
+		},
+		"es": {
+			"Obligación convertible": 1
+		},
+		"nl": {
+			"Converteerbare obligatie": 1
+		}
+	},
+	"indirect cost center": 
+	{
+		"de": {
+			"Hilfskostenstelle": 1,
+			"Nebenkostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Financial Reporting Act": 
+	{
+		"de": {
+			"Rechnungslegungsgesetz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"overall annual cost": 
+	{
+		"de": {
+			"Gesamtjahreskosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cafeteria plan": 
+	{
+		"de": {
+			"Cafeteria-Modell": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	" taxes": 
+	{
+		"de": {
+			" Steuern": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"economics": 
+	{
+		"de": {
+			"Wirtschaftswissenschaft": 1
+		},
+		"es": {
+			"Economía": 1
+		},
+		"nl": {
+			"Economie": 1
+		}
+	},
+	"accountancy": 
+	{
+		"de": {
+			"Rechnungswesen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"prepayments and accrued income": 
+	{
+		"de": {
+			"Rechnungsabgrenzungsposten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"outstanding money": 
+	{
+		"de": {
+			"Forderung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"in specie distribution": 
+	{
+		"de": {
+			"Sachausschüttung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"leverage": 
+	{
+		"de": {
+			"Leverage-Effekt": 1
+		},
+		"es": {
+			"Apalancamiento": 1
+		},
+		"nl": {
+		}
+	},
+	"balance forward": 
+	{
+		"de": {
+			"Saldoübertrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"statement of financial position": 
+	{
+		"de": {
+			"Bilanz": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Gross margin": 
+	{
+		"de": {
+			"Bruttoergebnis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Basic income guarantee": 
+	{
+		"de": {
+			"Bedingungsloses Grundeinkommen": 1
+		},
+		"es": {
+			"Renta básica universal": 1
+		},
+		"nl": {
+			"Basisinkomen": 1
+		}
+	},
+	"Income tax in the United States": 
+	{
+		"de": {
+			"Einkommensteuer": 1
+		},
+		"es": {
+			"Impuesto sobre la renta en los Estados Unidos": 1
+		},
+		"nl": {
+		}
+	},
+	"direct cost centre": 
+	{
+		"de": {
+			"Hauptkostenstelle": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"primary market": 
+	{
+		"de": {
+			"Primärmarkt": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Primaire markt": 1
+		}
+	},
+	"carry forward": 
+	{
+		"de": {
+			"Saldenübertrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Julian calendar": 
+	{
+		"de": {
+			"Julianischer Kalender": 1
+		},
+		"es": {
+			"Calendario juliano": 1
+		},
+		"nl": {
+			"Juliaanse kalender": 1
+		}
+	},
+	"nature of expense method": 
+	{
+		"de": {
+			"Gesamtkostenverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"real estate investment trust": 
+	{
+		"de": {
+			"Real Estate Investment Trust": 1
+		},
+		"es": {
+			"Real Estate Investment Trust": 1
+		},
+		"nl": {
+		}
+	},
+	"money": 
+	{
+		"de": {
+			"Geld": 1
+		},
+		"es": {
+			"Dinero": 1
+		},
+		"nl": {
+			"Geld": 1
+		}
+	},
+	"to enter data into SAP": 
+	{
+		"de": {
+			"Daten in SAP einpflegen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"balance brought forward": 
+	{
+		"de": {
+			"Saldoübertrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax relief scheme": 
+	{
+		"de": {
+			"Steuersparmodell": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"quarterly results": 
+	{
+		"de": {
+			"Quartalsergebnis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"volume variance": 
+	{
+		"de": {
+			"Beschäftigungsabweichung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"business tax": 
+	{
+		"de": {
+			"Unternehmensteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting fraud": 
+	{
+		"de": {
+			"Bilanzfälschung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Suspense account": 
+	{
+		"de": {
+			"CpD-Konto": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Federal Reserve Bank of Dallas": 
+	{
+		"de": {
+		},
+		"es": {
+			"Banco de la Reserva Federal de Dallas": 1
+		},
+		"nl": {
+		}
+	},
+	"leveraged buyout": 
+	{
+		"de": {
+			"Fremdfinanzierte Übernahme": 1
+		},
+		"es": {
+			"Leveraged buyout": 1
+		},
+		"nl": {
+			"Leveraged buyout": 1
+		}
+	},
+	"Ratio": 
+	{
+		"de": {
+		},
+		"es": {
+			"Razón": 1
+		},
+		"nl": {
+			"Verhouding": 1
+		}
+	},
+	"Medicare": 
+	{
+		"de": {
+			"Medicare": 1
+		},
+		"es": {
+			"Medicare": 1
+		},
+		"nl": {
+		}
+	},
+	"net profit or loss for the period": 
+	{
+		"de": {
+			"Jahresüberschuss": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"investment book value": 
+	{
+		"de": {
+			"Beteiligungsbuchwert": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"New Year": 
+	{
+		"de": {
+			"Neujahr": 1
+		},
+		"es": {
+			"Año Nuevo": 1
+		},
+		"nl": {
+			"Nieuwjaar": 1
+		}
+	},
+	"amortization type": 
+	{
+		"de": {
+			"Abschreibungsart": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"debit side": 
+	{
+		"de": {
+			"Soll": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"proceeds of liquidation": 
+	{
+		"de": {
+			"Liquidationserlös": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Consumer choice": 
+	{
+		"de": {
+			"Haushaltstheorie": 1
+		},
+		"es": {
+			"Teoría del consumidor": 1
+		},
+		"nl": {
+		}
+	},
+	"target costing": 
+	{
+		"de": {
+			"Zielkostenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"revaluation reserve": 
+	{
+		"de": {
+			"Neubewertungsrücklage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"China": 
+	{
+		"de": {
+			"Volksrepublik China": 1
+		},
+		"es": {
+			"República Popular China": 1
+		},
+		"nl": {
+			"Volksrepubliek China": 1
+		}
+	},
+	"delivery costs": 
+	{
+		"de": {
+			"Kosten der Warenabgabe": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"characteristic": 
+	{
+		"de": {
+			"Charakteristik": 1
+		},
+		"es": {
+			"Característica": 1
+		},
+		"nl": {
+			"Karakteristieke functie": 1
+		}
+	},
+	"adjusting entry": 
+	{
+		"de": {
+			"Umbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Capital accumulation": 
+	{
+		"de": {
+			"Akkumulation": 1
+		},
+		"es": {
+			"Acumulación del capital": 1
+		},
+		"nl": {
+			"Kapitaalaccumulatie": 1
+		}
+	},
+	"Market segmentation": 
+	{
+		"de": {
+			"Marktsegmentierung": 1
+		},
+		"es": {
+			"Segmentación de mercado": 1
+		},
+		"nl": {
+			"Marktsegment": 1
+		}
+	},
+	"Social cost": 
+	{
+		"de": {
+		},
+		"es": {
+			"Coste social": 1
+		},
+		"nl": {
+		}
+	},
+	"reconciliation of book and taxable income": 
+	{
+		"de": {
+			"ertragssteuerliche Vorschriften": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"transfer price": 
+	{
+		"de": {
+			"Verrechnungspreis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"comptroller": 
+	{
+		"de": {
+			"Rechnungsprüferin": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"garnishment": 
+	{
+		"de": {
+			"Drittschuldner": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting rules": 
+	{
+		"de": {
+			"Buchhaltungsrichtlinien": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Trade": 
+	{
+		"de": {
+			"Handel": 1
+		},
+		"es": {
+			"Comercio": 1
+		},
+		"nl": {
+			"Handel": 1
+		}
+	},
+	"retirement": 
+	{
+		"de": {
+			"Ausbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Mexico": 
+	{
+		"de": {
+			"Mexiko": 1
+		},
+		"es": {
+			"México": 1
+		},
+		"nl": {
+			"Mexico": 1
+		}
+	},
+	"reserve component": 
+	{
+		"de": {
+			"Rücklageanteil": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"tax audit": 
+	{
+		"de": {
+			"steuerliche Außenprüfung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Government": 
+	{
+		"de": {
+			"Regierung": 1
+		},
+		"es": {
+			"Gobierno": 1
+		},
+		"nl": {
+			"Regering": 1
+		}
+	},
+	"step-up": 
+	{
+		"de": {
+			"Aufstockung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Barack Obama": 
+	{
+		"de": {
+			"Barack Obama": 1
+		},
+		"es": {
+			"Barack Obama": 1
+		},
+		"nl": {
+			"Barack Obama": 1
+		}
+	},
+	"Government-owned corporation": 
+	{
+		"de": {
+			"Öffentliches Unternehmen": 1
+		},
+		"es": {
+			"Empresa pública": 1
+		},
+		"nl": {
+			"Staatsbedrijf": 1
+		}
+	},
+	"minority interest": 
+	{
+		"de": {
+		},
+		"es": {
+			"Interés minoritario": 1
+		},
+		"nl": {
+		}
+	},
+	"minority interests": 
+	{
+		"de": {
+			"Anteile anderer Gesellschafter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"capital paid in excess of par value": 
+	{
+		"de": {
+			"Kapitalrücklage": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"decision": 
+	{
+		"de": {
+			"Entscheidung": 1
+		},
+		"es": {
+			"Decisión": 1
+		},
+		"nl": {
+			"Besluit": 1
+		}
+	},
+	"Credit risk": 
+	{
+		"de": {
+			"Kreditrisiko": 1
+		},
+		"es": {
+			"Riesgo de crédito": 1
+		},
+		"nl": {
+			"Kredietrisico": 1
+		}
+	},
+	"Gross profit": 
+	{
+		"de": {
+			"Rohertrag": 1
+		},
+		"es": {
+		},
+		"nl": {
+			"Brutowinst": 1
+		}
+	},
+	"leaseback": 
+	{
+		"de": {
+			"Sale-Lease-Back": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"reversing of entry": 
+	{
+		"de": {
+			"Eintrag einer Gegenbuchung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"XBRL": 
+	{
+		"de": {
+			"XBRL": 1
+		},
+		"es": {
+			"XBRL": 1
+		},
+		"nl": {
+			"XBRL": 1
+		}
+	},
+	"bookkeeping clerk": 
+	{
+		"de": {
+			"Buchhalter": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Finance": 
+	{
+		"de": {
+			"Finanzierung": 1
+		},
+		"es": {
+			"Finanzas": 1
+		},
+		"nl": {
+			"Financiën": 1
+		}
+	},
+	"United States Congress": 
+	{
+		"de": {
+			"Kongress der Vereinigten Staaten": 1
+		},
+		"es": {
+			"Congreso de los Estados Unidos": 1
+		},
+		"nl": {
+			"Amerikaans Congres": 1
+		}
+	},
+	"financial risk": 
+	{
+		"de": {
+			"Finanzrisiko": 1
+		},
+		"es": {
+			"Riesgo financiero": 1
+		},
+		"nl": {
+		}
+	},
+	"to set off against": 
+	{
+		"de": {
+			"verrechnen mit": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"EBITA": 
+	{
+		"de": {
+			"EBITA": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Good": 
+	{
+		"de": {
+			"Gut": 1
+		},
+		"es": {
+			"Bien económico": 1
+		},
+		"nl": {
+			"Goed": 1
+		}
+	},
+	"impairment losses": 
+	{
+		"de": {
+			"Verluste aus Wertminderungen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Profit": 
+	{
+		"de": {
+		},
+		"es": {
+		},
+		"nl": {
+			"Bedrijfsresultaat": 1
+		}
+	},
+	"ledger keeper": 
+	{
+		"de": {
+			"Hauptbuchführer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accounting area": 
+	{
+		"de": {
+			"Buchungskreis": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"amortization": 
+	{
+		"de": {
+			"Abschreibung immaterieller Vermögensgegenstände": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"Real estate broker": 
+	{
+		"de": {
+			"Immobilienmakler": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"function of expense method": 
+	{
+		"de": {
+			"Umsatzkostenverfahren": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"accrual": 
+	{
+		"de": {
+			"Rechnungsabgrenzung": 1
+		},
+		"es": {
+			"Devengo": 1
+		},
+		"nl": {
+		}
+	},
+	"pension": 
+	{
+		"de": {
+			"Pension": 1
+		},
+		"es": {
+			"Pensión": 1
+		},
+		"nl": {
+			"Pensioen": 1
+		}
+	},
+	"amortization method": 
+	{
+		"de": {
+			"Tilgungsart": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"cost center accounting": 
+	{
+		"de": {
+			"Kostenstellenrechnung": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"shares in affiliated companies": 
+	{
+		"de": {
+			"Anteile an verbundenen Unternehmen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"non-current assets": 
+	{
+		"de": {
+			"Anlagevermögen": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"income tax": 
+	{
+		"de": {
+			"Ertragssteuer": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	},
+	"gross domestic product": 
+	{
+		"de": {
+			"Bruttoinlandsprodukt": 1
+		},
+		"es": {
+			"Producto interno bruto": 1
+		},
+		"nl": {
+			"Bruto binnenlands product": 1
+		}
+	},
+	"Earnings before interest and taxes": 
+	{
+		"de": {
+			"EBIT": 1
+		},
+		"es": {
+			"Beneficio%20antes%20de%20intereses%20e%20impuestos": 1
+		},
+		"nl": {
+			"EBIT": 1
+		}
+	},
+	"information": 
+	{
+		"de": {
+			"Information": 1
+		},
+		"es": {
+			"Información": 1
+		},
+		"nl": {
+			"Informatie": 1
+		}
+	},
+	"shareholder": 
+	{
+		"de": {
+			"Aktionär": 1
+		},
+		"es": {
+			"Accionista": 1
+		},
+		"nl": {
+		}
+	},
+	"Income statement": 
+	{
+		"de": {
+			"Gewinn- und Verlustrechnung": 1
+		},
+		"es": {
+			"Estado de resultados": 1
+		},
+		"nl": {
+			"Winst-en-verliesrekening": 1
+		}
+	},
+	"value added": 
+	{
+		"de": {
+			"Wertschöpfung": 1
+		},
+		"es": {
+			"Valor agregado": 1
+		},
+		"nl": {
+			"Toegevoegde waarde": 1
+		}
+	},
+	"SG&A": 
+	{
+		"de": {
+			"Vertriebsgemeinkosten": 1
+		},
+		"es": {
+		},
+		"nl": {
+		}
+	}
+}

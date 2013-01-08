@@ -1,0 +1,25 @@
+
+\data\
+ngram 1=4
+ngram 2=4
+ngram 3=4
+
+\1-grams:
+-1  A   -1
+-2  B   -2
+-3  C   -3
+-4  D   -4
+
+\2-grams:
+-1 A B -1
+-2 B C -2
+-3 C D -3
+-4 D A -4
+
+\3-grams:
+-1 A B C
+-2 B C D
+-3 C D A
+-4 D A B
+
+\end\

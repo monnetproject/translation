@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:finance="http://www.monnet-project.eu/finance#" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+	<owl:Class rdf:about="http://www.monnet-project.eu/finance#FixedAssets">
+		<rdfs:label xml:lang="en">Fixed assets</rdfs:label>
+		<rdfs:subClassOf>
+			<owl:Class rdf:about="http://www.monnet-project.eu/finance#Assets">
+				<rdfs:label xml:lang="en">Assets</rdfs:label>
+			</owl:Class>
+		</rdfs:subClassOf>
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/finance#IntangibleFixedAssets">
+		<rdfs:label xml:lang="en">Intangible fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/finance#FixedAssets" />
+	</owl:Class>
+	<owl:Class rdf:about="http://www.monnet-project.eu/finance#TangibleFixedAssets">
+		<rdfs:label xml:lang="en">Tangible fixed assets</rdfs:label>
+		<rdfs:subClassOf rdf:resource="http://www.monnet-project.eu/finance#FixedAssets" />
+	</owl:Class>
+</rdf:RDF>

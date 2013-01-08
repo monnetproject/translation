@@ -1,0 +1,10 @@
+#!/bin/bash
+
+if [ "$1" == "-v" ]
+then
+  shift
+  mvn exec:java -Dexec.mainClass=eu.monnetproject.translation.evaluation.EvaluateNFolds -Dexec.args="$*"
+else
+  mvn -q exec:java -Dexec.mainClass=eu.monnetproject.translation.evaluation.EvaluateNFolds -Dexec.args="$*"
+fi
+

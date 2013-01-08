@@ -1,0 +1,341 @@
+[INFO] Scanning for projects...
+[WARNING] POM for 'biz.aQute:bndlib:pom:1.50.0:runtime' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building eu.monnetproject.translation.phrasal OSGi Bundle
+[INFO]    task-segment: [test]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [bndannotation:bndannotation {execution: default}]
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 24 resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Surefire report directory: /home/tobwun/deri/software/monnet-trunk/eu.monnetproject.translation.phrasal/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running eu.monnetproject.translation.phrasal.pt.SQLPhraseTableSourceTest
+connect to acquis_nl_de
+candidatesFallbackGermanCompound
+translate: Arbeitsmarktsegmentationstheorie
+translate compounds: [arbeitsmarktsegment, a, t, ions, theorie]
+Error: no translations for "arbeitsmarktsegment"
+Error: no translations for "ions"
+no translations found
+
+translate: Ausbildungsplatzförderungsgesetz
+translate compounds: [ausbildung, platz, förderung, gesetz]
+final res: TAINING Platz encourage Gesetz for ausbildungplatzförderunggesetz
+final res: TAINING Platz promotion Gesetz for ausbildungplatzförderunggesetz
+final res: TRAINING Platz encourage Law for ausbildungplatzförderunggesetz
+final res: TRAINING Platz promotion Law for ausbildungplatzförderunggesetz
+final res: training Platz encourage Law for ausbildungplatzförderunggesetz
+final res: training Platz promotion Law for ausbildungplatzförderunggesetz
+final res: TRAINING Platz encourage Gesetz for ausbildungplatzförderunggesetz
+final res: TRAINING Platz promotion Gesetz for ausbildungplatzförderunggesetz
+final res: training Platz encourage Gesetz for ausbildungplatzförderunggesetz
+final res: training Platz promotion Gesetz for ausbildungplatzförderunggesetz
+
+translate: Außenwirtschaftsdiskriminierung
+translate compounds: [außenwirtschaft, diskriminierung]
+Error: no translations for "außenwirtschaft"
+no translations found
+
+translate: Außenwirtschaftsliberalisierung
+translate compounds: [außenwirtschaft, liberalisierung]
+Error: no translations for "außenwirtschaft"
+no translations found
+
+translate: Betriebsunterbrechungsversicherung
+translate compounds: [betriebsunterbrechung, versicherung]
+Error: no translations for "betriebsunterbrechung"
+no translations found
+
+translate: Bodenbewirtschaftungsintensität
+translate compounds: [bodenbewirtschaftung, intensität]
+final res: land intensity for bodenbewirtschaftungintensität
+
+translate: Bundesausbildungsförderungsgesetz
+translate compounds: [bundes, ausbildungsförderung, gesetz]
+final res: Bundes training support Act for bundesausbildungsförderunggesetz
+final res: Bundes Training support Act for bundesausbildungsförderunggesetz
+final res: Bundes Training Law for bundesausbildungsförderunggesetz
+final res: Bundes Training Gesetz for bundesausbildungsförderunggesetz
+final res: Bundes Promotion of training Law for bundesausbildungsförderunggesetz
+final res: Bundes Promotion of training Gesetz for bundesausbildungsförderunggesetz
+final res: Bundes training support Law for bundesausbildungsförderunggesetz
+final res: Bundes training support Gesetz for bundesausbildungsförderunggesetz
+final res: Bundes Training support Law for bundesausbildungsförderunggesetz
+final res: Bundes Training support Gesetz for bundesausbildungsförderunggesetz
+
+translate: Elektrohaushaltsgeräteindustrie
+translate compounds: [elektrohaushaltsgeräte, industrie]
+final res: electrical household industrie for elektrohaushaltsgeräteindustrie
+final res: electrical household appliances industrie for elektrohaushaltsgeräteindustrie
+
+translate: Entscheidungsunterstützungssystem
+translate compounds: [entscheidung, unterstützung, system]
+final res: judgment assistance system for entscheidungunterstützungsystem
+final res: decision to assistance system for entscheidungunterstützungsystem
+final res: , Decision assistance system for entscheidungunterstützungsystem
+final res: Decision to assistance system for entscheidungunterstützungsystem
+final res: Entscheidung assistance system for entscheidungunterstützungsystem
+final res: Decision , assistance system for entscheidungunterstützungsystem
+final res: the DECISION assistance system for entscheidungunterstützungsystem
+final res: DECISION assistance system for entscheidungunterstützungsystem
+final res: decision assistance system for entscheidungunterstützungsystem
+final res: Decision assistance system for entscheidungunterstützungsystem
+
+translate: Familieneinkommensbesteuerung
+translate compounds: [familien, einkommensbesteuerung]
+final res: families — the income tax for familieneinkommensbesteuerung
+final res: following families income tax for familieneinkommensbesteuerung
+final res: and families income tax for familieneinkommensbesteuerung
+final res: families to be income tax for familieneinkommensbesteuerung
+final res: families , income tax for familieneinkommensbesteuerung
+final res: families — income tax for familieneinkommensbesteuerung
+final res: families of income tax for familieneinkommensbesteuerung
+final res: in families income tax for familieneinkommensbesteuerung
+final res: of families income tax for familieneinkommensbesteuerung
+final res: families income tax for familieneinkommensbesteuerung
+
+translate: Informationswissenschaftlerinnen
+translate compounds: [informations, wissenschaftlerinnen]
+Error: no translations for "wissenschaftlerinnen"
+no translations found
+
+translate: Kapitalanlagegesellschaftsgesetz
+translate compounds: [kapitalanlagegesellschaft, gesetz]
+Error: no translations for "kapitalanlagegesellschaft"
+no translations found
+
+translate: Kapitalbeteiligungsgesellschaft
+4 translations found
+final res: equity company for Kapitalbeteiligungsgesellschaft
+final res: equity investment firm for Kapitalbeteiligungsgesellschaft
+final res: equity investment organisation for Kapitalbeteiligungsgesellschaft
+final res: private equity firm for Kapitalbeteiligungsgesellschaft
+
+translate: Kernbrennstoffwiederaufarbeitung
+translate compounds: [kernbrennstoff, wiederaufarbeitung]
+Error: no translations for "kernbrennstoff"
+no translations found
+
+translate: Kernbrennstoffwiederaufbereitung
+translate compounds: [kernbrennstoff, wieder, aufbereitung]
+Error: no translations for "kernbrennstoff"
+no translations found
+
+translate: Kraftfahrzeughaftpflichtversicherung
+translate compounds: [kraftfahrzeug, haftpflichtversicherung]
+final res: motor , MOTOR VEHICLES for kraftfahrzeughaftpflichtversicherung
+final res: motor vehicle civil liability for kraftfahrzeughaftpflichtversicherung
+final res: USE MOTOR VEHICLES for kraftfahrzeughaftpflichtversicherung
+final res: motor civil liability for kraftfahrzeughaftpflichtversicherung
+final res: of motor liability insurance for kraftfahrzeughaftpflichtversicherung
+final res: motor vehicle liability insurance for kraftfahrzeughaftpflichtversicherung
+final res: of motor MOTOR VEHICLES for kraftfahrzeughaftpflichtversicherung
+final res: motor liability insurance for kraftfahrzeughaftpflichtversicherung
+final res: motor vehicle MOTOR VEHICLES for kraftfahrzeughaftpflichtversicherung
+final res: motor MOTOR VEHICLES for kraftfahrzeughaftpflichtversicherung
+
+translate: Lebensmittelkennzeichnungsverordnung
+translate compounds: [lebensmittel, kennzeichnung, verordnung]
+final res: INDUSTRIES LABELLING a Regulation for lebensmittelkennzeichnungverordnung
+final res: foods marking a Regulation for lebensmittelkennzeichnungverordnung
+final res: food marking a Regulation for lebensmittelkennzeichnungverordnung
+final res: foodstuffs LABELLING a Regulation for lebensmittelkennzeichnungverordnung
+final res: INDUSTRIES labelling a Regulation for lebensmittelkennzeichnungverordnung
+final res: INDUSTRIES MARKING a Regulation for lebensmittelkennzeichnungverordnung
+final res: foodstuffs labelling a Regulation for lebensmittelkennzeichnungverordnung
+final res: foodstuffs MARKING a Regulation for lebensmittelkennzeichnungverordnung
+final res: INDUSTRIES marking a Regulation for lebensmittelkennzeichnungverordnung
+final res: foodstuffs marking a Regulation for lebensmittelkennzeichnungverordnung
+
+translate: Nachhaltigkeitsberichterstattung
+translate compounds: [nachhaltigkeit, berichterstattung]
+final res: the sustainability reporting for nachhaltigkeitberichterstattung
+final res: sustainability of reporting for nachhaltigkeitberichterstattung
+final res: the sustainability REPORTING for nachhaltigkeitberichterstattung
+final res: sustainability of REPORTING for nachhaltigkeitberichterstattung
+final res: SUSTAINABILITY REPORTS for nachhaltigkeitberichterstattung
+final res: sustainability REPORTS for nachhaltigkeitberichterstattung
+final res: SUSTAINABILITY reporting for nachhaltigkeitberichterstattung
+final res: sustainability reporting for nachhaltigkeitberichterstattung
+final res: SUSTAINABILITY REPORTING for nachhaltigkeitberichterstattung
+final res: sustainability REPORTING for nachhaltigkeitberichterstattung
+
+translate: Nahrungsmittelversorgungssicherheit
+translate compounds: [nahrungsmittelversorgung, sicherheit]
+final res: : purposes for nahrungsmittelversorgungsicherheit
+final res: : security for nahrungsmittelversorgungsicherheit
+final res: food supply purposes of monitoring for nahrungsmittelversorgungsicherheit
+final res: food supply the purposes of for nahrungsmittelversorgungsicherheit
+final res: food supply security of the for nahrungsmittelversorgungsicherheit
+final res: food supply the purposes for nahrungsmittelversorgungsicherheit
+final res: food supply security of for nahrungsmittelversorgungsicherheit
+final res: food supply purposes of for nahrungsmittelversorgungsicherheit
+final res: food supply purposes for nahrungsmittelversorgungsicherheit
+final res: food supply security for nahrungsmittelversorgungsicherheit
+
+translate: Organisationsentwicklungsberatung
+translate compounds: [organisations, entwicklungsberatung]
+Error: no translations for "entwicklungsberatung"
+no translations found
+
+translate: Partnerschaftsgesellschaftsgesetz
+translate compounds: [partnerschaftsgesellschaft, gesetz]
+Error: no translations for "partnerschaftsgesellschaft"
+no translations found
+
+translate: Steuerberatergebührenverordnung
+translate compounds: [steuerberater, gebühren, verordnung]
+final res: tax advisors are stepping up a Regulation for steuerberatergebührenverordnung
+final res: tax advisors stepping up a Regulation for steuerberatergebührenverordnung
+
+translate: Telekommunikationsinfrastruktur
+1 translations found
+final res: telecommunications infrastructure for Telekommunikationsinfrastruktur
+
+translate: Umweltverträglichkeitsprüfung
+33 translations found
+final res: Assessment for Umweltverträglichkeitsprüfung
+final res: assessment for Umweltverträglichkeitsprüfung
+final res: assessment of for Umweltverträglichkeitsprüfung
+final res: assessment of environmental for Umweltverträglichkeitsprüfung
+final res: assessment of the for Umweltverträglichkeitsprüfung
+final res: EIA for Umweltverträglichkeitsprüfung
+final res: environment for Umweltverträglichkeitsprüfung
+final res: Environment Assessment for Umweltverträglichkeitsprüfung
+final res: environment impact assessment for Umweltverträglichkeitsprüfung
+final res: environment risk for Umweltverträglichkeitsprüfung
+final res: environment risk assessment for Umweltverträglichkeitsprüfung
+final res: Environmental for Umweltverträglichkeitsprüfung
+final res: environmental for Umweltverträglichkeitsprüfung
+final res: Environmental Assessment for Umweltverträglichkeitsprüfung
+final res: Environmental Impact for Umweltverträglichkeitsprüfung
+final res: environmental impact for Umweltverträglichkeitsprüfung
+final res: environmental impact analysis for Umweltverträglichkeitsprüfung
+final res: Environmental Impact Assessment for Umweltverträglichkeitsprüfung
+final res: Environmental impact assessment for Umweltverträglichkeitsprüfung
+final res: environmental impact assessment for Umweltverträglichkeitsprüfung
+final res: environmental impact assessments for Umweltverträglichkeitsprüfung
+final res: environmental risk for Umweltverträglichkeitsprüfung
+final res: environmental risk assessment for Umweltverträglichkeitsprüfung
+final res: Impact for Umweltverträglichkeitsprüfung
+final res: impact for Umweltverträglichkeitsprüfung
+final res: Impact Assessment for Umweltverträglichkeitsprüfung
+final res: impact assessment for Umweltverträglichkeitsprüfung
+final res: Impact Assessment ( for Umweltverträglichkeitsprüfung
+final res: of environmental for Umweltverträglichkeitsprüfung
+final res: risk assessment for Umweltverträglichkeitsprüfung
+final res: risk assessment to for Umweltverträglichkeitsprüfung
+final res: the Environmental Impact for Umweltverträglichkeitsprüfung
+final res: the environmental impact for Umweltverträglichkeitsprüfung
+
+translate: Verkehrsinfrastrukturinvestition
+translate compounds: [verkehrsinfrastruktur, investition]
+final res: in transport infrastructure Investition for verkehrsinfrastrukturinvestition
+final res: Traffic infrastructure investment for verkehrsinfrastrukturinvestition
+final res: transport infrastructure investment , for verkehrsinfrastrukturinvestition
+final res: transport infrastructures Investition for verkehrsinfrastrukturinvestition
+final res: in transport infrastructure investment for verkehrsinfrastrukturinvestition
+final res: infrastructure Investition for verkehrsinfrastrukturinvestition
+final res: transport infrastructures investment for verkehrsinfrastrukturinvestition
+final res: infrastructure investment for verkehrsinfrastrukturinvestition
+final res: transport infrastructure Investition for verkehrsinfrastrukturinvestition
+final res: transport infrastructure investment for verkehrsinfrastrukturinvestition
+
+translate: Verwaltungswissenschaftlerinnen
+translate compounds: [verwaltungswissenschaftler, innen]
+Error: no translations for "verwaltungswissenschaftler"
+no translations found
+
+translate: Vollbeschäftigungsarbeitslosigkeit
+translate compounds: [vollbeschäftigung, arbeitslosigkeit]
+final res: employment unemployment for vollbeschäftigungarbeitslosigkeit
+final res: full employment unemployment matters for vollbeschäftigungarbeitslosigkeit
+final res: full employment Arbeitslosigkeit for vollbeschäftigungarbeitslosigkeit
+final res: full unemployment for vollbeschäftigungarbeitslosigkeit
+final res: full employment goals unemployment for vollbeschäftigungarbeitslosigkeit
+final res: full employment unemployment , for vollbeschäftigungarbeitslosigkeit
+final res: full employment of unemployment for vollbeschäftigungarbeitslosigkeit
+final res: of full employment unemployment for vollbeschäftigungarbeitslosigkeit
+final res: achieving full employment unemployment for vollbeschäftigungarbeitslosigkeit
+final res: full employment unemployment for vollbeschäftigungarbeitslosigkeit
+
+translate: Wirtschaftskonzentrationspolitik
+translate compounds: [wirtschaft, konzentrationspolitik]
+Error: no translations for "konzentrationspolitik"
+no translations found
+
+translate: Wirtschaftsprüfungsgesellschaft
+4 translations found
+final res: auditing for Wirtschaftsprüfungsgesellschaft
+final res: auditing firm for Wirtschaftsprüfungsgesellschaft
+final res: firm of auditors for Wirtschaftsprüfungsgesellschaft
+final res: Wirtschaftsprüfungsgesellschaft for Wirtschaftsprüfungsgesellschaft
+
+translate: Wirtschaftssicherstellungsgesetz
+translate compounds: [wirtschaft, sicherstellungsgesetz]
+Error: no translations for "sicherstellungsgesetz"
+no translations found
+
+translate: Wirtschaftswissenschaftlerinnen
+translate compounds: [wirtschaft, wissenschaftlerinnen]
+Error: no translations for "wissenschaftlerinnen"
+no translations found
+
+translate: Wohnungsgemeinnützigkeitsgesetz
+translate compounds: [wohnung, gemeinnützigkeit, gesetz]
+final res: home @-@ Law for wohnunggemeinnützigkeitgesetz
+final res: home @-@ Gesetz for wohnunggemeinnützigkeitgesetz
+final res: accommodation not @-@ Law for wohnunggemeinnützigkeitgesetz
+final res: PLACES OF RESIDENCE not @-@ Law for wohnunggemeinnützigkeitgesetz
+final res: housing not @-@ Law for wohnunggemeinnützigkeitgesetz
+final res: accommodation not @-@ Gesetz for wohnunggemeinnützigkeitgesetz
+final res: PLACES OF RESIDENCE not @-@ Gesetz for wohnunggemeinnützigkeitgesetz
+final res: housing not @-@ Gesetz for wohnunggemeinnützigkeitgesetz
+final res: home not @-@ Law for wohnunggemeinnützigkeitgesetz
+final res: home not @-@ Gesetz for wohnunggemeinnützigkeitgesetz
+
+translate: Zahlungsbilanzanpassungsprozess
+translate compounds: [zahlungsbilanz, anpassungsprozess]
+final res: balance ownership for zahlungsbilanzanpassungsprozess
+final res: balance hereby for zahlungsbilanzanpassungsprozess
+final res: balance of payments facilitate adaptation for zahlungsbilanzanpassungsprozess
+final res: balance adaptation for zahlungsbilanzanpassungsprozess
+final res: balance of payments supporting for zahlungsbilanzanpassungsprozess
+final res: balance of payments process of for zahlungsbilanzanpassungsprozess
+final res: balance of payments process for zahlungsbilanzanpassungsprozess
+final res: balance of payments ownership for zahlungsbilanzanpassungsprozess
+final res: balance of payments hereby for zahlungsbilanzanpassungsprozess
+final res: balance of payments adaptation for zahlungsbilanzanpassungsprozess
+
+translate: Zahlungsbilanzungleichgewichte
+translate compounds: [zahlungsbilanzungleichgewichte]
+Error: no translations for "zahlungsbilanzungleichgewichte"
+no translations found
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.444 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5 seconds
+[INFO] Finished at: Tue Oct 23 23:59:10 IST 2012
+[INFO] Final Memory: 30M/228M
+[INFO] ------------------------------------------------------------------------

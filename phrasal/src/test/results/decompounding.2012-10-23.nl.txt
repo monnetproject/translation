@@ -1,0 +1,329 @@
+[INFO] Scanning for projects...
+[WARNING] POM for 'biz.aQute:bndlib:pom:1.50.0:runtime' is invalid.
+
+Its dependencies (if any) will NOT be available to the current build.
+[INFO] ------------------------------------------------------------------------
+[INFO] Building eu.monnetproject.translation.phrasal OSGi Bundle
+[INFO]    task-segment: [test]
+[INFO] ------------------------------------------------------------------------
+[INFO] [resources:resources {execution: default-resources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 8 resources
+[INFO] [compiler:compile {execution: default-compile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [bndannotation:bndannotation {execution: default}]
+[INFO] [resources:testResources {execution: default-testResources}]
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 24 resources
+[INFO] [compiler:testCompile {execution: default-testCompile}]
+[INFO] Nothing to compile - all classes are up to date
+[INFO] [surefire:test {execution: default-test}]
+[INFO] Surefire report directory: /home/tobwun/deri/software/monnet-trunk/eu.monnetproject.translation.phrasal/target/surefire-reports
+
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running eu.monnetproject.translation.phrasal.pt.SQLPhraseTableSourceTest
+connect to acquis_nl_de
+candidatesFallbackDutchCompound
+translate: Aanmeldcentrum
+translate compounds: [aanmeld, centrum]
+Error: no translations for "aanmeld"
+no translations found
+
+translate: Adoptieverdrag
+translate compounds: [adoptie, verdrag]
+final res: adoptable Treaty for adoptieverdrag
+final res: adoptions Treaty for adoptieverdrag
+final res: Adoption Convention for adoptieverdrag
+final res: adoptable treaty for adoptieverdrag
+final res: adoption Convention for adoptieverdrag
+final res: adoptions treaty for adoptieverdrag
+final res: adoptable convention for adoptieverdrag
+final res: adoptions convention for adoptieverdrag
+final res: adoptable Convention for adoptieverdrag
+final res: adoptions Convention for adoptieverdrag
+
+translate: Antecedentenverklaring
+translate compounds: [antecedent, enver, klaring]
+Error: no translations for "enver"
+Error: no translations for "klaring"
+no translations found
+
+translate: asielvergunning
+translate compounds: [asiel, vergunning]
+final res: asylum authorization to for asielvergunning
+final res: Asylum authorisation for asielvergunning
+final res: asylum authorization , for asielvergunning
+final res: asylum authorised for asielvergunning
+final res: Asylum authorization for asielvergunning
+final res: asylum to authorization for asielvergunning
+final res: asylum permit for asielvergunning
+final res: asylum licence for asielvergunning
+final res: asylum authorisation for asielvergunning
+final res: asylum authorization for asielvergunning
+
+translate: Beginseltoestemming
+translate compounds: [beginsel, toestemming]
+final res: principle authorization for beginseltoestemming
+final res: principle consent , for beginseltoestemming
+final res: principle to consent for beginseltoestemming
+final res: principle the permission for beginseltoestemming
+final res: principle , consent for beginseltoestemming
+final res: principle the consent for beginseltoestemming
+final res: principle , consent for beginseltoestemming
+final res: principle authorisation for beginseltoestemming
+final res: principle permission for beginseltoestemming
+final res: principle consent for beginseltoestemming
+
+translate: Begrippenlijst
+no translations found
+
+translate: Bewustverklaring
+translate compounds: [bewust, verklaring]
+final res: knowingly attestation for bewustverklaring
+final res: knowingly certificate for bewustverklaring
+final res: awareness declaration for bewustverklaring
+final res: aware declaration for bewustverklaring
+final res: , knowingly statement for bewustverklaring
+final res: , knowingly Declaration for bewustverklaring
+final res: , knowingly declaration for bewustverklaring
+final res: knowingly statement for bewustverklaring
+final res: knowingly Declaration for bewustverklaring
+final res: knowingly declaration for bewustverklaring
+
+translate: Concernverband
+translate compounds: [concern, verband]
+final res: group connection , for concernverband
+final res: group 's connection for concernverband
+final res: group respect for concernverband
+final res: group to link for concernverband
+final res: group verband for concernverband
+final res: group to connection for concernverband
+final res: group relation for concernverband
+final res: group context for concernverband
+final res: group link for concernverband
+final res: group connection for concernverband
+
+translate: GewijzigdeInkomenssituatie
+no translations found
+
+translate: godsdienstleraar
+translate compounds: [godsdienst, leraar]
+final res: religion , as within for godsdienstleraar
+final res: religion , within for godsdienstleraar
+final res: Religion within for godsdienstleraar
+final res: religion within for godsdienstleraar
+final res: religious teacher for godsdienstleraar
+final res: their religion teacher for godsdienstleraar
+final res: religion , as teacher for godsdienstleraar
+final res: religion , teacher for godsdienstleraar
+final res: Religion teacher for godsdienstleraar
+final res: religion teacher for godsdienstleraar
+
+translate: inburgeringsexamen
+translate compounds: [inburgering, s, examen]
+final res: integrate regions examen for inburgeringsexamen
+final res: integrate PCBs examen for inburgeringsexamen
+final res: integrate programmes examen for inburgeringsexamen
+final res: integrate Memories examen for inburgeringsexamen
+final res: agrees s examination for inburgeringsexamen
+final res: agrees with s examen for inburgeringsexamen
+final res: integrate properly s examen for inburgeringsexamen
+final res: integrate s examination for inburgeringsexamen
+final res: agrees s examen for inburgeringsexamen
+final res: integrate s examen for inburgeringsexamen
+
+translate: Inburgeringsvereiste
+translate compounds: [inburgering, s, vereiste]
+final res: integrate Memories required for inburgeringsvereiste
+final res: agrees s requisite for inburgeringsvereiste
+final res: agrees with s required for inburgeringsvereiste
+final res: integrate s requirement for inburgeringsvereiste
+final res: agrees s necessary for inburgeringsvereiste
+final res: integrate s requisite for inburgeringsvereiste
+final res: integrate properly s required for inburgeringsvereiste
+final res: integrate s necessary for inburgeringsvereiste
+final res: agrees s required for inburgeringsvereiste
+final res: integrate s required for inburgeringsvereiste
+
+translate: Koninkrijksrelaties
+no translations found
+
+translate: Leeftijdsvereiste
+no translations found
+
+translate: Legestarieven
+translate compounds: [le, gest, arie, ven]
+Error: no translations for "arie"
+no translations found
+
+translate: Nationaliteitsvereiste
+translate compounds: [nationaliteit, s, vereiste]
+final res: nationality , s required for nationaliteitsvereiste
+final res: nationality regions required for nationaliteitsvereiste
+final res: the nationality s required for nationaliteitsvereiste
+final res: nationality PCBs required for nationaliteitsvereiste
+final res: nationality programmes required for nationaliteitsvereiste
+final res: nationality Memories required for nationaliteitsvereiste
+final res: nationality s requirement for nationaliteitsvereiste
+final res: nationality s requisite for nationaliteitsvereiste
+final res: nationality s necessary for nationaliteitsvereiste
+final res: nationality s required for nationaliteitsvereiste
+
+translate: Naturalisatiedienst
+translate compounds: [naturalisatie, dienst]
+final res: naturalisation service of for naturalisatiedienst
+final res: naturalisation service shall for naturalisatiedienst
+final res: naturalisation of service for naturalisatiedienst
+final res: naturalisation authority for naturalisatiedienst
+final res: naturalisation department to for naturalisatiedienst
+final res: naturalisation service , for naturalisatiedienst
+final res: naturalisation entity for naturalisatiedienst
+final res: naturalisation Service for naturalisatiedienst
+final res: naturalisation department for naturalisatiedienst
+final res: naturalisation service for naturalisatiedienst
+
+translate: Ongewenstverklaring
+translate compounds: [ongewenst, verklaring]
+final res: unwanted Statement for ongewenstverklaring
+final res: adverse declaration for ongewenstverklaring
+final res: unwanted attestation for ongewenstverklaring
+final res: unwanted certificate for ongewenstverklaring
+final res: untoward statement for ongewenstverklaring
+final res: untoward Declaration for ongewenstverklaring
+final res: untoward declaration for ongewenstverklaring
+final res: unwanted statement for ongewenstverklaring
+final res: unwanted Declaration for ongewenstverklaring
+final res: unwanted declaration for ongewenstverklaring
+
+translate: procedureinformatie
+translate compounds: [procedure, informatie]
+final res: procedure the information for procedureinformatie
+final res: procedure information to for procedureinformatie
+final res: procedure referred information for procedureinformatie
+final res: procedure information , for procedureinformatie
+final res: procedure , information for procedureinformatie
+final res: procedure provided information for procedureinformatie
+final res: procedure of information for procedureinformatie
+final res: proceedings information for procedureinformatie
+final res: proceeding information for procedureinformatie
+final res: procedure information for procedureinformatie
+
+translate: publiciteitsmedium
+translate compounds: [publiciteit, s, medium]
+final res: publicity s appropriate medium for publiciteitsmedium
+final res: publicity s transmission medium for publiciteitsmedium
+final res: publicity s medium itself for publiciteitsmedium
+final res: publicity regions medium for publiciteitsmedium
+final res: publicity s of medium for publiciteitsmedium
+final res: publicity PCBs medium for publiciteitsmedium
+final res: publicity programmes medium for publiciteitsmedium
+final res: publicity Memories medium for publiciteitsmedium
+final res: publicity s whatever medium for publiciteitsmedium
+final res: publicity s medium for publiciteitsmedium
+
+translate: Relatieverklaring
+translate compounds: [relatie, verklaring]
+final res: relationship explanation for relatieverklaring
+final res: relationship declaration , for relatieverklaring
+final res: link declaration for relatieverklaring
+final res: relation declaration for relatieverklaring
+final res: relationship Statement for relatieverklaring
+final res: relationship attestation for relatieverklaring
+final res: relationship certificate for relatieverklaring
+final res: relationship statement for relatieverklaring
+final res: relationship Declaration for relatieverklaring
+final res: relationship declaration for relatieverklaring
+
+translate: Remigratieregeling
+translate compounds: [remigratie, regeling]
+Error: no translations for "remigratie"
+no translations found
+
+translate: Samenvattingscherm
+translate compounds: [samenvatting, scherm]
+final res: summary displays for samenvattingscherm
+final res: summaries screen for samenvattingscherm
+final res: Summary screen for samenvattingscherm
+final res: Gist screen for samenvattingscherm
+final res: summary screen sizes for samenvattingscherm
+final res: summary display shall for samenvattingscherm
+final res: Executive summary screen for samenvattingscherm
+final res: summary display screen for samenvattingscherm
+final res: summary display for samenvattingscherm
+final res: summary screen for samenvattingscherm
+
+translate: Stagetraject
+translate compounds: [stage, traject]
+final res: placement pathway for stagetraject
+final res: training period pathway for stagetraject
+final res: probationary pathway , for stagetraject
+final res: traineeship route for stagetraject
+final res: probationary route for stagetraject
+final res: traineeship journey for stagetraject
+final res: stage pathway for stagetraject
+final res: probationary journey for stagetraject
+final res: traineeship pathway for stagetraject
+final res: probationary pathway for stagetraject
+
+translate: Tewerkstellingsvergunning
+translate compounds: [tewerkstelling, s, vergunning]
+final res: , 2.11.1963 s authorisation for tewerkstellingsvergunning
+final res: employment s permit for tewerkstellingsvergunning
+final res: employing s authorisation for tewerkstellingsvergunning
+final res: , 2.11.1963 s authorization for tewerkstellingsvergunning
+final res: employing s authorization for tewerkstellingsvergunning
+final res: employment s licence for tewerkstellingsvergunning
+final res: 2.11.1963 s authorisation for tewerkstellingsvergunning
+final res: 2.11.1963 s authorization for tewerkstellingsvergunning
+final res: employment s authorisation for tewerkstellingsvergunning
+final res: employment s authorization for tewerkstellingsvergunning
+
+translate: Toestemmingsverklaring
+translate compounds: [toestemming, s, verklaring]
+final res: consent Memories declaration for toestemmingsverklaring
+final res: consent s attestation for toestemmingsverklaring
+final res: permission s statement for toestemmingsverklaring
+final res: permission s Declaration for toestemmingsverklaring
+final res: consent s certificate for toestemmingsverklaring
+final res: authorisation s declaration for toestemmingsverklaring
+final res: permission s declaration for toestemmingsverklaring
+final res: consent s statement for toestemmingsverklaring
+final res: consent s Declaration for toestemmingsverklaring
+final res: consent s declaration for toestemmingsverklaring
+
+translate: Uitzetcentrum
+translate compounds: [uitzet, centrum]
+Error: no translations for "uitzet"
+no translations found
+
+translate: Vreemdelingenpolitie
+translate compounds: [vreemdeling, en, politie]
+final res: alien and the police for vreemdelingenpolitie
+final res: vreemdeling and Commissioner for vreemdelingenpolitie
+final res: alien , and police for vreemdelingenpolitie
+final res: alien and of police for vreemdelingenpolitie
+final res: alien 's and police for vreemdelingenpolitie
+final res: vreemdeling and police for vreemdelingenpolitie
+final res: alien and Police Commissioner for vreemdelingenpolitie
+final res: alien and Police for vreemdelingenpolitie
+final res: alien and Commissioner for vreemdelingenpolitie
+final res: alien and police for vreemdelingenpolitie
+
+translate: Vrijheidsontnemende
+no translations found
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.869 sec
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESSFUL
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 5 seconds
+[INFO] Finished at: Tue Oct 23 23:59:30 IST 2012
+[INFO] Final Memory: 30M/227M
+[INFO] ------------------------------------------------------------------------

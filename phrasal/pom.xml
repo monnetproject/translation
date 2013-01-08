@@ -1,0 +1,68 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.monnetproject</groupId>
+        <artifactId>project</artifactId>
+        <version>1.13.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>translation.phrasal</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>eu.monnetproject.translation.phrasal OSGi Bundle</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>com.bbn.mt.ter,edu.stanford.nlp.lm,edu.stanford.nlp.mt,edu.stanford.nlp.mt.base,edu.stanford.nlp.mt.decoder.feat,edu.stanford.nlp.mt.decoder.feat.oracle,edu.stanford.nlp.mt.decoder.h,edu.stanford.nlp.mt.decoder.inferer,edu.stanford.nlp.mt.decoder.inferer.impl,edu.stanford.nlp.mt.decoder.recomb,edu.stanford.nlp.mt.decoder.util,edu.stanford.nlp.mt.metrics,edu.stanford.nlp.mt.tools,edu.stanford.nlp.mt.tune,edu.stanford.nlp.mt.tune.optimizers,eu.monnetproject.translation.phrasal,eu.monnetproject.translation.phrasal.chunker,eu.monnetproject.translation.phrasal.corpus,eu.monnetproject.translation.phrasal.eval,eu.monnetproject.translation.phrasal.feat,eu.monnetproject.translation.phrasal.lm,eu.monnetproject.translation.phrasal.mert,eu.monnetproject.translation.phrasal.mmap,eu.monnetproject.translation.phrasal.pt,eu.monnetproject.translation.phrasal.pt.cache</Export-Package>
+                        <Private-Package>com.bbn.mt.ter.*,edu.stanford.nlp.lm.*,edu.stanford.nlp.mt.*,eu.monnetproject.translation.phrasal.*</Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>it.unimi.dsi</groupId>
+            <artifactId>fastutil</artifactId>
+            <version>6.4.1</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>nlp.stl</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.20</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-math</artifactId>
+            <version>2.2</version>
+        </dependency>
+        <dependency>
+            <groupId>edu.stanford</groupId>
+            <artifactId>corenlp</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>framework.services</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+</project>

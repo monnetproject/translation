@@ -1,0 +1,437 @@
+SRRP,SIRS,5,1
+Richettsia typhi,Ricketisia typhi,5,5
+Pollo,Chicken,5,1
+Virus del dengue,Dengue Virus,5,5
+Gripe aviar,Bird flu virus,5,2
+Virus de inmunodeficiencia felina (SIDA felino),Feline immunodeficiency virus,5,4
+Virus de las paperas,Virus of paperas,4,5
+Enfermedad porcina de la oreja azul,Mystery reproductive syndrome,3.5,1
+Lesión cutánea (Humana),Skin lesion (Human),5,5
+Virus de la influenza A del subtipo H5N1,Virus of influenza To of subtype H5N1,3.5,4
+Lesión cutánea (Equina),Skin lesion (Equine),3,4
+Granuloma Inguinal,Granuloma venereum,5,5
+Cebú,Zebu,5,5
+Aspergillus fumigatus,Aspergillus fumigatus,5,5
+Granuloma Inguinal,puerperal ulcer,5,3
+Virus de Inmunodeficiencia Humana (VIH) tipo 1,Human Immunodeficiency Virus (HIV) type 1,5,5
+Fasciolosis (Bovina),Fasciolosis (Bovine),5,5
+Virus de la diarrea porcina epidémica,Porcine epidemic diarrhoa virus,4,5
+Enfermedad de la Floresta Kyasanur (Roedor),Kyasanur Forest disease (Rodent),5,5
+Lengua azul,BT,5,1
+Blastomicosis (Canino),Blastomicosis (Dog),4,5
+Primate no humano,Non-human primate,5,5
+Viruela ovina,Ovine smallpox,5,5
+Virus de la influenza A del subtipo H1N2,Virus of influenza To of subtype H1N2,3,4.5
+Fiebre (Caprina),Fever (Caprina),3,5
+Enfermedad de la fiebre aftosa (Humana),Foot and mouth disease (Human),5,5
+Gran simio africano,Great African ape,5,5
+Hemorragia subungular,Subungulates Hemorrhage,4,5
+Bordetella pertussis,Bordetella pertussis,5,5
+Vómito (Aviar),Vómyth (Aviar),2.5,3
+Mangosta,Mongoose,5,5
+Virus de la influenza B,Influenza B Virus,5,5
+Bacillus anthracis,Bacillus anthracis,5,5
+Conejo,MUL,5,0
+Burkholderia mallei,Burkholderia mallei,5,5
+Enfermedad por arañazo de gato,Illness by arañazo of cat,3,3
+Síndrome de Inmunodeficiencia Adquirida,Síndrome of Immunodeficiency Acquired,2.5,3.5
+Linfangitis epizoótica de los caballos,Pseudofarcy in horses,5,5
+Anaplasma phagocytophilum,Anaplasma phagocytophilum,5,5
+Borrelia parkeri,Borrelia parkeri,5,5
+SIDA,arrow-leaf sida,5,1
+Virus de la gripe porcina A/H1N1,Novel influenza A/H1N1 strain,5,4
+SIDA,AIDS,5,5
+Hemoptisis,Hemoptisis,5,5
+Cisticercosis,Cysticercosis,5,5
+Hantavirus,Hantavirus,5,5
+Tos (Felino),Cough (Feline),5,5
+Fiebre (Primates no humanos),Fever (not human Primates),4,5
+Cicatriz,Scar,5,5
+Tos (Equina),Cough (Horse),5,5
+Deformidad fetal (Bovino),Congenital anomaly,5,3
+Vibrio non-cholera,Vibrio odd-cholera,4,3
+Flujo vaginal,Vaginal discharge,5,5
+Transmisión por mosca de polvo,Sandfly borne,5,5
+Yersinia pseudotuberculosis,Yersinia pseudotuberculosis,5,5
+Campilobacteriosis,Campilobacteriosis,5,5
+Ave domesticada,Domesticated bird,5,5
+Inmunosupresión,Immunosuppression,5,5
+Gallid herpesvirus 1,Gallad herpesvirus 1,4,5
+Staphylococcus,Staphylococcus,5,5
+Trichinella spiralis,Trichinella spiralis,5,5
+Dolor muscular (Porcina),Myalgia (Swine),5,5
+Enfermedad de Johne,paratuberculosis,5,4
+Vómito (Primates no humanos),Vómyth (not human Primates),2.5,3.5
+Virus de la arteritis equina,EAV,5,4
+Virus de la influenza A del subtipo H2N2,Influenza A virus subtype H2N2,5,5
+Ganado bovino,Bovine cattle,3,4
+Dolor muscular (Lagomorfa),Muscle pain (lagomorphs),4,4
+Virus de la artritis encefalitis caprina,Virus caprine arthritis encephalitis,3.5,5
+Enfermedad de Alper,Alpers' Huttenlocher disease,5,4.5
+Ceguera (Primates no humanos),Blindness (Non-Human Primate),5,5
+Cercopiteco de L'Hoest,Cercopiteco of L' Hoest,3,3.5
+Síndrome de despoblación de abejas,Bee depopulation syndrome,5,5
+Legionella,Legionella,5,5
+Sangramiento menstrual fuera de ciclo,Off-cycle menstrual bleeding,5,5
+Dracontiasis,Dracontiasis,5,5
+Hemorragia gastrointestinal (Primates no humanos),Gastrointestinal hemorrhage (not human Primates),4,5
+Dolor en las juntas (Aviar),Pain in the joints (Avian),5,5
+Camello,candyman,5,1
+Camello,Camel,5,5
+Ictericia,Jaundice,5,5
+Hemorragia gastrointestinal,gastro-intestinal bleeding,5,5
+Fiebre recurrente  transmitida por ftirápteros,Fever appellant transmitted by ftir�pteros,2,4
+SCTE,Streptococal toxic shock syndrome,5,4
+Enfermedad de Marek,avian lymphomatosis,5,3
+Leucosis aviar,ALV,5,3
+Dolor abdominal (Primates no humanos),Abdominal pain (not human Primates),4,5
+Fiebre (Bovina),Fever (Bovine),5,5
+Leucocytozoonosis,Leucocytozoonosis,5,5
+Inflamación gastrointestinal (Humano),Inflamación gastrointestinal (Human),3,5
+Inflamación gastrointestinal (Humano),Inflammation of the stomach,5,4
+Pustule,Pustule,5,5
+Mosquito,gnat,5,3
+Mareos,Dizziness,5,5
+Mareos,Sicknesses,5,3
+Mosquito,Mosquito,5,5
+Virus de la fiebre de Rift Valley,Riftvalley virus,3.5,5
+Fiebre tifoidea,Typhoid fever,5,5
+Inflamación gastrointestinal,Epigastric inflammation,5,3.5
+Fiebre del Valle del Rift,Rift valley fever,5,5
+Virus de la influenza A del subtipo H7N7,Influenza A virus subtype H7N7,5,5
+virus de la Enfermedad hemorrágica epizoótica,virus of the epizo�tica haemorrhagic Disease,3,5
+Wuchereria bancrofti,Wuchereria bancrofti,5,5
+Wuchereria bancrofti,Wuchereria bancrofti,5,5
+Caquexia crónica,Chronic Wasting Disease,5,4
+Clonorchis sinensis,Clonorchis sinensis,5,5
+Síndrome respiratorio agudo severo (Felino),Severe acute respiratory syndrome (Cat),4,5
+Nosemosis,Nosemosis of bees,5,3
+Herpes,Herpes,5,5
+Tembladera,TTO,5,0
+Transmisión por garrapata,Transmission by garrapata,3,4
+Varroasis,Varroa,5,3.5
+Fasciola gigantica,Fasciola gigantica,5,5
+Fiebre del Nilo Occidental,West Nile Fever,5,5
+Arador de la sarna,Acarapis woodi,5,1.5
+Fiebre hemorrágica argentina,Fever hemorrágica Argentina,2,5
+Choque,impaction,5,1.5
+Virus de la encefalitis japonesa B,Virus of the Japanese encephalitis B,3.5,5
+Inflamación de Glándulas Salivales,Inflamación of Glándulas Salivary,2,3
+Catarro (Porcina),Cold (Pork),5,5
+VSR,VSR,5,5
+Infertilidad (Humana),Infertility (Human),5,5
+Hepatitis del pato,Hepatitis of the duck,4,5
+Hepatitis E,Hepatitis E,5,5
+Ardilla voladora,Flying squirrel,5,5
+Ganglios linfáticos,Ganglions linfáCosta Rican,3,2
+Peste porcina clásica,Classical swine fever,5,5
+Transmisión por insecto redúvido,Reduviid bug borne,4,4
+Modo desconocido,Unknown mode,5,4
+Fiebre de Chikungunya (Humano),Fever of Chikungunya (Human),4,5
+Marmoset común,Common marmoset,5,5
+Transmisión por mosca tse-tsé,Tsetse fly borne,5,5
+Incapaz de caminar correctamente,Incapable to walk correctly,4,5
+Virus respiratorio sincicial,RSV,5,4
+Hiperhidrosis,ephidrosis,4,4
+Infección por MRSA resistentes a la vancomicina,Infección by MRSA resistant to the vancomicina,3,5
+Gibón,Gibbon,5,5
+Hiperhidrosis,Excessive sweating,5,4
+Producción disminuida de huevos (Aviario),Diminished egg production (Aviario),3.5,4
+Infeccione por A baumannii multirresistente,Infeccione by TO baumannii multirresistente,2,3.5
+Enfermedad del herpesvirus B (Humano),Monkey herpes infection (Human),5,5
+Vaginosis bacteriana (Canino),Bacterial vaginosis (Dog),4,4
+Fiebre por garrapata de Colorado (Roedor),Fever by garrapata of Colorado (Erosive),3,3
+Picazón (Porcina),Picaz�n (Pig),2.5,3
+Virus de estomatitis vesicular,Virus of estomatitis vesicular,3,4
+Streptobacillus moniliformis,Streptobacillus moniliformis,5,5
+Problema de colapso de colonias,Colony collapse problem,5,5
+Enfermedad de Ibaraki,Ibaraki disease,5,5
+Anemia,Anemia,5,5
+Fiebre de Chikungunya (Primates non humanos),Chikungunya fever (Non-human primate),4.5,5
+Pulmonia,Pneumonia,5,5
+Fiebre por garrapata de Colorado,Colorado tick fever,5,5
+Cáncer hepático,Liver cancer,5,5
+Virus Junin,Junin Virus,5,5
+Infección por HSV-2 (Humano),Infection with HSV-2 (Human),4,5
+Fotofobia,Fotofobia,2,3
+Helminto,Helminto,2,3
+Verrugas genitale,Warts genitale,3,4
+Rigidez en el cuello,Neck ache,5,4
+Transmisión por la piel,Transmisión by the skin,2.5,3.5
+Condiloma acuminata,Condyloma acuminata,5,5
+Condiloma acuminata,Condiloma acuminata,3.5,4
+Fotofobia,Fear of light,4,4
+Virus de la garrapata de Colorado,Colorado tick fever virus,4,4
+Lacertilia,Lizard,5,4
+Transmisión por fluido corporal,Body fluid borne,4.5,5
+Pluma mudada (Aviario),Feather moved (Aviary),3,2
+Infeccione por helminto,Infeccione by helminto,2,3
+Himenolepiasis (Roedor),Hymenolepiasis (Rodent),5,5
+Picazón (Humana),Itching (Human),5,5
+Virus Sin Nombre,Virus Without Name,4,4
+Virus Sin Nombre,Virus Sin Nombre,2,3
+Neumonía equina por morbillivirus,Equine morbillivirus pneumonia,5,5
+Neosporosis,Neosporosis,5,5
+Variante de la ECJ,Variant of the ECJ,4.5,4
+Lobo,skull,5,5
+Picazón (Bovina),Itching (Bovine),5,5
+Convulsión,Convulsión,2,3
+Náusea (Roedores),Nausea (Rodent),5,5
+Rata,rattail,5,2
+Dipsnea (Humano),Shortness of breath (Human),5,4
+Foca,Seal,5,5
+Arteritis viral equina,Arteritis viral equine,3.5,4
+Síndrome de Guillain-Barré,Acute inflammatory demyelinating polyneuropathy,5,3.5
+Dolor de espalda,Pain of back,4,5
+Peste bovina,Rinderpest,5,5
+Dolor de espalda,Backache,5,5
+Presencia de eritrocitos en la orina,Hematuria,5,4
+Peste bovina,Bovine plague,5,3
+Ojos enrojecidos,Red eyes,5,5
+Úlcera genital,Genital ulcer,5,5
+Náusea (Equina),Náusea (Equine),3,4
+Mosquito Culex,Mosquito Culex,5,5
+Condilomas,Condyloma,5,5
+Asintomaticidad (Humano),Asymptomatic (Human),5,4
+Cryptosporidium parvum,Cryptosporidium parvum,5,5
+Vómito en posos de café,Vómyth in posos of café,2,2
+Gato,Cat,5,5
+Dolor en las juntas (Roedores),Pain in the joints (Rodents),5,5
+procariota,prokaryote,5,5
+decoración,decoración,2,3
+suelo franco muy fino,fine loamy,5,3.5
+convariedad,convariety,3,4
+sitio,site,5,5
+definidor del axon,defining the axon,4,4
+fabricación de productos químicos,manufacturing chemical,5,3
+sustancia,substance,5,5
+Colección de plantas,Plant Collection,5,5
+Enzima de restricción,Restriction enzyme,5,5
+Colección de datos,data stock,5,4
+entidad numérica,numeric entity,5,5
+Colección de datos,data collection,5,4
+mejoramiento ,breeding,5,2
+arena media,medium sand,5,5
+Viento,blast,5,3
+Etapas de desarrollo de la planta,Stages of plant development,5,5
+Salinidad,salinity,5,5
+extinguido,extinct,5,5
+interacción genoma-medio ambiente,genome-environment interaction,5,5
+Suelo ácido,I am used ácido,3,2
+erosión genética,genetic erosion,5,5
+filogenéticos,filogenéCosta Rican,1,0
+Degradación ambiental,environmental degradation,5,5
+Alelos,allele,5,4
+cormofito,cormophyte,5,5
+Angiospermas,Angiospermaes,5,5
+Geografía,geography,5,5
+institución gubernamental,government institution,5,5
+Genomas,Genomes,5,5
+propiedades de la región,region property,4,4
+estación experimental,estación experimental,3,3
+alimento para animales,food for animals,5,5
+transecto en tiras,strip transect,4,4
+Ecología,Ecology,5,5
+Necesidades de luz,Light requirements,4,3
+región terrestre,land region,4,4
+adaptación de la planta,plant adaptation,5,5
+suelo arenoso arcilloso,sandy clay,5,4
+Planificación,Planificación,2,3
+Evolución,manoeuvre,5,3
+Hibridación intraespecífica,Hibridación intraespecífica,2,3
+zona boreal,boreal,5,4
+Sistemas de apareamiento,breeding system,5,5
+instalación de investigación,instalación of investigación,2,3
+ecosistema terrestre,terrestrial ecosystem,5,5
+protección,protección,2,3
+perfume,perfume,5,5
+referencia,reference,5,5
+amenaza a la cosecha,it threatens to the crop,3,3
+región terrestre,región terrestrial,3,4
+equipamiento,furnishing,5,5
+investigación-exploración,investigación-exploración,2,3
+suelo arenoso franco fino,I am used sandy clear fine,2,2
+Geofísica,geophysics,5,5
+región administrativa,administrative region,5,5
+hábitat de pradera ,grassland habitat,5,4
+Colecciones de material genético,Collections of material genéCosta Rican,2.5,2.5
+nutriente vegetal,vegetable nutrient,5,5
+hábitat de herbazal,grassland habitat,5,5
+hábitat de caverna,cave habitat,5,5
+Producción primaria,Primary Production,5,5
+elemento terrestre,land element,5,5
+transecto de punto,Point transect,4,5
+compañía de semillas,compañíto of seeds,3,4
+colector,commutator,5,2
+vegetación introducida,introduced vegetation,5,5
+helófita,helófita,2,3
+Plantas,plant,5,4
+pendiente pronunciada,upper slope,5,3
+Tejido vascular,fibro-vascular tissue,5,4
+Suelo mineral,Mineral soil,5,4
+zona ártica,arctic zone,5,5
+Agua,water,5,5
+aposporía,apospory,5,5
+Yema (planta),Yolk (plant),5,3
+hábitat ribereño,hábitat ribereñor,2,3
+clasificación del grado de amenaza del taxon,taxon endangerment classification,4,4
+arena muy fina,very fine sand,5,5
+poseedor de germoplasma,possessor of germoplasma,5,4
+Germinación,floor malting,5,3
+descomponedor ,decomposer,5,5
+documento sobre legislación,Legislation document,5,5
+hábitat arbustivo,hábitat bushy,3,4
+flor femenina,feminine flower,5,5
+herbario,herbarium,5,5
+circulación,traffic,5,3
+lista roja,Red List,5,5
+Zona subtropical,subtropical zone,5,5
+plantel principal,main campus,5,3
+orden ,order,5,5
+servicio,operating conditions,5,3
+longitud decimal,length decimal,5,3
+Ordenación forestal,Forest management,5,5
+circulación,scalar line integral,5,0
+clasificación de la amenaza,threat classification,5,5
+Ritmos biológicos,Rhythms biológicos,3,3
+clasificación de la amenaza,clasificación of the threat,3,3
+degradación del hábitat,degradación of the hábitat,2,3
+Utilización de la tierra,land use,5,5
+subdivisión de país,subdivisión of país,3,3
+reino ecológico,kingdom ecológico,3,3
+Morfología vegetal,Plant morphology,5,5
+colección crioconservada ,colección crioconservada,2,3
+requisitos de  floración,flowering requirement,5,5
+región terrestre,terrestrial region,4,4
+descomponedor ,decomposer,5,5
+Habitat,habitat,5,5
+nombre común del taxón,common name of the taxon,4,4
+maleza,weed,5,5
+sustancia peligrosa ,hazardous substance,5,5
+Procesos,Processes,5,5
+Análisis de imágenes,image analysis,5,5
+sustancia orgánica,organic compound,5,5
+neofita,neofita,2,3
+autoecología,autoecologíto,2,3
+Propiedad,Property,5,5
+autoecología,autoecology,5,5
+Criopreservación,cryopreservation,5,5
+pico montañoso,peak montañbear,2.5,2
+rango taxonómico,taxonomic rank,5,5
+Híbridos,hybrid,5,4
+Política ambiental,environmental policy,5,5
+población sintética,synthetic population,5,5
+Horticultura,Horticulture,5,5
+Conservación de la naturaleza,Conservación of the nature,3,4
+cantidad,quantity,5,5
+Terrazas,terrace,5,4
+categoría de plantas,plant category,5,5
+fecha de adquisición,acquisition date,5,5
+andromonoico,andromonoecious,5,4
+depósito,water tank,5,3
+plantel fundador ,founder stock,5,5
+historia genealógica,pedigree,5,4
+empresa semillera,seed company,5,5
+auto-exogamia,self-exogamy,5,5
+referencia taxonómica,reference taxonómica,3,4
+origen vegetal,vegetable origin,5,5
+región superficial,región superficial,3,3
+institución autónoma,institución autónoma,2,3
+epilítico,epilithic,5,5
+herbario de referencia,reference herbarium,5,5
+referencia de derecho,reference of right,4,3
+Control ambiental,environmental monitoring,5,5
+Recursos genéticos,Resources genéCosta Rican,2,3
+producto tejido,weaving product,5,5
+ademán,ademán,2,3
+Tierras rehabilitadas,Land rehabilitated,4,4
+transecto en tiras,strip transect,5,5
+Usos tradicionales,Traditional uses,5,5
+Criterios de selección,Selection criteria,5,5
+localidad,locality,5,5
+estructura de  planta vascular,structure of vascular plant,4,5
+recurso,protest,5,1
+hábitat general,hábitat general,3,3
+conservación in situ,conservación in situ,3,3
+Latitud,latitude,5,5
+información de la herencia,Heritage Information,5,5
+fecha de adquisición,date of adquisición,3,3
+apomixis gametofítica,gametophytic apomixis,5,5
+líquen,lichen,5,5
+Elementos químicos,chemical element,5,5
+fecha de adquisición,acquisition date,5,5
+Ácidos nucléicos,Nucleic Acids,5,5
+propágulo,propagule,2,3
+ejemplar,specimen,5,5
+plantación de árboles,tree cropping,5,5
+dique longitudinal; dique lateral; dique aluvial; caballón,dam longitudinal; lateral dike; dam alluvial ridge,3.5,5
+Anatomía de la planta,Anatomíto of the plant,3,3
+Transgénicos,Transgénicos,2,3
+bioma,biome,5,5
+actividad basada en política,policy-based action,5,5
+población,población,2,3
+Economía de la producción,Economíto of the producción,2,3
+Desarrollo económico y social,Development económonkey and social,2.5,3
+alimento,food,5,5
+monoico,monoecious,5,5
+política,policy,5,5
+Transporte,Transport,5,5
+registro genealógico,studbook,5,5
+Economía,economics,5,5
+Organismos del suelo,Soil organisms,5,5
+Infraestructura,Infrastructure,5,5
+establo,lairage,5,4
+Almacenamiento,Storage,5,5
+Ciencias de la tierra,earth science,5,5
+región,región,2,3
+circulación de aguas de superficie,movement of surface water,5,5
+establo,lairage,5,5
+latitud decimal,latitude decimal,4,5
+Índice de superficie foliar,Index of foliar surface,5,5
+área no protegida,ádefendant done not protect,2,3
+sustancia química mixta,mixed chemical substance,5,5
+diferenciación sexual,sexual differentiation,5,5
+sitio protegido,protected site,5,5
+célula diploide,diploid cell,5,5
+Esporofitas,Esporofitas,2,3
+Métodos de cultivo,cultural method,5,3
+rango estadístico,rank estadístico,3,3
+triángulo equilátero,equilateral triangle,5,5
+coseno,cosine,5,5
+datos,data,5,5
+Cuadrado,Squared,5,5
+datos,data,5,5
+polígono regular,regular polygon,5,5
+polígono de frecuencias,frequency polygon,5,2
+medida de la dispersión,measurement of the dispersion,5,5
+centro de un círculo,centre of a circle,5,5
+rango estadístico,statistical range,5,5
+centro de un círculo,centre of a circle,5,5
+representatividad,representativity,5,5
+rango estadístico,statistical rank,5,5
+adición,addition,5,5
+ecuación de primer grado,simple equation,5,3
+análisis estadístico,Statistical analysis,5,5
+ecuación de primer grado,simple equation,5,3
+adición,adición,2,3
+triángulo rectángulo,triangle,5,3
+raíz anónima,anonymous root,5,5
+Proyecto,Project,5,5
+nombre,name,5,5
+licencia,license,5,5
+tester,to tester,3,4
+descripción,descripción,2,3
+Repositorio Subversion,Subversion Repository,5,5
+colaborador,collaborating,5,4
+nombre,name,5,5
+colaborador,collaborator,5,5
+Repositorio BitKeeper,BitKeeper repository,5,5
+Repositorio BitKeeper,Repositorio BitKeeper,3,4
+creado,created,5,5
+página web antigua,old page Web,3.5,4
+navegar,sailing,5,5
+navegar,surf,5,3
+tester,tester,5,5
+capturas de pantalla,screenshots,5,5
+desarrollador,let-off motion,5,0
+desarrollador principal,main developer,5,5
