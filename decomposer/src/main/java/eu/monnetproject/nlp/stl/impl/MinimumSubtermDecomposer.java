@@ -3,8 +3,6 @@ package eu.monnetproject.nlp.stl.impl;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.nlp.stl.Decomposer;
 import eu.monnetproject.nlp.stl.Termbase;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
 import java.io.File;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -19,6 +17,7 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.SortedSet;
 import java.util.TreeSet;
+import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -31,7 +30,7 @@ import java.util.regex.Pattern;
  */
 public class MinimumSubtermDecomposer implements Decomposer, eu.monnetproject.translation.Decomposer {
 
-    private static final Logger log = Logging.getLogger(MinimumSubtermDecomposer.class);
+    private static final Logger log = Logger.getLogger(MinimumSubtermDecomposer.class.getName());
     public static final int MIN_TERM_LENGTH = 2;
     public static final HashSet<List<String>> EMPTY_DECOMPOSITION = new HashSet<List<String>>();
     public static final ArrayList<String> EMPTY_DECOMP = new ArrayList<String>(0);

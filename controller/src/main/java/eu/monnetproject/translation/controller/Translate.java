@@ -34,7 +34,6 @@ import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.label.LabelExtractorFactory;
-import eu.monnetproject.tokenizer.TokenizerFactory;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.controller.impl.SimpleLexicalizer;
 import eu.monnetproject.translation.controller.impl.TranslationController;

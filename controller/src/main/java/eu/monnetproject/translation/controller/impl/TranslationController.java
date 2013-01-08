@@ -33,8 +33,6 @@ import eu.monnetproject.lemon.model.LexicalEntry;
 import eu.monnetproject.lemon.model.Lexicon;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.ontology.Ontology;
-import eu.monnetproject.tokenizer.Tokenizer;
-import eu.monnetproject.tokenizer.TokenizerFactory;
 import eu.monnetproject.translation.Decoder;
 import eu.monnetproject.translation.DecoderFactory;
 import eu.monnetproject.translation.DecoderWeights;

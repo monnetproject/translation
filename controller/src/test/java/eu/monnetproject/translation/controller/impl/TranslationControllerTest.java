@@ -9,7 +9,6 @@ import eu.monnetproject.ontology.Ontology;
 import eu.monnetproject.ontology.OntologySerializer;
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
-import eu.monnetproject.tokenizer.TokenizerFactory;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.phrasal.lm.ARPALanguageModelFactory;
 import eu.monnetproject.translation.phrasal.pt.MemoryMappedPhraseTableSourceFactory;
@@ -62,8 +61,8 @@ public class TranslationControllerTest {
         String namePrefix = "file:test#";
         int nBest = 1;
         Configurator.setConfig("eu.monnetproject.translation.phrasal", "weight-d", "1", "weight-t", "1", "weight-l", "1", "weight-w", "0");
-        Configurator.setConfig("eu.monnetproject.translation.phrasal.lm", "en", "../eu.monnetproject.translation.phrasal/src/test/resources/sample-models/lm/europarl.srilm.gz");
-        Configurator.setConfig("eu.monnetproject.translation.phrasal.pt", "de/en/1", "../eu.monnetproject.translation.phrasal/src/test/resources/sample-models/phrase-model/phrase-table.sorted");
+        Configurator.setConfig("eu.monnetproject.translation.phrasal.lm", "en", "src/test/resources/sample-models/lm/europarl.srilm.gz");
+        Configurator.setConfig("eu.monnetproject.translation.phrasal.pt", "de/en/1", "src/test/resources/sample-models/phrase-model/phrase-table.sorted");
         Configurator.setConfig("eu.monnetproject.translation.topics.lda");
         final TranslationController instance = new TranslationController(Collections.singleton((LanguageModelFactory)new ARPALanguageModelFactory()),
                 Services.get(DecoderFactory.class),

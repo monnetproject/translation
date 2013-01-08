@@ -27,9 +27,8 @@
 package eu.monnetproject.translation.controller.impl;
 
 import eu.monnetproject.lang.Language;
-import eu.monnetproject.tokenizer.Tokenizer;
-import eu.monnetproject.tokens.Token;
 import eu.monnetproject.translation.Label;
+import eu.monnetproject.translation.Tokenizer;
 import java.util.List;
 
 /**
@@ -41,10 +40,10 @@ public class SimpleLabel implements Label {
     private final Language language;
 
     public SimpleLabel(String value, Language language, Tokenizer tokenizer) {
-        final List<Token> tokens = tokenizer.tokenize(value);
+        final List<String> tokens = tokenizer.tokenize(value);
         final StringBuilder sb = new StringBuilder();
-        for(Token tk : tokens) {
-            sb.append(tk.getValue()).append(" ");
+        for(String tk : tokens) {
+            sb.append(tk).append(" ");
         }
         this.value = sb.toString().trim();
         this.language = language;

@@ -27,14 +27,8 @@
 
 package eu.monnetproject.translation.phrasal.test;
 
-import eu.monnetproject.translation.Decoder;
-import eu.monnetproject.translation.DecoderFactory;
-import eu.monnetproject.translation.monitor.Messages;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
-import org.osgi.framework.ServiceReference;
-import org.osgi.util.tracker.ServiceTracker;
-import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
 /**
  *

@@ -34,8 +34,6 @@ import eu.monnetproject.lemon.model.LexicalForm;
 import eu.monnetproject.lemon.model.Lexicon;
 import eu.monnetproject.lemon.model.Text;
 import eu.monnetproject.ontology.Entity;
-import eu.monnetproject.tokenizer.Tokenizer;
-import eu.monnetproject.tokens.Token;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.monitor.TranslationMonitor;
 import eu.monnetproject.translation.monitor.Messages;
@@ -141,12 +139,12 @@ public class TranslationThread implements Runnable {
             List<Translation> tempList = new ArrayList<Translation>();
             for (Translation translation : initialTranslations) {
                 String trgLabel = translation.getTargetLabel().asString().replaceFirst("^[\\p{P}&&[^\\p{Pi}\\p{Ps}]]+\\s", "").replaceAll("\\s[\\p{P}&&[^\\p{Pf}\\p{Pe}]]+$", "");
-                List<Token> tokens = tokenizer.tokenize(trgLabel);
+                List<String> tokens = tokenizer.tokenize(trgLabel);
                 StringBuilder finalLabel = new StringBuilder();
                 final String[] trueTokens;
                 String[] arrayTokens = new String[tokens.size()];
                 for (int i = 0; i < tokens.size(); i++) {
-                    arrayTokens[i] = tokens.get(i).getValue();
+                    arrayTokens[i] = tokens.get(i);
                 }
                 if (trueCaser != null) {
                     trueTokens = trueCaser.trueCase(arrayTokens, 1);

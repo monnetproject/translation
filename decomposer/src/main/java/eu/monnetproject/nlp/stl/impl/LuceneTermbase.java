@@ -1,11 +1,10 @@
 package eu.monnetproject.nlp.stl.impl;
 
 import eu.monnetproject.nlp.stl.Termbase;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
 import java.util.Iterator;
 import java.io.File;
 import java.io.IOException;
+import java.util.logging.Logger;
 import org.apache.lucene.index.IndexReader;
 import org.apache.lucene.index.Term;
 import org.apache.lucene.search.IndexSearcher;
@@ -21,7 +20,7 @@ import org.apache.lucene.store.FSDirectory;
  */
 public class LuceneTermbase implements Termbase, Iterable<String> {
 
-    private static final Logger log = Logging.getLogger(LuceneTermbase.class);
+    private static final Logger log = Logger.getLogger(LuceneTermbase.class.getName());
     private final String language;
     private final String lookupfield;
     private final IndexReader reader;

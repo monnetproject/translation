@@ -4,14 +4,14 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>translation.project</artifactId>
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
-    <artifactId>nlp.stl</artifactId>
+    <artifactId>translation.decomposer</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.nlp.stl OSGi Bundle</name>
+    <name>eu.monnetproject.translation.decomposer OSGi Bundle</name>
     <build>
         <plugins>
             <plugin>
@@ -29,16 +29,6 @@
     </build>
 
     <dependencies>
-        <dependency>
-            <groupId>eu.monnetproject</groupId>
-            <artifactId>nlp.core</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>framework.util</artifactId>
-            <version>${project.version}</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.lucene</groupId>
             <artifactId>lucene-analyzers</artifactId>

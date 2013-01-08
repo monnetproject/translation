@@ -1,14 +1,13 @@
 package eu.monnetproject.nlp.stl.impl;
 
 import eu.monnetproject.nlp.stl.DecomposerFactory;
-import eu.monnetproject.util.Logger;
-import eu.monnetproject.util.Logging;
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.nlp.stl.Termbase;
 import eu.monnetproject.translation.Decomposer;
 import java.io.File;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 /**
  * A factory for generating minimum subterm decomposers for the appropriate
@@ -18,7 +17,7 @@ import java.util.Properties;
  */
 public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.monnetproject.translation.DecomposerFactory {
 
-    private final Logger log = Logging.getLogger(this);
+    private final Logger log = Logger.getLogger(MinimumSubtermDecomposerFactory.class.getName());
     private static final String LUCENE_INDEX_PROP = "termbase.lucene.index.";
     private static final String SIMPLE_INDEX_PROP = "termbase.simple.index.";
 
@@ -51,9 +50,10 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
                     LuceneTermbase termbase = new LuceneTermbase(luceneIndexDir, lang);
                     return new MinimumSubtermDecomposer(termbase);
                 } catch (Exception x) {
-                    Exception e = new Exception("No decomposer model for language " + lang + " available");
-                    log.stackTrace(x);
-                    Logging.stackTrace(log, e);
+                    //Exception e = new Exception("No decomposer model for language " + lang + " available");
+                    x.printStackTrace();
+                    //log.stackTrace(x);
+                    //Logging.stackTrace(log, e);
             return null;
                 }
             } else {
@@ -66,9 +66,10 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
                     final Termbase termbase = TermbaseImpl.fromFile(new File(simpleIndexDir), lang);
                     return new MinimumSubtermDecomposer(termbase);
                 } catch (Exception x) {
-                    Exception e = new Exception("No decomposer model for language " + lang + " available");
-                    log.stackTrace(x);
-                    Logging.stackTrace(log, e);
+                    //Exception e = new Exception("No decomposer model for language " + lang + " available");
+                    x.printStackTrace();
+                   // log.stackTrace(x);
+                    //Logging.stackTrace(log, e);
             return null;
                 }
             } else {

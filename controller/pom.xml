@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <artifactId>project</artifactId>
+        <artifactId>translation.project</artifactId>
         <version>1.13.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
@@ -26,7 +26,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.label</artifactId>
+            <artifactId>ontology.label</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -36,7 +36,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.owlapi</artifactId>
+            <artifactId>ontology.owlapi</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
@@ -79,22 +79,22 @@
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>clesa</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
         	<groupId>${project.groupId}</groupId>
         	<artifactId>translation.quality</artifactId>
         	<version>${project.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
         	<groupId>${project.groupId}</groupId>
         	<artifactId>nlp.core</artifactId>
         	<version>${project.version}</version>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-server</artifactId>
@@ -125,12 +125,12 @@
 	  <artifactId>lemon.api</artifactId>
 	  <version>${project.version}</version>
 	</dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>nlp.basic</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
-        </dependency>
+        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>translation.jmert</artifactId>
