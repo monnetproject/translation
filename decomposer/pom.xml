@@ -1,0 +1,59 @@
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.monnetproject</groupId>
+        <artifactId>project</artifactId>
+        <version>1.13.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>nlp.stl</artifactId>
+    <packaging>bundle</packaging>
+
+    <name>eu.monnetproject.nlp.stl OSGi Bundle</name>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.felix</groupId>
+                <artifactId>maven-bundle-plugin</artifactId>
+                <extensions>true</extensions>
+                <configuration>
+                    <instructions>
+                        <Export-Package>eu.monnetproject.nlp.stl,eu.monnetproject.nlp.stl.impl</Export-Package>
+                        <Private-Package>eu.monnetproject.nlp.stl.*,eu.monnetproject.nlp.stl.impl.*</Private-Package>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>eu.monnetproject</groupId>
+            <artifactId>nlp.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>framework.util</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.lucene</groupId>
+            <artifactId>lucene-analyzers</artifactId>
+            <version>3.6.1</version>
+        </dependency>
+        <dependency>
+          <groupId>commons-dbutils</groupId>
+          <artifactId>commons-dbutils</artifactId>
+          <version>1.2</version>
+       </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
