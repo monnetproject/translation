@@ -34,6 +34,7 @@ import java.io.EOFException;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.nio.ByteBuffer;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 //import java.util.Arrays;
@@ -50,7 +51,8 @@ public class DirectDataMMap {
     public static final int CACHE_SIZE = 4096;
     private final Map<RecordID, long[]> dataLocMap;
     // Must query dataLocMap.contains before cache !
-    private final LoadingCache<RecordID, byte[]> cache;
+    //private final LoadingCache<RecordID, byte[]> cache;
+    private final LoadingCache<RecordID, ByteBuffer> cache;
     private final FileChannel fileChannel;
     // private long mapped = 0;
 
@@ -92,7 +94,8 @@ public class DirectDataMMap {
         final int rs = recordSize(key.length);
         int mask = (int) (l[1] - l[0] - 1) / rs;
         try {
-            final byte[] data;
+            //final byte[] data;
+            final ByteBuffer data;
             //synchronized (this) {
                 data = cache.get(rid);
             //}
@@ -117,38 +120,60 @@ public class DirectDataMMap {
         return Double.longBitsToDouble(l);
     }
 
-    private int validateKey(byte[] data, int pos, int[] k, int arrHash) {
-        if (data[pos + 3] == 0 && data[pos + 2] == 0 && data[pos + 1] == 0 && data[pos] == 0) {
+    private int validateKey(ByteBuffer data, int pos, int[] k, int arrHash) {
+        if(data.get() == 0 && data.get() == 0 && data.get() == 0 && data.get() == 0) {
             return -1;
+        } else {
+            data.position(pos);
         }
-        for (int i = 0; i < k.length; i++) {
-            
-            if ((k[i] & 0xff) != (data[pos + 3] & 0xff)) {
+        for(int i = 0; i < k.length; i++) {
+            if(data.get() != ((k[i] & 0xff000000) >>> 24)) {
                 return 0;
             }
-            if (((k[i] & 0xff00) >>> 8) != (data[pos + 2] & 0xff)) {
+            if(data.get() != ((k[i] & 0xff0000) >>> 16)) {
                 return 0;
             }
-            if (((k[i] & 0xff0000) >>> 16) != (data[pos + 1] & 0xff)) {
+            if(data.get() != ((k[i] & 0xff00) >>> 8)) {
                 return 0;
             }
-            if (((k[i] & 0xff000000) >>> 24) != (data[pos] & 0xff)) {
+            if(data.get() != ((k[i] & 0xff))) {
                 return 0;
             }
-            pos += 4;
         }
         return 1;
     }
+//        if (data[pos + 3] == 0 && data[pos + 2] == 0 && data[pos + 1] == 0 && data[pos] == 0) {
+//            return -1;
+//        }
+//        for (int i = 0; i < k.length; i++) {
+//            
+//            if ((k[i] & 0xff) != (data[pos + 3] & 0xff)) {
+//                return 0;
+//            }
+//            if (((k[i] & 0xff00) >>> 8) != (data[pos + 2] & 0xff)) {
+//                return 0;
+//            }
+//            if (((k[i] & 0xff0000) >>> 16) != (data[pos + 1] & 0xff)) {
+//                return 0;
+//            }
+//            if (((k[i] & 0xff000000) >>> 24) != (data[pos] & 0xff)) {
+//                return 0;
+//            }
+//            pos += 4;
+//        }
+//        return 1;
+//    }
 
-    private double[] get(byte[] data, int[] k, int mask, int rs) {
+    private double[] get(ByteBuffer data, int[] k, int mask, int rs) {
         int arrHash = MurmurHash.hash32(k);
         int pos = (arrHash & mask) * rs;
+        data.position(pos);
         int keyVal = validateKey(data, pos, k,arrHash);
         pos += 4 * k.length;
         while (keyVal >= 0) {
             if (keyVal > 0) {
-                double p = read(data, pos);
-                double a = read(data, pos + 8);
+                double p = data.getDouble();//read(data, pos);
+                double a = data.getDouble();//read(data, pos + 8);
                 if (a != 0.0) {
                     return new double[]{p, a};
                 } else {
@@ -157,6 +182,7 @@ public class DirectDataMMap {
             }
             arrHash++;
             pos = (arrHash & mask) * rs;
+            data.position(pos);
             keyVal = validateKey(data, pos, k,arrHash);
             pos += 4 * k.length;
         }
@@ -167,16 +193,18 @@ public class DirectDataMMap {
         cache.invalidateAll();
     }
 
-    private LoadingCache<RecordID, byte[]> makeCache() {
-        return CacheBuilder.newBuilder().maximumSize(CACHE_SIZE).build(new CacheLoader<RecordID, byte[]>() {
+    //private LoadingCache<RecordID, byte[]> makeCache() {
+    private LoadingCache<RecordID, ByteBuffer> makeCache() {
+        return CacheBuilder.newBuilder().maximumSize(CACHE_SIZE).softValues().build(new CacheLoader<RecordID, ByteBuffer>() {
             @Override
-            public byte[] load(RecordID k) throws Exception {
+            public ByteBuffer load(RecordID k) throws Exception {
                 final long[] startEnd = dataLocMap.get(k);
                 final int size = (int) (startEnd[1] - startEnd[0]);
-                byte[] data = new byte[size];
+                //byte[] data = new byte[size];
                 final MappedByteBuffer map = fileChannel.map(FileChannel.MapMode.READ_ONLY, startEnd[0], startEnd[1] - startEnd[0]);
-                map.get(data);
-                return data;
+                //map.get(data);
+                //return data;
+                return map;
             }
         });
     }
