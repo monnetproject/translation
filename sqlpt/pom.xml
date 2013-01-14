@@ -21,6 +21,7 @@
             <groupId>${project.groupId}</groupId>
             <artifactId>translation.decomposer</artifactId>
             <version>${project.version}</version>
+            <scope>runtime</scope>
         </dependency>
     </dependencies>
 </project>

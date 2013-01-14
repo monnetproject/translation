@@ -33,14 +33,12 @@ import eu.monnetproject.translation.DecomposerFactory;
 import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.TranslationSourceFactory;
 import eu.monnetproject.translation.monitor.Messages;
-import eu.monnetproject.nlp.stl.impl.MinimumSubtermDecomposerFactory;
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Properties;
 
@@ -56,8 +54,8 @@ public class SQLPhraseTableSourceFactory implements TranslationSourceFactory {
     private final Collection<DecomposerFactory> decomposerFactories;
     // private Connection conn;
 
-    public SQLPhraseTableSourceFactory(/*Collection<DecomposerFactory> decomposerFactories*/) {
-        this.decomposerFactories = Collections.singleton((DecomposerFactory)new MinimumSubtermDecomposerFactory());
+    public SQLPhraseTableSourceFactory(Collection<DecomposerFactory> decomposerFactories) {
+        this.decomposerFactories = decomposerFactories;
         final Properties dbConfig = Configurator.getConfig("com.mysql.jdbc");
         if (dbConfig.containsKey("username") && dbConfig.containsKey("password") && dbConfig.containsKey("database")) {
             try {
