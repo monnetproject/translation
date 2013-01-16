@@ -81,6 +81,9 @@ public class PagedLMTest {
             System.out.println("score");
             final File tmpFile = File.createTempFile("enen", "lm");
             tmpFile.deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".data").deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".static").deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".map").deleteOnExit();
             final PrintWriter out = new PrintWriter(tmpFile);
             out.println("");
             out.println("\\data\\");
@@ -118,6 +121,9 @@ public class PagedLMTest {
             System.err.println("toKey");
             final File tmpFile = File.createTempFile("enen", "lm");
             tmpFile.deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".data").deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".static").deleteOnExit();
+            new File(tmpFile.getAbsolutePath()+".map").deleteOnExit();
             final PrintWriter out = new PrintWriter(tmpFile);
             out.println("");
             out.println("\\data\\");
