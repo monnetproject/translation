@@ -90,11 +90,6 @@
         	<artifactId>translation.quality</artifactId>
         	<version>${project.version}</version>
         </dependency>
-        <!--<dependency>
-        	<groupId>${project.groupId}</groupId>
-        	<artifactId>nlp.core</artifactId>
-        	<version>${project.version}</version>
-        </dependency>-->
         <dependency>
             <groupId>com.sun.jersey</groupId>
             <artifactId>jersey-server</artifactId>
@@ -125,12 +120,6 @@
 	  <artifactId>lemon.api</artifactId>
 	  <version>${project.version}</version>
 	</dependency>
-        <!--<dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>nlp.basic</artifactId>
-            <version>${project.version}</version>
-            <scope>runtime</scope>
-        </dependency>-->
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>translation.jmert</artifactId>
