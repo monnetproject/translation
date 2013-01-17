@@ -28,7 +28,6 @@ import edu.stanford.nlp.util.StringUtils;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.translation.LanguageModelFactory;
 import eu.monnetproject.translation.TrueCaser;
-import eu.monnetproject.translation.monitor.Messages;
 import eu.monnetproject.translation.phrasal.lm.ARPALanguageModelFactory;
 import eu.monnetproject.translation.phrasal.lm.WrappedLanguageModel;
 
@@ -114,11 +113,12 @@ public class LanguageModelTrueCaser implements TrueCaser {
     }
 
     public String[] trueCase(String[] tokens, int id) {
-
+        synchronized(this) {
         Sequence<IString> source = new SimpleSequence<IString>(true,
                 IStrings.toIStringArray(tokens));
         RichTranslation<IString, String> translation = inferer.translate(source,
                 id - 1, null, null, Inferer.DEFAULT_BEAM_SIZE);
+        
 
         // manual fix up(s)
         // capitalize the first letter
@@ -131,6 +131,7 @@ public class LanguageModelTrueCaser implements TrueCaser {
 //    }
 
         return trg;
+        }
     }
 }
 
