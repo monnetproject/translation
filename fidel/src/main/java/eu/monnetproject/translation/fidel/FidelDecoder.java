@@ -29,6 +29,8 @@ package eu.monnetproject.translation.fidel;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;
@@ -47,18 +49,17 @@ public class FidelDecoder {
     public static Int2ObjectMap<String> wordMap;
     public static Object2IntMap<String> srcWordMap;
     private static final boolean verbose = Boolean.parseBoolean(System.getProperty("fidel.verbose", "false"));
+//    private static final PrintWriter log;
 
-    public static void printSoln(Solution soln) {
-        System.err.print("Solution: ");
-        for (int i = 0; i < soln.soln.length; i++) {
-            if (wordMap != null) {
-                System.err.print(wordMap.get(soln.soln[i]) + "(" + soln.dist[i] + ") ");
-            } else {
-                System.err.print(soln.soln[i] + "(" + soln.dist[i] + ") ");
-            }
-        }
-        System.err.println("\t\t" + soln.score + " - " + soln.futureCost);
-    }
+//    static {
+//        PrintWriter log2 = null;
+//        try {
+//            log2 = new PrintWriter("decode-stats.csv");
+//        } catch (IOException x) {
+//        }
+//        log = log2;
+//        log.println("ITERS,SOLN_ITER,N,SCORE");
+//    }
 
     public static void printPhrase(int[] p) {
         for (int i = 0; i < p.length; i++) {
@@ -79,6 +80,8 @@ public class FidelDecoder {
      * @param weights Of the form { UNK, DIST, LM, PT1, ... PTN }
      * @param distortionLimit The maximum distortion to consider
      * @param nBest The nBest results to return
+     * @param beamSize The size of beam to use (20 for quick, 50 for slow)
+     * @param useLazy Evaluate distortion lazily (much quicker, with slightly worse performance)
      * @return
      */
     public static Solution[] decode(int[] src,
@@ -88,28 +91,45 @@ public class FidelDecoder {
             double[] weights,
             int distortionLimit,
             int nBest,
-            int beamSize) {
+            int beamSize,
+            boolean useLazy) {
         final double[] scorePartial = calcPartialScore(src, phraseTable, weights, languageModel, lmN);
 
         final Beam beam = new Beam(beamSize);
         final Beam solns = new Beam(nBest);
         // Add null solution
-        beam.add(new Solution(0, new int[0], new int[0], sum(scorePartial), sum(scorePartial)));
+        beam.add(new SolutionImpl(0, new int[0], new int[0], sum(scorePartial), sum(scorePartial)));
 
         // Potential code bug here if the maximum translation length is greater
         // than 32 times large than the source
         final int[] buf = new int[src.length * 32];
+        final BufferCache bufferCache = new BufferCache(beamSize+5, src.length * 32);
 
-        while (!beam.isEmpty()) {
+        int iterationNo = 0;
+        int solnFound = 0;
+
+        while (!beam.isEmpty() && beam.bestScore() > solns.leastScore()) {
             // Take the best solution
-            final Solution soln = beam.poll();
+            final Solution solnTmp = beam.poll();
+            final SolutionImpl soln;
+            if (solnTmp instanceof SolutionImpl) {
+                soln = (SolutionImpl) solnTmp;
+            } else if (solnTmp instanceof LazyDistortedSolution) {
+                soln = ((LazyDistortedSolution) solnTmp).evaluate(weights, languageModel, lmN);
+            } else {
+                throw new RuntimeException("Unreachable");
+            }
+            iterationNo++;
             if (verbose) {
                 System.err.print("Selecting ");
-                printSoln(soln);
+                soln.printSoln(wordMap);
             }
             // If it is a complete solution we add it to the solution beam
             if (soln.upto == src.length) {
                 solns.add(soln);
+                if (soln == solns.first()) {
+                    solnFound = iterationNo;
+                }
                 continue;
             }
             // i is the end of the curent solution (in the source)
@@ -124,6 +144,9 @@ public class FidelDecoder {
             PHRASE_END:
             for (int j = i + 1; j <= src.length; j++) {
                 final double futureCost = sum(scorePartial, j);
+                if (Double.isNaN(futureCost) || Double.isInfinite(futureCost)) {
+                    throw new RuntimeException("Infinite future cost");
+                }
                 final Collection<PhraseTranslation> candidates = phraseTable.get(new Phrase(Arrays.copyOfRange(src, i, j)));
                 // No candidate
                 if (candidates == null || candidates.isEmpty()) {
@@ -155,11 +178,11 @@ public class FidelDecoder {
                             if (!Double.isInfinite(score)
                                     && (score > solns.leastScore() || !solns.isFull())
                                     && (score > beam.leastScore() || !beam.isFull())) {
-                                final Solution newSoln = new Solution(j, Arrays.copyOfRange(buf, 0, pos + 1), recalcDist(soln.dist, 1, d), score, futureCost);
+                                final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + 1), recalcDist(soln.dist, 1, d), score, futureCost);
                                 beam.add(newSoln);
                                 if (verbose) {
                                     System.err.print("Adding ");
-                                    printSoln(newSoln);
+                                    newSoln.printSoln(wordMap);
                                 }
                             }
                             leftShiftBuffer(buf, d, pos);
@@ -180,45 +203,68 @@ public class FidelDecoder {
                                 }
                             }
                             final double ddScore = deltaDist(soln.dist, candidate.words.length, d, weights);
-                            final double tptScore = tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
-                            // Get the score of the solution
-                            final double score = tptScore
-                                    + soln.score
-                                    + futureCost
-                                    - soln.futureCost
-                                    + ddScore;
+                            if (useLazy) {
 
-                            if (Double.isNaN(score)) {
-                                System.err.println(ddScore);
-                                System.err.println(soln.score);
-                                System.err.println(futureCost);
-                                System.err.println(soln.futureCost);
-                                System.err.println(tptScore);
-                                throw new RuntimeException();
-                            }
-
-                            if (!Double.isInfinite(score)
-                                    && (score > solns.leastScore() || !solns.isFull())
-                                    && (score > beam.leastScore() || !beam.isFull())) {
-                                final Solution newSoln = new Solution(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost);
-                                // System.err.println(newSoln.toString());
-                                beam.add(newSoln);
-                                if (verbose) {
-                                    System.err.print("Adding ");
-                                    printSoln(newSoln);
+                                double ptScore2 = 0.0;
+                                for (int k = 0; k < candidate.scores.length; k++) {
+                                    ptScore2 += weights[PT + k] * candidate.scores[k];
                                 }
-                            } else if (verbose) {
-                                System.err.print("Rejecting ");
-                                printSoln(new Solution(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost));
+                                double score = ptScore2
+                                        + soln.score
+                                        + futureCost
+                                        - soln.futureCost
+                                        + ddScore;
 
+                                if (!Double.isInfinite(score) && (!beam.isFull() || score > beam.leastScore())) {
+                                    final LazyDistortedSolution lds = new LazyDistortedSolution(candidate, soln, buf, pos, d, j, futureCost, ddScore, ptScore2, weights, bufferCache);
+                                    if(beam.add(lds)) {
+                                        beam.addRemovalListener(lds);
+                                    }
+                                }
+                            } else {
+                                final double tptScore = tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
+                                // Get the score of the solution
+                                final double score = tptScore
+                                        + soln.score
+                                        + futureCost
+                                        - soln.futureCost
+                                        + ddScore;
+
+                                if (Double.isNaN(score)) {
+                                    //System.err.println(ddScore);
+                                    //System.err.println(soln.score);
+                                    //System.err.println(futureCost);
+                                    //System.err.println(soln.futureCost);
+                                    //System.err.println(tptScore);
+                                    //throw new RuntimeException();
+                                    continue;
+                                }
+
+                                if (!Double.isInfinite(score)
+                                        && (score > solns.leastScore() || !solns.isFull())
+                                        && (score > beam.leastScore() || !beam.isFull())) {
+                                    final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost);
+                                    // System.err.println(newSoln.toString());
+                                    beam.add(newSoln);
+                                    if (verbose) {
+                                        System.err.print("Adding ");
+                                        newSoln.printSoln(wordMap);
+                                    }
+                                } else if (verbose) {
+                                    System.err.print("Rejecting ");
+                                    new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost).printSoln(wordMap);
+
+                                }
+                                // Undo damage by tryPutTranslation
+                                leftShiftBuffer(buf, candidate.words.length, pos - d);
                             }
-                            // Undo damage by tryPutTranslation
-                            leftShiftBuffer(buf, candidate.words.length, pos - d);
                         }
                     }
                 }
             }
         }
+//        log.println(iterationNo + "," + solnFound + "," + src.length + "," + solns.bestScore());
+//        log.flush();
         return solns.toArray();
     }
 
@@ -238,20 +284,30 @@ public class FidelDecoder {
         final Phrase ph = p >= lmN
                 ? new Phrase(buf, p - lmN, lmN)
                 : new Phrase(buf, 0, p);
+        /*final double[] lmScore = languageModel.get(ph);
+         if (lmScore != null) {
+         if(Double.isInfinite(lmScore[0])) {
+         return unk;
+         } else {
+         return lmScore[0];
+         }
+         } else if (lmN > 1) {
+         final Phrase boPh = new Phrase(buf, p - lmN, lmN - 1);
+         final double[] boScore = languageModel.get(boPh);
+         if (boScore != null && boScore.length > 0) {
+         final double scoreWithBO = boScore[1] + lmScore(buf, p, languageModel, lmN - 1, unk);
+         return scoreWithBO;
+         } else {
+         return lmScore(buf, p, languageModel, lmN - 1, unk);
+         }
+         } else {
+         return unk;
+         }*/
         final double[] lmScore = languageModel.get(ph);
-        if (lmScore != null) {
+        if (lmScore != null && !Double.isInfinite(lmScore[0])) {
             return lmScore[0];
-        } else if (lmN > 1) {
-            final Phrase boPh = new Phrase(buf, p - lmN, lmN - 1);
-            final double[] boScore = languageModel.get(boPh);
-            if (boScore != null) {
-                final double scoreWithBO = boScore[1] + lmScore(buf, p, languageModel, lmN - 1, unk);
-                return scoreWithBO;
-            } else {
-                return lmScore(buf, p, languageModel, lmN - 1, unk);
-            }
         } else {
-            return unk;
+            return -100;
         }
     }
 
@@ -376,7 +432,7 @@ public class FidelDecoder {
         }
         // Change should be undone:
         //leftShiftBuffer(buf, pt.w.length, pos - dist);
-        assert (!Double.isInfinite(score) && !Double.isNaN(score));
+        //assert (!Double.isInfinite(score) && !Double.isNaN(score));
         return Double.isNaN(score) ? Double.NEGATIVE_INFINITY : score;
     }
 

@@ -44,19 +44,20 @@ import java.io.ObjectOutputStream;
  * @author John McCrae
  */
 public class PagedLM extends AbstractLM {
+
     private final Language language;
     private int order;
     private Int2ObjectMap<double[]> unigrams;
     private DirectDataMMap map;
-    private double[] mus,sds;
+    private double[] mus, sds;
 
     public PagedLM(Language language, File model) throws IOException, ClassNotFoundException {
         this.language = language;
-        this.map = new File(model.getPath()+".static").exists() ? loadLM(model) : buildLM(model);
+        this.map = new File(model.getPath() + ".static").exists() ? loadLM(model) : buildLM(model);
         if (str2key.containsKey(UNK)) {
             unkCode = str2key.getInt(UNK);
         } else {
-            unkCode = str2key.size()+1;
+            unkCode = str2key.size() + 1;
         }
     }
 
@@ -67,7 +68,7 @@ public class PagedLM extends AbstractLM {
 
     @Override
     public int getOrder() {
-       return order;
+        return order;
     }
 
     @Override
@@ -78,16 +79,17 @@ public class PagedLM extends AbstractLM {
     @Override
     public void close() {
         try {
+            Messages.info("Raw score calls: " + rawScoreCalls);
             map.close();
-        } catch(Exception x) {
+        } catch (Exception x) {
             Messages.cleanupFailure(x);
         }
     }
 
     @Override
     protected double mean(int n) {
-        if(n > 0 && n <= mus.length) {
-            return mus[n-1];
+        if (n > 0 && n <= mus.length) {
+            return mus[n - 1];
         } else {
             return -Double.NEGATIVE_INFINITY;
         }
@@ -95,8 +97,8 @@ public class PagedLM extends AbstractLM {
 
     @Override
     protected double sd(int n) {
-        if(n > 0 && n <= sds.length) {
-            return sds[n-1];
+        if (n > 0 && n <= sds.length) {
+            return sds[n - 1];
         } else {
             return 0;
         }
@@ -105,10 +107,10 @@ public class PagedLM extends AbstractLM {
     @SuppressWarnings("unchecked")
     private DirectDataMMap loadLM(File file) throws IOException, ClassNotFoundException {
 
-        final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(file.getPath()+ ".static")));
+        final ObjectInputStream ois = new ObjectInputStream(new FileInputStream(new File(file.getPath() + ".static")));
         order = ois.readInt();
-        mus = (double[])ois.readObject();
-        sds = (double[])ois.readObject();
+        mus = (double[]) ois.readObject();
+        sds = (double[]) ois.readObject();
         unigrams = (Int2ObjectMap<double[]>) ois.readObject();
         str2key = (Object2IntMap<String>) ois.readObject();
         ois.close();
@@ -119,19 +121,18 @@ public class PagedLM extends AbstractLM {
         final DirectDataMMapBuilder builder = new DirectDataMMapBuilder(model);
         final DoubleArrayList mus = new DoubleArrayList(), sds = new DoubleArrayList();
         final ARPAReader reader = new ARPAReader() {
-
             @Override
             protected void prepare(int i) {
-                  if (i == 1) {
-                      // Reduced load factor for speed
-                      unigrams = new Int2ObjectOpenHashMap<double[]>(50000,0.4f);
-                  } 
-          
+                if (i == 1) {
+                    // Reduced load factor for speed
+                    unigrams = new Int2ObjectOpenHashMap<double[]>(50000, 0.4f);
+                }
+
             }
 
             @Override
             protected void put(int[] ng, double[] scores) throws IOException {
-                if(ng.length == 1) {
+                if (ng.length == 1) {
                     unigrams.put(ng[0], scores);
                 } else {
                     builder.accept(ng, scores);
@@ -140,7 +141,6 @@ public class PagedLM extends AbstractLM {
 
             @Override
             protected void end(int order) {
-                
             }
 
             @Override
@@ -153,14 +153,12 @@ public class PagedLM extends AbstractLM {
                 mus.add(mu);
                 sds.add(sd);
             }
-            
-            
         };
         reader.read(model);
         this.order = reader.order;
         this.str2key = reader.str2key;
-        
-        final ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(model.getPath()+".static")));
+
+        final ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(new File(model.getPath() + ".static")));
         oos.writeInt(order);
         oos.writeObject(mus.toDoubleArray());
         oos.writeObject(sds.toDoubleArray());
@@ -169,17 +167,20 @@ public class PagedLM extends AbstractLM {
         oos.close();
         // We could use the builder to create the record map, instead of re-reading
         // it from disk
-        return new DirectDataMMap(model,builder.dataLocMap);
+        return new DirectDataMMap(model, builder.dataLocMap);
     }
 
-
+    private int rawScoreCalls = 0;
+    
     @Override
     protected double[] rawScore(int n, NGram key) {
         if (n == 1) {
             return unigrams.get(key.data(0));
         } else {
-            return map.rawScore(key.data());
+            synchronized (this) {
+                rawScoreCalls++;
+                return map.rawScore(key.data());
+            }
         }
     }
-
 }

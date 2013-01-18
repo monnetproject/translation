@@ -41,10 +41,11 @@ import java.util.ListIterator;
  */
 public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
 
-    private LanguageModel languageModel;
-    private Object2IntMap<String> wordMap = new WordMap();
-    private Int2ObjectMap<String> invWordMap = new Int2ObjectOpenHashMap<String>();
-    private int W = 0;
+    private final LanguageModel languageModel;
+    private final Object2IntMap<String> wordMap = new WordMap();
+    private final Int2ObjectMap<String> invWordMap = new Int2ObjectOpenHashMap<String>();
+    private final Object wordMapLock = new Object();
+    //private int W = 0;
 
     public IntegerLanguageModelWrapper(LanguageModel languageModel) {
         this.languageModel = languageModel;
@@ -54,7 +55,9 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
     public double[] get(Phrase phrase) {
         final List<String> ls = new ArrayList<String>(phrase.p.length);
         for (int i = 0; i < phrase.n; i++) {
-            ls.add(invWordMap.get(phrase.p[i + phrase.l]));
+            synchronized(wordMapLock) {
+                ls.add(invWordMap.get(phrase.p[i + phrase.l]));
+            }
         }
         final double[] score = new double[]{languageModel.score(ls)};
         if (Double.isInfinite(score[0]) || Double.isNaN(score[0])) {
@@ -105,16 +108,18 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
 
         @Override
         public int getInt(Object k) {
-            if (k instanceof String) {
-                if (super.containsKey((String) k)) {
-                    return super.getInt(k);
+            synchronized (wordMapLock) {
+                if (k instanceof String) {
+                    if (super.containsKey((String) k)) {
+                        return super.getInt(k);
+                    } else {
+                        super.put((String) k, W);
+                        invWordMap.put(W, (String) k);
+                        return W++;
+                    }
                 } else {
-                    super.put((String) k, W);
-                    invWordMap.put(W, (String) k);
-                    return W++;
+                    throw new IllegalArgumentException();
                 }
-            } else {
-                throw new IllegalArgumentException();
             }
         }
 

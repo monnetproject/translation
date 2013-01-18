@@ -5,8 +5,10 @@ import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -63,6 +65,41 @@ public class AbstractLMTest {
         assertEquals(2, instance.quartile(Arrays.asList("is")));
         assertEquals(4, instance.quartile(Arrays.asList("a")));
         assertEquals(4, instance.quartile(Arrays.asList("test")));
+    }
+    
+    //@Test
+    public void compareToMemoryLM() throws Exception {
+        final MemoryLM memoryLM = new MemoryLM(Language.AFAR, new File("src/test/resources/europarl.lm"));
+        final PagedLM pagedLM = new PagedLM(Language.AFAR, new File("src/test/resources/europarl.lm"));
+        
+        String[] words = memoryLM.str2key.keySet().toArray(new String[memoryLM.str2key.size()]);
+        final Random random = new Random();
+        for(int i = 0; i < 100; i++) {
+            int N = random.nextInt(3)+1;
+            String[] ngram = new String[N];
+            for(int j = 0; j < N; j++) {
+                ngram[j] = words[random.nextInt(words.length)];
+            }
+            final double memoryScore = memoryLM.score(Arrays.asList(ngram));
+            final double pagedScore = pagedLM.score(Arrays.asList(ngram));
+            assertEquals(memoryScore,pagedScore,0.00001);
+        }
+        
+        String[] oov = { "dafdaf", "gbfgg", "ateaaeta", ":;[@v;a[", "dfa[[vc]", "dd c" };
+        for(int i = 0; i < 100; i++) {
+            int N = random.nextInt(3)+1;
+            String[] ngram = new String[N];
+            for(int j = 0; j < N; j++) {
+                if(random.nextBoolean()) {
+                    ngram[j] = words[random.nextInt(words.length)];
+                } else {
+                    ngram[j] = oov[random.nextInt(oov.length)];
+                }
+            }
+            final double memoryScore = memoryLM.score(Arrays.asList(ngram));
+            final double pagedScore = pagedLM.score(Arrays.asList(ngram));
+            assertEquals(memoryScore,pagedScore,0.00001);
+        }
     }
 
     public class AbstractLMImpl extends AbstractLM {

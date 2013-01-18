@@ -2,6 +2,7 @@ package eu.monnetproject.translation.fidel;
 
 import eu.monnetproject.translation.fidel.Solution;
 import eu.monnetproject.translation.fidel.Beam;
+import it.unimi.dsi.fastutil.objects.ObjectBidirectionalIterator;
 import java.util.Iterator;
 import java.util.Random;
 import java.util.TreeSet;
@@ -55,7 +56,7 @@ public class BeamTest {
         final Iterator<Solution> expIter = solns.iterator();
         while (i < 100) {
             assertEquals(expIter.next(), beam.poll());
-            // System.err.println(expIter.next().score+"  "+beam.poll().score);
+            // System.err.println(expIter.next().score+" vs "+beam.poll().score);
             i++;
         }
     }
@@ -80,7 +81,7 @@ public class BeamTest {
         while (i < 10) {
             final Solution expSoln = expIter.next();
             final Solution beamSoln = beam.poll();
-            System.err.println(expSoln.score + "  " + beamSoln.score);
+            System.err.println(expSoln.score() + "  " + beamSoln.score());
             assertEquals(expSoln, beamSoln);
             i++;
         }
@@ -90,15 +91,16 @@ public class BeamTest {
     private static Solution randomSolution() {
         final double s = r.nextDouble();
         System.err.println(s);
-        return new Solution(r.nextInt(), new int[0], new int[0], s, s);
+        return new SolutionImpl(r.nextInt(), new int[0], new int[0], s, s);
     }
 
     private void verify(TreeSet<Solution> solns, Beam beam, int i) {
         final Iterator<Solution> expIter = solns.iterator();
+        final ObjectBidirectionalIterator<Solution> beamIter = beam.iterator();
         while (i < beam.size()) {
             final Solution expSoln = expIter.next();
-            final Solution beamSoln = beam.get(i);
-            System.err.println(expSoln.score + "  " + beamSoln.score);
+            final Solution beamSoln = beamIter.next();
+            System.err.println(expSoln.score() + "  " + beamSoln.score());
             assertEquals(expSoln, beamSoln);
             i++;
         }

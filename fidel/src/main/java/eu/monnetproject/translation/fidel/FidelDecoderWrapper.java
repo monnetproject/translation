@@ -71,15 +71,15 @@ public class FidelDecoderWrapper implements Decoder {
 
     @Override
     public List<Translation> decode(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest) {
-        return decode(phrase, phraseTable, featureNames, nBest, 200);
+        return decode(phrase, phraseTable, featureNames, nBest, 50,false);
     }
 
     @Override
     public List<Translation> decodeFast(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest) {
-        return decode(phrase, phraseTable, featureNames, nBest, 20);
+        return decode(phrase, phraseTable, featureNames, nBest, 20,true);
     }
 
-    private List<Translation> decode(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest, int beamSize) {
+    private List<Translation> decode(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest, int beamSize, boolean useLazy) {
         FidelDecoder.wordMap = invWordMap;
         FidelDecoder.srcWordMap = srcWordMap;
         int[] src = convertPhrase(phrase);
@@ -87,14 +87,15 @@ public class FidelDecoderWrapper implements Decoder {
         int lmN = languageModel.order();
         double[] wts = new double[featureNames.size() + FidelDecoder.PT];
         int i = FidelDecoder.PT;
-        wts[FidelDecoder.UNK] = weights.containsKey("UnknownWord") ? weights.get("UnknownWord") : 0.0;
+        //wts[FidelDecoder.UNK] = -100 * (weights.containsKey("UnknownWord") ? weights.get("UnknownWord") : 1.0);
+        wts[FidelDecoder.UNK] = -100;
         wts[FidelDecoder.DIST] = weights.containsKey("LinearDistortion") ? weights.get("LinearDistortion") : 0.0;
         wts[FidelDecoder.LM] = weights.containsKey("LM") ? weights.get("LM") : 0.0;
         for (String feat : featureNames) {
             wts[i++] = weights.containsKey(feat) ? weights.get(feat)
                     : (weights.containsKey("TM:" + feat) ? weights.get("TM:" + feat) : 0);
         }
-        final Solution[] translations = FidelDecoder.decode(src, pt, languageModel, lmN, wts, distortionLimit, nBest, beamSize);
+        final Solution[] translations = FidelDecoder.decode(src, pt, languageModel, lmN, wts, distortionLimit, nBest, beamSize, useLazy);
         final StringBuilder sb = new StringBuilder();
         for (String w : phrase) {
             if (sb.length() != 0) {
@@ -142,8 +143,14 @@ public class FidelDecoderWrapper implements Decoder {
     private Object2ObjectMap<Phrase, Collection<PhraseTranslation>> convertPT(PhraseTable phraseTable, Object2IntMap<String> trgDict, List<String> featureNames) {
         final Object2ObjectOpenHashMap<Phrase, Collection<PhraseTranslation>> pt = new Object2ObjectOpenHashMap<Phrase, Collection<PhraseTranslation>>();
         for (PhraseTableEntry pte : phraseTable) {
-            final Phrase src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
-            final Phrase trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
+            final Phrase src;// = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
+            final Phrase trg;// = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
+            synchronized(srcWordMap) {
+                src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
+            }
+            synchronized(trgDict) {
+                trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
+            }
             final double[] wts = convertWeights(pte.getFeatures(), featureNames);
             final PhraseTranslation translation = new PhraseTranslation(trg.p, wts);
             if (!pt.containsKey(src)) {
@@ -188,7 +195,7 @@ public class FidelDecoderWrapper implements Decoder {
             this.solution = solution;
             this.srcLabel = srcLabel;
             StringBuilder sb = new StringBuilder();
-            for (int w : solution.soln) {
+            for (int w : solution.soln()) {
                 if (sb.length() != 0) {
                     sb.append(" ");
                 }
@@ -218,7 +225,7 @@ public class FidelDecoderWrapper implements Decoder {
 
         @Override
         public double getScore() {
-            return solution.score;
+            return solution.score();
         }
 
         @Override

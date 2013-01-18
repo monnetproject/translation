@@ -1,23 +1,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <groupId>eu.monnetproject</groupId>
-    <artifactId>translation.project</artifactId>
-    <version>1.13.1-SNAPSHOT</version>
-    <relativePath>..</relativePath>
-  </parent>
-  <artifactId>translation.evaluation</artifactId>
-  <name>eu.monnetproject.translation.evaluation OSGi Bundle</name>
-  <packaging>bundle</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>eu.monnetproject</groupId>
+        <artifactId>translation.project</artifactId>
+        <version>1.13.1-SNAPSHOT</version>
+        <relativePath>..</relativePath>
+    </parent>
+    <artifactId>translation.evaluation</artifactId>
+    <name>eu.monnetproject.translation.evaluation OSGi Bundle</name>
+    <packaging>bundle</packaging>
   
-  <repositories>
-        <repository>
-            <id>project</id>
-            <url>file:///${project.basedir}/repo</url>
-        </repository>
-    </repositories>
-  
-  <dependencies>
+    <dependencies>
         <dependency>
             <groupId>org.apache.felix</groupId>
             <artifactId>org.osgi.core</artifactId>
@@ -90,9 +83,9 @@
             <scope>runtime</scope>
         </dependency>
         <dependency>
-        	<groupId>${project.groupId}</groupId>
-        	<artifactId>translation.quality</artifactId>
-        	<version>${project.version}</version>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.quality</artifactId>
+            <version>${project.version}</version>
             <exclusions>
                 <exclusion>
                     <artifactId>translation.phrasal</artifactId>
@@ -125,23 +118,23 @@
             <artifactId>jtidy</artifactId>
             <version>r938</version>
         </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>translation.controller</artifactId>
-      <version>${project.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>translation.langmodel</artifactId>
-      <version>${project.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-    <dependency>
-      <groupId>${project.groupId}</groupId>
-      <artifactId>translation.evalmetrics</artifactId>
-      <version>${project.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-  </dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.controller</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.langmodel</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>translation.evalmetrics</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+    </dependencies>
 </project>

@@ -195,7 +195,7 @@ public class FidelDecoderPerformance {
             double[] weights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
             int distiortionLimit = 3;
             int nBest = 1;
-            FidelDecoder.decode(src, phraseTable, new IntegerLanguageModelImpl(), lmN, weights, distiortionLimit, nBest,1000);
+            FidelDecoder.decode(src, phraseTable, new IntegerLanguageModelImpl(), lmN, weights, distiortionLimit, nBest,1000,false);
             if(i % 100 == 0) {
                 System.err.print(".");
             }
