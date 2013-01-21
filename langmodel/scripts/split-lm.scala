@@ -52,7 +52,7 @@ out.println()
 
 for(n <- 1 to order) {
   out.println("\\"+n+"-grams:")
-  val in = Source.fromFile("lm_tmp.sort."+n).getLines
+  val in = Source.fromFile("lm_tmp.sort."+n).getLines.map(_.trim)
   for(line <- in) {
     val e = line.split("\t")
     if(e.length < 2) {
