@@ -1,7 +1,7 @@
 import java.io._
 import scala.io._
 
-val src = Source.fromFile(args(0)).getLines
+val src = Source.fromFile(args(0)).getLines.map(_.trim)
 
 def fail(msg : String) {
   System.err.println(msg)
