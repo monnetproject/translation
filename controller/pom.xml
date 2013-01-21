@@ -146,7 +146,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>translation.fidel</artifactId>
+            <artifactId>translation.phrasal</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
