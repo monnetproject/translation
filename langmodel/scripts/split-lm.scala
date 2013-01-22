@@ -11,7 +11,7 @@ def fail(msg : String) {
 src.find(_ == "\\data\\").getOrElse(fail("No header"))
 
 var order = 0
-while(src.next.matches("ngram \\d+=\\d+")) {
+while(src.next.matches("ngram \\d+=.*")) {
   order = order + 1
 }
 
