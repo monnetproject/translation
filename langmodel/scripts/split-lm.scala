@@ -15,6 +15,8 @@ while(src.next.matches("ngram \\d+=\\d+")) {
   order = order + 1
 }
 
+println("order="+order)
+
 var ngCt = new Array[Int](order)
 
 for(n <- 1 to order) {
