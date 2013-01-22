@@ -52,6 +52,7 @@ public class PagedLM extends AbstractLM {
     private double[] mus, sds;
 
     public PagedLM(Language language, File model) throws IOException, ClassNotFoundException {
+        Messages.info("Creating PagedLM " + model);
         this.language = language;
         this.map = new File(model.getPath() + ".static").exists() ? loadLM(model) : buildLM(model);
         if (str2key.containsKey(UNK)) {
