@@ -51,7 +51,9 @@ public class LMFactory implements LanguageModelFactory {
 
     private LanguageModelAndTrueCaser get(Language language) {
         final String pid = System.getProperty("langmodel.config","eu.monnetproject.translation.langmodel");
+        Messages.info("langmodel.pid=" + pid);
         final Properties config = Configurator.getConfig(pid);
+        Messages.info(config.getProperty("method"));
         if (config.containsKey(language.toString())) {
             LanguageModelAndTrueCaser lm = pagedLMs.get(language);
             if (lm != null) {

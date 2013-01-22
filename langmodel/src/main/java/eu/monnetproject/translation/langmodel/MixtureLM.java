@@ -26,9 +26,6 @@
 package eu.monnetproject.translation.langmodel;
 
 import eu.monnetproject.lang.Language;
-import eu.monnetproject.translation.LanguageModel;
-import eu.monnetproject.translation.TrueCaser;
-import java.util.Arrays;
 import java.util.List;
 
 /**
