@@ -51,9 +51,7 @@ public class LMFactory implements LanguageModelFactory {
 
     private LanguageModelAndTrueCaser get(Language language) {
         final String pid = System.getProperty("langmodel.config","eu.monnetproject.translation.langmodel");
-        Messages.info("langmodel.pid=" + pid);
         final Properties config = Configurator.getConfig(pid);
-        Messages.info(config.getProperty("method"));
         if (config.containsKey(language.toString())) {
             LanguageModelAndTrueCaser lm = pagedLMs.get(language);
             if (lm != null) {
@@ -82,16 +80,20 @@ public class LMFactory implements LanguageModelFactory {
                             Messages.componentLoadFail(MixtureLM.class, x);
                             return null;
                         }
+                        
                         if (!config.containsKey(language.toString() + "2")) {
-                            Messages.componentLoadFail(MixtureLM.class, "Mixture model must specify second model as " + language + "2");
-                            return null;
-                        }
-
+                            if(method.equals("mixp")) {
+                                return new PagedLM(language, modelFile);
+                            } else {
+                                return new MemoryLM(language, modelFile);
+                            }
+                        } 
                         final File modelFile2 = new File(config.getProperty(language + "2"));
                         if (!modelFile2.exists()) {
                             Messages.componentLoadFail(PagedLM.class, modelFile2.getPath() + " not found");
                             return null;
                         }
+                        
                         final AbstractLM lm1, lm2;
                         if (method.equals("mixp")) {
                             lm1 = new PagedLM(language, modelFile);
