@@ -70,8 +70,8 @@ public class IATEIndexer {
 		File referenceFolder = new File(config.getProperty("ontologiesFolder"));		
 		IATEIndexer indexer = new IATEIndexer(Services.get(OntologySerializer.class),
 				Services.get(LabelExtractorFactory.class), Services.get(TokenizerFactory.class), Services.getAll(TranslationPhraseChunkerFactory.class), Language.ENGLISH, Language.DUTCH);
-		indexer.sourceLanguage = Language.getByIso639_1(config.getProperty("sourceLanguage"));
-		indexer.targetLanguage = Language.getByIso639_1(config.getProperty("targetLanguage"));
+		indexer.sourceLanguage = Language.getByIso639_1(config.getProperty("sourceLanguage").trim());
+		indexer.targetLanguage = Language.getByIso639_1(config.getProperty("targetLanguage").trim());
 		Boolean use = Boolean.parseBoolean(config.getProperty("use"));		
 		for (String scopeStr : indexer.scopeStrs) {
 			final URI scope = URI.create(scopeStr);
