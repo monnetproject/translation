@@ -11,8 +11,6 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
-
-
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.label.LabelExtractorFactory;
@@ -39,6 +37,7 @@ import eu.monnetproject.translation.TranslationPhraseChunker;
 import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
 import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.monitor.Messages;
+import eu.monnetproject.clesa.CLSim;
 
 
 
@@ -52,8 +51,7 @@ public class IATEIndexer {
 	private TranslationSource translationSource = null;
 	private final String[] scopeStrs;
 	private final List<URI> scopes;
-
-
+	
 	public IATEIndexer(OntologySerializer ontoSerializer, LabelExtractorFactory lef, TokenizerFactory tokenizerFactory, Iterable<TranslationPhraseChunkerFactory> chunkerFactories,  Language sourceLanguage, Language targetLanguage){
 		this.ontoSerializer = ontoSerializer;		
 		this.lef = lef;
@@ -66,7 +64,8 @@ public class IATEIndexer {
 	}
 
 
-	public static void main(String[] args) throws IOException {	
+	public static void main(String[] args) throws IOException {
+		CLSim clsim = Services.get(CLSim.class);
 		final Properties config = Configurator.getConfig("eu.monnetproject.translation.sources.iate.indexer");
 		File referenceFolder = new File(config.getProperty("ontologiesFolder"));		
 		IATEIndexer indexer = new IATEIndexer(Services.get(OntologySerializer.class),
