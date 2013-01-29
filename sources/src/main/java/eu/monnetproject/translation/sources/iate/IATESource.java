@@ -220,7 +220,6 @@ public class IATESource implements TranslationSource {
 		}
 	}
 
-
 	public static void main(String[] args) throws IOException {
 		String word = "event";
 		String configFile = "load//eu.monnetproject.translation.sources.iate.cfg";

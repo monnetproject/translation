@@ -1,11 +1,14 @@
 package eu.monnetproject.translation.sources.iate;
 
 
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
 import java.io.StringReader;
 import java.io.Writer;
 import java.net.HttpURLConnection;
@@ -43,6 +46,7 @@ public class IATESourceWithCache implements TranslationSource {
 	private Properties config;
 	private NRTCacheIndexer cacheIndexer;
 	private String[] contexts;
+	private PrintWriter cacheLog;
 
 	public IATESourceWithCache(Language srcLang, Language trgLang, Properties config) {
 		this.srcLang = srcLang;
@@ -50,6 +54,18 @@ public class IATESourceWithCache implements TranslationSource {
 		this.config = config;
 		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang);
 		contexts = config.getProperty("domains").split(";");
+		if(config.containsKey("cacheLogPath")) 
+			openLog(config.getProperty("cacheLogPath"));		
+	}
+
+	private void openLog(String filePath) {
+		try {
+			cacheLog = new PrintWriter(new BufferedWriter(new FileWriter(filePath, true)), true);	
+		} catch (IOException e) {
+			e.printStackTrace();
+			cacheLog = null;
+			return;
+		}
 	}
 
 	@Override
@@ -59,6 +75,7 @@ public class IATESourceWithCache implements TranslationSource {
 
 	@Override
 	public void close() {	
+		cacheLog.close();
 		cacheIndexer.close();
 	}
 
@@ -85,6 +102,8 @@ public class IATESourceWithCache implements TranslationSource {
 						if(retrievedContext.equalsIgnoreCase("00")) 
 							continue;					
 						cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
+						if(cacheLog!=null)
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+translation.replace("\n", "").trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1());																
 					}		
 				}
 			} else {
@@ -255,7 +274,6 @@ public class IATESourceWithCache implements TranslationSource {
 		}
 	}
 
-
 	public static void main(String[] args) throws IOException {
 		String word = "event";
 		String configFile = "load//eu.monnetproject.translation.sources.iate.cfg";
@@ -282,8 +300,7 @@ public class IATESourceWithCache implements TranslationSource {
 			for(Pair<String, String> allT : allTranslations) {
 				String text1 = allT.getFirst();
 				String context1 = allT.getSecond();				
-				if(text.equalsIgnoreCase(text1) && context.equalsIgnoreCase(context1)) {
-					//System.out.println(++i + "  done");
+				if(text.equalsIgnoreCase(text1) && context.equalsIgnoreCase(context1)) {				
 					System.out.println(text);
 					System.out.println(context);
 					i++;
