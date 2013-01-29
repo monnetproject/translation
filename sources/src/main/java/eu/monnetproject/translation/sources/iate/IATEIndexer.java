@@ -12,7 +12,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
-import eu.monnetproject.clesa.CLESA;
+
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.label.LabelExtractorFactory;
@@ -67,7 +67,6 @@ public class IATEIndexer {
 
 
 	public static void main(String[] args) throws IOException {	
-		CLESA clesa = new CLESA();
 		final Properties config = Configurator.getConfig("eu.monnetproject.translation.sources.iate.indexer");
 		File referenceFolder = new File(config.getProperty("ontologiesFolder"));		
 		IATEIndexer indexer = new IATEIndexer(Services.get(OntologySerializer.class),
