@@ -37,7 +37,6 @@ import eu.monnetproject.translation.TranslationPhraseChunker;
 import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
 import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.monitor.Messages;
-import eu.monnetproject.clesa.CLSim;
 
 
 
