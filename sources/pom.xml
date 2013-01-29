@@ -21,6 +21,13 @@
 			<version>3.7.2</version>
 		</dependency>
 		
+		 <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>clesa</artifactId>
+            <version>${project.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+		
 	   <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>translation.fidel</artifactId>
