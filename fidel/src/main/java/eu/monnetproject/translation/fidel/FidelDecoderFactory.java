@@ -26,11 +26,13 @@
  */
 package eu.monnetproject.translation.fidel;
 
-import eu.monnetproject.lang.Language;
+import eu.monnetproject.config.Configurator;
 import eu.monnetproject.translation.Decoder;
 import eu.monnetproject.translation.DecoderFactory;
 import eu.monnetproject.translation.DecoderWeights;
 import eu.monnetproject.translation.LanguageModel;
+import java.util.HashMap;
+import java.util.Properties;
 
 /**
  *
@@ -38,10 +40,16 @@ import eu.monnetproject.translation.LanguageModel;
  */
 public class FidelDecoderFactory implements DecoderFactory {
 
+    @Override
     public Decoder getDecoder(LanguageModel model, int tFeatureCount) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        if (model instanceof IntegerLanguageModel) {
+            return new FidelDecoderWrapper((IntegerLanguageModel)model, getDefaultWeights());
+        } else {
+            return new FidelDecoderWrapper(new IntegerLanguageModelWrapper(model), getDefaultWeights());
+        }
     }
 
+    @Override
     public Decoder getDecoder(LanguageModel model, DecoderWeights weights) {
         if (model instanceof IntegerLanguageModel) {
             return new FidelDecoderWrapper((IntegerLanguageModel)model, weights);
@@ -50,8 +58,24 @@ public class FidelDecoderFactory implements DecoderFactory {
         }
     }
 
+    @Override
     public DecoderWeights getDefaultWeights() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        Properties config = Configurator.getConfig("eu.monnetproject.translation.wts");
+        if (!config.isEmpty()) {
+            final DecoderWeightsImpl dwi = new DecoderWeightsImpl();
+            for (Object key : config.keySet()) {
+                String keyStr = key.toString();
+                String value = config.getProperty(key.toString());
+                dwi.put(keyStr, Double.parseDouble(value));
+            }
+            return dwi;
+        } else {
+            return new DecoderWeightsImpl();
+        }
     }
 
+    private static class DecoderWeightsImpl extends HashMap<String,Double> implements DecoderWeights {
+
+    }
+    
 }
