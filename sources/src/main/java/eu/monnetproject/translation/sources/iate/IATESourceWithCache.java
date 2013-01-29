@@ -90,8 +90,12 @@ public class IATESourceWithCache implements TranslationSource {
 				Set<Pair<String, String>> translationsFromIateWS = getTranslations(chunk.getSource(), context);
 				if(translationsFromIateWS!=null){
 					translationsWithContext.addAll(translationsFromIateWS);
-					if(translationsWithContext.size()==0) 
-						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());										
+					if(translationsWithContext.size()==0) {
+						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
+						if(cacheLog!=null)
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1());																
+		
+					}
 					for(Pair<String, String> translationWithContext : translationsWithContext) {
 						String translation = translationWithContext.getFirst();
 						String retrievedContext = translationWithContext.getSecond();
