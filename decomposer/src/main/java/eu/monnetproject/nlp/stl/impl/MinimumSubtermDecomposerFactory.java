@@ -5,6 +5,7 @@ import eu.monnetproject.config.Configurator;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.nlp.stl.Termbase;
 import eu.monnetproject.translation.Decomposer;
+import eu.monnetproject.translation.monitor.Messages;
 import java.io.File;
 import java.util.Properties;
 import java.util.logging.Logger;
@@ -29,7 +30,7 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
             return null;
         }
     }
-    
+
     public String getSimpleIndexDir(String lang) {
         final Properties config = Configurator.getConfig("eu.monnetproject.nlp.stl");
         if (config.containsKey(SIMPLE_INDEX_PROP + lang)) {
@@ -41,7 +42,7 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
 
     @Override
     public MinimumSubtermDecomposer makeDecomposer(String lang) {
-    	    System.err.println("makeDecomposer");
+
         String luceneIndexDir = getLuceneIndexDir(lang);
         String simpleIndexDir = getSimpleIndexDir(lang);
         if (luceneIndexDir != null) {
@@ -54,13 +55,13 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
                     x.printStackTrace();
                     //log.stackTrace(x);
                     //Logging.stackTrace(log, e);
-            return null;
+                    return null;
                 }
             } else {
-                log.warning("Indexdir " + luceneIndexDir + " does not exist");
-            return null;
+                Messages.warning("Indexdir " + luceneIndexDir + " does not exist");
+                return null;
             }
-        } else if(simpleIndexDir != null) {
+        } else if (simpleIndexDir != null) {
             if ((new File(simpleIndexDir)).exists()) {
                 try {
                     final Termbase termbase = TermbaseImpl.fromFile(new File(simpleIndexDir), lang);
@@ -68,17 +69,17 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
                 } catch (Exception x) {
                     //Exception e = new Exception("No decomposer model for language " + lang + " available");
                     x.printStackTrace();
-                   // log.stackTrace(x);
+                    // log.stackTrace(x);
                     //Logging.stackTrace(log, e);
-            return null;
+                    return null;
                 }
             } else {
-                log.warning("Indexdir " + simpleIndexDir + " does not exist");
-            return null;
+                Messages.warning("Indexdir " + simpleIndexDir + " does not exist");
+                return null;
             }
-            
+
         } else {
-            log.warning("Indexdir nullpointer excception");
+            Messages.componentLoadFail(MinimumSubtermDecomposerFactory.class,"No index directory for decomposer");
             return null;
         }
     }
@@ -87,6 +88,4 @@ public class MinimumSubtermDecomposerFactory implements DecomposerFactory, eu.mo
     public Decomposer makeDecomposer(Language lang) throws Exception {
         return makeDecomposer(lang.toString());
     }
-    
-    
 }
