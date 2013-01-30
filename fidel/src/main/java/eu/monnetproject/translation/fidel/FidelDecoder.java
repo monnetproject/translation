@@ -98,7 +98,7 @@ public class FidelDecoder {
         final Beam beam = new Beam(beamSize);
         final Beam solns = new Beam(nBest);
         // Add null solution
-        beam.add(new SolutionImpl(0, new int[0], new int[0], sum(scorePartial), sum(scorePartial)));
+        beam.add(new SolutionImpl(0, new int[0], new int[0], sum(scorePartial), sum(scorePartial),new double[weights.length]));
 
         // Potential code bug here if the maximum translation length is greater
         // than 32 times large than the source
@@ -178,7 +178,9 @@ public class FidelDecoder {
                             if (!Double.isInfinite(score)
                                     && (score > solns.leastScore() || !solns.isFull())
                                     && (score > beam.leastScore() || !beam.isFull())) {
-                                final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + 1), recalcDist(soln.dist, 1, d), score, futureCost);
+                                double[] newFeatures = Arrays.copyOf(soln.features, soln.features.length);
+                                newFeatures[UNK]++;
+                                final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + 1), recalcDist(soln.dist, 1, d), score, futureCost, newFeatures);
                                 beam.add(newSoln);
                                 if (verbose) {
                                     System.err.print("Adding ");
@@ -204,10 +206,12 @@ public class FidelDecoder {
                             }
                             final double ddScore = deltaDist(soln.dist, candidate.words.length, d, weights);
                             if (useLazy) {
-
+                                double[] newFeatures = Arrays.copyOf(soln.features,soln.features.length);
+                                newFeatures[DIST] += ddScore / weights[DIST];
                                 double ptScore2 = 0.0;
                                 for (int k = 0; k < candidate.scores.length; k++) {
                                     ptScore2 += weights[PT + k] * candidate.scores[k];
+                                    newFeatures[PT + k] += candidate.scores[k];
                                 }
                                 double score = ptScore2
                                         + soln.score
@@ -216,15 +220,15 @@ public class FidelDecoder {
                                         + ddScore;
 
                                 if (!Double.isInfinite(score) && (!beam.isFull() || score > beam.leastScore())) {
-                                    final LazyDistortedSolution lds = new LazyDistortedSolution(candidate, soln, buf, pos, d, j, futureCost, ddScore, ptScore2, weights, bufferCache);
+                                    final LazyDistortedSolution lds = new LazyDistortedSolution(candidate, soln, buf, pos, d, j, futureCost, ddScore, ptScore2, weights, bufferCache, newFeatures);
                                     if(beam.add(lds)) {
                                         beam.addRemovalListener(lds);
                                     }
                                 }
                             } else {
-                                final double tptScore = tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
+                                final double[] tptScore = tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
                                 // Get the score of the solution
-                                final double score = tptScore
+                                final double score = tptScore[0]
                                         + soln.score
                                         + futureCost
                                         - soln.futureCost
@@ -243,7 +247,12 @@ public class FidelDecoder {
                                 if (!Double.isInfinite(score)
                                         && (score > solns.leastScore() || !solns.isFull())
                                         && (score > beam.leastScore() || !beam.isFull())) {
-                                    final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost);
+                                    final double[] newFeatures = Arrays.copyOf(soln.features,soln.features.length);
+                                    for(int f = 0; f < newFeatures.length; f++) {
+                                        newFeatures[f] += tptScore[f+1];
+                                    }
+                                    newFeatures[DIST] += ddScore / weights[DIST];
+                                    final Solution newSoln = new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost,newFeatures);
                                     // System.err.println(newSoln.toString());
                                     beam.add(newSoln);
                                     if (verbose) {
@@ -252,7 +261,7 @@ public class FidelDecoder {
                                     }
                                 } else if (verbose) {
                                     System.err.print("Rejecting ");
-                                    new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost).printSoln(wordMap);
+                                    new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), recalcDist(soln.dist, candidate.words.length, d), score, futureCost,soln.features).printSoln(wordMap);
 
                                 }
                                 // Undo damage by tryPutTranslation
@@ -411,15 +420,18 @@ public class FidelDecoder {
      * @param dist The amount to shift (positive)
      * @return The cost to do this
      */
-    public static double tryPutTranslation(PhraseTranslation pt, double[] weights,
+    public static double[] tryPutTranslation(PhraseTranslation pt, double[] weights,
             final int[] buf, int pos, IntegerLanguageModel languageModel, int lmN, int dist) {
-        double score = 0.0;
+        double[] score = new double[weights.length+1];
         for (int j = 0; j < pt.scores.length; j++) {
-            score += weights[PT + j] * pt.scores[j];
+            score[0] += weights[PT + j] * pt.scores[j];
+            score[1+PT+ j] += pt.scores[j];
         }
         // remove the "lost n-grams"
         for (int i = 0; i < Math.min(lmN, dist); i++) {
-            score -= weights[LM] * lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
+            final double lm = lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
+            score[0] -= weights[LM] * lm;
+            score[LM] -= lm;
         }
         // shift the n-grams
         rightShiftBuffer(buf, pt.words.length, pos - dist);
@@ -427,15 +439,22 @@ public class FidelDecoder {
         //for (int w : pt.p) {
         for (int i = 0; i < pt.words.length; i++) {
             buf[pos - dist + i] = pt.words[i];
-            score += weights[LM] * lmScore(buf, pos + i + 1, languageModel, lmN, weights[UNK]);
+            final double lm = lmScore(buf, pos + i + 1, languageModel, lmN, weights[UNK]);
+            score[0] += weights[LM] * lm;
+            score[LM] += lm;
         }
         for (int i = 0; i < Math.min(lmN, dist); i++) {
-            score += weights[LM] * lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
+            final double lm = lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
+            score[0] += weights[LM] * lm;
+            score[LM] += lm;
         }
         // Change should be undone:
         //leftShiftBuffer(buf, pt.w.length, pos - dist);
         //assert (!Double.isInfinite(score) && !Double.isNaN(score));
-        return Double.isNaN(score) ? Double.NEGATIVE_INFINITY : score;
+        if(Double.isNaN(score[0])) {
+            score[0] = Double.NEGATIVE_INFINITY;
+        }
+        return score;
     }
 
     private static double sum(double[] ds) {

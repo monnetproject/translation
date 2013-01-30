@@ -91,7 +91,7 @@ public class BeamTest {
     private static Solution randomSolution() {
         final double s = r.nextDouble();
         System.err.println(s);
-        return new SolutionImpl(r.nextInt(), new int[0], new int[0], s, s);
+        return new SolutionImpl(r.nextInt(), new int[0], new int[0], s, s,new double[0]);
     }
 
     private void verify(TreeSet<Solution> solns, Beam beam, int i) {

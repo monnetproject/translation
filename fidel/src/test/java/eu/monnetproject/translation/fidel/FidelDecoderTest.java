@@ -274,6 +274,25 @@ public class FidelDecoderTest extends TestCase {
         System.out.println("Fidel's soln: " + Arrays.toString(result[0].soln()));
 //        assertArrayEquals(expSoln, result[0].soln);
     }
+    
+    public void testFeatures() {
+        System.out.println("decode");
+        int[] src = {0, 1, 2, 3, 4, 5};
+        Object2ObjectMap<Phrase, Collection<PhraseTranslation>> phraseTable = pt;
+        IntegerLanguageModelImpl languageModel = lm;
+        int lmN = 2;
+        double[] weights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0};
+        int distiortionLimit = 3;
+        int nBest = 1;
+        Solution[] result = FidelDecoder.decode(src, phraseTable, languageModel, lmN, weights, distiortionLimit, nBest, 1000, false);
+        for(int j = 0; j < result.length; j++) {
+            double scoreFromFeats = 0.0;
+            for(int i = 0; i < weights.length; i++) {
+                scoreFromFeats += result[j].features()[i];
+            }
+            assertEquals(result[j].score(),scoreFromFeats,0.0001);
+        }
+    }
 
     public void testHash() {
         final HashSet<Phrase> hs = new HashSet<Phrase>();
@@ -395,7 +414,7 @@ public class FidelDecoderTest extends TestCase {
         int lmN = 2;
         int dist = 0;
         double expResult = log10(0.474756) + log10(0.427108) + log10(0.128955) + log10(0.144797) + log10(2.718) - 3.320179;
-        double result = FidelDecoder.tryPutTranslation(pt, weights, buf, pos, languageModel, lmN, dist);
+        double result = FidelDecoder.tryPutTranslation(pt, weights, buf, pos, languageModel, lmN, dist)[0];
         assertEquals(expResult, result, 0.001);
     }
 

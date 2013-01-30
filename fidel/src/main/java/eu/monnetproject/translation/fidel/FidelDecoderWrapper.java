@@ -103,7 +103,7 @@ public class FidelDecoderWrapper implements Decoder {
             }
             sb.append(w);
         }
-        return convertTranslations(translations, new StringLabel(sb.toString(), phraseTable.getForeignLanguage()), phraseTable.getTranslationLanguage());
+        return convertTranslations(translations, new StringLabel(sb.toString(), phraseTable.getForeignLanguage()), phraseTable.getTranslationLanguage(), featureNames);
     }
 
     private int[] convertPhrase(List<String> phrase) {
@@ -161,11 +161,21 @@ public class FidelDecoderWrapper implements Decoder {
         return pt;
     }
 
-    private List<Translation> convertTranslations(Solution[] translations, Label srcLabel, Language trgLang) {
+    private List<Translation> convertTranslations(Solution[] translations, Label srcLabel, Language trgLang, List<String> featureNames) {
         final ArrayList<Translation> converted = new ArrayList<Translation>();
         for (Solution soln : translations) {
+            Feature[] features = new Feature[FidelDecoder.PT + featureNames.size()];
+            final double[] solnFeatures = soln.features();
+            features[FidelDecoder.UNK] = new Feature("UnknownWord", solnFeatures[FidelDecoder.UNK]);
+            features[FidelDecoder.DIST] = new Feature("LinearDistortion", solnFeatures[FidelDecoder.DIST]);
+            features[FidelDecoder.LM] = new Feature("LM", solnFeatures[FidelDecoder.LM]);
+            int i = FidelDecoder.PT;
+            for(String featName : featureNames) {
+                features[i] = new Feature(featName.startsWith("TM:") ? featName : ("TM:" + featName), solnFeatures[i]);
+                i++;
+            }
             if (soln != null) {
-                converted.add(new TranslationImpl(soln, srcLabel, trgLang, invWordMap, srcInvMap));
+                converted.add(new TranslationImpl(soln, srcLabel, trgLang, invWordMap, srcInvMap,features));
             }
         }
         return converted;
@@ -190,10 +200,12 @@ public class FidelDecoderWrapper implements Decoder {
         final Solution solution;
         final Label srcLabel;
         final Label trgLabel;
+        final Feature[] features;
 
-        public TranslationImpl(Solution solution, Label srcLabel, Language trgLang, Int2ObjectMap<String> invMap, Int2ObjectMap<String> srcInvMap) {
+        public TranslationImpl(Solution solution, Label srcLabel, Language trgLang, Int2ObjectMap<String> invMap, Int2ObjectMap<String> srcInvMap, Feature[] features) {
             this.solution = solution;
             this.srcLabel = srcLabel;
+            this.features = features;
             StringBuilder sb = new StringBuilder();
             for (int w : solution.soln()) {
                 if (sb.length() != 0) {
@@ -231,7 +243,7 @@ public class FidelDecoderWrapper implements Decoder {
         @Override
         @SuppressWarnings("unchecked")
         public Collection<Feature> getFeatures() {
-            return Collections.EMPTY_LIST;
+            return Arrays.asList(features);
         }
     }
 
@@ -255,4 +267,5 @@ public class FidelDecoderWrapper implements Decoder {
             return language;
         }
     }
+    
 }

@@ -42,9 +42,10 @@ public class LazyDistortedSolution implements Solution, Beam.RemovalListener {
     private final double futureCost, ddScore, ptScore;
     private static final double LAZY_BONUS = 1.0;
     private final BufferCache bufferCache;
+    private final double[] features;
 
     @SuppressWarnings("LeakingThisInConstructor")
-    public LazyDistortedSolution(PhraseTranslation candidate, SolutionImpl soln, int[] buf, int pos, int d, int j, double futureCost, double ddScore, double ptScore, double[] weights, BufferCache bufferCache) {
+    public LazyDistortedSolution(PhraseTranslation candidate, SolutionImpl soln, int[] buf, int pos, int d, int j, double futureCost, double ddScore, double ptScore, double[] weights, BufferCache bufferCache, double[] features) {
         this.candidate = candidate;
         this.soln = soln;
         this.buf = bufferCache.lock(this);
@@ -56,10 +57,11 @@ public class LazyDistortedSolution implements Solution, Beam.RemovalListener {
         this.ddScore = ddScore;
         this.ptScore = ptScore;
         this.bufferCache = bufferCache;
+        this.features = features;
     }
     
     public SolutionImpl evaluate(double[] weights, IntegerLanguageModel languageModel, int lmN) {
-        double tptScore = FidelDecoder.tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
+        double tptScore = tryPutTranslation(candidate, weights, buf, pos, languageModel, lmN, d);
         // Get the score of the solution
         final double score = tptScore
                 + soln.score
@@ -71,9 +73,38 @@ public class LazyDistortedSolution implements Solution, Beam.RemovalListener {
             return null;
         }
 
-        return new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), FidelDecoder.recalcDist(soln.dist, candidate.words.length, d), score, futureCost);
+        features[FidelDecoder.LM] += tptScore / weights[FidelDecoder.LM];
+        
+        return new SolutionImpl(j, Arrays.copyOfRange(buf, 0, pos + candidate.words.length), FidelDecoder.recalcDist(soln.dist, candidate.words.length, d), score, futureCost,features);
     }
 
+    public static double tryPutTranslation(PhraseTranslation pt, double[] weights,
+            final int[] buf, int pos, IntegerLanguageModel languageModel, int lmN, int dist) {
+        double score = 0.0;
+        //for (int j = 0; j < pt.scores.length; j++) {
+//            score += weights[FidelDecoder.PT + j] * pt.scores[j];
+  //      }
+        // remove the "lost n-grams"
+        for (int i = 0; i < Math.min(lmN, dist); i++) {
+            score -= weights[FidelDecoder.LM] * FidelDecoder.lmScore(buf, pos - i, languageModel, lmN, weights[FidelDecoder.UNK]);
+        }
+        // shift the n-grams
+        FidelDecoder.rightShiftBuffer(buf, pt.words.length, pos - dist);
+
+        //for (int w : pt.p) {
+        for (int i = 0; i < pt.words.length; i++) {
+            buf[pos - dist + i] = pt.words[i];
+            score += weights[FidelDecoder.LM] * FidelDecoder.lmScore(buf, pos + i + 1, languageModel, lmN, weights[FidelDecoder.UNK]);
+        }
+        for (int i = 0; i < Math.min(lmN, dist); i++) {
+            score += weights[FidelDecoder.LM] * FidelDecoder.lmScore(buf, pos - i, languageModel, lmN, weights[FidelDecoder.UNK]);
+        }
+        // Change should be undone:
+        //leftShiftBuffer(buf, pt.w.length, pos - dist);
+        //assert (!Double.isInfinite(score) && !Double.isNaN(score));
+        return Double.isNaN(score) ? Double.NEGATIVE_INFINITY : score;
+    }
+    
     @Override
     public void printSoln(Int2ObjectMap<String> wordMap) {
         System.err.println("LAZY_SOLN");
@@ -93,6 +124,11 @@ public class LazyDistortedSolution implements Solution, Beam.RemovalListener {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+    @Override
+    public double[] features() {
+        return features;
+    }
+    
     @Override
     public int compareTo(Solution t) {
         

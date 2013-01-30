@@ -171,6 +171,9 @@ public class JMert implements Tuner {
                 }
                 final Collection<JMertTranslation> jMertTranses = jMertTranslations.get(j);
                 for (Translation translation : translations) {
+                    if(translation.getFeatures().isEmpty()) {
+                        Messages.warning("Empty features for translation");
+                    }
                     for (Feature f : translation.getFeatures()) {
                         if (!featureNames.contains(f.name)) {
                             Messages.severe("No initial value for feature " + f.name);

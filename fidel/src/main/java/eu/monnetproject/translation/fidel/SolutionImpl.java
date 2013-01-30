@@ -41,8 +41,9 @@ public class SolutionImpl implements Solution {
     public final int[] dist;
     public final double score;
     public final double futureCost;
+    public final double[] features;
 
-    public SolutionImpl(int upto, int[] soln, int[] dist, double score, double futureCost) {
+    public SolutionImpl(int upto, int[] soln, int[] dist, double score, double futureCost, double[] features) {
         assert (soln.length == dist.length);
         assert (futureCost >= score);
         this.upto = upto;
@@ -50,6 +51,7 @@ public class SolutionImpl implements Solution {
         this.dist = dist;
         this.score = score;
         this.futureCost = futureCost;
+        this.features = features;
     }
 
     @Override
@@ -130,6 +132,11 @@ public class SolutionImpl implements Solution {
         return soln;
     }
 
+    @Override
+    public double[] features() {
+        return features;
+    }
+    
     @Override
     public void printSoln(Int2ObjectMap<String> wordMap) {
         System.err.print("Solution: ");

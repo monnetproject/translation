@@ -36,4 +36,5 @@ public interface Solution extends Comparable<Solution> {
     void printSoln(Int2ObjectMap<String> wordMap);
     double score();
     int[] soln();
+    double[] features();
 }
