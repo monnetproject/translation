@@ -153,6 +153,10 @@ public class SVMRank {
                 luHessSolve();
             }
 
+            if(allZero(step)) {
+                break;
+            }
+            
             // [t,out] = line_search_linear(w,step,out,C);
             double t = lineSearchLinear();
 
@@ -544,5 +548,14 @@ public class SVMRank {
                 step[i] += v[j][i] * y[j + 1];
             }
         }
+    }
+
+    private boolean allZero(double[] step) {
+        for(int i = 0; i < step.length; i++) {
+            if(step[i] != 0.0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
