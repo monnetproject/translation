@@ -189,7 +189,7 @@ public class JMert implements Tuner {
             }
             if (changed) {
 
-                if (featureNames == null) {
+                if (featureNames == null || featureNames.isEmpty()) {
                     Messages.warning("No features to optimize");
                     return weights;
                 }
