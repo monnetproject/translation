@@ -329,8 +329,10 @@ public class FidelDecoder {
             score += weights[PT + j] * pt.scores[j];
         }
         for (int w : pt.words) {
-            baselineBuffer[pos++] = w;
-            score += weights[LM] * lmScore(baselineBuffer, pos, languageModel, lmN, weights[UNK]);
+            if(pos < baselineBuffer.length) {
+                baselineBuffer[pos++] = w;
+                score += weights[LM] * lmScore(baselineBuffer, pos, languageModel, lmN, weights[UNK]);
+            }
         }
         assert (!Double.isInfinite(score) && !Double.isNaN(score));
         return score;
