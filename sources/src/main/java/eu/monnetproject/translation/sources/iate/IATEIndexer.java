@@ -122,7 +122,10 @@ public class IATEIndexer {
 				continue;
 			}
 
+			int i = 0;
 			for (LexicalEntry entry : sourceLexicon.getEntrys()) {
+				
+				System.out.println("Entry " + i++  + " out of " + sourceLexicon.getEntrys().size());
 				if (entry.getSenses() == null) {
 					Messages.translationFail(entry.getURI(), "entry has no senses");
 				}
