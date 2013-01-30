@@ -341,7 +341,6 @@ public class IATESourceWithCache implements TranslationSource {
 		String word = "event";
 		String configFile = "load//eu.monnetproject.translation.sources.iate.cfg";
 		InputStream is = new FileInputStream(configFile);
-
 		Properties config =  new Properties();
 		config.load(is);
 		IATESourceWithCache iate = new IATESourceWithCache(Language.ENGLISH, Language.SPANISH, config);
@@ -368,11 +367,9 @@ public class IATESourceWithCache implements TranslationSource {
 					System.out.println(context);
 					i++;
 				}
-
 			} 
 			System.out.println(i);
 		}
-
 	}
 
 }

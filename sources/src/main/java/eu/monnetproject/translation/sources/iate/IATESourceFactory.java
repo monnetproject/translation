@@ -13,7 +13,13 @@ public class IATESourceFactory implements TranslationSourceFactory {
 		final Properties config = Configurator.getConfig("eu.monnetproject.translation.sources.iate");
 		Boolean use = Boolean.parseBoolean(config.getProperty("use"));
 		if (use) {
-			return new IATESourceWithCache(srcLang, trgLang, config);
+			try {
+				TranslationSource source = new IATESourceWithCache(srcLang, trgLang, config);
+				return source;
+			} catch(Exception e) {
+				e.printStackTrace();
+				return null;
+			}			
 		} else {
 			return null;
 		}
