@@ -132,9 +132,11 @@ public class IATESourceWithCache implements TranslationSource {
 					if(translationsWithContext.size()==0) {
 						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																		
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																		
 					}
-					for(Pair<String, String> translationWithContext : translationsWithContext) {
+				
+					boolean atleastOneWritten = false;
+					for(Pair<String, String> translationWithContext : translationsWithContext) {						
 						String translation = translationWithContext.getFirst();
 						String retrievedContext = translationWithContext.getSecond();
 						int retrievedContexNo = Integer.parseInt(retrievedContext);					
@@ -143,13 +145,22 @@ public class IATESourceWithCache implements TranslationSource {
 						translations.add(translation);						
 						if(retrievedContext.equalsIgnoreCase("00")) 
 							continue;					
-						cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
 						String text1 = chunk.getSource().replace("\n", "").trim();
 						String text2 = translation.replace("\n", "").trim();
 						double score = clsim.score(text1, srcLang, text2, trgLang);
+						if(score>0.02) {
+							atleastOneWritten = true;
+							cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
+							if(cacheLog!=null)
+								cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t" + score);													
+						} 
+						
+					}	
+					if(atleastOneWritten) {
+						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
-							cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t" + score);																
-					}		
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																						
+					}
 				}
 			} else {
 				if(!(cacheResults.contains("koitranslationnahihaiiskaiatepe"))) 
