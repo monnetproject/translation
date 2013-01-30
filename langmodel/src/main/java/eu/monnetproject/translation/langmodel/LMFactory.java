@@ -50,7 +50,7 @@ public class LMFactory implements LanguageModelFactory {
     }
 
     private LanguageModelAndTrueCaser get(Language language) {
-        final String pid = System.getProperty("langmodel.config","eu.monnetproject.translation.langmodel");
+        final String pid = System.getProperty("langmodel.config", "eu.monnetproject.translation.langmodel");
         final Properties config = Configurator.getConfig(pid);
         if (config.containsKey(language.toString())) {
             LanguageModelAndTrueCaser lm = pagedLMs.get(language);
@@ -63,9 +63,11 @@ public class LMFactory implements LanguageModelFactory {
                     return null;
                 }
                 try {
-                    final String method = config.containsKey("method")
+                    final String method = System.getProperty("eu.monnetproject.translation.langmodel.method") != null
+                            ? System.getProperty("eu.monnetproject.translation.langmodel.method")
+                            : (config.containsKey("method")
                             ? config.getProperty("method")
-                            : "";
+                            : "");
                     if (method.equals("mem")) {
                         lm = new MemoryLM(language, modelFile);
                     } else if (method.equals("mix") || method.equals("mixp")) {
@@ -80,20 +82,20 @@ public class LMFactory implements LanguageModelFactory {
                             Messages.componentLoadFail(MixtureLM.class, x);
                             return null;
                         }
-                        
+
                         if (!config.containsKey(language.toString() + "2")) {
-                            if(method.equals("mixp")) {
+                            if (method.equals("mixp")) {
                                 return new PagedLM(language, modelFile);
                             } else {
                                 return new MemoryLM(language, modelFile);
                             }
-                        } 
+                        }
                         final File modelFile2 = new File(config.getProperty(language + "2"));
                         if (!modelFile2.exists()) {
                             Messages.componentLoadFail(PagedLM.class, modelFile2.getPath() + " not found");
                             return null;
                         }
-                        
+
                         final AbstractLM lm1, lm2;
                         if (method.equals("mixp")) {
                             lm1 = new PagedLM(language, modelFile);
