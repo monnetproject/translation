@@ -40,6 +40,7 @@ import eu.monnetproject.translation.PhraseTable;
 import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.sources.cache.NRTCacheIndexer;
 import eu.monnetproject.translation.sources.common.Pair;
+import eu.monnetproject.translation.util.CLSim;
 
 public class IATESourceWithCache implements TranslationSource {
 	private final Language srcLang, trgLang;
@@ -93,8 +94,7 @@ public class IATESourceWithCache implements TranslationSource {
 					if(translationsWithContext.size()==0) {
 						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1());																
-		
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1());																		
 					}
 					for(Pair<String, String> translationWithContext : translationsWithContext) {
 						String translation = translationWithContext.getFirst();
@@ -108,6 +108,47 @@ public class IATESourceWithCache implements TranslationSource {
 						cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
 						if(cacheLog!=null)
 							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+translation.replace("\n", "").trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1());																
+					}		
+				}
+			} else {
+				if(!(cacheResults.contains("koitranslationnahihaiiskaiatepe"))) 
+					translations.addAll(cacheResults);			
+			}
+		}		
+		return new PhraseTableImpl(translations, chunk.getSource(), srcLang, trgLang, getName());
+	}
+
+
+	public PhraseTable indexCandidates(Chunk chunk, CLSim clsim) {
+		Set<String> translations = new HashSet<String>();
+		Set<String> cacheResults = null;	
+		for(String context : contexts) {	
+			cacheResults = cacheIndexer.getTranslations(chunk.getSource(), "domain" + context.trim());			
+			if(cacheResults == null) {
+				List<Pair<String, String>> translationsWithContext = new ArrayList<Pair<String, String>>();
+				Set<Pair<String, String>> translationsFromIateWS = getTranslations(chunk.getSource(), context);
+				if(translationsFromIateWS!=null){
+					translationsWithContext.addAll(translationsFromIateWS);
+					if(translationsWithContext.size()==0) {
+						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
+						if(cacheLog!=null)
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t:::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																		
+					}
+					for(Pair<String, String> translationWithContext : translationsWithContext) {
+						String translation = translationWithContext.getFirst();
+						String retrievedContext = translationWithContext.getSecond();
+						int retrievedContexNo = Integer.parseInt(retrievedContext);					
+						if(retrievedContexNo/10 < 1) 
+							retrievedContext = "0" + retrievedContexNo;					
+						translations.add(translation);						
+						if(retrievedContext.equalsIgnoreCase("00")) 
+							continue;					
+						cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
+						String text1 = chunk.getSource().replace("\n", "").trim();
+						String text2 = translation.replace("\n", "").trim();
+						double score = clsim.score(text1, srcLang, text2, trgLang);
+						if(cacheLog!=null)
+							cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t" + score);																
 					}		
 				}
 			} else {

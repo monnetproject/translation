@@ -11,6 +11,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
+
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.label.LabelExtractorFactory;
@@ -35,7 +36,6 @@ import eu.monnetproject.translation.Tokenizer;
 import eu.monnetproject.translation.TokenizerFactory;
 import eu.monnetproject.translation.TranslationPhraseChunker;
 import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
-import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.monitor.Messages;
 import eu.monnetproject.translation.util.CLSim;
 
@@ -48,7 +48,7 @@ public class IATEIndexer {
 	private Language sourceLanguage, targetLanguage;
 	private TokenizerFactory tokenizerFactory;
 	private final Iterable<TranslationPhraseChunkerFactory> chunkerFactories;
-	private TranslationSource translationSource = null;
+	private IATESourceWithCache translationSource = null;
 	private final String[] scopeStrs;
 	private final List<URI> scopes;
 	
@@ -88,7 +88,7 @@ public class IATEIndexer {
 		for (File ontologyFile : referenceFolder.listFiles()) {
 			final PreparedOntology po = indexer.prepareOntologyFile(ontologyFile);
 			if (po != null) 
-				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes);				
+				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);				
 		}
 		indexer.translationSource.close();
 	}
@@ -104,7 +104,7 @@ public class IATEIndexer {
 		return chunkers;
 	}
 
-	protected void doIndexing(Ontology ontology, Collection<Lexicon> sourceLexicons,  Collection<URI> scope) {
+	protected void doIndexing(Ontology ontology, Collection<Lexicon> sourceLexicons,  Collection<URI> scope, CLSim clsim) {
 		for(Lexicon sourceLexicon : sourceLexicons) {
 			final Language sourceLanguage = Language.get(sourceLexicon.getLanguage());
 			final Script[] knownScriptsForLanguage = Script.getKnownScriptsForLanguage(sourceLanguage);
@@ -141,7 +141,7 @@ public class IATEIndexer {
 						chunkList.addAll(chunker.chunk(srcLabel));
 					}
 					for(Chunk chunk : chunkList)
-						translationSource.candidates(chunk);														
+						translationSource.indexCandidates(chunk, clsim);														
 				}
 			}
 		}
