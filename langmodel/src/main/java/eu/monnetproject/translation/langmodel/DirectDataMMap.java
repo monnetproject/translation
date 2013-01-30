@@ -201,10 +201,16 @@ public class DirectDataMMap {
                 final long[] startEnd = dataLocMap.get(k);
                 final int size = (int) (startEnd[1] - startEnd[0]);
                 //byte[] data = new byte[size];
-                final MappedByteBuffer map = fileChannel.map(FileChannel.MapMode.READ_ONLY, startEnd[0], startEnd[1] - startEnd[0]);
-                //map.get(data);
-                //return data;
-                return map;
+                try {
+                    final MappedByteBuffer map = fileChannel.map(FileChannel.MapMode.READ_ONLY, startEnd[0], startEnd[1] - startEnd[0]);
+                    //map.get(data);
+                    //return data;
+                    return map;
+                } catch(IOException x) {
+                    System.err.println("page size: " + size);
+                    x.printStackTrace();
+                    return ByteBuffer.allocate(size);
+                }
             }
         });
     }
