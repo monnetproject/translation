@@ -76,6 +76,7 @@ public class IATESourceWithCache implements TranslationSource {
 
 	@Override
 	public void close() {	
+	
 		cacheLog.close();
 		cacheIndexer.close();
 	}
@@ -132,7 +133,9 @@ public class IATESourceWithCache implements TranslationSource {
 					if(translationsWithContext.size()==0) {
 						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																		
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + 
+									"\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() 
+									+ "\t::::\t -0.02" + "\t::::\tdomain" + "all");																		
 					}
 				
 					boolean atleastOneWritten = false;
@@ -152,14 +155,18 @@ public class IATESourceWithCache implements TranslationSource {
 							atleastOneWritten = true;
 							cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
 							if(cacheLog!=null)
-								cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t" + score);													
+								cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() 
+										+"-"+trgLang.getIso639_1() + "\t::::\t" + score + "\t::::\t" + 
+										"domain" + retrievedContext.trim());													
 						} 
 						
 					}	
 					if(!atleastOneWritten) {
 						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + "\t::::\t -0.02");																						
+							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+
+						"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + 
+						"\t::::\t -0.02" + "\t::::\tdomain" + "all");																						
 					}
 				}
 			} else {

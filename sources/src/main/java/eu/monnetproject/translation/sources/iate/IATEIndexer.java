@@ -91,6 +91,7 @@ public class IATEIndexer {
 				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);				
 		}
 		indexer.translationSource.close();
+		clsim.close();
 	}
 
 	private List<TranslationPhraseChunker> getChunkers(Iterable<TranslationPhraseChunkerFactory> chunkerFactories, Ontology ontology, Language src) {
