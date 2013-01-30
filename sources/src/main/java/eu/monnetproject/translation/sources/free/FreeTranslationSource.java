@@ -52,7 +52,7 @@ public class FreeTranslationSource extends OnlineServiceHTTPTranslator {
 		this.srcLang = srcLang;
 		this.trgLang = trgLang;
 		this.config = config;
-		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang);
+		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang, false);
 	}
 
 	/** Character encoding required by provider for input */

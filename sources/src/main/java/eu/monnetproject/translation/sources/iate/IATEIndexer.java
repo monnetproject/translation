@@ -37,6 +37,7 @@ import eu.monnetproject.translation.TokenizerFactory;
 import eu.monnetproject.translation.TranslationPhraseChunker;
 import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
 import eu.monnetproject.translation.monitor.Messages;
+import eu.monnetproject.translation.sources.common.ChunkListImpl;
 import eu.monnetproject.translation.util.CLSim;
 
 

@@ -30,10 +30,12 @@ public class Indexer {
 	}
 
 	private void openIndexWriter() {
+		
 		if(writer!=null)
 			closeIndexer();
 		try {
 			writer = new IndexWriter(index, config);
+	
 		} catch (CorruptIndexException e) {
 			e.printStackTrace();
 		} catch (LockObtainFailedException e) {

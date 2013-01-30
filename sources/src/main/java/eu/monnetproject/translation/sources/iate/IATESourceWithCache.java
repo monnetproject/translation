@@ -53,7 +53,7 @@ public class IATESourceWithCache implements TranslationSource {
 		this.srcLang = srcLang;
 		this.trgLang = trgLang;
 		this.config = config;
-		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang);
+		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang, false);
 		contexts = config.getProperty("domains").split(";");
 		if(config.containsKey("cacheLogPath")) 
 			openLog(config.getProperty("cacheLogPath"));		
@@ -158,8 +158,7 @@ public class IATESourceWithCache implements TranslationSource {
 								cacheLog.println(text1+"\t::::\t"+ text2 + "\t::::\t" + srcLang.getIso639_1() 
 										+"-"+trgLang.getIso639_1() + "\t::::\t" + score + "\t::::\t" + 
 										"domain" + retrievedContext.trim());													
-						} 
-						
+						} 						
 					}	
 					if(!atleastOneWritten) {
 						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());

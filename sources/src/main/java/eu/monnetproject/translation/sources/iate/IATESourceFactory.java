@@ -14,7 +14,7 @@ public class IATESourceFactory implements TranslationSourceFactory {
 		Boolean use = Boolean.parseBoolean(config.getProperty("use"));
 		if (use) {
 			try {
-				TranslationSource source = new IATESourceWithCache(srcLang, trgLang, config);
+				TranslationSource source = new IATEReaderSource(srcLang, trgLang, config);
 				return source;
 			} catch(Exception e) {
 				e.printStackTrace();

@@ -45,13 +45,16 @@ public class NRTCacheIndexer {
 	private SearcherManager searchMgr;
 	private Indexer indexer;
 
-	public NRTCacheIndexer(Properties config, Language lang1, Language lang2) {		
+	public NRTCacheIndexer(Properties config, Language lang1, Language lang2, boolean searcherOnly) {		
 		this.config = config;	
 		this.lang1 = lang1;
 		this.lang2 = lang2;
 		getConfig();
-		openWriter();
-		openSearchManager();
+		if(!searcherOnly) {
+			openWriter();	
+			openSearchManager(true);
+		}		
+		openSearchManager(false);		
 	}
 
 	public void close() {
@@ -67,29 +70,35 @@ public class NRTCacheIndexer {
 		return analyzer;
 	}
 
-	private void openSearchManager() {
+	private void openSearchManager(boolean withWriter) {
 		try {
-			searchMgr = new SearcherManager(indexer.getWriter(), false, new SearcherFactory());
+			if(withWriter)
+				searchMgr = new SearcherManager(indexer.getWriter(), false, new SearcherFactory());
+			else {
+				Directory index = getIndex(indexPath);	
+				searchMgr = new SearcherManager(index, new SearcherFactory());
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}		
 	}
 
-	private void openWriter() {		
+	private boolean openWriter() {		
 		try {
 			IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_36, getAnalyzer());
-			config.setWriteLockTimeout(20 * 1000);
+			config.setWriteLockTimeout(10 * 1000);
 			config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 			Directory index = getIndex(indexPath);
 			if(IndexReader.indexExists(index)) 
 				config.setOpenMode(IndexWriterConfig.OpenMode.APPEND);			
 			config.setRAMBufferSizeMB(ramBuffer);
-			
 			indexer = new Indexer(config, index);
 		}
 		catch (IOException e) {
-			e.printStackTrace();	
+			e.printStackTrace();
+			return false;
 		}			
+		return true;
 	}
 
 	private void getConfig() {
@@ -116,10 +125,8 @@ public class NRTCacheIndexer {
 			} catch (IOException e) {
 				e.printStackTrace();	
 			}
-
 		}
 	}
-
 
 	private TopScoreDocCollector search(String queryString, String field, IndexSearcher searcher) throws IOException{
 		TopScoreDocCollector collector = TopScoreDocCollector.create(50, true);		
