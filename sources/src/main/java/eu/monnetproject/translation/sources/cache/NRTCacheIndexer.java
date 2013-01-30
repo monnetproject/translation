@@ -78,15 +78,17 @@ public class NRTCacheIndexer {
 	private void openWriter() {		
 		try {
 			IndexWriterConfig config = new IndexWriterConfig(Version.LUCENE_36, getAnalyzer());
+			config.setWriteLockTimeout(20 * 1000);
 			config.setOpenMode(IndexWriterConfig.OpenMode.CREATE);
 			Directory index = getIndex(indexPath);
 			if(IndexReader.indexExists(index)) 
 				config.setOpenMode(IndexWriterConfig.OpenMode.APPEND);			
 			config.setRAMBufferSizeMB(ramBuffer);
+			
 			indexer = new Indexer(config, index);
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			e.printStackTrace();	
 		}			
 	}
 
