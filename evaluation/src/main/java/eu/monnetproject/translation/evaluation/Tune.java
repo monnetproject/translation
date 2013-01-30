@@ -41,12 +41,15 @@ import eu.monnetproject.translation.monitor.Messages;
 import eu.monnetproject.translation.tune.TranslatorSetup;
 import eu.monnetproject.translation.tune.Tuner;
 import java.io.File;
+import java.io.FileReader;
 import java.io.PrintWriter;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 
 /**
  *
@@ -90,7 +93,13 @@ public class Tune extends AbstractEvaluation {
                 Messages.componentLoadFail(Ontology.class,x);
             }
         }
-        final TranslatorSetup setup = controller.setup(sourceLanguage, targetLanguage, null, null);
+        final Properties decoderWtProps = new Properties();
+        
+        decoderWtProps.load(new FileReader(wtsFile));
+        
+        final DecoderWeights initWeights = new DecoderWeightsImpl(decoderWtProps);
+        
+        final TranslatorSetup setup = controller.setup(sourceLanguage, targetLanguage, null, initWeights);
         
         final DecoderWeights weights = doTune(setup, pol, tuner, evaluatorFactory);
         
@@ -165,5 +174,27 @@ public class Tune extends AbstractEvaluation {
                 Services.get(LabelExtractorFactory.class),
                 Services.get(Tuner.class),
                 monitor).exec();
+    }
+    
+     private class DecoderWeightsImpl extends HashMap<String, Double> implements DecoderWeights {
+
+        private static final long serialVersionUID = -8575226431160097127L;
+
+        public DecoderWeightsImpl(Properties config) {
+            for (Object key : config.keySet()) {
+                String keyStr = key.toString();
+                String value = config.getProperty(key.toString());
+                put(keyStr, Double.parseDouble(value));
+            }
+        }
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder("{");
+            for (Map.Entry<String, Double> entry : entrySet()) {
+                sb.append(" ").append(entry.getKey()).append(" -> ").append(entry.getValue()).append(",");
+            }
+            return sb.deleteCharAt(sb.length() - 1).append(" }").toString();
+        }
     }
 }
