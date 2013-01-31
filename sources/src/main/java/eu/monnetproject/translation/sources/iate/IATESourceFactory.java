@@ -17,7 +17,7 @@ public class IATESourceFactory implements TranslationSourceFactory {
 		if (use) {
 			try {
 				TranslationSource source = new IATEReaderSource(srcLang, trgLang, config);
-				Messages.info("IATE Ranker available");
+				Messages.info("IATE Source available");
 				return source;
 			} catch(Exception e) {
 				e.printStackTrace();
