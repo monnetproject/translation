@@ -87,7 +87,7 @@ public class IATEIndexer {
 			return;
 		}		
 		for (File ontologyFile : referenceFolder.listFiles()) {
-			final PreparedOntology po = indexer.prepareOntologyFile(ontologyFile);
+			PreparedOntology po = indexer.prepareOntologyFile(ontologyFile);
 			if (po != null) 
 				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);				
 		}
@@ -124,8 +124,7 @@ public class IATEIndexer {
 			}
 
 			int i = 0;
-			for (LexicalEntry entry : sourceLexicon.getEntrys()) {
-				
+			for (LexicalEntry entry : sourceLexicon.getEntrys()) {				
 				System.out.println("Entry " + i++  + " out of " + sourceLexicon.getEntrys().size());
 				if (entry.getSenses() == null) {
 					Messages.translationFail(entry.getURI(), "entry has no senses");
