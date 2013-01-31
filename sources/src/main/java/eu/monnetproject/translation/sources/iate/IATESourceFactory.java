@@ -4,6 +4,8 @@ import eu.monnetproject.config.Configurator;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.translation.TranslationSource;
 import eu.monnetproject.translation.TranslationSourceFactory;
+import eu.monnetproject.translation.monitor.Messages;
+
 import java.util.Properties;
 
 public class IATESourceFactory implements TranslationSourceFactory {
@@ -15,9 +17,11 @@ public class IATESourceFactory implements TranslationSourceFactory {
 		if (use) {
 			try {
 				TranslationSource source = new IATEReaderSource(srcLang, trgLang, config);
+				Messages.info("IATE Ranker available");
 				return source;
 			} catch(Exception e) {
 				e.printStackTrace();
+				Messages.warning("IATE Factory returned null");				
 				return null;
 			}			
 		} else {

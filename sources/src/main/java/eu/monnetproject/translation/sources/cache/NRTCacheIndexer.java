@@ -29,6 +29,7 @@ import org.apache.lucene.store.SimpleFSDirectory;
 import org.apache.lucene.util.Version;
 
 import eu.monnetproject.lang.Language;
+import eu.monnetproject.translation.monitor.Messages;
 import eu.monnetproject.translation.sources.common.Indexer;
 import eu.monnetproject.translation.sources.common.Pair;
 
@@ -63,9 +64,11 @@ public class NRTCacheIndexer {
 		try {
 			searchMgr.close();
 			if(!searcherOnly)
-				indexer.closeIndexer();			
+				indexer.closeIndexer();
+			Messages.info("Closing IATE Source");
 		} catch (IOException e) {
 			e.printStackTrace();
+			Messages.warning("Error while closing IATE source");
 		}
 	}
 
