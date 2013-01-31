@@ -44,21 +44,19 @@ import eu.monnetproject.translation.util.CLSim;
 
 public class IATEIndexer {
 
-	private final OntologySerializer ontoSerializer;
-	private final LabelExtractorFactory lef;
+	private OntologySerializer ontoSerializer;
+	private LabelExtractorFactory lef;
 	private Language sourceLanguage, targetLanguage;
 	private TokenizerFactory tokenizerFactory;
-	private final Iterable<TranslationPhraseChunkerFactory> chunkerFactories;
+	private Iterable<TranslationPhraseChunkerFactory> chunkerFactories;
 	private IATESourceWithCache translationSource = null;
-	private final String[] scopeStrs;
-	private final List<URI> scopes;
-	
-	public IATEIndexer(OntologySerializer ontoSerializer, LabelExtractorFactory lef, TokenizerFactory tokenizerFactory, Iterable<TranslationPhraseChunkerFactory> chunkerFactories,  Language sourceLanguage, Language targetLanguage){
+	private String[] scopeStrs;
+	private List<URI> scopes;
+
+	public IATEIndexer(OntologySerializer ontoSerializer, LabelExtractorFactory lef, TokenizerFactory tokenizerFactory, Iterable<TranslationPhraseChunkerFactory> chunkerFactories){
 		this.ontoSerializer = ontoSerializer;		
 		this.lef = lef;
 		this.tokenizerFactory = tokenizerFactory;
-		this.sourceLanguage = sourceLanguage;
-		this.targetLanguage = targetLanguage;	
 		this.chunkerFactories = chunkerFactories;
 		scopes = new ArrayList<URI>();
 		scopeStrs = new String[0];			
@@ -70,7 +68,7 @@ public class IATEIndexer {
 		final Properties config = Configurator.getConfig("eu.monnetproject.translation.sources.iate.indexer");
 		File referenceFolder = new File(config.getProperty("ontologiesFolder"));		
 		IATEIndexer indexer = new IATEIndexer(Services.get(OntologySerializer.class),
-				Services.get(LabelExtractorFactory.class), Services.get(TokenizerFactory.class), Services.getAll(TranslationPhraseChunkerFactory.class), Language.ENGLISH, Language.DUTCH);
+				Services.get(LabelExtractorFactory.class), Services.get(TokenizerFactory.class), Services.getAll(TranslationPhraseChunkerFactory.class));
 		indexer.sourceLanguage = Language.getByIso639_1(config.getProperty("sourceLanguage").trim());
 		indexer.targetLanguage = Language.getByIso639_1(config.getProperty("targetLanguage").trim());
 		Boolean use = Boolean.parseBoolean(config.getProperty("use"));		
@@ -88,8 +86,13 @@ public class IATEIndexer {
 		}		
 		for (File ontologyFile : referenceFolder.listFiles()) {
 			PreparedOntology po = indexer.prepareOntologyFile(ontologyFile);
-			if (po != null) 
-				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);				
+			if (po != null) {
+				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);
+				indexer.ontoSerializer = Services.get(OntologySerializer.class);
+				indexer.lef = Services.get(LabelExtractorFactory.class);
+				indexer.tokenizerFactory =  Services.get(TokenizerFactory.class);
+				indexer.chunkerFactories = Services.getAll(TranslationPhraseChunkerFactory.class);				
+			}
 		}
 		indexer.translationSource.close();
 		clsim.close();

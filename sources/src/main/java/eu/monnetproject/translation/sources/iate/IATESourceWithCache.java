@@ -131,10 +131,10 @@ public class IATESourceWithCache implements TranslationSource {
 					translationsWithContext.addAll(translationsFromIateWS);
 					if(translationsWithContext.size()==0) {
 						//cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
-						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + 
-									"\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() 
-									+ "\t::::\t -1.0" + "\t::::\tdomain" + "all");																		
+//						if(cacheLog!=null)
+//							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + 
+//									"\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() 
+//									+ "\t::::\t -1.0" + "\t::::\tdomain" + "all");																		
 					}
 				
 					boolean atleastOneWritten = false;
@@ -161,10 +161,10 @@ public class IATESourceWithCache implements TranslationSource {
 					}	
 					if(!atleastOneWritten) {
 						//cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
-						if(cacheLog!=null)
-							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+
-						"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + 
-						"\t::::\t -1.0" + "\t::::\tdomain" + "all");																						
+//						if(cacheLog!=null)
+//							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+
+//						"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + 
+//						"\t::::\t -1.0" + "\t::::\tdomain" + "all");																						
 					}
 				}
 			} else {
