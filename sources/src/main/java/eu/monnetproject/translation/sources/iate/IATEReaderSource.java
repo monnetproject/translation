@@ -40,7 +40,7 @@ public class IATEReaderSource implements TranslationSource {
 		Set<String> translations = new HashSet<String>();
 		Set<String> cacheResults = null;	
 		for(String context : contexts) {	
-			cacheResults = cacheIndexer.getTranslations(chunk.getSource(), "domain" + context.trim());			
+			cacheResults = cacheIndexer.getTranslations(chunk.getSource().toLowerCase().trim(), "domain" + context.trim());			
 			if(!(cacheResults == null)) {
 				if(!(cacheResults.contains("koitranslationnahihaiiskaiatepe"))) 
 					translations.addAll(cacheResults);			

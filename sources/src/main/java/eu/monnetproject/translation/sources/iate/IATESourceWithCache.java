@@ -75,8 +75,7 @@ public class IATESourceWithCache implements TranslationSource {
 	}
 
 	@Override
-	public void close() {	
-	
+	public void close() {		
 		cacheLog.close();
 		cacheIndexer.close();
 	}
@@ -124,18 +123,18 @@ public class IATESourceWithCache implements TranslationSource {
 		Set<String> translations = new HashSet<String>();
 		Set<String> cacheResults = null;	
 		for(String context : contexts) {	
-			cacheResults = cacheIndexer.getTranslations(chunk.getSource(), "domain" + context.trim());			
+			cacheResults = cacheIndexer.getTranslations(chunk.getSource().toLowerCase().trim(), "domain" + context.trim());			
 			if(cacheResults == null) {
 				List<Pair<String, String>> translationsWithContext = new ArrayList<Pair<String, String>>();
 				Set<Pair<String, String>> translationsFromIateWS = getTranslations(chunk.getSource(), context);
 				if(translationsFromIateWS!=null){
 					translationsWithContext.addAll(translationsFromIateWS);
 					if(translationsWithContext.size()==0) {
-						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
+						//cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
 							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+"koitranslationnahihaiiskaiatepe".trim() + 
 									"\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() 
-									+ "\t::::\t -0.02" + "\t::::\tdomain" + "all");																		
+									+ "\t::::\t -1.0" + "\t::::\tdomain" + "all");																		
 					}
 				
 					boolean atleastOneWritten = false;
@@ -151,7 +150,7 @@ public class IATESourceWithCache implements TranslationSource {
 						String text1 = chunk.getSource().replace("\n", "").trim();
 						String text2 = translation.replace("\n", "").trim();
 						double score = clsim.score(text1, srcLang, text2, trgLang);
-						if(score>0.02) {
+						if(score>=0.0) {
 							atleastOneWritten = true;
 							cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
 							if(cacheLog!=null)
@@ -161,11 +160,11 @@ public class IATESourceWithCache implements TranslationSource {
 						} 						
 					}	
 					if(!atleastOneWritten) {
-						cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
+						//cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
 						if(cacheLog!=null)
 							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+
 						"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + 
-						"\t::::\t -0.02" + "\t::::\tdomain" + "all");																						
+						"\t::::\t -1.0" + "\t::::\tdomain" + "all");																						
 					}
 				}
 			} else {
