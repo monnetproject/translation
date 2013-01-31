@@ -212,7 +212,9 @@ public class FidelDecoderWrapper implements Decoder {
                     sb.append(" ");
                 }
                 if (w >= 0) {
-                    sb.append(invMap.get(w));
+                    synchronized(invMap) {
+                        sb.append(invMap.get(w));
+                    }
                 } else {
                     sb.append(srcInvMap.get(-w));
                 }

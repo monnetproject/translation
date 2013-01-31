@@ -44,7 +44,6 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
     private final LanguageModel languageModel;
     private final Object2IntMap<String> wordMap = new WordMap();
     private final Int2ObjectMap<String> invWordMap = new Int2ObjectOpenHashMap<String>();
-    private final Object wordMapLock = new Object();
     //private int W = 0;
 
     public IntegerLanguageModelWrapper(LanguageModel languageModel) {
@@ -55,7 +54,7 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
     public double[] get(Phrase phrase) {
         final List<String> ls = new ArrayList<String>(phrase.p.length);
         for (int i = 0; i < phrase.n; i++) {
-            synchronized(wordMapLock) {
+            synchronized(invWordMap) {
                 ls.add(invWordMap.get(phrase.p[i + phrase.l]));
             }
         }
@@ -108,7 +107,7 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
 
         @Override
         public int getInt(Object k) {
-            synchronized (wordMapLock) {
+            synchronized (invWordMap) {
                 if (k instanceof String) {
                     if (super.containsKey((String) k)) {
                         return super.getInt(k);
