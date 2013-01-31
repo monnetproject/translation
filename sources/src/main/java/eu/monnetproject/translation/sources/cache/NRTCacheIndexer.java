@@ -56,8 +56,9 @@ public class NRTCacheIndexer {
 		if(!this.searcherOnly) {
 			openWriter();	
 			openSearchManager(true);
-		}		
-		openSearchManager(false);		
+		} else {		
+			openSearchManager(false);
+		}
 	}
 
 	public void close() {
