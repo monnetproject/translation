@@ -44,13 +44,15 @@ public class NRTCacheIndexer {
 	private Language lang2;
 	private SearcherManager searchMgr;
 	private Indexer indexer;
+	private boolean searcherOnly = false;
 
 	public NRTCacheIndexer(Properties config, Language lang1, Language lang2, boolean searcherOnly) {		
 		this.config = config;	
 		this.lang1 = lang1;
 		this.lang2 = lang2;
+		this.searcherOnly = searcherOnly;
 		getConfig();
-		if(!searcherOnly) {
+		if(!this.searcherOnly) {
 			openWriter();	
 			openSearchManager(true);
 		}		
@@ -60,7 +62,8 @@ public class NRTCacheIndexer {
 	public void close() {
 		try {
 			searchMgr.close();
-			indexer.closeIndexer();			
+			if(!searcherOnly)
+				indexer.closeIndexer();			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
