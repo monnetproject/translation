@@ -25,7 +25,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>translation.phrasal</artifactId>
+            <artifactId>translation.sqlpt</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>

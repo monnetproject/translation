@@ -30,7 +30,6 @@ import eu.monnetproject.translation.LanguageModelFactory;
 import eu.monnetproject.translation.Translation;
 import eu.monnetproject.translation.TranslationConfidence;
 import eu.monnetproject.translation.TranslationSourceFactory;
-import java.util.Arrays;
 
 /**
  *

@@ -43,6 +43,9 @@ import javax.servlet.ServletContext;
  	 
  	 @Override public void handle(Messages.Message msg) {
  	 	 switch(msg.type) {
+                 case INFO:
+                         context.log("["+msg.job.id()+"] "+msg.message);
+                         break;
  	 	 case WARNING:
  	 	 case SEVERE:
  	 	 	 context.log("["+msg.job.id()+"] "+msg.message);

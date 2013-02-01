@@ -26,7 +26,6 @@
  */
 package eu.monnetproject.translation.quality;
 
-import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.translation.Chunk;
@@ -43,9 +42,6 @@ import eu.monnetproject.translation.TranslationSourceFactory;
 import eu.monnetproject.translation.util.NGramCarousel;
 import java.io.*;
 import java.net.URI;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.util.*;
 
 /**

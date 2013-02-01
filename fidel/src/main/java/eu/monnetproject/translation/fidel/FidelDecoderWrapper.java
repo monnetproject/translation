@@ -71,12 +71,12 @@ public class FidelDecoderWrapper implements Decoder {
 
     @Override
     public List<Translation> decode(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest) {
-        return decode(phrase, phraseTable, featureNames, nBest, 50,false);
+        return decode(phrase, phraseTable, featureNames, nBest, 50, false);
     }
 
     @Override
     public List<Translation> decodeFast(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest) {
-        return decode(phrase, phraseTable, featureNames, nBest, 20,true);
+        return decode(phrase, phraseTable, featureNames, nBest, 20, true);
     }
 
     private List<Translation> decode(List<String> phrase, PhraseTable phraseTable, List<String> featureNames, int nBest, int beamSize, boolean useLazy) {
@@ -133,7 +133,7 @@ public class FidelDecoderWrapper implements Decoder {
                 p[i++] = ++W;
                 if (srcWordMap == dict) {
                     dict.put(s, W);
-                    srcInvMap.put(W,s);
+                    srcInvMap.put(W, s);
                 }
             }
         }
@@ -145,10 +145,10 @@ public class FidelDecoderWrapper implements Decoder {
         for (PhraseTableEntry pte : phraseTable) {
             final Phrase src;// = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
             final Phrase trg;// = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
-            synchronized(srcWordMap) {
+            synchronized (srcWordMap) {
                 src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
             }
-            synchronized(trgDict) {
+            synchronized (trgDict) {
                 trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
             }
             final double[] wts = convertWeights(pte.getFeatures(), featureNames);
@@ -170,12 +170,12 @@ public class FidelDecoderWrapper implements Decoder {
             features[FidelDecoder.DIST] = new Feature("LinearDistortion", solnFeatures[FidelDecoder.DIST]);
             features[FidelDecoder.LM] = new Feature("LM", solnFeatures[FidelDecoder.LM]);
             int i = FidelDecoder.PT;
-            for(String featName : featureNames) {
+            for (String featName : featureNames) {
                 features[i] = new Feature(featName.startsWith("TM:") ? featName : ("TM:" + featName), solnFeatures[i]);
                 i++;
             }
             if (soln != null) {
-                converted.add(new TranslationImpl(soln, srcLabel, trgLang, invWordMap, srcInvMap,features));
+                converted.add(new TranslationImpl(soln, srcLabel, trgLang, invWordMap, srcInvMap, features));
             }
         }
         return converted;
@@ -212,7 +212,7 @@ public class FidelDecoderWrapper implements Decoder {
                     sb.append(" ");
                 }
                 if (w >= 0) {
-                    synchronized(invMap) {
+                    synchronized (invMap) {
                         sb.append(invMap.get(w));
                     }
                 } else {
@@ -269,5 +269,4 @@ public class FidelDecoderWrapper implements Decoder {
             return language;
         }
     }
-    
 }

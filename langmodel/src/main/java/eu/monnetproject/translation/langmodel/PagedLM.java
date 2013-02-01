@@ -177,10 +177,10 @@ public class PagedLM extends AbstractLM {
         if (n == 1) {
             return unigrams.get(key.data(0));
         } else {
-            synchronized (this) {
+            //synchronized (this) {
                 rawScoreCalls++;
                 return map.rawScore(key.data());
-            }
+            //}
         }
     }
 }
