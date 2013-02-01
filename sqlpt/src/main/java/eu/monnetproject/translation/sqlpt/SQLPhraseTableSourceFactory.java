@@ -103,6 +103,15 @@ public class SQLPhraseTableSourceFactory implements TranslationSourceFactory {
             }
         }
         tables.close();
+        final ResultSet views = metaData.getTables(null, null, "%", new String[]{"VIEW"});
+        while (views.next()) {
+            final String name = views.getString("TABLE_NAME");
+            if (name.startsWith("pt_")) {
+                final String[] ss = name.split("_");
+                ptFeatures.put(new LangPair(Language.get(ss[1]), Language.get(ss[2])), 5);
+            }
+        }
+        views.close();
         connection.close();
     }
 
