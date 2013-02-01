@@ -50,7 +50,9 @@ public class DefaultMessageHandler implements MessageHandler {
         }
         
 	private void print(String str) {
+            synchronized(this) {
 		System.out.print(str);
+            }
 	}
 	
 	@Override public void beginJob(Job job) {
