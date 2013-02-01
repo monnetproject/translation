@@ -127,6 +127,7 @@ public class TranslationController implements OntologyTranslator {
             String namePrefix,
             int nBest,
             int options) {
+        Messages.info("Using " + numThreads + " threads");
         // Find suitable services
         final Language targetLanguage = Language.get(targetLexicon.getLanguage());
         TrueCaser trueCaser = null;
