@@ -10,8 +10,8 @@ import eu.monnetproject.ontology.OntologySerializer;
 import eu.monnetproject.config.Configurator;
 import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.translation.*;
-import eu.monnetproject.translation.phrasal.lm.ARPALanguageModelFactory;
-import eu.monnetproject.translation.phrasal.pt.MemoryMappedPhraseTableSourceFactory;
+//import eu.monnetproject.translation.phrasal.lm.ARPALanguageModelFactory;
+//import eu.monnetproject.translation.phrasal.pt.MemoryMappedPhraseTableSourceFactory;
 import java.net.URI;
 import java.util.Collection;
 import java.util.Collections;
@@ -64,10 +64,10 @@ public class TranslationControllerTest {
         Configurator.setConfig("eu.monnetproject.translation.phrasal.lm", "en", "src/test/resources/sample-models/lm/europarl.srilm.gz");
         Configurator.setConfig("eu.monnetproject.translation.phrasal.pt", "de/en/1", "src/test/resources/sample-models/phrase-model/phrase-table.sorted");
         Configurator.setConfig("eu.monnetproject.translation.topics.lda");
-        final TranslationController instance = new TranslationController(Collections.singleton((LanguageModelFactory)new ARPALanguageModelFactory()),
+        final TranslationController instance = new TranslationController(Collections.singleton(/*(LanguageModelFactory)new ARPALanguageModelFactory()*/Services.get(LanguageModelFactory.class)),
                 Services.get(DecoderFactory.class),
                 Services.getAll(TranslationPhraseChunkerFactory.class),
-                Collections.singletonList((TranslationSourceFactory)new MemoryMappedPhraseTableSourceFactory()),
+									 Collections.singletonList(/*(TranslationSourceFactory)new MemoryMappedPhraseTableSourceFactory()*/Services.get(TranslationSourceFactory.class)),
                 Services.getAll(TranslationFeaturizerFactory.class),
                 Services.getFactory(TokenizerFactory.class),
                 Services.getAll(TranslationConfidenceFactory.class));
