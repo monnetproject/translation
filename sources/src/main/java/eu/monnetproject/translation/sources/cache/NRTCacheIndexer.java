@@ -68,8 +68,8 @@ public class NRTCacheIndexer {
 				indexer.closeIndexer();
 			Messages.info("Closing IATE Source");
 		} catch (IOException e) {
-			e.printStackTrace();
-			Messages.warning("Error while closing IATE source");
+		//	e.printStackTrace();
+			Messages.warning("Error while closing IATE source in NRTCacheIndexer.java, indexer seems to be null");
 		}
 	}
 
@@ -86,7 +86,8 @@ public class NRTCacheIndexer {
 				searchMgr = new SearcherManager(index, new SearcherFactory());
 			}
 		} catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			Messages.warning("Error while opening search manager in NRTCacheIndexer.java, index doesn't seem to exist in the path provided");			
 		}		
 	}
 
@@ -102,7 +103,8 @@ public class NRTCacheIndexer {
 			indexer = new Indexer(config, index);
 		}
 		catch (IOException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
+			Messages.warning("Error while opening indexWriter in NRTCacheIndexer.java, index doesn't seem to exist in the path provided");	
 			return false;
 		}			
 		return true;
@@ -130,7 +132,8 @@ public class NRTCacheIndexer {
 			try {
 				searchMgr.maybeRefresh();
 			} catch (IOException e) {
-				e.printStackTrace();	
+				Messages.warning("Error while refreshing search mangager in NRTCacheIndexer.java");				
+		//		e.printStackTrace();	
 			}
 		}
 	}
@@ -144,7 +147,8 @@ public class NRTCacheIndexer {
 			query = queryParser.parse(queryString);
 			searcher.search(query, collector);		
 		} catch (ParseException e) {
-			e.printStackTrace();
+			Messages.warning("Error while parsing the query in NRTCacheIndexer.java, query may contain illegal characters");							
+		//	e.printStackTrace();
 			collector = null;
 		}						
 		return collector;				
@@ -169,7 +173,9 @@ public class NRTCacheIndexer {
 						translations = null;		
 				}				
 			} catch (IOException e) {
-				e.printStackTrace();
+				Messages.warning("Error while searching the query in NRTCacheIndexer.java, index may not exist");						
+				
+		//		e.printStackTrace();
 				translations = null;
 			}			
 		}
@@ -177,7 +183,8 @@ public class NRTCacheIndexer {
 			try {
 				searchMgr.release(searcher);
 			} catch (IOException e) {
-				e.printStackTrace();
+				Messages.warning("Error while releasing the current searher by search manager in NRTCacheIndexer.java");										
+			//	e.printStackTrace();
 				translations = null;
 			}
 			searcher = null;
@@ -218,11 +225,13 @@ public class NRTCacheIndexer {
 			try {
 				searcher.search(query, collector);
 			} catch (IOException e) {
-				e.printStackTrace();
+				Messages.warning("Error while searching the multifield query in NRTCacheIndexer.java");														
+			//	e.printStackTrace();
 				return null;
 			}					
 		} catch (ParseException e) {
-			e.printStackTrace();
+			Messages.warning("Error while parsing the multifield query in NRTCacheIndexer.java");			
+		//	e.printStackTrace();
 			return null;
 		}
 		return collector;
@@ -256,7 +265,8 @@ public class NRTCacheIndexer {
 				if(translations.size()==0)
 					translations = null;							
 			} catch (IOException e) {
-				e.printStackTrace();
+				Messages.warning("Error while searching the multifield query in NRTCacheIndexer.java");																	
+			//	e.printStackTrace();
 				translations = null;
 			}			
 		}
@@ -264,7 +274,8 @@ public class NRTCacheIndexer {
 			try {
 				searchMgr.release(searcher);
 			} catch (IOException e) {
-				e.printStackTrace();
+				Messages.warning("Error while releasing the current searcher by search manager in NRTCacheIndexer.java");																	
+			//	e.printStackTrace();
 				translations = null;
 			}
 			searcher = null;
@@ -278,7 +289,8 @@ public class NRTCacheIndexer {
 			index = new SimpleFSDirectory(new File(indexPath + 
 					System.getProperty("file.separator")));
 		} catch (IOException e) {
-			e.printStackTrace();
+			Messages.warning("Error while opening/getting the indices in NRTCacheIndexer.java, the index may not exist in the path provided");																	
+		//	e.printStackTrace();
 		}		
 		return index;
 	}
