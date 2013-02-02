@@ -84,17 +84,25 @@ public class IATEIndexer {
 		} else {
 			return;
 		}		
+		boolean closed = false ;
 		for (File ontologyFile : referenceFolder.listFiles()) {
 			PreparedOntology po = indexer.prepareOntologyFile(ontologyFile);
 			if (po != null) {
 				indexer.doIndexing(po.ontology, Collections.singletonList(po.sourceLexicon), indexer.scopes, clsim);
+				try {
 				indexer.ontoSerializer = Services.get(OntologySerializer.class);
 				indexer.lef = Services.get(LabelExtractorFactory.class);
 				indexer.tokenizerFactory =  Services.get(TokenizerFactory.class);
-				indexer.chunkerFactories = Services.getAll(TranslationPhraseChunkerFactory.class);				
+				indexer.chunkerFactories = Services.getAll(TranslationPhraseChunkerFactory.class);
+				} catch (Exception e) {
+					closed = true;
+					indexer.translationSource.close();
+					e.printStackTrace();					
+				}
 			}
 		}
-		indexer.translationSource.close();
+		if(!closed)
+			indexer.translationSource.close();
 		clsim.close();
 	}
 

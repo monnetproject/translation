@@ -149,7 +149,8 @@ public class IATESourceWithCache implements TranslationSource {
 							continue;					
 						String text1 = chunk.getSource().replace("\n", "").trim();
 						String text2 = translation.replace("\n", "").trim();
-						double score = clsim.score(text1, srcLang, text2, trgLang);
+						double score = 2.0;
+								//clsim.score(text1, srcLang, text2, trgLang);
 						if(score>=0.0) {
 							atleastOneWritten = true;
 							cacheIndexer.cache(chunk.getSource(), translation.trim(), "domain" + retrievedContext.trim(), getName());
@@ -161,7 +162,7 @@ public class IATESourceWithCache implements TranslationSource {
 					}	
 					if(!atleastOneWritten) {
 						//cacheIndexer.cache(chunk.getSource(), "koitranslationnahihaiiskaiatepe", "domain" + "all", getName());
-//						if(cacheLog!=null)
+//						if(cacheLog!=null) 
 //							cacheLog.println(chunk.getSource().replace("\n", "").trim()+"\t::::\t"+
 //						"koitranslationnahihaiiskaiatepe".trim() + "\t::::\t" + srcLang.getIso639_1() +"-"+trgLang.getIso639_1() + 
 //						"\t::::\t -1.0" + "\t::::\tdomain" + "all");																						
