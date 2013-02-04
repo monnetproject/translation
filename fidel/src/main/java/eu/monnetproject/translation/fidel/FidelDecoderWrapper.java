@@ -34,6 +34,8 @@ import eu.monnetproject.translation.Label;
 import eu.monnetproject.translation.PhraseTable;
 import eu.monnetproject.translation.PhraseTableEntry;
 import eu.monnetproject.translation.Translation;
+import it.unimi.dsi.fastutil.doubles.DoubleRBTreeSet;
+import it.unimi.dsi.fastutil.doubles.DoubleSet;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
@@ -47,6 +49,7 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.TreeSet;
 
 /**
  *
@@ -83,7 +86,7 @@ public class FidelDecoderWrapper implements Decoder {
         FidelDecoder.wordMap = invWordMap;
         FidelDecoder.srcWordMap = srcWordMap;
         int[] src = convertPhrase(phrase);
-        Object2ObjectMap<Phrase, Collection<PhraseTranslation>> pt = convertPT(phraseTable, trgWordMap, featureNames);
+        Object2ObjectMap<Phrase, Collection<PhraseTranslation>> pt = convertPT(phraseTable, trgWordMap, featureNames, beamSize+10);
         int lmN = languageModel.order();
         double[] wts = new double[featureNames.size() + FidelDecoder.PT];
         int i = FidelDecoder.PT;
@@ -140,13 +143,31 @@ public class FidelDecoderWrapper implements Decoder {
         return new Phrase(p);
     }
 
-    private Object2ObjectMap<Phrase, Collection<PhraseTranslation>> convertPT(PhraseTable phraseTable, Object2IntMap<String> trgDict, List<String> featureNames) {
+    private Object2ObjectMap<Phrase, Collection<PhraseTranslation>> convertPT(PhraseTable phraseTable, Object2IntMap<String> trgDict, List<String> featureNames, int maxSize) {
         final Object2ObjectOpenHashMap<Phrase, Collection<PhraseTranslation>> pt = new Object2ObjectOpenHashMap<Phrase, Collection<PhraseTranslation>>();
+        final Object2ObjectOpenHashMap<Phrase, DoubleRBTreeSet> approxScores = new Object2ObjectOpenHashMap<Phrase, DoubleRBTreeSet>();
         for (PhraseTableEntry pte : phraseTable) {
             final Phrase src;// = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
             final Phrase trg;// = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
+
             synchronized (srcWordMap) {
                 src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
+            }
+            if (maxSize > 0) {
+                if (!approxScores.containsKey(src)) {
+                    approxScores.put(src, new DoubleRBTreeSet());
+                }
+                final DoubleRBTreeSet as = approxScores.get(src);
+                if (as.size() >= maxSize) {
+                    if(as.firstDouble() > pte.getApproxScore()) {
+                        continue;
+                    } else {
+                        as.remove(as.firstDouble());
+                        as.add(pte.getApproxScore());
+                    }
+                } else {
+                    as.add(pte.getApproxScore());
+                }
             }
             synchronized (trgDict) {
                 trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
@@ -154,7 +175,7 @@ public class FidelDecoderWrapper implements Decoder {
             final double[] wts = convertWeights(pte.getFeatures(), featureNames);
             final PhraseTranslation translation = new PhraseTranslation(trg.p, wts);
             if (!pt.containsKey(src)) {
-                pt.put(src, new LinkedList<PhraseTranslation>());
+                pt.put(src, new ArrayList<PhraseTranslation>());
             }
             pt.get(src).add(translation);
         }
