@@ -122,6 +122,13 @@ public class PhraseTableImpl implements PhraseTable {
 					public Feature[] getFeatures() {
 						return NO_FEATURES;
 					}
+
+                                @Override
+                                public double getApproxScore() {
+                                    return 0.0;
+                                }
+                                        
+                                        
 				};
 			}
 

@@ -129,6 +129,13 @@ public class PhraseTableImpl extends HashMap<PhraseTableEntry,PhraseTableEntry> 
         }
 
         @Override
+        public double getApproxScore() {
+            return c.getApproxScore();
+        }
+        
+        
+
+        @Override
         public Feature[] getFeatures() {
             final Feature[] feats = c.getFeatures();
             if(feats.length == featureNames.size()) {
@@ -225,6 +232,13 @@ public class PhraseTableImpl extends HashMap<PhraseTableEntry,PhraseTableEntry> 
             return c1.getTranslation();
         }
 
+        @Override
+        public double getApproxScore() {
+            return c1.getApproxScore() + c2.getApproxScore();
+        }
+
+        
+        
         @Override
         public Feature[] getFeatures() {
             final Feature[] feats1 = c1.getFeatures();

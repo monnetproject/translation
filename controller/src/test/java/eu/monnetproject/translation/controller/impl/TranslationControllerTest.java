@@ -91,6 +91,11 @@ public class TranslationControllerTest {
             this.translation = translation;
             this.score = score;
         }
+
+        @Override
+        public double getApproxScore() {
+            return score;
+        }
         
         
         

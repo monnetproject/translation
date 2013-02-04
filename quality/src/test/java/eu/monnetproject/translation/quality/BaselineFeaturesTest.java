@@ -206,6 +206,12 @@ public class BaselineFeaturesTest {
             this.translation = translation;
             this.thirdScore = thirdScore;
         }
+
+        @Override
+        public double getApproxScore() {
+            return Math.log(thirdScore);
+        }
+        
         
         
         

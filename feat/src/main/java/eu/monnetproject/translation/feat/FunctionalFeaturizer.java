@@ -22,7 +22,7 @@
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- ********************************************************************************
+ * *******************************************************************************
  */
 package eu.monnetproject.translation.feat;
 
@@ -60,34 +60,36 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
         Messages.info("Using " + rankers.size() + " rankers");
         return new RescoringPhraseTable(entity, candidates);
     }
-    
+
     @Override
     public void close() {
-    	Messages.info("Closing rankers");        
-    	for(TranslationRanker ranker: rankers) {
-    		ranker.close();
-    	}
+        Messages.info("Closing rankers");
+        for (TranslationRanker ranker : rankers) {
+            ranker.close();
+        }
     }
-    
+
     @Override
     public List<String> extraFeatureNames() {
-    	final List<String> efn = new LinkedList<String>();
-    	for(TranslationRanker ranker : rankers) {
-    		efn.add(ranker.getName());
-    	}
-    	return efn;
+        final List<String> efn = new LinkedList<String>();
+        for (TranslationRanker ranker : rankers) {
+            efn.add(ranker.getName());
+        }
+        return efn;
     }
-    
 
-    private static class PhraseTableEntryImpl implements PhraseTableEntry {
+    private class PhraseTableEntryImpl implements PhraseTableEntry {
 
         private final Label foreign, translation;
-        private final Feature[] scores;
+        private final Feature[] baseScores;
+        private Feature[] scores;
+        private final Entity entity;
 
-        public PhraseTableEntryImpl(Label foreign, Label translation, Feature[] scores) {
+        public PhraseTableEntryImpl(Label foreign, Label translation, Feature[] scores, Entity entity) {
             this.foreign = foreign;
             this.translation = translation;
-            this.scores = scores;
+            this.baseScores = scores;
+            this.entity = entity;
         }
 
         @Override
@@ -101,7 +103,25 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
         }
 
         @Override
+        public double getApproxScore() {
+            double score = 0.0;
+            for(Feature f : baseScores) {
+                score += f.score;
+            }
+            return score;
+        }
+        
+        
+
+        @Override
         public Feature[] getFeatures() {
+            if(scores == null) {
+                scores = baseScores;
+                for (TranslationRanker ranker : rankers) {
+                    double factor = ranker.score(this, entity);
+                    scores = rescore(scores, factor, ranker.getName());
+                }
+            }
             return scores;
         }
 
@@ -109,8 +129,6 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
         public String toString() {
             return "PhraseTableEntryImpl{" + "foreign=" + foreign + ", translation=" + translation + ", scores=" + Arrays.toString(scores) + '}';
         }
-        
-        
     }
 
     protected abstract Feature[] rescore(Feature[] scores, double factor, String rankerName);
@@ -149,7 +167,6 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
         public Iterator iterator() {
             final Iterator<PhraseTableEntry> baseIter = base.iterator();
             return new Iterator() {
-
                 @Override
                 public boolean hasNext() {
                     return baseIter.hasNext();
@@ -159,11 +176,11 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
                 public Object next() {
                     final PhraseTableEntry next = baseIter.next();
                     Feature[] scores = next.getFeatures();
-                    for (TranslationRanker ranker : rankers) {
-                        double factor = ranker.score(next, entity);
-                        scores = rescore(scores, factor, ranker.getName());
-                    }
-                    return new PhraseTableEntryImpl(next.getForeign(), next.getTranslation(), scores);
+                    //for (TranslationRanker ranker : rankers) {
+//                        double factor = ranker.score(next, entity);
+  //                      scores = rescore(scores, factor, ranker.getName());
+    //                }
+                    return new PhraseTableEntryImpl(next.getForeign(), next.getTranslation(), scores,entity);
                 }
 
                 @Override
@@ -172,8 +189,5 @@ public abstract class FunctionalFeaturizer implements TranslationFeaturizer {
                 }
             };
         }
-
-        
-        
     }
 }

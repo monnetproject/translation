@@ -29,8 +29,6 @@ package eu.monnetproject.translation.fidel;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Random;

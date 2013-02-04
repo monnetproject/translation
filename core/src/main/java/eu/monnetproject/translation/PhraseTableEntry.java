@@ -43,4 +43,10 @@ public interface PhraseTableEntry {
      * The feature scores (log probabilities)
      */
     Feature[] getFeatures();
+    
+    /**
+     * Get a very rough score, suitable for filtering out very bad translations
+     * @return A very rough approx score
+     */
+    double getApproxScore();
 }

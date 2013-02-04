@@ -69,6 +69,17 @@ public class PhraseTableEntryImpl implements AlignedPhraseTableEntry, Comparable
     }
 
     @Override
+    public double getApproxScore() {
+        double score = 0.0;
+        for(Feature f : features) {
+            score += f.score;
+        }
+        return score;
+    }
+    
+    
+
+    @Override
     public boolean equals(Object obj) {
         if (obj == null) {
             return false;

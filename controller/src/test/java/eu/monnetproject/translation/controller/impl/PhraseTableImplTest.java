@@ -40,32 +40,33 @@ public class PhraseTableImplTest {
     }
 
     @Test
-    public void testMultiSources() { 
+    public void testMultiSources() {
         System.err.println("multiSources");
-        final PhraseTableImpl ptImpl = new PhraseTableImpl(Language.MALTESE, Language.DANISH, "test", 2, Arrays.asList("p(t|f)",PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX+"mock2"));
+        final PhraseTableImpl ptImpl = new PhraseTableImpl(Language.MALTESE, Language.DANISH, "test", 2, Arrays.asList("p(t|f)", PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX + "mock2"));
         ptImpl.addAll(new MockPhraseTable1());
         ptImpl.addAll(new MockPhraseTable2());
         final ArrayList<PhraseTableEntry> result = new ArrayList<PhraseTableEntry>();
-	int b0 = 0, b1 = 0;
+        int b0 = 0, b1 = 0;
         int i = 0;
-        for(PhraseTableEntry pte : ptImpl) {
-            if(pte.getTranslation().asString().equals("b\u0036d")) {
-              b0 = i;
-            } else if(pte.getTranslation().asString().equals("boat")) {
-              b1 = i;
+        for (PhraseTableEntry pte : ptImpl) {
+            if (pte.getTranslation().asString().equals("b\u0036d")) {
+                b0 = i;
+            } else if (pte.getTranslation().asString().equals("boat")) {
+                b1 = i;
             }
             result.add(pte);
             i++;
         }
-        Assert.assertEquals(3,result.size());
+        Assert.assertEquals(3, result.size());
         Assert.assertEquals("b\u0036d", result.get(b0).getTranslation().asString());
-        Assert.assertArrayEquals(new Feature[] { new Feature("p(t|f)", -1), new Feature(PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX+"mock2",0.0) }, result.get(b0).getFeatures());
-        Assert.assertArrayEquals(new Feature[] { new Feature("p(t|f)", -7), new Feature(PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX+"mock2",1.0) }, result.get(b1).getFeatures());
+        Assert.assertArrayEquals(new Feature[]{new Feature("p(t|f)", -1), new Feature(PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX + "mock2", 0.0)}, result.get(b0).getFeatures());
+        Assert.assertArrayEquals(new Feature[]{new Feature("p(t|f)", -7), new Feature(PhraseTableImpl.PHRASE_TABLE_SRC_PREFIX + "mock2", 1.0)}, result.get(b1).getFeatures());
         System.err.println("done");
-        
+
     }
-    
+
     private static class MockPhraseTableEntry implements PhraseTableEntry {
+
         private final String foreign, translation;
         private final Feature[] feature;
 
@@ -74,12 +75,19 @@ public class PhraseTableImplTest {
             this.translation = translation;
             this.feature = feature;
         }
-        
-        
+
+        @Override
+        public double getApproxScore() {
+            double approxScore = 0.0;
+            for (Feature f : feature) {
+                approxScore += f.score;
+            }
+            return approxScore;
+        }
+
         @Override
         public Label getForeign() {
             return new Label() {
-
                 @Override
                 public String asString() {
                     return foreign;
@@ -95,7 +103,6 @@ public class PhraseTableImplTest {
         @Override
         public Label getTranslation() {
             return new Label() {
-
                 @Override
                 public String asString() {
                     return translation;
@@ -142,19 +149,15 @@ public class PhraseTableImplTest {
             }
             return true;
         }
-
-        
     }
-    
+
     private static class MockPhraseTable1 extends ArrayList<PhraseTableEntry> implements PhraseTable {
 
         public MockPhraseTable1() {
-            super(Arrays.asList(new MockPhraseTableEntry("dg\u0127ajsa", "b\u0036d", new Feature[] { new Feature("p(t|f)", -1) }),
-                    new MockPhraseTableEntry("fwar", "damp", new Feature[] { new Feature("p(t|f)", -1) })));
+            super(Arrays.asList(new MockPhraseTableEntry("dg\u0127ajsa", "b\u0036d", new Feature[]{new Feature("p(t|f)", -1)}),
+                    new MockPhraseTableEntry("fwar", "damp", new Feature[]{new Feature("p(t|f)", -1)})));
         }
 
-        
-        
         @Override
         public Language getForeignLanguage() {
             return Language.MALTESE;
@@ -175,15 +178,14 @@ public class PhraseTableImplTest {
             return 1;
         }
     }
+
     private static class MockPhraseTable2 extends ArrayList<PhraseTableEntry> implements PhraseTable {
 
         public MockPhraseTable2() {
-            super(Arrays.asList(new MockPhraseTableEntry("dg\u0127ajsa", "boat", new Feature[] {  }),
-                    new MockPhraseTableEntry("fwar", "damp", new Feature[] {  })));
+            super(Arrays.asList(new MockPhraseTableEntry("dg\u0127ajsa", "boat", new Feature[]{}),
+                    new MockPhraseTableEntry("fwar", "damp", new Feature[]{})));
         }
 
-        
-        
         @Override
         public Language getForeignLanguage() {
             return Language.MALTESE;

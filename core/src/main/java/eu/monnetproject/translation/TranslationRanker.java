@@ -33,6 +33,7 @@ import eu.monnetproject.ontology.Entity;
  * @author John McCrae
  */
 public interface TranslationRanker {
+    // First parameter should be changed to two labels
     /**
      * Score a candidate translation
      * @param entry The candidate translation

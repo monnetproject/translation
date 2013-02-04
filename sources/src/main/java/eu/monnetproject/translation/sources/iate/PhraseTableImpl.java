@@ -124,6 +124,13 @@ public class PhraseTableImpl implements PhraseTable {
 						IATEFeatures[0] = new Feature("inIATE", 1.0);
 						return IATEFeatures;
 					}
+
+                                @Override
+                                public double getApproxScore() {
+                                    return 0.0;
+                                }
+                                        
+                                        
 				};
 			}
 
