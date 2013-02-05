@@ -16,13 +16,19 @@ public class IATEReaderSource implements TranslationSource {
 	private Properties config;
 	private NRTCacheIndexer cacheIndexer;
 	private String[] contexts;
-	
+	boolean sourceWorking = false;
+
 	public IATEReaderSource(Language srcLang, Language trgLang, Properties config) {
 		this.srcLang = srcLang;
 		this.trgLang = trgLang;
 		this.config = config;
 		cacheIndexer = new NRTCacheIndexer(this.config, srcLang, trgLang, true);
+		sourceWorking = cacheIndexer.isSearchedOpened();
 		contexts = config.getProperty("domains").split(";");
+	}
+
+	public boolean isSourceWorking() {
+		return sourceWorking;
 	}
 
 	@Override
@@ -56,7 +62,7 @@ public class IATEReaderSource implements TranslationSource {
 		featureNames[0] = "inIATE";
 		return featureNames;
 	}
-		
+
 }
 
 
