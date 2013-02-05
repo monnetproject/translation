@@ -46,6 +46,7 @@ public class NRTCacheIndexer {
 	private SearcherManager searchMgr;
 	private Indexer indexer;
 	private boolean searcherOnly = false;
+	private boolean searcherOpened = false;
 
 	public NRTCacheIndexer(Properties config, Language lang1, Language lang2, boolean searcherOnly) {		
 		this.config = config;	
@@ -77,18 +78,24 @@ public class NRTCacheIndexer {
 		return analyzer;
 	}
 
-	private void openSearchManager(boolean withWriter) {
+	private void openSearchManager(boolean withWriter) {		
 		try {
 			if(withWriter)
 				searchMgr = new SearcherManager(indexer.getWriter(), false, new SearcherFactory());
 			else {
 				Directory index = getIndex(indexPath);	
 				searchMgr = new SearcherManager(index, new SearcherFactory());
+				searcherOpened = true;
 			}
 		} catch (IOException e) {
 			//e.printStackTrace();
-			Messages.warning("Error while opening search manager in NRTCacheIndexer.java, index doesn't seem to exist in the path provided");			
-		}		
+			searcherOpened = false;
+			Messages.warning("Error while opening search manager in NRTCacheIndexer.java, index doesn't seem to exist in the path provided");	
+		}	
+	}
+	
+	public boolean isSearchedOpened() {
+		return searcherOpened;
 	}
 
 	private boolean openWriter() {		
