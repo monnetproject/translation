@@ -97,7 +97,7 @@ public class DirectDataMMap {
             //final byte[] data;
             final ByteBuffer data;
             //synchronized (this) {
-                data = cache.get(rid);
+            data = cache.get(rid);
             //}
             return get(data, key, mask, rs);
         } catch (ExecutionException x) {
@@ -121,22 +121,22 @@ public class DirectDataMMap {
     }
 
     private int validateKey(ByteBuffer data, int pos, int[] k, int arrHash) {
-        if(data.get() == 0 && data.get() == 0 && data.get() == 0 && data.get() == 0) {
+        if (data.get() == 0 && data.get() == 0 && data.get() == 0 && data.get() == 0) {
             return -1;
         } else {
             data.position(pos);
         }
-        for(int i = 0; i < k.length; i++) {
-            if(data.get() != ((k[i] & 0xff000000) >>> 24)) {
+        for (int i = 0; i < k.length; i++) {
+            if (data.get() != ((k[i] & 0xff000000) >>> 24)) {
                 return 0;
             }
-            if(data.get() != ((k[i] & 0xff0000) >>> 16)) {
+            if (data.get() != ((k[i] & 0xff0000) >>> 16)) {
                 return 0;
             }
-            if(data.get() != ((k[i] & 0xff00) >>> 8)) {
+            if (data.get() != ((k[i] & 0xff00) >>> 8)) {
                 return 0;
             }
-            if(data.get() != ((k[i] & 0xff))) {
+            if (data.get() != ((k[i] & 0xff))) {
                 return 0;
             }
         }
@@ -165,26 +165,28 @@ public class DirectDataMMap {
 //    }
 
     private double[] get(ByteBuffer data, int[] k, int mask, int rs) {
-        int arrHash = MurmurHash.hash32(k);
-        int pos = (arrHash & mask) * rs;
-        data.position(pos);
-        int keyVal = validateKey(data, pos, k,arrHash);
-        pos += 4 * k.length;
-        while (keyVal >= 0) {
-            if (keyVal > 0) {
-                double p = data.getDouble();//read(data, pos);
-                double a = data.getDouble();//read(data, pos + 8);
-                if (a != 0.0) {
-                    return new double[]{p, a};
-                } else {
-                    return new double[]{p};
-                }
-            }
-            arrHash++;
-            pos = (arrHash & mask) * rs;
+        synchronized (data) { // Other threads can change the position of the buffer :(
+            int arrHash = MurmurHash.hash32(k);
+            int pos = (arrHash & mask) * rs;
             data.position(pos);
-            keyVal = validateKey(data, pos, k,arrHash);
+            int keyVal = validateKey(data, pos, k, arrHash);
             pos += 4 * k.length;
+            while (keyVal >= 0) {
+                if (keyVal > 0) {
+                    double p = data.getDouble();//read(data, pos);
+                    double a = data.getDouble();//read(data, pos + 8);
+                    if (a != 0.0) {
+                        return new double[]{p, a};
+                    } else {
+                        return new double[]{p};
+                    }
+                }
+                arrHash++;
+                pos = (arrHash & mask) * rs;
+                data.position(pos);
+                keyVal = validateKey(data, pos, k, arrHash);
+                pos += 4 * k.length;
+            }
         }
         return null;
     }
@@ -206,7 +208,7 @@ public class DirectDataMMap {
                     //map.get(data);
                     //return data;
                     return map;
-                } catch(IOException x) {
+                } catch (IOException x) {
                     System.err.println("page size: " + size);
                     x.printStackTrace();
                     return ByteBuffer.allocate(size);
