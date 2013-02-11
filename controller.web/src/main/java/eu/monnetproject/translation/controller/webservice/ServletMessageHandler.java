@@ -42,6 +42,8 @@ import javax.servlet.ServletContext;
  	 
  	 
  	 @Override public void handle(Messages.Message msg) {
+             if(context == null || msg == null || msg.job == null)
+                 return;
  	 	 switch(msg.type) {
                  case INFO:
                          context.log("["+msg.job.id()+"] "+msg.message);
@@ -65,10 +67,14 @@ import javax.servlet.ServletContext;
  	 	 	 
 	
  	 @Override public void beginJob(Job job) {
+             if(context == null)
+                 return;
  	 	 context.log("["+job.id()+"] Started");
  	 }
 	
  	 @Override public void endJob(Job job) {
+             if(context == null)
+                 return;
  	 	 context.log("["+job.id()+"] Finished");
  	 }
  	 
