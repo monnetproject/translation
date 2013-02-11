@@ -37,8 +37,10 @@ import eu.monnetproject.translation.Translation;
 import it.unimi.dsi.fastutil.doubles.DoubleRBTreeSet;
 import it.unimi.dsi.fastutil.doubles.DoubleSet;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMaps;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import it.unimi.dsi.fastutil.objects.Object2IntMaps;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectMap;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
@@ -65,8 +67,8 @@ public class FidelDecoderWrapper implements Decoder {
 
     public FidelDecoderWrapper(IntegerLanguageModel languageModel, DecoderWeights weights) {
         this.languageModel = languageModel;
-        this.srcWordMap = new Object2IntOpenHashMap<String>();
-        this.srcInvMap = new Int2ObjectOpenHashMap<String>();
+        this.srcWordMap = Object2IntMaps.synchronize(new Object2IntOpenHashMap<String>());
+        this.srcInvMap = Int2ObjectMaps.synchronize(new Int2ObjectOpenHashMap<String>());
         this.trgWordMap = languageModel.wordMap();
         this.invWordMap = languageModel.invWordMap();
         this.weights = weights;
@@ -150,9 +152,7 @@ public class FidelDecoderWrapper implements Decoder {
             final Phrase src;// = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
             final Phrase trg;// = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
 
-            synchronized (srcWordMap) {
-                src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
-            }
+            src = convertPhrase(FairlyGoodTokenizer.split(pte.getForeign().asString()), srcWordMap);
             if (maxSize > 0) {
                 if (!approxScores.containsKey(src)) {
                     approxScores.put(src, new DoubleRBTreeSet());
@@ -169,9 +169,7 @@ public class FidelDecoderWrapper implements Decoder {
                     as.add(pte.getApproxScore());
                 }
             }
-            synchronized (trgDict) {
-                trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
-            }
+            trg = convertPhrase(FairlyGoodTokenizer.split(pte.getTranslation().asString()), trgDict);
             final double[] wts = convertWeights(pte.getFeatures(), featureNames);
             final PhraseTranslation translation = new PhraseTranslation(trg.p, wts);
             if (!pt.containsKey(src)) {
@@ -233,9 +231,7 @@ public class FidelDecoderWrapper implements Decoder {
                     sb.append(" ");
                 }
                 if (w >= 0) {
-                    synchronized (invMap) {
-                        sb.append(invMap.get(w));
-                    }
+                    sb.append(invMap.get(w));
                 } else {
                     sb.append(srcInvMap.get(-w));
                 }

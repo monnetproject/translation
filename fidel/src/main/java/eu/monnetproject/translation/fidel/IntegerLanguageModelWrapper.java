@@ -28,8 +28,10 @@ package eu.monnetproject.translation.fidel;
 
 import eu.monnetproject.translation.LanguageModel;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
+import it.unimi.dsi.fastutil.ints.Int2ObjectMaps;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
+import it.unimi.dsi.fastutil.objects.Object2IntMaps;
 import it.unimi.dsi.fastutil.objects.Object2IntOpenHashMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -42,8 +44,8 @@ import java.util.ListIterator;
 public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
 
     private final LanguageModel languageModel;
-    private final Object2IntMap<String> wordMap = new WordMap();
-    private final Int2ObjectMap<String> invWordMap = new Int2ObjectOpenHashMap<String>();
+    private final Object2IntMap<String> wordMap = Object2IntMaps.synchronize(new WordMap());
+    private final Int2ObjectMap<String> invWordMap = Int2ObjectMaps.synchronize(new Int2ObjectOpenHashMap<String>());
     //private int W = 0;
 
     public IntegerLanguageModelWrapper(LanguageModel languageModel) {
@@ -54,9 +56,7 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
     public double[] get(Phrase phrase) {
         final List<String> ls = new ArrayList<String>(phrase.p.length);
         for (int i = 0; i < phrase.n; i++) {
-            synchronized(invWordMap) {
-                ls.add(invWordMap.get(phrase.p[i + phrase.l]));
-            }
+            ls.add(invWordMap.get(phrase.p[i + phrase.l]));
         }
         final double[] score = new double[]{languageModel.score(ls)};
         if (Double.isInfinite(score[0]) || Double.isNaN(score[0])) {
@@ -107,18 +107,18 @@ public class IntegerLanguageModelWrapper implements IntegerLanguageModel {
 
         @Override
         public int getInt(Object k) {
-            synchronized (invWordMap) {
-                if (k instanceof String) {
-                    if (super.containsKey((String) k)) {
-                        return super.getInt(k);
-                    } else {
+            if (k instanceof String) {
+                if (super.containsKey((String) k)) {
+                    return super.getInt(k);
+                } else {
+                    synchronized(this) {
                         super.put((String) k, W);
                         invWordMap.put(W, (String) k);
-                        return W++;
                     }
-                } else {
-                    throw new IllegalArgumentException();
+                    return W++;
                 }
+            } else {
+                throw new IllegalArgumentException();
             }
         }
 
