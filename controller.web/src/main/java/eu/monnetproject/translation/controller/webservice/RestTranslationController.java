@@ -159,7 +159,7 @@ public class RestTranslationController extends HttpServlet {
                     } else if (fi.getFieldName().equalsIgnoreCase("estimate-confidence") && !fi.getString().matches("\\s*")) {
                         params.confidenceEstimation = fi.getString().equalsIgnoreCase("true") || fi.getString().equals("yes") || fi.getString().equalsIgnoreCase("y") || fi.getString().equalsIgnoreCase("t");
                     } else if (fi.getFieldName().equalsIgnoreCase("speed") && !fi.getString().matches("\\s*")) {
-                        params.fast = fi.getString().equalsIgnoreCase("fast");
+                        params.fast = !fi.getString().equalsIgnoreCase("normal");
                     } else {
                         resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
                         return;
@@ -352,7 +352,7 @@ public class RestTranslationController extends HttpServlet {
         List<URI> acceptVocabularies = new LinkedList<URI>();
         boolean includeSource = true;
         boolean confidenceEstimation = false;
-        boolean fast = false;
+        boolean fast = true;
     }
 
     private static class InputStreamDataSource implements DataSource {
