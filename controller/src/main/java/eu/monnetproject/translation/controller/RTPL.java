@@ -128,8 +128,8 @@ public class RTPL {
             scopes.add(scope);
         }
 
-        System.err.printf("Translating %d entities using %d lexica\n", ontology.getEntities().size(), sourceLexica.size());
-        System.err.print("Source languages: ");
+        //System.err.printf("Translating %d entities using %d lexica\n", ontology.getEntities().size(), sourceLexica.size());
+        //System.err.print("Source languages: ");
         for (Lexicon sourceLexicon : sourceLexica) {
             System.err.print(sourceLexicon.getLanguage() + " ");
         }
@@ -141,7 +141,7 @@ public class RTPL {
 
         for (LexicalEntry entry : targetLexicon.getEntrys()) {
             for (LexicalSense sense : entry.getSenses()) {
-                System.out.println("<"+sense.getReference() + "> rdfs:label " + entry.getCanonicalForm().getWrittenRep());
+                System.out.println(entry.getCanonicalForm().getWrittenRep());
             }
         }
         }
