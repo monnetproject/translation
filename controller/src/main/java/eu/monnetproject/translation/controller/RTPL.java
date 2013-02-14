@@ -104,7 +104,7 @@ public class RTPL {
                 Services.getAll(TranslationFeaturizerFactory.class),
                 Services.getFactory(TokenizerFactory.class),
                 Services.getAll(TranslationConfidenceFactory.class));
-        final Language sourceLanguage = Language.get(argsList.get(1));
+        final Language sourceLanguage = Language.get(argsList.get(0));
         final Language targetLanguage = Language.get(argsList.get(1));
         
         
