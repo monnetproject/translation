@@ -137,30 +137,46 @@ public class RestTranslationController extends HttpServlet {
                         params.ontology = fi.getInputStream();
                     } else if (fi.getFieldName().equalsIgnoreCase("target-language")) {
                         params.targetLanguage = Language.get(fi.getString());
-                    } else if (fi.getFieldName().equalsIgnoreCase("scope") && !fi.getString().matches("\\s*")) {
-                        final String[] urisAsStr = fi.getString().split(",");
-                        for (String uriAsStrt : urisAsStr) {
-                            params.scope.add(URI.create(uriAsStrt.trim()));
+                    } else if (fi.getFieldName().equalsIgnoreCase("scope")) {
+                        if(!fi.getString().matches("\\s*")){
+                            final String[] urisAsStr = fi.getString().split(",");
+                            for (String uriAsStrt : urisAsStr) {
+                                params.scope.add(URI.create(uriAsStrt.trim()));
+                            }
                         }
-                    } else if (fi.getFieldName().equalsIgnoreCase("name-prefix") && !fi.getString().matches("\\s*")) {
-                        params.namePrefix = fi.getString();
-                    } else if (fi.getFieldName().equalsIgnoreCase("custom-label") && !fi.getString().matches("\\s*")) {
-                        params.customLabel = URI.create(fi.getString());
-                    } else if (fi.getFieldName().equalsIgnoreCase("n-best") && !fi.getString().matches("\\s*")) {
-                        params.nBest = Integer.parseInt(fi.getString());
-                    } else if (fi.getFieldName().equalsIgnoreCase("accept-vocabularies") && !fi.getString().matches("\\s*")) {
-                        final String[] urisAsStr = fi.getString().split(",");
-                        for (String uriAsStr : urisAsStr) {
-                            params.acceptVocabularies.add(URI.create(uriAsStr.trim()));
+                    } else if (fi.getFieldName().equalsIgnoreCase("name-prefix")) {
+                        if(!fi.getString().matches("\\s*")){
+                            params.namePrefix = fi.getString();
                         }
-                    } else if (fi.getFieldName().equalsIgnoreCase("include-source") && !fi.getString().matches("\\s*")) {
-                        params.includeSource = fi.getString().equalsIgnoreCase("true") || fi.getString().equals("yes") || fi.getString().equalsIgnoreCase("y") || fi.getString().equalsIgnoreCase("t");
-                        
-                    } else if (fi.getFieldName().equalsIgnoreCase("estimate-confidence") && !fi.getString().matches("\\s*")) {
-                        params.confidenceEstimation = fi.getString().equalsIgnoreCase("true") || fi.getString().equals("yes") || fi.getString().equalsIgnoreCase("y") || fi.getString().equalsIgnoreCase("t");
-                    } else if (fi.getFieldName().equalsIgnoreCase("speed") && !fi.getString().matches("\\s*")) {
-                        params.fast = !fi.getString().equalsIgnoreCase("normal");
+                    } else if (fi.getFieldName().equalsIgnoreCase("custom-label")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            params.customLabel = URI.create(fi.getString());
+                        }
+                    } else if (fi.getFieldName().equalsIgnoreCase("n-best")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            params.nBest = Integer.parseInt(fi.getString());
+                        }
+                    } else if (fi.getFieldName().equalsIgnoreCase("accept-vocabularies")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            final String[] urisAsStr = fi.getString().split(",");
+                            for (String uriAsStr : urisAsStr) {
+                                params.acceptVocabularies.add(URI.create(uriAsStr.trim()));
+                            }
+                        }
+                    } else if (fi.getFieldName().equalsIgnoreCase("include-source")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            params.includeSource = fi.getString().equalsIgnoreCase("true") || fi.getString().equals("yes") || fi.getString().equalsIgnoreCase("y") || fi.getString().equalsIgnoreCase("t");
+                        }
+                    } else if (fi.getFieldName().equalsIgnoreCase("estimate-confidence")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            params.confidenceEstimation = fi.getString().equalsIgnoreCase("true") || fi.getString().equals("yes") || fi.getString().equalsIgnoreCase("y") || fi.getString().equalsIgnoreCase("t");
+                        }
+                    } else if (fi.getFieldName().equalsIgnoreCase("speed")) {
+                        if(!fi.getString().matches("\\s*")) {
+                            params.fast = !fi.getString().equalsIgnoreCase("normal");
+                        }
                     } else {
+                        System.err.println("Bad field name:" + fi.getFieldName());
                         resp.sendError(HttpServletResponse.SC_BAD_REQUEST);
                         return;
                     }
@@ -304,7 +320,7 @@ public class RestTranslationController extends HttpServlet {
         resp.setContentType("text/html");
         final PrintWriter out = new PrintWriter(resp.getWriter());
         out.println("<html><head></head><body>");
-        out.println("<form action='/translate/' method='post' enctype='multipart/form-data'>");
+        out.println("<form action='' method='post' enctype='multipart/form-data'>");
         out.println("<label for='ontology'>Ontology</label><input type='file' name='ontology' id='ontology'/><br/>");
         out.println("<label for='target-language'>Target Language</label><input type='text' name='target-language' id='target-language'/><br/>");
         out.println("<label for='scope'>Scope</label><input type='text' name='scope' id='scope'/><br/>");
