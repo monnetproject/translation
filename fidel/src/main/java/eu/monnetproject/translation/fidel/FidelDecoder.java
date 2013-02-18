@@ -106,7 +106,7 @@ public class FidelDecoder {
         int iterationNo = 0;
         int solnFound = 0;
 
-        while (!beam.isEmpty() && beam.bestScore() > solns.leastScore()) {
+        while (!beam.isEmpty() && (beam.bestScore() > solns.leastScore() || solns.size() < nBest)) {
             // Take the best solution
             final Solution solnTmp = beam.poll();
             final SolutionImpl soln;
@@ -429,7 +429,7 @@ public class FidelDecoder {
         for (int i = 0; i < Math.min(lmN, dist); i++) {
             final double lm = lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
             score[0] -= weights[LM] * lm;
-            score[LM] -= lm;
+            score[1+LM] -= lm;
         }
         // shift the n-grams
         rightShiftBuffer(buf, pt.words.length, pos - dist);
@@ -439,12 +439,12 @@ public class FidelDecoder {
             buf[pos - dist + i] = pt.words[i];
             final double lm = lmScore(buf, pos + i + 1, languageModel, lmN, weights[UNK]);
             score[0] += weights[LM] * lm;
-            score[LM] += lm;
+            score[1+LM] += lm;
         }
         for (int i = 0; i < Math.min(lmN, dist); i++) {
             final double lm = lmScore(buf, pos - i, languageModel, lmN, weights[UNK]);
             score[0] += weights[LM] * lm;
-            score[LM] += lm;
+            score[1+LM] += lm;
         }
         // Change should be undone:
         //leftShiftBuffer(buf, pt.w.length, pos - dist);

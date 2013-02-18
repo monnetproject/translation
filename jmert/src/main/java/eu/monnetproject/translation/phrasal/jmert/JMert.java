@@ -212,7 +212,7 @@ public class JMert implements Tuner {
                         interestingIterator.remove();
                     }
                 }
-                // writeTranslations("iter" + i + ".csv", interestingTranslation);
+                //writeTranslations("iter" + i + ".csv", interestingTranslation);
                 final double[] newWts = optimizer.optimizeFeatures(interestingTranslation, featureArray, 100, unused);
                 k = 0;
                 for (String featureName : featureNames) {
