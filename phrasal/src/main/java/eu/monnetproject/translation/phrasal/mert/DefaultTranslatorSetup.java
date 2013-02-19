@@ -79,8 +79,15 @@ public class DefaultTranslatorSetup implements TranslatorSetup {
         chunker = new TranslationPhraseChunker() {
 
             @Override
-            public ChunkList chunk(Label label) {
-                return new ChunkListImpl(Arrays.asList(FairlyGoodTokenizer.split(label.asString())));
+            public List<String> preCase(List<String> label) {
+                return label;
+            }
+
+            
+            
+            @Override
+            public ChunkList chunk(List<String> label) {
+                return new ChunkListImpl(label);
             }
         };
         source = mmpts.getSource(srcLang, trgLang);

@@ -204,7 +204,7 @@ public class MERTuner implements Tuner {
         final Decoder decoder = setup.decoder(weights);
         int i = 0;
         for (EntityLabel sp : corpus) {
-            final ChunkList chunkList = setup.chunker(sp.entity).chunk(new StringLabel(sp.srcLabel, setup.sourceLanguage()));
+            final ChunkList chunkList = setup.chunker(sp.entity).chunk(Arrays.asList(sp.srcLabel.split(" ")));
             final PhraseTableImpl pt = new PhraseTableImpl(setup.sourceLanguage(), setup.targetLanguage(), "mert_table");
             for (Chunk chunk : chunkList) {
                 for(TranslationSource source : setup.sources()) {

@@ -27,6 +27,7 @@
 package eu.monnetproject.translation.phrasal.jmert;
 
 import eu.monnetproject.lang.Language;
+import eu.monnetproject.lang.Script;
 import eu.monnetproject.ontology.Entity;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.corpus.ParallelCorpus;
@@ -58,12 +59,13 @@ public class JMert implements Tuner {
     private final int nBest = 100;
     private final Optimizer optimizer;
     private final Method method = Method.valueOf(System.getProperty("jmert.method","SVM"));
-
-    public JMert(/*
-             * Optimizer optimizer
-             */) {
+    private final Tokenizer tokenizer;
+    
+    
+    public JMert(TokenizerFactory tokenizerFactory) {
         //this.optimizer = optimizer == null ? new OLSOptimizer() : optimizer;
         //this.optimizer = new OLSOptimizer();
+        this.tokenizer = tokenizerFactory.getTokenizer(Script.LATIN);
         switch(method) {
             case DUMMY: 
                 this.optimizer = new DummyOptimizer();
@@ -229,7 +231,7 @@ public class JMert implements Tuner {
     }
 
     private List<Translation> doDecoding(TranslatorSetup setup, Decoder decoder, EntityLabel el, int options) {
-        final ChunkList chunkList = setup.chunker(el.entity).chunk(new StringLabel(el.srcLabel, setup.sourceLanguage()));
+        final ChunkList chunkList = setup.chunker(el.entity).chunk(tokenizer.tokenize(el.srcLabel));
         final PhraseTableImpl pt = new PhraseTableImpl(setup.sourceLanguage(), setup.targetLanguage(), "mert_table");
         for (Chunk chunk : chunkList) {
             for (TranslationSource source : setup.sources()) {

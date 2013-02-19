@@ -459,7 +459,7 @@ public class PhrasalDecoder implements eu.monnetproject.translation.Decoder {
             if (s.matches("\\s*")) {
                 continue;
             }
-            final ChunkList chunks = chunker.chunk(new StringLabel(s, srcLang));
+            final ChunkList chunks = chunker.chunk(Arrays.asList(s.split(" ")));
             PhraseTableImpl pt = new PhraseTableImpl(srcLang, trgLang, "std-table");
             for (Chunk chunk : chunks) {
                 pt.addAll(source.candidates(chunk));

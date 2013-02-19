@@ -153,7 +153,7 @@ public class IATEIndexer {
 					final Label srcLabel = getLabel(entry, tokenizer);
 					final ChunkListImpl chunkList = new ChunkListImpl();
 					for (TranslationPhraseChunker chunker : chunkers) {
-						chunkList.addAll(chunker.chunk(srcLabel));
+						chunkList.addAll(chunker.chunk(tokenizer.tokenize(srcLabel.asString())));
 					}
 					for(Chunk chunk : chunkList)
 						translationSource.indexCandidates(chunk, clsim);														

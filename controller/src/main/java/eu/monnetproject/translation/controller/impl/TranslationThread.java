@@ -26,6 +26,7 @@
  */
 package eu.monnetproject.translation.controller.impl;
 
+import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.lang.LanguageCodeFormatException;
 import eu.monnetproject.lemon.LemonModels;
@@ -108,11 +109,17 @@ public class TranslationThread implements Runnable {
                 return;
             }
             final Language targetLang = Language.get(targetLexicon.getLanguage());
-
+            
+            // Step 0: Tokenization and true-casing
+            List<String> srcTokens = tokenize(srcLabel);
+            for(TranslationPhraseChunker chunker : chunkers) {
+                srcTokens = chunker.preCase(srcTokens);
+            }
+            
             // Step 1: Chunking
             final ChunkListImpl chunkList = new ChunkListImpl();
             for (TranslationPhraseChunker chunker : chunkers) {
-                chunkList.addAll(chunker.chunk(srcLabel));
+                chunkList.addAll(chunker.chunk(srcTokens));
             }
 
             // Step 2: Sourcing translations
@@ -131,8 +138,8 @@ public class TranslationThread implements Runnable {
 
             // Step 4: Decode
             final List<Translation> initialTranslations = fast
-                    ? decoder.decodeFast(tokenize(srcLabel), rerankedTable, features, nBest)
-                    : decoder.decode(tokenize(srcLabel), rerankedTable, features, nBest);
+                    ? decoder.decodeFast(srcTokens, rerankedTable, features, nBest)
+                    : decoder.decode(srcTokens, rerankedTable, features, nBest);
 
             // Step 4.1: Removal of trailing punctuation
 

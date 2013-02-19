@@ -360,7 +360,7 @@ public class MinimumSubtermDecomposer implements Decomposer, eu.monnetproject.tr
 //        System.out.println(decomposer.decomposeBest(term));
 //    }
     public static void main(String[] args) throws Exception {
-        args = "/home/shared/index-acquis4BI.nl.gz nl inburgeringsexamen".split(" ");
+        args = "/home/shared/index-acquis4BI.nl.gz nl nationaliteitsvereiste".split(" ");
         if(args.length < 3) {
             throw new IllegalArgumentException();
         }

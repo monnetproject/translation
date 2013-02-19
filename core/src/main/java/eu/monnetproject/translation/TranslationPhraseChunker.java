@@ -26,15 +26,25 @@
  *********************************************************************************/
 package eu.monnetproject.translation;
 
+import java.util.List;
+
 /**
  * A chunker, a system capable of breaking a complex label into subcomponents
  * @author John McCrae
  */
 public interface TranslationPhraseChunker {
+    
+    /**
+     * Pre-truecase the label
+     * @param label The label
+     * @return The result
+     */
+    List<String> preCase(List<String> label);
+    
     /**
      * Chunk a label
      * @param label The label
      * @return The set of chunks within this label
      */
-    ChunkList chunk(Label label);
+    ChunkList chunk(List<String> label);
 }

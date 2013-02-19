@@ -27,6 +27,7 @@
 package eu.monnetproject.translation.phrasal.jmert;
 
 import eu.monnetproject.config.Configurator;
+import eu.monnetproject.framework.services.Services;
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.corpus.ParallelCorpus;
@@ -85,7 +86,7 @@ public class JMertTest {
         TranslatorSetup setup = new MockSetup();
         ParallelCorpus corpus = new ParallelCorpusImpl();
         int n = 5;
-        Tuner instance = new JMert();
+        Tuner instance = new JMert(Services.get(TokenizerFactory.class));
         DecoderWeights wts = instance.tune(setup, corpus, new MetricWrapperFactory(), "BLEU-2", n, OntologyTranslator.DECODE_FAST);
         System.out.println("decodeWithWts");
         List<String> phrase = Arrays.asList(new String[]{"das", "ist", "ein", "kleines", "haus"});
