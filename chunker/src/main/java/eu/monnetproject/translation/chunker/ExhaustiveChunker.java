@@ -29,7 +29,9 @@ package eu.monnetproject.translation.chunker;
 import eu.monnetproject.translation.Chunk;
 import eu.monnetproject.translation.ChunkList;
 import eu.monnetproject.translation.Label;
+import eu.monnetproject.translation.LanguageModel;
 import eu.monnetproject.translation.TranslationPhraseChunker;
+import java.util.Arrays;
 
 /**
  *
@@ -37,10 +39,26 @@ import eu.monnetproject.translation.TranslationPhraseChunker;
  */
 public class ExhaustiveChunker implements TranslationPhraseChunker {
 
+    private final LanguageModel lm;
+
+    public ExhaustiveChunker(LanguageModel lm) {
+        this.lm = lm;
+    }
+    
     @Override
     public ChunkList chunk(Label label) {
         ChunkListImpl rval = new ChunkListImpl();
         final String[] tokens = FairlyGoodTokenizer.split(label.asString());
+        for(int i = 0; i < tokens.length; i++) {
+            final String lowerCaseTk = tokens[i].toLowerCase();
+            if(!tokens[i].equals(lowerCaseTk)) {
+                final double origCaseScore = lm.score(Arrays.asList(tokens[i]));
+                final double lowerCaseScore = lm.score(Arrays.asList(lowerCaseTk));
+                if(lowerCaseScore - origCaseScore > 1.5) {
+                    tokens[i] = lowerCaseTk;
+                }
+            }
+        }
         for(int i = 0; i < tokens.length; i++) {
             for(int j = i+1; j <= tokens.length; j++) {
                 final Chunk chunk = new ChunkImpl(build(tokens,i,j));

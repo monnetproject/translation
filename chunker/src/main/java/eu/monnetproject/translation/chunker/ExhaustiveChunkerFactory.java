@@ -28,6 +28,7 @@ package eu.monnetproject.translation.chunker;
 
 import eu.monnetproject.lang.Language;
 import eu.monnetproject.ontology.Ontology;
+import eu.monnetproject.translation.LanguageModelFactory;
 import eu.monnetproject.translation.TranslationPhraseChunker;
 import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
 
@@ -36,11 +37,15 @@ import eu.monnetproject.translation.TranslationPhraseChunkerFactory;
  * @author John McCrae
  */
 public class ExhaustiveChunkerFactory implements TranslationPhraseChunkerFactory {
-    private final ExhaustiveChunker chunker = new  ExhaustiveChunker();
+    private final LanguageModelFactory lmFactory;
+
+    public ExhaustiveChunkerFactory(LanguageModelFactory lmFactory) {
+        this.lmFactory = lmFactory;
+    }
     
     @Override
     public TranslationPhraseChunker getPhraseChunker(Ontology ontology, Language srcLang) {
-        return chunker;
+        return new ExhaustiveChunker(lmFactory.getModel(srcLang));
     }
     
 }
