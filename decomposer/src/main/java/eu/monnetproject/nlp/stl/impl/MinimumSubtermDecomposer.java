@@ -279,15 +279,27 @@ public class MinimumSubtermDecomposer implements Decomposer, eu.monnetproject.tr
                 if (decompsOfRestOfTerm.isEmpty() && restterm.matches(ONE_OR_TWO_LETTER_TO_WORD_BOUNDARY)) {
                     if (restterm.length() >= 2 && Character.isLetter(restterm.charAt(1))) {
                         decompsOfRestOfTerm = decompose(restterm.substring(2).replaceAll("^\\s+", ""), subterms);
-                        subterm2 = subterm + restterm.substring(0, 2);
+                        if(!subterms.contains(subterm + restterm.substring(0,2))) {
+                            subterm2 = subterm;// + restterm.substring(0, 2);
+                        } else {
+                            subterm2 = subterm + restterm.substring(0, 2);
+                        }
                     } else {
                         decompsOfRestOfTerm = decompose(restterm.substring(1).replaceAll("^\\s+", ""), subterms);
-                        subterm2 = subterm + restterm.substring(0, 1);
+                        if(!subterms.contains(subterm + restterm.substring(0,1))) {
+                            subterm2 = subterm;// + restterm.substring(0, 1);
+                        } else {
+                            subterm2 = subterm + restterm.substring(0, 1);
+                        }
                     }
                 } else if(decompsOfRestOfTerm.isEmpty() && (ciMatcher = COMPOUND_INSERTION.matcher(restterm)).matches()) {
                     final String restterm2 = ciMatcher.group(2);
                     decompsOfRestOfTerm = decompose(restterm2, subterms);
-                    subterm2 = subterm + ciMatcher.group(1);
+                    if(!subterms.contains(subterm + ciMatcher.group(1))) {
+                        subterm2 = subterm;// + ciMatcher.group(1);
+                    } else {
+                        subterm2 = subterm + ciMatcher.group(1);
+                    }
                 } else {
                     subterm2 = subterm;
                 }
@@ -348,6 +360,7 @@ public class MinimumSubtermDecomposer implements Decomposer, eu.monnetproject.tr
 //        System.out.println(decomposer.decomposeBest(term));
 //    }
     public static void main(String[] args) throws Exception {
+        args = "/home/shared/index-acquis4BI.nl.gz nl inburgeringsexamen".split(" ");
         if(args.length < 3) {
             throw new IllegalArgumentException();
         }
