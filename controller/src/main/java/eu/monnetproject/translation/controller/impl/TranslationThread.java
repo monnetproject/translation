@@ -144,7 +144,11 @@ public class TranslationThread implements Runnable {
                 final String[] trueTokens;
                 String[] arrayTokens = new String[tokens.size()];
                 for (int i = 0; i < tokens.size(); i++) {
-                    arrayTokens[i] = tokens.get(i);
+                    final String tk = tokens.get(i);
+                    if(tk.startsWith("@") || tk.endsWith("@")) {
+                        tk.replaceAll("@", "");
+                    }
+                    arrayTokens[i] = tk;
                 }
                 if (trueCaser != null) {
                     trueTokens = trueCaser.trueCase(arrayTokens, 1);
