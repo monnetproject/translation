@@ -56,8 +56,7 @@ public class ExhaustiveChunker implements TranslationPhraseChunker {
                 final double origCaseScore = lm.score(Arrays.asList(tokens[i]));
                 final double lowerCaseScore = lm.score(Arrays.asList(lowerCaseTk));
                 if(lowerCaseScore - origCaseScore > 1.5) {
-                    Messages.severe(tokens[i] + "/" + lowerCaseTk);
-                    tokens[i] = lowerCaseTk;
+                    //tokens[i] = lowerCaseTk;
                 }
             }
         }
