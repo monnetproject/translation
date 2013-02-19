@@ -370,6 +370,9 @@ public class MinimumSubtermDecomposer implements Decomposer, eu.monnetproject.tr
             }
             System.out.println();
         }
+        if(results.isEmpty()) {
+            System.out.println("No decompositions");
+        }
     }
 
     public static List<String> recase(List<String> decomposition, String term) {

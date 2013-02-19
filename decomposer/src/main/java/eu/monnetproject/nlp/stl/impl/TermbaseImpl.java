@@ -66,7 +66,7 @@ public class TermbaseImpl extends HashSet<String> implements Termbase {
         while(scanner.hasNextLine()) {
             final String term =  scanner.nextLine();
             if(!term.matches("\\s*")) {
-                termbaseImpl.add(term);
+                termbaseImpl.add(term.trim());
             }
         }
         return termbaseImpl;
