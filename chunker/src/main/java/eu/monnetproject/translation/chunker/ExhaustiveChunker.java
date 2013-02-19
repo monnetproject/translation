@@ -22,7 +22,7 @@
  * ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- ********************************************************************************
+ * *******************************************************************************
  */
 package eu.monnetproject.translation.chunker;
 
@@ -48,26 +48,26 @@ public class ExhaustiveChunker implements TranslationPhraseChunker {
     }
 
     @Override
-    public List<String> preCase(List<String> label) {  
-        final ListIterator<String> iter = label.listIterator();
-        while(iter.hasNext()) {
-            final String tokeni = iter.next();
-            final String lowerCaseTk = tokeni.toLowerCase();
-            if (!tokeni.equals(lowerCaseTk)) {
-                final double origCaseScore = lm.score(Arrays.asList(tokeni));
-                final double lowerCaseScore = lm.score(Arrays.asList(lowerCaseTk));
-                if (!Double.isNaN(origCaseScore) && !Double.isNaN(lowerCaseScore)
-                        && !Double.isInfinite(origCaseScore) && !Double.isInfinite(lowerCaseScore)
-                        && lowerCaseScore - origCaseScore > 1.5) {
-                    iter.set(lowerCaseTk);
+    public List<String> preCase(List<String> label) {
+        if (lm != null) {
+            final ListIterator<String> iter = label.listIterator();
+            while (iter.hasNext()) {
+                final String tokeni = iter.next();
+                final String lowerCaseTk = tokeni.toLowerCase();
+                if (!tokeni.equals(lowerCaseTk)) {
+                    final double origCaseScore = lm.score(Arrays.asList(tokeni));
+                    final double lowerCaseScore = lm.score(Arrays.asList(lowerCaseTk));
+                    if (!Double.isNaN(origCaseScore) && !Double.isNaN(lowerCaseScore)
+                            && !Double.isInfinite(origCaseScore) && !Double.isInfinite(lowerCaseScore)
+                            && lowerCaseScore - origCaseScore > 1.5) {
+                        iter.set(lowerCaseTk);
+                    }
                 }
             }
         }
         return label;
     }
 
-    
-    
     @Override
     public ChunkList chunk(List<String> tokens2) {
         ChunkListImpl rval = new ChunkListImpl();
