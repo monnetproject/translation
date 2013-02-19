@@ -144,11 +144,7 @@ public class TranslationThread implements Runnable {
                 final String[] trueTokens;
                 String[] arrayTokens = new String[tokens.size()];
                 for (int i = 0; i < tokens.size(); i++) {
-                    final String tk = tokens.get(i);
-                    if(tk.startsWith("@") || tk.endsWith("@")) {
-                        tk.replaceAll("@", "");
-                    }
-                    arrayTokens[i] = tk;
+                    arrayTokens[i] = tokens.get(i);
                 }
                 if (trueCaser != null) {
                     trueTokens = trueCaser.trueCase(arrayTokens, 1);
@@ -166,7 +162,8 @@ public class TranslationThread implements Runnable {
                         finalLabel.append(" ").append(token);
                     }
                 }
-                Translation trans = new TranslationImpl(translation.getEntity() == null ? entity.getURI() : translation.getEntity(), translation.getSourceLabel().asString(), translation.getSourceLabel().getLanguage(), finalLabel.toString(), translation.getTargetLabel().getLanguage(), translation.getScore(), translation.getFeatures());
+                final String finalLabelStr = finalLabel.toString().replaceAll("\\s?@?-@\\s?","-");
+                Translation trans = new TranslationImpl(translation.getEntity() == null ? entity.getURI() : translation.getEntity(), translation.getSourceLabel().asString(), translation.getSourceLabel().getLanguage(), finalLabelStr, translation.getTargetLabel().getLanguage(), translation.getScore(), translation.getFeatures());
                 tempList.add(trans);
             }
 
