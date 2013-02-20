@@ -31,6 +31,9 @@ import eu.monnetproject.translation.monitor.Messages;
 import it.unimi.dsi.fastutil.doubles.DoubleArrayList;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import it.unimi.dsi.fastutil.ints.Int2ObjectOpenHashMap;
+import it.unimi.dsi.fastutil.objects.Object2DoubleMap;
+import it.unimi.dsi.fastutil.objects.Object2DoubleMaps;
+import it.unimi.dsi.fastutil.objects.Object2DoubleOpenHashMap;
 import it.unimi.dsi.fastutil.objects.Object2IntMap;
 import java.io.File;
 import java.io.FileInputStream;
@@ -38,6 +41,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  *
@@ -45,6 +50,7 @@ import java.io.ObjectOutputStream;
  */
 public class PagedLM extends AbstractLM {
 
+    private final Object2DoubleMap<NGram> salients = Object2DoubleMaps.synchronize(new Object2DoubleOpenHashMap<NGram>());
     private final Language language;
     private int order;
     private Int2ObjectMap<double[]> unigrams;
@@ -53,12 +59,27 @@ public class PagedLM extends AbstractLM {
 
     public PagedLM(Language language, File model) throws IOException, ClassNotFoundException {
         this.language = language;
+        Messages.info("Using " + model.getPath() + " for language " + language);
         this.map = new File(model.getPath() + ".static").exists() ? loadLM(model) : buildLM(model);
         if (str2key.containsKey(UNK)) {
             unkCode = str2key.getInt(UNK);
         } else {
             unkCode = str2key.size() + 1;
         }
+//        try {
+//            final Scanner in = new Scanner(new File("salience.uniq"));
+//            while (in.hasNextLine()) {
+//                final String line = in.nextLine();
+//                final double score = Double.parseDouble(line.substring(0, line.indexOf(" ")));
+//                final String ngram = line.substring(line.indexOf(" ") + 1, line.length()).trim();
+//                if (score > 0) {
+//                    salients.put(super.toKey(Arrays.asList(ngram.split(" "))), score);
+//                }
+//            }
+//
+//        } catch (Exception x) {
+//            x.printStackTrace();
+//        }
     }
 
     @Override
@@ -169,17 +190,25 @@ public class PagedLM extends AbstractLM {
         // it from disk
         return new DirectDataMMap(model, builder.dataLocMap);
     }
-
     private int rawScoreCalls = 0;
-    
+
     @Override
     protected double[] rawScore(int n, NGram key) {
+//        final double[] rs = rawScore2(n, key);
+//        if (rs != null && salients.containsKey(key)) {
+//            return rs.length == 2 ? new double[]{rs[0] + 2.0 * salients.getDouble(key), rs[1]} : new double[]{rs[0] + 2.0 * salients.getDouble(key)};
+//        } else {
+//            return rs;
+//        }
+//    }
+//
+//    protected double[] rawScore2(int n, NGram key) {
         if (n == 1) {
             return unigrams.get(key.data(0));
         } else {
             //synchronized (this) {
-                rawScoreCalls++;
-                return map.rawScore(key.data());
+            rawScoreCalls++;
+            return map.rawScore(key.data());
             //}
         }
     }
