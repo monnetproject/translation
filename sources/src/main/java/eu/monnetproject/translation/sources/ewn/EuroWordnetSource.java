@@ -1,36 +1,32 @@
 package eu.monnetproject.translation.sources.ewn;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.Set;
 
+import eu.monnetproject.config.Configurator;
 import eu.monnetproject.lang.Language;
-//import eu.monnetproject.mrd.LexicalRelation;
 import eu.monnetproject.translation.Chunk;
 import eu.monnetproject.translation.PhraseTable;
-import eu.monnetproject.translation.PhraseTableEntry;
 import eu.monnetproject.translation.TranslationSource;
-import eu.monnetproject.translation.sources.ewn.api.EuroWordnetAPI;
-import eu.monnetproject.translation.sources.iate.PhraseTableImpl;
 import eu.monnetproject.translation.monitor.Messages;
+import eu.monnetproject.translation.sources.ewn.api.EuroWordnetAPI;
 
 
 public class EuroWordnetSource implements TranslationSource {
-
-	//private EWNAPI ewnAPI; 
 	private Language srcLang, trgLang;	
-
-	//private final Logger log = Logging.getLogger(this);
-
 	private static EuroWordnetAPI ewn;
+	private Properties config;
 
 	//Available languages in EuroWordnet
 	private static Language[] languages = {Language.ENGLISH,
@@ -39,14 +35,12 @@ public class EuroWordnetSource implements TranslationSource {
 
 	private static Map<String, String> paths = new HashMap<String, String>();
 
-	//private static List<LexicalRelation> supportedRelations = new LinkedList<LexicalRelation>();
+	//	public static final String resPrefix = "/ewn/";
 
-	public static final String resPrefix = "/ewn/";
-
-	public EuroWordnetSource(Language srcLang, Language trgLang) {	
+	public EuroWordnetSource(Language srcLang, Language trgLang, Properties config) {	
 		this.srcLang = srcLang;
 		this.trgLang = trgLang;
-		
+		this.config = config;
 		try {
 			if (ewn == null) {
 				init();
@@ -55,22 +49,20 @@ public class EuroWordnetSource implements TranslationSource {
 		} catch (Exception e) {
 			Messages.severe("Error connection to EWN");
 		}
-		start();
-		
-	}
-
-	public void start() {
-		//log.warning("Activating EuroWordNet");
-	//	Parameters.setParameters(Configurator.getConfig("load/eu.monnetproject.translation.sources.EWN"));
 	}
 
 	private void init() {
+		String ewnDBPath = config.getProperty("ewnDBPath");
 		InputStream stream = null;
 		for (int i=0; i<languages.length; i++) {
 			String code = languages[i].getIso639_1();
-			stream = EuroWordnetSource.class.getResourceAsStream(resPrefix + "ewn_" + code + ".db");
-			if(stream == null) {
-				throw new IllegalArgumentException("Could not locate " + resPrefix + "ewn_" + code + ".db");
+			String resourcePath = ewnDBPath + File.separator + "ewn_" + code + ".db"; 
+			//stream = EuroWordnetSource.class.getResourceAsStream(resourcePath);			
+			File file = new File(resourcePath);
+			try {
+				stream = new FileInputStream(file);
+			} catch (FileNotFoundException e1) {
+				Messages.warning("Problem in loading EuroWordNet DataBase, may be missing in the given path " + resourcePath);								
 			}
 			try {
 				final File tempFile = File.createTempFile("ewn_" + code ,".db");
@@ -82,26 +74,21 @@ public class EuroWordnetSource implements TranslationSource {
 				}
 				out.close();
 				stream.close();
-
 				tempFile.deleteOnExit();
 				paths.put(code, tempFile.getAbsolutePath());
 			}
 			catch (IOException e){
+				Messages.warning("Error in closing the EuroWordNet database");				
 			}
 		}
 	}
 
-//	@Override
-	public int featureCount() {
-		return 0;
+	@Override
+	public String[] featureNames() {	
+		String[] featureNames = new String[1];
+		featureNames[0] = "inEWN";
+		return featureNames;
 	}
-
-    @Override
-    public String[] featureNames() {
-        return new String[] { };
-    }
-        
-        
 
 	@Override
 	public PhraseTable candidates(Chunk label) {
@@ -129,16 +116,20 @@ public class EuroWordnetSource implements TranslationSource {
 	public String getName() {
 		return "EWN";
 	}
-
+	
 	@Override
 	public void close() {
 	}
 
 	public static void main(String[] args) {
-		EuroWordnetSource ewnSource = new EuroWordnetSource(Language.ENGLISH, Language.SPANISH);
+		final Properties config = Configurator.getConfig("eu.monnetproject.translation.sources.EWN");
+
+		EuroWordnetSource ewnSource = new EuroWordnetSource(Language.SPANISH, Language.ENGLISH, config);
 		List<String> translations = ewnSource.getTranslations("sport");
 		for(String candidate : translations) {
 			System.out.println(candidate);
 		}		
 	}	
+
+
 }

@@ -5,6 +5,8 @@ import java.io.*;
 import java.util.*;
 import java.sql.*;
 
+import eu.monnetproject.translation.monitor.Messages;
+
 
 
 /**
@@ -545,13 +547,12 @@ public class Lexicon {
 	}
 
 
-
 	/** 
 	 * Look up the Interlingua IDs (ILIs, ilis) of a word.
 	 * @param word the word to be looked for
 	 * @return a set of ILIs that represent meanings of the given word
 	 */
-	public  Set<String> getILIs(String word) throws Exception {
+	public Set<String> getILIs(String word) throws Exception {
 		TreeSet<String> result = new TreeSet<String>();
 		try {
 			Statement stmt = con.createStatement();
@@ -560,11 +561,12 @@ public class Lexicon {
 			query.append("WHERE Word = '");
 			query.append(escapeSQL(new String (word.getBytes("UNICODE"),"UTF-16"))); 
 			query.append("' AND Pos LIKE '" + partOfSpeech + "'");
-			ResultSet rs = stmt.executeQuery(query.toString());
+			ResultSet rs = stmt.executeQuery(query.toString());			
 			while (rs.next()) 
 				result.add(rs.getString(1));
 		} catch(SQLException ex) {
-			throw ex;	
+			Messages.warning("Error in querying (SQL) EuroWordNet");
+		//	throw ex;	
 		}
 		return result;
 	}

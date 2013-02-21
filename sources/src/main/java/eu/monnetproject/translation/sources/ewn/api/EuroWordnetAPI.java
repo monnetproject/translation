@@ -186,14 +186,14 @@ public class EuroWordnetAPI {
 			throw new LanguageNotAvailableException(lang2);
 		}        
 
-		String ili = null;  // the synset ID
+		//String ili = null;  // the synset ID
 		Set<String> lexemes; 	     
 		Map<String, Set<String>> result = new HashMap<String, Set<String>>();
 		Set<String> meanings = ewn1.getILIs(word);
 		for(String ilI : meanings) {			
 			lexemes = ewn2.getLexemesByILI(ilI);
 			if (!lexemes.isEmpty()) 
-				result.put(ili, lexemes);		 
+				result.put(ilI, lexemes);		 
 		}
 		return result;
 	}
