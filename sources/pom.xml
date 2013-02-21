@@ -81,6 +81,13 @@
 
         <dependency>
             <groupId>eu.monnetproject</groupId>
+            <artifactId>translation.langmodel</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>eu.monnetproject</groupId>
             <artifactId>ewn.client.api</artifactId>
             <version>11.10</version>
         </dependency>
