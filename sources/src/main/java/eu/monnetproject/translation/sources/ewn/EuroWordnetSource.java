@@ -107,7 +107,8 @@ public class EuroWordnetSource implements TranslationSource {
 				for (String translation : candidateTranslations) 
 					candidates.add(translation);		
 		} catch (Exception e) {
-			e.printStackTrace();
+			Messages.warning("Error in getting translations from EuroWordNet");
+			//e.printStackTrace();
 		}		
 		return candidates;
 	}	
