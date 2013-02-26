@@ -238,6 +238,12 @@ public class RestTranslationController extends HttpServlet {
                         params.acceptVocabularies.addAll(inputVocabulary);
                     }
 
+                    if(!params.acceptVocabularies.contains(RDFS) && 
+                            !params.acceptVocabularies.contains(URI.create(LemonModel.LEMON_URI)) &&
+                            !params.acceptVocabularies.contains(SKOSXL)) {
+                        params.acceptVocabularies.addAll(inputVocabulary);
+                    }
+                    
                     if (params.acceptVocabularies.contains(RDFS)) {
                         final ValueFactory valueFactory = conn.getValueFactory();
                         final org.openrdf.model.URI rdfsLabel = valueFactory.createURI(RDFS + "label");
@@ -252,6 +258,7 @@ public class RestTranslationController extends HttpServlet {
                         }
                     }
                     if (params.acceptVocabularies.contains(URI.create(LemonModel.LEMON_URI))) {
+                        System.err.println("Writing as lemon");
                         final StringWriter sw = new StringWriter();
                         lemonSerializer.write(lemonModel, sw);
                         conn.add(new StringReader(sw.toString()), "unknown:lexicon", RDFFormat.RDFXML);
@@ -327,7 +334,7 @@ public class RestTranslationController extends HttpServlet {
         out.println("<label for='name-prefix'>Name prefix</label><input type='text' name='name-prefix' id='name-prefix'/><br/>");
         out.println("<label for='custom-label'>Custom label property</label><input type='text' name='custom-label' id='custom-label'/><br/>");
         out.println("<label for='n-best'>Number of results to return</label><input type='text' name='n-best' id='n-best'/><br/>");
-        out.println("<label for='accept-vocabularies'>Return vocabulary (RDFS="+RDFS+",SKOS-XL"+SKOSXL+",LEMON=http://www.monnet.project.eu/lemon#)</label><input type='text' name='accept-vocabularies' id='accept-vocabularies'/><br/>");
+        out.println("<label for='accept-vocabularies'>Return vocabulary (RDFS="+RDFS+",SKOS-XL"+SKOSXL+",LEMON=http://www.monnet-project.eu/lemon#)</label><input type='text' name='accept-vocabularies' id='accept-vocabularies'/><br/>");
         out.println("<label for='include-source'>Include source</label><input type='checkbox' name='include-source' id='include-source'/><br/>");
         out.println("<label for='estimate-confidence'>Estimate confidence</label><input type='checkbox' name='estimate-confidence' id='estimate-confidence'/><br/>");
         out.println("<input type='submit'/>");
