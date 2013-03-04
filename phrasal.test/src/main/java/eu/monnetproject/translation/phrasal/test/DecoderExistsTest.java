@@ -5,9 +5,10 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 
-import eu.monnetproject.framework.test.TestMonitor;
-import eu.monnetproject.framework.test.annotation.TestCase;
-import eu.monnetproject.framework.test.annotation.TestSuite;
+import com.beinformed.framework.osgi.osgitest.TestMonitor;
+import com.beinformed.framework.osgi.osgitest.annotation.TestCase;
+import com.beinformed.framework.osgi.osgitest.annotation.TestSuite;
+
 import eu.monnetproject.translation.Decoder;
 import eu.monnetproject.translation.DecoderFactory;
 import eu.monnetproject.translation.monitor.Messages;

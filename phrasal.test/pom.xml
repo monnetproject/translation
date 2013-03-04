@@ -55,10 +55,45 @@
             <artifactId>translation.phrasal</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>framework.test</artifactId>
-            <version>${project.version}</version>
-        </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>osgitest.api</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>frameworkstate.api</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>frameworkstate.entropy</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>osgitest.annotationprocessor</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>osgitest.launcher</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>osgitest.loggingmonitor</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.beinformed.framework.osgi</groupId>
+      <artifactId>osgitest.testrunner</artifactId>
+      <version>1.0.0</version>
+      <scope>runtime</scope>
+    </dependency>
     </dependencies>
 </project>
