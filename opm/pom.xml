@@ -4,7 +4,7 @@
     <parent>
     <artifactId>translation.project</artifactId>
     <groupId>eu.monnetproject</groupId>
-    <version>1.13.1-SNAPSHOT</version>
+    <version>1.13.3</version>
   </parent>
 
     <artifactId>translation.opm</artifactId>

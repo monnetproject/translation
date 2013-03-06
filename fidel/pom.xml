@@ -4,7 +4,7 @@
 
     <parent>
         <groupId>eu.monnetproject</groupId>
-        <version>1.13.1-SNAPSHOT</version>
+        <version>1.13.3</version>
         <artifactId>translation.project</artifactId>
         <relativePath>..</relativePath>
     </parent>
@@ -32,7 +32,7 @@
         <dependency>
             <groupId>eu.monnetproject</groupId>
             <artifactId>translation.core</artifactId>
-            <version>1.13.1-SNAPSHOT</version>
+            <version>1.13.3</version>
         </dependency>
     </dependencies>
 </project>
