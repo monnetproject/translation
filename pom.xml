@@ -65,6 +65,7 @@
         <module>quality</module>
         <module>sources</module>
         <module>sqlpt</module>
+    <module>bootstrapeval</module>
   </modules>
   
     <dependencies>
