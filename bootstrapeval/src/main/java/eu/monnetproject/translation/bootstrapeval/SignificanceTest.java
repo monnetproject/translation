@@ -91,7 +91,7 @@ public class SignificanceTest {
             return;
         }
         final int m = Math.min(100, N / 2);
-        final int iters = 50;
+        final int iters = 100;
 
         final URI[] entities = refs.keySet().toArray(new URI[N]);
 
