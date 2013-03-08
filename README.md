@@ -162,13 +162,13 @@ This runs using 10 folds and tuning using 5 iterations on the NIST metric
 For debugging the translation can read a single ontology as follows
 
     mvn exec:java -Dexec.mainClass="eu.monnetproject.translation.controller.Translate" \
-         -Dexec.args="ontology.rdf en"
+         -Dexec.args="ontology.rdf en translation.rdf"
 
 ### Interactive mode
 
 For debugging, the decoder may be used directly by reading from `STDIN`
 
-    mvn exec:java -Dexec.mainClass="eu.monnetproject.translation.phrasal.PhrasalDecoder" \
+    mvn exec:java -Dexec.mainClass="eu.monnetproject.translation.controller.RTPL" \
       -Dexec.args="en es 1"
 
 1 is number of candidates to print.
@@ -191,18 +191,27 @@ All can be provided in both RDF-XML as well as turtle format.
 Input format is determined by the HTTP Content-Type header value.
 
 The translation service accepts the following parameters which must be offered as a POST multipart request:
-| Parameter           | Description | Mandatory | Defaults to |
-| ------------------- | ----------- | --------- | ----------- |
-| ontology            | the source file containing the source ontology and the lexica | x | |
-| target-language     | IETF code, eg. "nl" | x | |
-| scope               | Comma separated list of URI's | | by default all URI's in the ontology will be translated |
-| name-prefix         | The name prefix for URI's of new entities created by SKOS-XL or Lemon | | blank nodes |
-| custom-label        | comma separated list of URI's for custom label properties | | |
-| n-best              | The maximum amount of candidates to return for a single label | | 10 |
-| accept-vocabularies | comma separated list of URI's for the target vocabularies, e.g. Lemon is [http://www.monnet-project.eu/lemon#] | | input vocabulary |
-| include-source      | include the source ontology and lexicon in the result. If true all existing candidates that were not created by this translation services will be untouched. | | true |
-| esimate-confidence  | Provide estimates of confidence of translation (Lemon Metadata only) | | false |
-| speed               | Optimize for speed not quality of translations, one of \{fast,normal\} | | fast |
+
+ * `ontology` (Required)
+     - The source file containing the source ontology and the lexica 
+ * `target-language` (Required)
+     - IETF code, eg. "nl"
+ * `scope`
+     - Comma separated list of URI's (by default all URI's in the ontology will be translated)
+ * `name-prefix`
+     - The name prefix for URI's of new entities created by SKOS-XL or Lemon (defaults to blank nodes)
+ * `custom-label`
+     - Comma separated list of URI's for custom label properties
+ * `n-best`
+     - The maximum amount of candidates to return for a single label (defaults to 1)
+ * `accept-vocabularies`
+     - Comma separated list of URI's for the target vocabularies, e.g. Lemon is http://www.monnet-project.eu/lemon# (defaults to input vocabulary)
+ * `include-source`
+     - Include the source ontology and lexicon in the result. If true all existing candidates that were not created by this translation services will be untouched. (defaults to `true`)
+ * `esimate-confidence`
+     - Provide estimates of confidence of translation (Lemon Metadata only) (defaults to `false`)
+ * `speed`
+     - Optimize for speed not quality of translations, one of {`fast`,`normal`} (defaults to `fast`)
 
 
 Implementation specific features:
@@ -215,13 +224,17 @@ Error conditions:
 The translation service will provide a maximum of n candidates for each label in the source language. The translation service can use translation candidates that are already present in the source lexicon but only those that are marked as accepted. Candidates with a draft status should be ignored.
 
 Metadata included per translation candidate
-| Attribute                      | Description | URL |
-| ------------------------------ | ----------- | --- |
-| confidence                     | Confidence level provided by the translator, a value between 0 and 1 | [http://monnet01.sindice.net/ontologies/translation.owl#confidence] |
-| logprob                        | Logaritmic probability of the translation | |
-| translation-service-identifier | Identifier of the translation service, e.g. Monnet | |
-| source                         | Source of the translation (used by the translation service) | |
-| status                         | either accepted, for-review, rejected. If no status is available it's presumed to be accepted. | |
+
+ * `confidence`
+     - Confidence level provided by the translator, a value between 0 and 1, using property http://monnet01.sindice.net/ontologies/translation.owl#confidence
+ * `logprob`
+     - Logaritmic probability of the translation
+ * `translation-service-identifier`
+     - Identifier of the translation service, e.g. Monnet
+ * `source`
+     - Source of the translation (used by the translation service)
+ * `status`
+     - Either accepted, for-review, rejected. If no status is available it's presumed to be accepted. (Not sure if we really return this?)
 
 ### Testing with CURL
 
