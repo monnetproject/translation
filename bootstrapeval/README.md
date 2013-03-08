@@ -10,16 +10,16 @@ This will create two monolingual ontologies `foaf-with-es.ttl.en` and `foaf-with
 
 Translate the ontologies using _two different_ settings
 
-   mvn exec:java -f ../controller/pom.xml                               \
-     -Dexec.mainClass=eu.monnetproject.translation.controller.Translate \
-     -Dexec.args="~/ontologies/foaf-with-es.ttl.es en lexicon1.en
+    mvn exec:java -f ../controller/pom.xml                               \
+      -Dexec.mainClass=eu.monnetproject.translation.controller.Translate \
+      -Dexec.args="~/ontologies/foaf-with-es.ttl.es en lexicon1.en
 
 Now we should have two lexica, for example `lexicon1.en` and `lexicon2.en`
 
 We can do a significance evaluation as follows
 
-   mvn exec:java -Dexec.mainClass=eu.monnetproject.translation.bootstrapeval.SignificanceTest \
-     -Dexec.args="~/ontologies/foaf-with-es.ttl.en lexicon1.en lexicon2.en es en"
+    mvn exec:java -Dexec.mainClass=eu.monnetproject.translation.bootstrapeval.SignificanceTest \
+      -Dexec.args="~/ontologies/foaf-with-es.ttl.en lexicon1.en lexicon2.en es en"
 
 And we get the result as follows:
 
