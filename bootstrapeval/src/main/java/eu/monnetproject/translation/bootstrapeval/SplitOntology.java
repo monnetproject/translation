@@ -67,7 +67,7 @@ public class SplitOntology {
         final Map<Language,Ontology> targetOntologies = new HashMap<Language, Ontology>();
         for(Language targetLang : targetLangs) {
             final OntologySerializer serializer = Services.get(OntologySerializer.class);
-            targetOntologies.put(targetLang, serializer.create(ontology.getURI()));
+            targetOntologies.put(targetLang, serializer.create(ontology.getURI() != null ? ontology.getURI() : new File(args[0]).toURI()));
             serializers.put(targetLang, serializer);
         }
         

@@ -110,6 +110,7 @@ public class RestTranslationController extends HttpServlet {
         // See TranslationController: Ensures that if there is no weight file for the given langauge pair
         // The service won't attempt to translate
         System.setProperty("eu.monnetproject.translation.controller.untrainedPairs", "false");
+        lemonSerializer.setIgnoreModelErrors(true);
     }
 
     
@@ -117,6 +118,18 @@ public class RestTranslationController extends HttpServlet {
         return "/translate";
     }
 
+    public StringBuilder readStream(final InputStream in, final String characterEncoding) throws IOException {
+        final InputStreamReader reader = new InputStreamReader(in,characterEncoding);
+        final StringBuilder sb = new StringBuilder();
+        char[] buf = new char[1024];
+        int read = 0;
+        while((read = reader.read(buf)) > 0) {
+            sb.append(buf, 0, read);
+        }
+        reader.close();
+        return sb;
+    }
+    
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         if (!ServletFileUpload.isMultipartContent(req)) {
@@ -191,8 +204,9 @@ public class RestTranslationController extends HttpServlet {
                 }
                 final String characterEncoding = req.getCharacterEncoding() != null ? req.getCharacterEncoding() : "UTF-8";
                 resp.setCharacterEncoding(characterEncoding);
-                final Ontology ontology = ontologySerializer.read(new InputStreamReader(params.ontology, characterEncoding));
-                final LemonModel lemonModel = lemonSerializer.read(new InputStreamReader(params.ontology));
+                final StringBuilder ontologyContents = readStream(params.ontology,characterEncoding);
+                final Ontology ontology = ontologySerializer.read(new StringReader(ontologyContents.toString()));
+                final LemonModel lemonModel = lemonSerializer.read(new StringReader(ontologyContents.toString()));
                 final HashMap<Language, Lexicon> lexica = new HashMap<Language, Lexicon>();
                 final Collection<Lexicon> sourceLexica;
                 Set<URI> inputVocabulary = new HashSet<URI>();

@@ -48,6 +48,7 @@
     </pluginRepositories>
     
     <modules>
+        <module>bootstrapeval</module>    
         <module>chunker</module>    
         <module>controller</module>
         <module>controller.web</module>    
@@ -65,7 +66,6 @@
         <module>quality</module>
         <module>sources</module>
         <module>sqlpt</module>
-    <module>bootstrapeval</module>
   </modules>
   
     <dependencies>

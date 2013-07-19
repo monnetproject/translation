@@ -206,10 +206,10 @@ public class TranslationController implements OntologyTranslator {
                         Messages.warning("Sense with null reference for " + entry.getURI());
                         continue;
                     }
-                    final Entity entity = getBestEntity(ontology.getEntities(sense.getReference()), scope);
+                    Entity entity = getBestEntity(ontology.getEntities(sense.getReference()), scope);
                     if (entity == null) {
-                        Messages.warning("Sense for " + entry.getURI() + " (" + sense.getReference() + ") not found in ontology ");
-                        continue;
+                        Messages.warning(sense.getReference()+ " not found in ontology, assuming class");
+                        entity = ontology.getFactory().makeClass(sense.getReference());
                     }
                     final TranslationThread thread = new TranslationThread(entity, entry, nBest, sourceLanguage, targetLexicon, namePrefix, chunkers, translationSources, featurizers, decoder, tokenizer, verbose, monitors, confidence, decodeFast, trueCaser, features, job);
 
@@ -232,6 +232,7 @@ public class TranslationController implements OntologyTranslator {
             } catch (InterruptedException x) {
                 throw new RuntimeException("The thread pool was interrupted or timed out");
             }
+            Messages.info("Closing sources");
             for (TranslationSource source : translationSources) {
                 try {
                     source.close();
@@ -239,11 +240,13 @@ public class TranslationController implements OntologyTranslator {
                     Messages.cleanupFailure(x);
                 }
             }
+            Messages.info("Closing language model");
             try {
                 languageModel.close();
             } catch (Exception x) {
                 Messages.cleanupFailure(x);
             }
+            Messages.info("Closing featurizers");
             try {
                 closeFeaturizers(featurizers);
             } catch (Exception x) {
@@ -253,6 +256,7 @@ public class TranslationController implements OntologyTranslator {
             if (sources.get(lp) == translationSources) {
                 sources.remove(lp);
             }
+            Messages.info("Translation complete");
         }
     }
 

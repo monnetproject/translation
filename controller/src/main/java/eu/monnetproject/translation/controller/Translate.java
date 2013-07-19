@@ -36,6 +36,10 @@ import eu.monnetproject.lemon.LemonSerializer;
 import eu.monnetproject.translation.*;
 import eu.monnetproject.translation.controller.impl.SimpleLexicalizer;
 import eu.monnetproject.translation.controller.impl.TranslationController;
+import eu.monnetproject.translation.monitor.Job;
+import eu.monnetproject.translation.monitor.MessageHandler;
+import eu.monnetproject.translation.monitor.Messages;
+import eu.monnetproject.translation.monitor.Messages.Message;
 import java.io.File;
 import java.io.FileReader;
 import java.io.InputStreamReader;
@@ -115,6 +119,8 @@ public class Translate {
                 new OutputStreamWriter(System.out);
         final Ontology ontology = ontoSerializer.read(ontologyReader);
 
+        Messages.addHandler(new DefaultMessageHandler());
+        
         final TranslationController controller = new TranslationController(Services.getAll(LanguageModelFactory.class),
                 Services.get(DecoderFactory.class),
                 Services.getAll(TranslationPhraseChunkerFactory.class),
@@ -146,8 +152,10 @@ public class Translate {
 
         controller.translate(ontology, sourceLexica, targetLexicon, scopes, namePrefix, nBest, fast ? OntologyTranslator.DECODE_FAST : 0);
 
+        System.err.println("Writing model");
         lemonSerializer.write(targetLexicon.getModel(), out);
         out.flush();
         out.close();
+        System.err.println("Done");
     }
 }

@@ -199,7 +199,7 @@ public class DirectDataMMap {
     private LoadingCache<RecordID, ByteBuffer> makeCache() {
         return CacheBuilder.newBuilder().maximumSize(CACHE_SIZE).softValues().build(new CacheLoader<RecordID, ByteBuffer>() {
             @Override
-            public ByteBuffer load(RecordID k) throws Exception {
+            public synchronized ByteBuffer load(RecordID k) throws Exception {
                 final long[] startEnd = dataLocMap.get(k);
                 final int size = (int) (startEnd[1] - startEnd[0]);
                 //byte[] data = new byte[size];
@@ -212,6 +212,9 @@ public class DirectDataMMap {
                     System.err.println("page size: " + size);
                     x.printStackTrace();
                     return ByteBuffer.allocate(size);
+                } catch(OutOfMemoryError err) {
+                    System.gc();
+                    throw err;
                 }
             }
         });
