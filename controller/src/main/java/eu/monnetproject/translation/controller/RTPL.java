@@ -107,10 +107,11 @@ public class RTPL {
 		final Language sourceLanguage = Language.get(argsList.get(0));
 		final Language targetLanguage = Language.get(argsList.get(1));
 		
+                int lineNo = 0;
 		
 		while(lineIn.hasNextLine()) {
 			final String line = lineIn.nextLine();
-			final Ontology ontology = ontoSerializer.create(URI.create("file:test#ontology"));
+			final Ontology ontology = ontoSerializer.create(URI.create("file:test#ontology" + (lineNo++)));
 			final OntologyFactory factory = ontology.getFactory();
 			final AnnotationProperty rdfsLabel = factory.makeAnnotationProperty(URI.create("http://www.w3.org/2000/01/rdf-schema#label"));
 			final Class c = factory.makeClass(URI.create("file:test#class1"));
