@@ -3,19 +3,19 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>translation.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
     </parent>
     
     <properties>
-        <eu.monnetproject.framework.test>true</eu.monnetproject.framework.test>
+        <com.github.monnetproject.framework.test>true</com.github.monnetproject.framework.test>
     </properties>
     
     <artifactId>translation.phrasal.test</artifactId>
     <packaging>bundle</packaging>
-    <name>eu.monnetproject.translation.phrasal Tests</name>
+    <name>com.github.monnetproject.translation.phrasal Tests</name>
     <build>
         <plugins>
             <plugin>
@@ -31,7 +31,7 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>eu.monnetproject</groupId>
+                <groupId>com.github.monnetproject</groupId>
                 <artifactId>osgirun</artifactId>
                 <executions>
                     <execution>

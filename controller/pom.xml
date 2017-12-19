@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>translation.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -11,7 +11,7 @@
     <artifactId>translation.controller</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.translation.controller OSGi Bundle</name>
+    <name>com.github.monnetproject.translation.controller OSGi Bundle</name>
 
     <dependencies>
         <dependency>

@@ -3,13 +3,13 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
   <parent>
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <artifactId>translation.project</artifactId>
     <version>1.13.3</version>
     <relativePath>..</relativePath>
   </parent>
   <artifactId>translation.sqlpt</artifactId>
-  <name>eu.monnetproject.translation.sqlpt OSGi Bundle</name>
+  <name>com.github.monnetproject.translation.sqlpt OSGi Bundle</name>
   <packaging>bundle</packaging>
     <dependencies>
         <dependency>

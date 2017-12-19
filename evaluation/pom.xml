@@ -1,13 +1,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>translation.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
     </parent>
     <artifactId>translation.evaluation</artifactId>
-    <name>eu.monnetproject.translation.evaluation OSGi Bundle</name>
+    <name>com.github.monnetproject.translation.evaluation OSGi Bundle</name>
     <packaging>bundle</packaging>
   
     <dependencies>
@@ -89,7 +89,7 @@
             <exclusions>
                 <exclusion>
                     <artifactId>translation.phrasal</artifactId>
-                    <groupId>eu.monnetproject</groupId>
+                    <groupId>com.github.monnetproject</groupId>
                 </exclusion>
             </exclusions>
         </dependency>

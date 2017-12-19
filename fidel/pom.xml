@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <version>1.13.3</version>
         <artifactId>translation.project</artifactId>
         <relativePath>..</relativePath>
@@ -11,7 +11,7 @@
     <artifactId>translation.fidel</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.translation.fidel OSGi Bundle</name>
+    <name>com.github.monnetproject.translation.fidel OSGi Bundle</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,7 +30,7 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>eu.monnetproject</groupId>
+            <groupId>com.github.monnetproject</groupId>
             <artifactId>translation.core</artifactId>
             <version>1.13.3</version>
         </dependency>

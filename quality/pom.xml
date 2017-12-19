@@ -3,15 +3,15 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
     <artifactId>translation.project</artifactId>
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <version>1.13.3</version>
   </parent>
 
-    <groupId>eu.monnetproject</groupId>
+    <groupId>com.github.monnetproject</groupId>
     <artifactId>translation.quality</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.translation.quality OSGi Bundle</name>
+    <name>com.github.monnetproject.translation.quality OSGi Bundle</name>
     <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>

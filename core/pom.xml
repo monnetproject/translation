@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>eu.monnetproject</groupId>
+        <groupId>com.github.monnetproject</groupId>
         <artifactId>translation.project</artifactId>
         <version>1.13.3</version>
         <relativePath>..</relativePath>
@@ -12,7 +12,7 @@
     <artifactId>translation.core</artifactId>
     <packaging>bundle</packaging>
 
-    <name>eu.monnetproject.translation.core OSGi Bundle</name>
+    <name>com.github.monnetproject.translation.core OSGi Bundle</name>
 
     <dependencies>
         <dependency>
