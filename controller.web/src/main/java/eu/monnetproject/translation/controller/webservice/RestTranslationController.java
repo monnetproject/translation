@@ -230,7 +230,7 @@ public class RestTranslationController extends HttpServlet {
                         }
                     }
                 } else {
-                    inputVocabulary.add(URI.create(LemonModel.LEMON_URI));
+                    inputVocabulary.add(URI.create(LemonModel.MONNET_LEMON_URI));
                     sourceLexica = lemonModel.getLexica();
                 }
                 if (lemonModel.getLexica().isEmpty()) {
@@ -253,7 +253,7 @@ public class RestTranslationController extends HttpServlet {
                     }
 
                     if(!params.acceptVocabularies.contains(RDFS) && 
-                            !params.acceptVocabularies.contains(URI.create(LemonModel.LEMON_URI)) &&
+                            !params.acceptVocabularies.contains(URI.create(LemonModel.MONNET_LEMON_URI)) &&
                             !params.acceptVocabularies.contains(SKOSXL)) {
                         params.acceptVocabularies.addAll(inputVocabulary);
                     }
@@ -271,7 +271,7 @@ public class RestTranslationController extends HttpServlet {
                             }
                         }
                     }
-                    if (params.acceptVocabularies.contains(URI.create(LemonModel.LEMON_URI))) {
+                    if (params.acceptVocabularies.contains(URI.create(LemonModel.MONNET_LEMON_URI))) {
                         System.err.println("Writing as lemon");
                         final StringWriter sw = new StringWriter();
                         lemonSerializer.write(lemonModel, sw);

@@ -2,7 +2,6 @@ package edu.stanford.nlp.mt.decoder.feat.oracle;
 
 import edu.stanford.nlp.io.IOUtils;
 import edu.stanford.nlp.stats.Counter;
-import edu.stanford.nlp.stats.OpenAddressCounter;
 
 import edu.stanford.nlp.mt.decoder.feat.RichIncrementalFeaturizer;
 import edu.stanford.nlp.mt.decoder.feat.StatefulFeaturizer;
@@ -14,6 +13,7 @@ import edu.stanford.nlp.mt.base.IString;
 import edu.stanford.nlp.mt.base.IStrings;
 import edu.stanford.nlp.mt.metrics.NISTTokenizer;
 import edu.stanford.nlp.mt.Phrasal;
+import edu.stanford.nlp.stats.IntCounter;
 
 import java.util.List;
 import java.util.Map;
@@ -296,7 +296,7 @@ public class BLEUFeaturizer extends StatefulFeaturizer<IString, String>
     final int[] localCounts;
     final int[] localPossibleMatchCounts;
     final List<Trie> partialMatches;
-    final Counter<Trie> fullMatches;
+    final IntCounter<Trie> fullMatches;
     // final BLEUIncrementalScorer backPtr;
     double score;
 
@@ -304,7 +304,7 @@ public class BLEUFeaturizer extends StatefulFeaturizer<IString, String>
       localCounts = new int[ORDER];
       localPossibleMatchCounts = new int[ORDER];
       partialMatches = new LinkedList<Trie>();
-      fullMatches = new OpenAddressCounter<Trie>();
+      fullMatches = new edu.stanford.nlp.stats.IntCounter<Trie>();
       // fullMatches = new ClassicCounter<Trie>();
       // backPtr = null;
       score = 0.0;
@@ -314,7 +314,7 @@ public class BLEUFeaturizer extends StatefulFeaturizer<IString, String>
       if (deep) {
         localCounts = old.localCounts.clone();
         localPossibleMatchCounts = old.localPossibleMatchCounts.clone();
-        fullMatches = new OpenAddressCounter<Trie>(old.fullMatches);
+        fullMatches = new IntCounter<Trie>(old.fullMatches);
       } else {
         localCounts = old.localCounts;
         localPossibleMatchCounts = old.localPossibleMatchCounts;

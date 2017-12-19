@@ -58,46 +58,46 @@ public class JMertTest {
 
     
     
-    @Test
-    public void testTune() throws Exception {
-        System.out.println("tune");
-        Configurator.setConfig("eu.monnetproject.translation.phrasal", "LinearDistortion", "0.3",
-                "TM\\:p(t|f)", "0.2",
-                // Here is the mistake, this value should of course never be negative
-                "LM", "-0.01",
-                "WordPenalty", "-1");
-               // "UnknownWord", "1.0",
-               // "SentenceBoundary", "1.0");
-        Configurator.setConfig("eu.monnetproject.translation.phrasal.pt", "de/en/1", "src/test/resources/sample-models/phrase-model/phrase-table.sorted");
-        Configurator.setConfig("eu.monnetproject.translation.phrasal.lm", "en", "src/test/resources/sample-models/lm/europarl.srilm.gz");
-        class MockSetup extends DefaultTranslatorSetup {
-
-            public MockSetup() {
-                super(Language.GERMAN, Language.ENGLISH);
-            }
-
-            @Override
-            public DecoderWeights weights() {
-                final DecoderWeights wts = super.weights();
-                wts.put("TM:p(t|f)",1.0);
-                return wts;
-            }
-        }
-        TranslatorSetup setup = new MockSetup();
-        ParallelCorpus corpus = new ParallelCorpusImpl();
-        int n = 5;
-        Tuner instance = new JMert(Services.get(TokenizerFactory.class));
-        DecoderWeights wts = instance.tune(setup, corpus, new MetricWrapperFactory(), "BLEU-2", n, OntologyTranslator.DECODE_FAST);
-        System.out.println("decodeWithWts");
-        List<String> phrase = Arrays.asList(new String[]{"das", "ist", "ein", "kleines", "haus"});
-        PhraseTable phraseTable = makePhraseTable();
-        int nBest = 2;
-        final LanguageModel lm = setup.languageModel();
-        PhrasalDecoder decoder = new PhrasalDecoder(lm,wts);
-        List<Translation> result = decoder.decode(phrase, phraseTable, Arrays.asList("TM:p(t|f)"),nBest);
-        String expResult = "this is a small house";
-//        assertEquals(expResult, result.get(0).getTargetLabel().asString());
-    }
+//    @Test
+//    public void testTune() throws Exception {
+//        System.out.println("tune");
+//        Configurator.setConfig("eu.monnetproject.translation.phrasal", "LinearDistortion", "0.3",
+//                "TM\\:p(t|f)", "0.2",
+//                // Here is the mistake, this value should of course never be negative
+//                "LM", "-0.01",
+//                "WordPenalty", "-1");
+//               // "UnknownWord", "1.0",
+//               // "SentenceBoundary", "1.0");
+//        Configurator.setConfig("eu.monnetproject.translation.phrasal.pt", "de/en/1", "src/test/resources/sample-models/phrase-model/phrase-table.sorted");
+//        Configurator.setConfig("eu.monnetproject.translation.phrasal.lm", "en", "src/test/resources/sample-models/lm/europarl.srilm.gz");
+//        class MockSetup extends DefaultTranslatorSetup {
+//
+//            public MockSetup() {
+//                super(Language.GERMAN, Language.ENGLISH);
+//            }
+//
+//            @Override
+//            public DecoderWeights weights() {
+//                final DecoderWeights wts = super.weights();
+//                wts.put("TM:p(t|f)",1.0);
+//                return wts;
+//            }
+//        }
+//        TranslatorSetup setup = new MockSetup();
+//        ParallelCorpus corpus = new ParallelCorpusImpl();
+//        int n = 5;
+//        Tuner instance = new JMert(Services.get(TokenizerFactory.class));
+//        DecoderWeights wts = instance.tune(setup, corpus, new MetricWrapperFactory(), "BLEU-2", n, OntologyTranslator.DECODE_FAST);
+//        System.out.println("decodeWithWts");
+//        List<String> phrase = Arrays.asList(new String[]{"das", "ist", "ein", "kleines", "haus"});
+//        PhraseTable phraseTable = makePhraseTable();
+//        int nBest = 2;
+//        final LanguageModel lm = setup.languageModel();
+//        PhrasalDecoder decoder = new PhrasalDecoder(lm,wts);
+//        List<Translation> result = decoder.decode(phrase, phraseTable, Arrays.asList("TM:p(t|f)"),nBest);
+//        String expResult = "this is a small house";
+////        assertEquals(expResult, result.get(0).getTargetLabel().asString());
+//    }
 
     public PhraseTable makePhraseTable() {
         final MockPhraseTable pt = new MockPhraseTable();

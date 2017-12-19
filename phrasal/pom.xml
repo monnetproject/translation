@@ -55,9 +55,9 @@
             <version>2.2</version>
         </dependency>
         <dependency>
-            <groupId>edu.stanford</groupId>
-            <artifactId>corenlp</artifactId>
-            <version>1.1.0</version>
+            <groupId>edu.stanford.nlp</groupId>
+            <artifactId>stanford-corenlp</artifactId>
+            <version>1.2.0</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
